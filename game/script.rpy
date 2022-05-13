@@ -1,33 +1,23 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define e = Character("Eileen")
-
-
-# The game starts here.
+﻿screen Day:
+    text "{color=#fff}Test hello world{/color}" xpos 0.5 ypos 0.5
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    "Sylvie" "Hi there! How was class?"
 
-    scene bg room
+    "Me" "I hate you"
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    "Sylvie" "I can't bring myself to admit that it all went in one ear and out the other."
 
-    show eileen happy
+    "Me" "Are you going home now? Wanna walk back with me?"
 
-    # These display lines of dialogue.
+    "Sylvie" "Sure!"
 
-    e "You've created a new Ren'Py game."
+    "Sylvie" "Did you ever hear Lincon's famous saying, \"The problem with Internet quotations is that many of them are not genuine.\""
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
+    window hide
+    show screen Day
+    pause
 
     return
+

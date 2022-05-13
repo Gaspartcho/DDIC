@@ -1,3 +1,9 @@
-**c
-**b
-**saves
+*.rpyc
+*.rpyb
+*.rpymc
+
+**/saves
+
+log.txt
+errors.txt
+traceback.txt
