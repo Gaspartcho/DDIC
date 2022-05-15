@@ -8,17 +8,17 @@ label start:
     define s = Character('Sylvie', color="#c8ffc8", what_slow_cps=text_speed)
     define m = Character('Me', color="#c8c8ff", what_slow_cps=text_speed)
 
-    "Me" "I hate you"
+    m "I hate you"
 
-    "Sylvie" "I can't bring myself to admit that it all went in one ear and out the other."
+    s "I can't bring myself to admit that it all went in one ear and out the other."
 
-    "Me" "Are you going home now? Wanna walk back with me?"
+    m "Are you going home now? Wanna walk back with me?"
 
-    "Sylvie" "Sure!"
+    s "Sure!"
 
-    "Sylvie" "Did you ever hear Lincon's famous saying, \"The problem with Internet quotations is that many of them are not genuine.\""
+    s "Did you ever hear Lincon's famous saying, \"The problem with Internet quotations is that many of them are not genuine.\""
 
-    "cunt" "pussy flap"
+    m "pussy flap"
     
 # The phrase in the brackets is the text that the game will display to prompt 
 # the player to enter the name they've chosen.
