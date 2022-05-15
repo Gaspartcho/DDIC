@@ -1,45 +1,115 @@
-﻿define text_speed = 50
+﻿#region Variables
 
-screen Day:
-    text "{color=#fff}Test hello world{/color}" xpos 0.5 ypos 0.5
+define hasPlayBefore = True
+define defaultPlayerName = "Shujin"
+define playerName = defaultPlayerName
+
+#endregion
+#region Characters
+
+define c_misteriousMan = Character("???", who_color="#000")
+
+#endregion
+
+
+label splashscreen:
+    scene black
+    with Pause(1)
+
+    show text "{color=#fff}NSI122 Presents...{/color}" with dissolve
+    with Pause(2)
+
+    hide text with dissolve
+    with Pause(1)
+
+    return
+
 
 label start:
 
-    define s = Character('Sylvie', color="#c8ffc8")
-    define m = Character('Me', color="#c8c8ff")
+    if hasPlayBefore:
+        c_misteriousMan """...
 
-    m "I hate you"
+        Tu est revenu...
 
-    s "I can't bring myself to admit that it all went in one ear and out the other."
+        Je vois...
 
-    m "Are you going home now? Wanna walk back with me?"
+        J'imagine que tu voulais vérifier que tu avais bien tout exploré...
 
-    s "Sure!"
+        Que tu avais bien découvers...
 
-    s "Did you ever hear Lincon's famous saying, \"The problem with Internet quotations is that many of them are not genuine.\""
+        Tu dois te poser beaucoup de questions... 
+        
+        Sur le fonctionnement de cet univers...
 
-    m "pussy flap"
+        Sur la psycologie des personnages que tu a rencontré...
 
-    
-# The phrase in the brackets is the text that the game will display to prompt 
-# the player to enter the name they've chosen.
+        Quelle curiosité, tu ne me déçois pas.
 
-    $ player_name = renpy.input("What is your name?")
+        Moi aussi je me pose beaucoup de questions tu sais...
 
-    $ player_name = player_name.strip()
-# The .strip() instruction removes any extra spaces the player 
-# may have typed by accident.
+        Combien de parties as-tu relancé?
 
-#  If the player can't be bothered to choose a name, then we
-#  choose a suitable one for them:
-    if player_name == "":
-        $ player_name="Shujin"
+        Combien de fois avons-nous eu cette discution?
 
-# And get a nostalgic sigh from Seasons of Sakura fans!
-    
-# Now the other characters in the game can greet the player.
+        Combien de fois t'ai-je fais ce monologue?
+
+        Pour être honette avec toi...
+
+        Je pense que la seule question valable d'être posée est...
+
+        POURQUOI JE POSE CE GENRE DE QUESTION, C JUSTE UN JEU A LA FIN !
+
+        N'est-ce pas?"""
+
+        menu:
+            "Voulez-vous continuer en tant que \"%(playerName)s\" ?"
+
+            "Oui (Continuer à jouer)":
+                jump .after_menu
+
+            "Non (Changer de nom avant de continuer à jouer)":
+                jump name_choose
+
+        label .after_menu:
+            narrator """Rénitialisation du jeu pour \"%(playerName)s\"...
+
+            Terminé!"""
+
+    else:
+        c_misteriousMan """Hello there.........."""
+
+        narrator """Préparation pour la première uttilisation du programme...
+        
+        Terminé!"""
+
+    jump game_Launching
+
+label name_choose:
+    $ playerName = renpy.input("Veuillez entrer votre nom:")
+    $ playerName = playerName.strip()
+
+    if playerName == "":
+        $ playerName = defaultPlayerName
+
+        narrator "Erreur: Nom de personnage invalide! Votre nom sera par défaut \"%(defaultPlayerName)s\""
+
+    jump game_Launching
+
+label game_Launching:
+    $ hasPlayBefore = True
+    narrator "Lancement du jeu..."
+    show text "{color=#fff}Terminé!{/color}"
+    image white = "#fff"
+    scene white with Dissolve (1.5)
+    pause (1.5)
+    jump scene_1
+
+
+label scene_1:
+    scene black
   
-    "Sylvie" "Pleased to meet you, %(player_name)s!"
+    "Sylvie" "Pleased to meet you, %(playerName)s!"
 
 
 # always start with this, it hides the regular text box, brings up the phone and has a short delay 
@@ -98,9 +168,5 @@ label aftermenu:
     
     # this one puts away the phone!
     call phone_end
-    
-    window hide
-    show screen Day
-    pause
 
     return
