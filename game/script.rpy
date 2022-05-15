@@ -5,8 +5,8 @@ screen Day:
 
 label start:
 
-    define s = Character('Sylvie', color="#c8ffc8", what_slow_cps=text_speed)
-    define m = Character('Me', color="#c8c8ff", what_slow_cps=text_speed)
+    define s = Character('Sylvie', color="#c8ffc8")
+    define m = Character('Me', color="#c8c8ff")
 
     m "I hate you"
 
@@ -19,7 +19,7 @@ label start:
     s "Did you ever hear Lincon's famous saying, \"The problem with Internet quotations is that many of them are not genuine.\""
 
     m "pussy flap"
-    
+
     
 # The phrase in the brackets is the text that the game will display to prompt 
 # the player to enter the name they've chosen.
@@ -40,6 +40,8 @@ label start:
 # Now the other characters in the game can greet the player.
   
     "Sylvie" "Pleased to meet you, %(player_name)s!"
+
+
 # always start with this, it hides the regular text box, brings up the phone and has a short delay 
 # most of these calls include delays to make this look nicer
 # you can find the code behind these calls in options.rpy
