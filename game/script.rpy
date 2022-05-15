@@ -1,4 +1,5 @@
-﻿
+﻿define text_speed = 50
+
 screen Day:
     text "{color=#fff}Test hello world{/color}" xpos 0.5 ypos 0.5
 
