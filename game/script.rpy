@@ -15,9 +15,9 @@ label start:
 
     "Sylvie" "Did you ever hear Lincon's famous saying, \"The problem with Internet quotations is that many of them are not genuine.\""
 
+    "cunt" "pussy flap"
     window hide
     show screen Day
     pause
 
     return
-
