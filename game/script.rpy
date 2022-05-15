@@ -1,23 +1,14 @@
-﻿screen Day:
+﻿
+screen Day:
     text "{color=#fff}Test hello world{/color}" xpos 0.5 ypos 0.5
 
 label start:
 
-    "Sylvie" "Hi there! How was class?"
+    define s = Character('Sylvie', color="#c8ffc8", what_slow_cps=text_speed)
+    define m = Character('Me', color="#c8c8ff", what_slow_cps=text_speed)
 
-    "Me" "I hate you"
-
-    "Sylvie" "I can't bring myself to admit that it all went in one ear and out the other."
-
-    "Me" "Are you going home now? Wanna walk back with me?"
-
-    "Sylvie" "Sure!"
-
-    "Sylvie" "Did you ever hear Lincon's famous saying, \"The problem with Internet quotations is that many of them are not genuine.\""
-
-    "cunt" "pussy flap"
-    window hide
-    show screen Day
-    pause
+    s "hello there, welcome to the game" 
+    m "thank you"
+    s "test test..."
 
     return
