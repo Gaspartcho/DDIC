@@ -32,7 +32,7 @@ label start:
 #  If the player can't be bothered to choose a name, then we
 #  choose a suitable one for them:
     if player_name == "":
-        $ player_name="Shuji"
+        $ player_name="Shujin"
 
 # And get a nostalgic sigh from Seasons of Sakura fans!
     
