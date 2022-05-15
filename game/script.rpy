@@ -98,4 +98,3 @@ label aftermenu:
     pause
 
     return
-
