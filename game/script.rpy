@@ -1,6 +1,6 @@
 ﻿#region Variables
 
-define hasPlayBefore = True
+define hasPlayBefore = False
 define defaultPlayerName = "Shujin"
 define playerName = defaultPlayerName
 
@@ -58,7 +58,11 @@ label start:
 
         ...
         
-        Quoi"""
+        Quoi? Tu pensias vraiment que j'allais faire un discours méta sur la nature du jeu vidéo?
+        
+        Franchement tu a pris confiance depuis la dernière fois.
+        
+        Bon, je te laisse... Je t'ai déja gardé assé longtemps."""
 
         menu:
             "Voulez-vous continuer en tant que \"%(playerName)s\" ?"
@@ -75,11 +79,27 @@ label start:
             Terminé!"""
 
     else:
-        c_misteriousMan """Hello there.........."""
+        c_misteriousMan """...
+        
+        Oh !
+        
+        Tu est là !
+        
+        Tout d'abors, merci d'avoir installé ce programme...
+        
+        Pour des raisons personnelles, je préfère te cacher mon identitée pour l'instant.
+        
+        Sache juste que nous nous revéront pendant ton aventure...
+        
+        C'est tout pour mois. A bientot ;)"""
 
         narrator """Préparation pour la première uttilisation du programme...
-        
-        Terminé!"""
+
+        Erreur: Aucun nom d'uttilisateur enrengistré."""
+
+        call name_choose
+    
+        narrator "Initialisation Terminé!"
 
     jump game_Launching
 
