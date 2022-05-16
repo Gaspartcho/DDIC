@@ -56,11 +56,9 @@ label start:
 
         Pour être honette avec toi...
 
-        Je pense que la seule question valable d'être posée est...
-
-        POURQUOI JE POSE CE GENRE DE QUESTION, C JUSTE UN JEU A LA FIN !
-
-        N'est-ce pas?"""
+        ...
+        
+        Quoi"""
 
         menu:
             "Voulez-vous continuer en tant que \"%(playerName)s\" ?"
