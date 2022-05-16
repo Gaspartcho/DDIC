@@ -1,13 +1,29 @@
-﻿#region Variables
+#region Variables
 
 define hasPlayBefore = False
 define defaultPlayerName = "Shujin"
 define playerName = defaultPlayerName
 
 #endregion
+
+#region Randoms Functions
+
+init python:
+    def beepy_voice(event, interact=True, sound="audio/Narator_U_Voice.mp3", **kwargs):
+        if not interact:
+            return
+
+        if event == "show_done":
+            renpy.sound.play(sound, loop=True)
+        elif event == "slow_done":
+            renpy.sound.stop()
+
+#endregion
+
 #region Characters
 
-define c_misteriousMan = Character("???", who_color="#000")
+define c_mysteriousMan = Character("???", who_color="#000")
+define narrateur = Character(" ", callback=beepy_voice)
 
 #endregion
 
@@ -28,7 +44,7 @@ label splashscreen:
 label start:
 
     if hasPlayBefore:
-        c_misteriousMan """...
+        c_mysteriousMan """...
 
         Tu est revenu...
 
@@ -74,12 +90,12 @@ label start:
                 jump name_choose
 
         label .after_menu:
-            narrator """Rénitialisation du jeu pour \"%(playerName)s\"...
+            narrateur """Rénitialisation du jeu pour \"%(playerName)s\"...
 
             Terminé!"""
 
     else:
-        c_misteriousMan """...
+        c_mysteriousMan """...
         
         Oh !
         
@@ -89,34 +105,38 @@ label start:
         
         Pour des raisons personnelles, je préfère te cacher mon identitée pour l'instant.
         
-        Sache juste que nous nous revéront pendant ton aventure...
+        Sache juste que nous nous revéront pendant ton aventure.
+
+        Au fait, on m'a demandé de te poser une question avant que je puisse te laisser passer:
+
+        Selon toi, comment faire pour développer ou entretenir des relations sur internet?
         
-        C'est tout pour mois. A bientot ;)"""
+        C'est tout pour moi. A bientot ;)"""
 
-        narrator """Préparation pour la première uttilisation du programme...
+        narrateur "Preparation pour la première uttilisation du programme..."
 
-        Erreur: Aucun nom d'uttilisateur enrengistré."""
+        narrateur "Erreur: Aucun nom d'uttilisateur enrengistré."
 
         call name_choose
     
-        narrator "Initialisation Terminé!"
+        narrateur "Initialisation Terminé!"
 
     jump game_Launching
 
 label name_choose:
-    $ playerName = renpy.input("Veuillez entrer votre nom:")
+    $ playerName = renpy.input("Veuillez entrer votre nom:", length=32)
     $ playerName = playerName.strip()
 
-    if playerName == "":
+    if not playerName:
         $ playerName = defaultPlayerName
 
-        narrator "Erreur: Nom de personnage invalide! Votre nom sera par défaut \"%(defaultPlayerName)s\""
+        narrateur "Erreur: Nom de personnage invalide! Votre nom sera par défaut \"%(defaultPlayerName)s\""
 
     jump game_Launching
 
 label game_Launching:
     $ hasPlayBefore = True
-    narrator "Lancement du jeu..."
+    narrateur "Lancement du jeu..."
     show text "{color=#fff}Terminé!{/color}"
     image white = "#fff"
     scene white with Dissolve (1.5)
