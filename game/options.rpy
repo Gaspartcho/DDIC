@@ -72,6 +72,10 @@ transform incoming_message:
 transform PhoneTitle:
     xpos 0.44
     ypos 0.118
+
+transform hourPlace:
+    xpos 0.6
+    ypos 0.1
         
 #### labels to shortcut stuff so you dont need to copypaste stuff repeatedly! #####
 
@@ -80,6 +84,7 @@ label phone_start(usrName="Messages"):
     show phone at phone_pickup
     pause(0.2)
     show text "{color=#505050}{font=gui/font/roboto-bold.ttf}[usrName]{/font}{/color}" at PhoneTitle
+    return
     
 label phone_msg:
     $ renpy.pause()
@@ -127,7 +132,7 @@ label message(who, what):
     hide screen phone_message_image
     $ renpy.pause(0.1)
     # if you want to change the players name to be something else than "me" you can change it here
-    if who.lower() == playerName:
+    if who == playerName:
         show screen phone_message2(who, what)
     else:
         show screen phone_message(who, what)
@@ -156,7 +161,7 @@ label message_img(who, what,img):
 
 label message_start(who, what):
     # if you want to change the players name to be something else than "me" you can change it here
-    if who.lower() == playerName:
+    if who == playerName:
         show screen phone_message2(who, what)
     else:
         show screen phone_message(who, what)

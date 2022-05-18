@@ -1352,7 +1352,7 @@ screen phone_reply(reply1, label1, reply2, label2):
     modal True
     vbox:
         xalign 0.5
-        yalign 0.8
+        yalign 0.7
         spacing 5
         
         textbutton "[reply1]" action Jump(label1) style "phone_reply"
