@@ -1,8 +1,9 @@
 #region Variables
 
-define hasPlayBefore = False
+define hasPlayBefore = True
 define defaultPlayerName = "Shujin"
 define playerName = defaultPlayerName
+define LovePoints = {"Akane":0, "Bomi":0, "Himeno":0}
 
 #endregion
 
@@ -46,19 +47,19 @@ label start:
     if hasPlayBefore:
         c_mysteriousMan """...
 
-        Tu est revenu...
+        Tu es revenu...
 
         Je vois...
 
         J'imagine que tu voulais vérifier que tu avais bien tout exploré...
 
-        Que tu avais bien découvers...
+        Que tu avais bien tout découvert...
 
         Tu dois te poser beaucoup de questions... 
         
         Sur le fonctionnement de cet univers...
 
-        Sur la psycologie des personnages que tu a rencontré...
+        Sur la psychologie des personnages que tu a rencontré...
 
         Quelle curiosité, tu ne me déçois pas.
 
@@ -68,20 +69,22 @@ label start:
 
         Combien de fois avons-nous eu cette discution?
 
-        Combien de fois t'ai-je fais ce monologue?
+        Combien de fois t'ai-je répété ce monologue?
 
-        Pour être honette avec toi...
+        Pour être honnête avec toi...
 
         ...
         
-        Quoi? Tu pensias vraiment que j'allais faire un discours méta sur la nature du jeu vidéo?
+        Quoi? Tu pensais vraiment que j'allais faire un discours méta sur la nature du jeu vidéo?
         
-        Franchement tu a pris confiance depuis la dernière fois.
+        Franchement tu as pris confiance depuis la dernière fois.
         
-        Bon, je te laisse... Je t'ai déja gardé assé longtemps."""
+        Bon, je te laisse... Je t'ai déjà gardé assé longtemps.
+        
+        ;)"""
 
         menu:
-            "Voulez-vous continuer en tant que \"%(playerName)s\" ?"
+            narrateur "Voulez-vous continuer en tant que \"%(playerName)s\" ?"
 
             "Oui (Continuer à jouer)":
                 jump .after_menu
@@ -99,31 +102,35 @@ label start:
         
         Oh !
         
-        Tu est là !
+        Tu es là !
         
         Tout d'abors, merci d'avoir installé ce programme...
         
         Pour des raisons personnelles, je préfère te cacher mon identitée pour l'instant.
         
-        Sache juste que nous nous revéront pendant ton aventure.
+        Sache juste que nous nous revérons pendant ton aventure.
 
         Au fait, on m'a demandé de te poser une question avant que je puisse te laisser passer:
 
         Selon toi, comment faire pour développer ou entretenir des relations sur internet?
+
+        Réfléchis bien.
         
-        C'est tout pour moi. A bientot ;)"""
+        C'est tout pour moi. A bientot.
+        
+        ;)"""
 
         narrateur "Preparation pour la première uttilisation du programme..."
 
         narrateur "Erreur: Aucun nom d'uttilisateur enrengistré."
 
-        call name_choose
+        call name_choose()
     
         narrateur "Initialisation Terminé!"
 
     jump game_Launching
 
-label name_choose:
+label name_choose():
     $ playerName = renpy.input("Veuillez entrer votre nom:", length=32)
     $ playerName = playerName.strip()
 
@@ -131,8 +138,7 @@ label name_choose:
         $ playerName = defaultPlayerName
 
         narrateur "Erreur: Nom de personnage invalide! Votre nom sera par défaut \"%(defaultPlayerName)s\""
-
-    jump game_Launching
+    return
 
 label game_Launching:
     $ hasPlayBefore = True
@@ -146,18 +152,10 @@ label game_Launching:
 
 label scene_1:
     scene black
-  
-    "Sylvie" "Pleased to meet you, %(playerName)s!"
 
+    call phone_start
 
-# always start with this, it hides the regular text box, brings up the phone and has a short delay 
-# most of these calls include delays to make this look nicer
-# you can find the code behind these calls in options.rpy
-call phone_start
-
-# this brings up the message, first slot is the name, and second is the content
-# notice how it has _start at the end, the first one is special as there are no delays before it. use this for the first message
-call message_start("nadia", "hey, this is a phone texting thingy")
+    call message_start("nadia", "hey, this is a phone texting thingy")
 
 # added an alternate way to reply from the player perspective, this time the name doesnt show if you think its extra
 call reply_message("oh really? what does it do lol")
