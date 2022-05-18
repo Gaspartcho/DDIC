@@ -90,7 +90,7 @@ label start:
                 jump .after_menu
 
             "Non (Changer de nom avant de continuer à jouer)":
-                jump name_choose
+                call name_choose
 
         label .after_menu:
             narrateur """Rénitialisation du jeu pour \"%(playerName)s\"...
@@ -124,7 +124,7 @@ label start:
 
         narrateur "Erreur: Aucun nom d'uttilisateur enrengistré."
 
-        call name_choose()
+        call name_choose
     
         narrateur "Initialisation Terminé!"
 
@@ -153,7 +153,7 @@ label game_Launching:
 label scene_1:
     scene black
 
-    call phone_start
+    call phone_start("Akane")
 
     call message_start("nadia", "hey, this is a phone texting thingy")
 
