@@ -1,53 +1,161 @@
-﻿define text_speed = 50
+#region Variables
 
-screen Day:
-    text "{color=#fff}Test hello world{/color}" xpos 0.5 ypos 0.5
+define hasPlayBefore = True
+define defaultPlayerName = "Shujin"
+define playerName = defaultPlayerName
+define LovePoints = {"Akane":0, "Bomi":0, "Himeno":0}
+
+#endregion
+
+#region Randoms Functions
+
+init python:
+    def beepy_voice(event, interact=True, sound="audio/Narator_U_Voice.mp3", **kwargs):
+        if not interact:
+            return
+
+        if event == "show_done":
+            renpy.sound.play(sound, loop=True)
+        elif event == "slow_done":
+            renpy.sound.stop()
+
+#endregion
+
+#region Characters
+
+define c_mysteriousMan = Character("???", who_color="#000")
+define narrateur = Character(" ", callback=beepy_voice)
+
+#endregion
+
+
+label splashscreen:
+    scene black
+    with Pause(1)
+
+    show text "{color=#fff}NSI122 Presents...{/color}" with dissolve
+    with Pause(2)
+
+    hide text with dissolve
+    with Pause(1)
+
+    return
+
 
 label start:
 
-    define s = Character('Sylvie', color="#c8ffc8", what_slow_cps=text_speed)
-    define m = Character('Me', color="#c8c8ff", what_slow_cps=text_speed)
+    if hasPlayBefore:
+        c_mysteriousMan """...
 
-    m "I hate you"
+        Tu es revenu...
 
-    s "I can't bring myself to admit that it all went in one ear and out the other."
+        Je vois...
 
-    m "Are you going home now? Wanna walk back with me?"
+        J'imagine que tu voulais vérifier que tu avais bien tout exploré...
 
-    s "Sure!"
+        Que tu avais bien tout découvert...
 
-    s "Did you ever hear Lincon's famous saying, \"The problem with Internet quotations is that many of them are not genuine.\""
+        Tu dois te poser beaucoup de questions... 
+        
+        Sur le fonctionnement de cet univers...
 
-    m "pussy flap"
+        Sur la psychologie des personnages que tu a rencontré...
+
+        Quelle curiosité, tu ne me déçois pas.
+
+        Moi aussi je me pose beaucoup de questions tu sais...
+
+        Combien de parties as-tu relancé?
+
+        Combien de fois avons-nous eu cette discution?
+
+        Combien de fois t'ai-je répété ce monologue?
+
+        Pour être honnête avec toi...
+
+        ...
+        
+        Quoi? Tu pensais vraiment que j'allais faire un discours méta sur la nature du jeu vidéo?
+        
+        Franchement tu as pris confiance depuis la dernière fois.
+        
+        Bon, je te laisse... Je t'ai déjà gardé assé longtemps.
+        
+        ;)"""
+
+        menu:
+            narrateur "Voulez-vous continuer en tant que \"%(playerName)s\" ?"
+
+            "Oui (Continuer à jouer)":
+                jump .after_menu
+
+            "Non (Changer de nom avant de continuer à jouer)":
+                call name_choose
+
+        label .after_menu:
+            narrateur """Rénitialisation du jeu pour \"%(playerName)s\"...
+
+            Terminé!"""
+
+    else:
+        c_mysteriousMan """...
+        
+        Oh !
+        
+        Tu es là !
+        
+        Tout d'abors, merci d'avoir installé ce programme...
+        
+        Pour des raisons personnelles, je préfère te cacher mon identitée pour l'instant.
+        
+        Sache juste que nous nous revérons pendant ton aventure.
+
+        Au fait, on m'a demandé de te poser une question avant que je puisse te laisser passer:
+
+        Selon toi, comment faire pour développer ou entretenir des relations sur internet?
+
+        Réfléchis bien.
+        
+        C'est tout pour moi. A bientot.
+        
+        ;)"""
+
+        narrateur "Preparation pour la première uttilisation du programme..."
+
+        narrateur "Erreur: Aucun nom d'uttilisateur enrengistré."
+
+        call name_choose
     
-    
-# The phrase in the brackets is the text that the game will display to prompt 
-# the player to enter the name they've chosen.
+        narrateur "Initialisation Terminé!"
 
-    $ player_name = renpy.input("What is your name?")
+    jump game_Launching
 
-    $ player_name = player_name.strip()
-# The .strip() instruction removes any extra spaces the player 
-# may have typed by accident.
+label name_choose():
+    $ playerName = renpy.input("Veuillez entrer votre nom:", length=32)
+    $ playerName = playerName.strip()
 
-#  If the player can't be bothered to choose a name, then we
-#  choose a suitable one for them:
-    if player_name == "":
-        $ player_name="Shujin"
+    if not playerName:
+        $ playerName = defaultPlayerName
 
-# And get a nostalgic sigh from Seasons of Sakura fans!
-    
-# Now the other characters in the game can greet the player.
-  
-    "Sylvie" "Pleased to meet you, %(player_name)s!"
-# always start with this, it hides the regular text box, brings up the phone and has a short delay 
-# most of these calls include delays to make this look nicer
-# you can find the code behind these calls in options.rpy
-call phone_start
+        narrateur "Erreur: Nom de personnage invalide! Votre nom sera par défaut \"%(defaultPlayerName)s\""
+    return
 
-# this brings up the message, first slot is the name, and second is the content
-# notice how it has _start at the end, the first one is special as there are no delays before it. use this for the first message
-call message_start("nadia", "hey, this is a phone texting thingy")
+label game_Launching:
+    $ hasPlayBefore = True
+    narrateur "Lancement du jeu..."
+    show text "{color=#fff}Terminé!{/color}"
+    image white = "#fff"
+    scene white with Dissolve (1.5)
+    pause (1.5)
+    jump scene_1
+
+
+label scene_1:
+    scene black
+
+    call phone_start("Akane")
+
+    call message_start("nadia", "hey, this is a phone texting thingy")
 
 # added an alternate way to reply from the player perspective, this time the name doesnt show if you think its extra
 call reply_message("oh really? what does it do lol")
@@ -96,9 +204,5 @@ label aftermenu:
     
     # this one puts away the phone!
     call phone_end
-    
-    window hide
-    show screen Day
-    pause
 
     return

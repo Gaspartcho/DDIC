@@ -46,15 +46,15 @@ image phone = "images/phone.png"
 
 # Picking up the phone
 transform phone_pickup:
-    yalign 1.0 xalign 0.5
+    ypos -0.075 xalign 0.5
     yoffset 900
     easein 0.3 yoffset 100
 
 transform phone_hide:
-    yalign 1.0 xalign 0.5
+    ypos -0.075 xalign 0.5
     yoffset 100
-    easein 0.3 yoffset 1300   
-    
+    easein 0.3 yoffset 1300
+
 transform scrolling_out_message:
     easeout 0.1 yoffset -30 alpha 0
         
@@ -68,15 +68,18 @@ transform incoming_message:
 
     on hide:
         scrolling_out_message
-        
+
+transform PhoneTitle:
+    xpos 0.44
+    ypos 0.118
         
 #### labels to shortcut stuff so you dont need to copypaste stuff repeatedly! #####
 
-label phone_start:
+label phone_start(usrName="Messages"):
     window hide
     show phone at phone_pickup
-    $ renpy.pause(0.2)
-    return
+    pause(0.2)
+    show text "{color=#505050}{font=gui/font/roboto-bold.ttf}[usrName]{/font}{/color}" at PhoneTitle
     
 label phone_msg:
     $ renpy.pause()
@@ -111,6 +114,7 @@ label phone_end:
     hide screen phone_message2
     hide screen phone_message3
     hide screen phone_message_image
+    hide text
     show phone at phone_hide
     $ renpy.pause(0.2)
     return
@@ -123,7 +127,7 @@ label message(who, what):
     hide screen phone_message_image
     $ renpy.pause(0.1)
     # if you want to change the players name to be something else than "me" you can change it here
-    if who.lower() == "me":
+    if who.lower() == playerName:
         show screen phone_message2(who, what)
     else:
         show screen phone_message(who, what)
@@ -152,7 +156,7 @@ label message_img(who, what,img):
 
 label message_start(who, what):
     # if you want to change the players name to be something else than "me" you can change it here
-    if who.lower() == "me":
+    if who.lower() == playerName:
         show screen phone_message2(who, what)
     else:
         show screen phone_message(who, what)
@@ -246,7 +250,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 60
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0

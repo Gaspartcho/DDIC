@@ -1253,7 +1253,7 @@ style skip_triangle:
 # just keep changing stuff and refreshing the game until it works, sorry lol
 
 
-init 5:
+init 5: # Drfining the styles for the phone messages
     style phone_message_vbox:
         xalign 0.5
         yalign 0
