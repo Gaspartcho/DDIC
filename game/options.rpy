@@ -41,12 +41,9 @@ define build.name = "ddic"
 
 ################# phone code stars ###################
 
-image phone = "images/phone.png"
-
-
 # Picking up the phone
 transform phone_pickup:
-    ypos -0.075 xalign 0.5
+    xpos 0.35 ypos -0.09
     yoffset 900
     easein 0.3 yoffset 100
 
@@ -68,22 +65,21 @@ transform incoming_message:
 
     on hide:
         scrolling_out_message
-
-transform PhoneTitle:
-    xpos 0.44
-    ypos 0.118
-
-transform hourPlace:
-    xpos 0.6
-    ypos 0.1
         
 #### labels to shortcut stuff so you dont need to copypaste stuff repeatedly! #####
 
-label phone_start(usrName="Messages"):
+label phone_start(usrName = "Messages", hour = "17:30"):
+    define usrName = usrName #Ca ne marche PASSSSSSSSSSSS (suprime sinon ca vas crash le jeu)
+    init python:
+        if usrName != "Messages":
+            couleur = charactersColors[usrName]
+            style.phone_message_frame.background = renpy.solid(charactersColors[usrName])
+        else:
+            style.phone_message_frame.background = renpy.solid("#d9398c")
+
     window hide
-    show phone at phone_pickup
+    show screen phone_object(usrName, hour)
     pause(0.2)
-    show text "{color=#505050}{font=gui/font/roboto-bold.ttf}[usrName]{/font}{/color}" at PhoneTitle
     return
     
 label phone_msg:

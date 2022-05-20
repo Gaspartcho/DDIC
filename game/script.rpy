@@ -4,6 +4,7 @@ define hasPlayBefore = False
 define defaultPlayerName = "Shujin"
 define playerName = defaultPlayerName
 define LovePoints = {"Akane":0, "Bomi":0, "Himeno":0}
+define charactersColors = {"Akane":"#efc87e", "Bomi":0, "Himeno":0}
 
 #endregion
 
@@ -153,7 +154,7 @@ label game_Launching:
 label scene_1:
     scene black
     define talkingCharacter = "Akane"
-    call phone_start(talkingCharacter)
+    call phone_start(talkingCharacter, "21:30")
     call message_start(talkingCharacter, "Salut! Je t'ai ajouté en amis comme ça tu pouras me joindre si tu a des questions.")
     pause 1.0
 
@@ -205,18 +206,13 @@ label scene_1:
             
         label .aftermenu:
             
-        call phone_end # this one puts away the phone!
+    call phone_end # this one puts away the phone!
 
-        return
-
-
+    return
 
 
-                # added an alternate way to reply from the player perspective, this time the name doesnt show if you think its extra
-        call reply_message("oh really? what does it do lol")
 
-        # this one is the same as the above one, but instead it has one more place for you to set an image
-        # you have to make the image be small enough to fit the screen or its gonna stretch weird!
-        call message_img("nadia", "it works with images too!","images/pic1.png")
-        call message("nadia", "the text box changes depending on how much content there is. dont put too big images or its gonna look weeeeiiiird")
-        call message("nadia", "you can also do menus here")
+
+    # added an alternate way to reply from the player perspective, this time the name doesnt show if you think its extra
+    call reply_message("oh really? what does it do lol")
+    call message_img("nadia", "it works with images too!","images/pic1.png")
