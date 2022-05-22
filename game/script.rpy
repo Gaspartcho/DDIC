@@ -208,7 +208,7 @@ label scene_1:
             
     call phone_end # this one puts away the phone!
 
-    jump scene_2:
+    jump scene_2
 
 
 label scene_2:
