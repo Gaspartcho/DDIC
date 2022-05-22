@@ -1,9 +1,10 @@
 #region Variables
 
-define hasPlayBefore = True
+define hasPlayBefore = False
 define defaultPlayerName = "Shujin"
 define playerName = defaultPlayerName
 define LovePoints = {"Akane":0, "Bomi":0, "Himeno":0}
+define charactersColors = {"Akane":"#efc87e", "Bomi":0, "Himeno":0}
 
 #endregion
 
@@ -152,57 +153,66 @@ label game_Launching:
 
 label scene_1:
     scene black
+    define talkingCharacter = "Akane"
+    call phone_start(talkingCharacter, "21:30")
+    call message_start(talkingCharacter, "Salut! Je t'ai ajouté en amis comme ça tu pouras me joindre si tu a des questions.")
+    pause 1.0
 
-    call phone_start("Akane")
+    label choiceMaking_WAY: # Use this template eatch time u want to make a phone menu
+        call screen phone_reply("Cool merci","choiceMaking_WAY.choice1","Qui es-tu ?","choiceMaking_WAY.choice2")
 
-    call message_start("nadia", "hey, this is a phone texting thingy")
+        label .choice1:    
+            call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
+            call message_start(playerName, "Cool merci") # whenever you put the sender name to be playerName it is the player characters own message!
+            call message(talkingCharacter, "Pas de problème, ça me fais plaisir ;)")
+            call message(talkingCharacter, "Je ne suis pas déléguée pour rien")
+            call message(talkingCharacter, "(enfin celle de l'année dernière mais ce n'est pas important...)")
 
-# added an alternate way to reply from the player perspective, this time the name doesnt show if you think its extra
-call reply_message("oh really? what does it do lol")
+            jump .aftermenu
+            
+        label .choice2:
+            call phone_after_menu
+            call message_start(playerName, "Qui es-tu ?")
+            call message(talkingCharacter, "Ah oui, j'ai complètement oublillé les présentations...")
+            call message(talkingCharacter, "Je m'appelle Akane! Je suis la déléguée de nottre classe. Enfin celle de l'année dernière mais on n'a pas encore fais les éléctions donc je prend le rôle pour l'instant")
+            call message(talkingCharacter, "Mais de toute façon je vais surement être ré-élue: je suis copine avec tout le monde ici.")
+            
+            jump .aftermenu
+            
+        label .aftermenu:
 
-# this one is the same as the above one, but instead it has one more place for you to set an image
-# you have to make the image be small enough to fit the screen or its gonna stretch weird!
-call message_img("nadia", "it works with images too!","images/pic1.png")
-call message("nadia", "the text box changes depending on how much content there is. dont put too big images or its gonna look weeeeiiiird")
-call message("nadia", "you can also do menus here")
-
-# the next line is the menu system, first and third slot are the menu options, second and fourth one are what happens when you click it
-
-# i made a special reply menu called phone_reply3 which can use 3. if you wish to have more you can make a new reply4 and see how i modified the code between the first reply code
-call screen phone_reply("awesome!","choice1","lame","choice2")
-# i made a special reply menu called phone_reply3 which can use 3. if you wish to have more you can make a new reply4 and see how i modified the code between the first reply code
-##call screen phone_reply3("awesome!","choice1","lame","choice2","im gay","choice3")
-
-label choice1:    
-    # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
-    call phone_after_menu
+    call message(talkingCharacter, "Bref, tu commence bien demain c'est ça?")
+    call message(playerName, "Ouai")
+    call message(talkingCharacter, "Ok cool. Pense bien à aller me voir dans la cour demain matin pour que je t'explique le fonctionnement et que je te présente au reste de la classe")
     
-    # whenever you put the sender name to be "me" it is the player characters own message!
-    call message_start("me", "awesome")
-    call message("nadia", "i hope you like it")
+    label choiceMaking_ST: # Use this template eatch time u want to make a phone menu
+        call screen phone_reply("Le fonctionnement?","choiceMaking_ST.choice1","Ok bonne nuit","choiceMaking_ST.choice2")
 
-    jump aftermenu
-    
-label choice2:
-    call phone_after_menu
-    call message_start("me", "lame")
-    call message("nadia", "well, its a shame but your feelings are valid")
-    
-    jump aftermenu
+        label .choice1:    
+            call phone_after_menu
+            call message_start(playerName, "Le fonctionnement?")
+            call message(talkingCharacter, "Ne t'inquiète pas, ce n'est pas grand chose: just un ou deux {i}petits{/i} détails")
+            call message(talkingCharacter, "Bon je vais aller me coucher. Bonne nuit.")
+            call message(playerName, "A demain")
 
-label choice3:
-    call phone_after_menu
-    call message_start("me", "im gay")
-    call message("nadia", "nice")
-    
-    jump aftermenu    
-    
-label aftermenu:
-    call message("nadia", "check the code for comments on how the code works, thanks for your time!")
-    call message("nadia", "the base for this code and this stretched phone background comes from cute demon crashers")
-    call message("nadia", "the images were drawn by my gf @sloppydraws")
-    
-    # this one puts away the phone!
-    call phone_end
+            jump .aftermenu
+            
+        label .choice2:
+            call phone_after_menu
+            call message_start(playerName, "Ok bonne nuit")
+            call message(talkingCharacter, "Bonne nuit")
+            
+            jump .aftermenu
+            
+        label .aftermenu:
+            
+    call phone_end # this one puts away the phone!
 
     return
+
+
+
+
+    # added an alternate way to reply from the player perspective, this time the name doesnt show if you think its extra
+    call reply_message("oh really? what does it do lol")
+    call message_img("nadia", "it works with images too!","images/pic1.png")
