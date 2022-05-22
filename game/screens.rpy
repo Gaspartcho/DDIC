@@ -1262,11 +1262,12 @@ init 5: # Drfining the styles for the phone messages
         xoffset -40
         
     style phone_message_frame:
+        background Solid("#efc87e")
         ypadding 10
-        xpadding 10
+        xpadding 40
         
-    style phone_message_frame2:
-        background Solid("#78E8A0")
+    style phone_message2_frame:
+        background Solid("#c6dff3")
         ypadding 10
         xpadding 10
 
@@ -1287,11 +1288,12 @@ init 5: # Drfining the styles for the phone messages
         
         
     style phone_message_who is phone_message:
-        color "#ecf0f1"
+        color "#333"
         size 25
+        bold True
 
     style phone_message_what is phone_message:
-        color "#ffffff"
+        color "#444"
         size 24
 
     style phone_reply is default:
@@ -1299,14 +1301,14 @@ init 5: # Drfining the styles for the phone messages
         xalign 0.5
         xsize 475
         background Solid("#666")
-        hover_background Solid("#78E8A0")
+        hover_background Solid("#c6dff3")
         ypadding 10
         xpadding 10
 
 
 screen phone_object(caller, hour):
     fixed at phone_pickup:
-        add "images/phone.png"
+        add "images/Phone/phone.png"
         text caller xpos 0.06 ypos 0.085 font "gui/font/roboto-bold.ttf" color "000"
         text hour xpos 0.24 ypos 0.04 font "gui/font/roboto-bold.ttf" color "000" size 25
 
@@ -1330,7 +1332,6 @@ screen phone_message2(who, what):
 
         frame:
             style_group "phone_message2"
-            background Solid("#78E8A0")
             xsize 200
             
             vbox:
@@ -1346,7 +1347,6 @@ screen phone_message3(what):
         
         frame:
             style_group "phone_message2"
-            background Solid("#78E8A0")
             xsize 200
             
             vbox:

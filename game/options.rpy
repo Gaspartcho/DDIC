@@ -69,14 +69,6 @@ transform incoming_message:
 #### labels to shortcut stuff so you dont need to copypaste stuff repeatedly! #####
 
 label phone_start(usrName = "Messages", hour = "17:30"):
-    define usrName = usrName #Ca ne marche PASSSSSSSSSSSS (suprime sinon ca vas crash le jeu)
-    init python:
-        if usrName != "Messages":
-            couleur = charactersColors[usrName]
-            style.phone_message_frame.background = renpy.solid(charactersColors[usrName])
-        else:
-            style.phone_message_frame.background = renpy.solid("#d9398c")
-
     window hide
     show screen phone_object(usrName, hour)
     pause(0.2)
@@ -116,8 +108,8 @@ label phone_end:
     hide screen phone_message3
     hide screen phone_message_image
     hide text
-    show phone at phone_hide
-    $ renpy.pause(0.2)
+    hide screen phone_object with fade
+    pause (1.0)
     return
 
 label message(who, what):
