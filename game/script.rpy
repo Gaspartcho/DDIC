@@ -208,11 +208,16 @@ label scene_1:
             
     call phone_end # this one puts away the phone!
 
+    jump scene_2:
+
+
+label scene_2:
+    #blablabla
     return
 
 
 
 
-    # added an alternate way to reply from the player perspective, this time the name doesnt show if you think its extra
-    call reply_message("oh really? what does it do lol")
-    call message_img("nadia", "it works with images too!","images/pic1.png")
+# added an alternate way to reply from the player perspective, this time the name doesnt show if you think its extra
+call reply_message("oh really? what does it do lol")
+call message_img("nadia", "it works with images too!","images/pic1.png")
