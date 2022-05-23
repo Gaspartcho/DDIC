@@ -1382,6 +1382,10 @@ screen phone_reply3(reply1, label1, reply2, label2, reply3, label3,):
 style phone_reply_text:
     xalign 0.5
 
+style message_image_resize:
+    xsize 300
+    ysize 300
+
 screen phone_message_image(who, what, img):
     vbox at incoming_message:
         style_group "phone_message"
@@ -1393,7 +1397,9 @@ screen phone_message_image(who, what, img):
                 style "phone_message_contents"
                 text who style "phone_message_who"
                 text what style "phone_message_what"
-                add img
+                vbox:
+                    style "message_image_resize"
+                    add Frame(img)
                 
 
 

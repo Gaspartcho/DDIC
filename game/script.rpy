@@ -11,6 +11,9 @@ label splashscreen:
     return
 
 label start:
+    stop music
+
+    play music "audio/musics/Ambiant_misterious.mp3" fadein 1.0 loop
 
     if hasPlayBefore:
         c_mysteriousMan """...
@@ -51,6 +54,8 @@ label start:
         
         ;)"""
 
+        stop music fadeout 1.0
+
         menu:
             narrateur "Voulez-vous continuer en tant que \"%(playerName)s\" ?"
 
@@ -84,17 +89,19 @@ label start:
 
         Réfléchis bien.
         
-        C'est tout pour moi. A bientot.
+        C'est tout pour moi. A bientôt.
         
         ;)"""
 
-        narrateur "Preparation pour la première uttilisation du programme..."
+        stop music fadeout 1.0
 
-        narrateur "Erreur: Aucun nom d'uttilisateur enrengistré."
+        narrateur """Preparation pour la première uttilisation du programme...
+
+        Erreur: Aucun nom d'uttilisateur enrengistré."""
 
         call name_choose
     
-        narrateur "Initialisation Terminé!"
+        narrateur "Initialisation pour le joueur \"%(playerName)s\": Terminé!"
 
     jump game_Launching
 
@@ -160,9 +167,13 @@ label scene_1:
             call phone_after_menu
             call message_start(playerName, "\"Deux-trois choses?\"")
             call message(talkingCharacter, "Oui, il faut que je te préviènne: il y a cette fille, {b}Bomi{/b}. Elle terrorsie un peut qui elle veut...")
-            call message(talkingCharacter, "Attend, je t'envoie une photo")
-            call message(playerName, "A demain")
-
+            call message_img(talkingCharacter, "Attend, je t'envoie une photo", "images/instagram/H1_insta.png")
+            call message(talkingCharacter, "On ne dirais pas comme ça, mais c'est une vraie peste! Toujours à embêter des gens comme Bomi")
+            call message(talkingCharacter, "Bref, tout ça pour te dire de ne pas trop te rapprocher d'elle...")
+            call message(playerName, "D'accord, je ferais attention, merci.")
+            call message(talkingCharacter, "Oh, mais ne t'inquiète pas, il y a pleint d'autres bon trucs ici!")
+            call message(talkingCharacter, "Bon, je vais aller me coucher, il commence à faire tard. Bonne nuit")
+            call message(playerName, "Bonne nuit.")
             jump .aftermenu
             
         label .choice2:
