@@ -1,6 +1,6 @@
 #region Variables
 
-define hasPlayBefore = True
+define hasPlayBefore = False
 
 define defaultPlayerName = "Shujin"
 define playerName = defaultPlayerName

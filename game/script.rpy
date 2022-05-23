@@ -211,7 +211,6 @@ label scene_2:
 
 
 
-
 # added an alternate way to reply from the player perspective, this time the name doesnt show if you think its extra
 call reply_message("oh really? what does it do lol")
 call message_img("nadia", "it works with images too!","images/pic1.png")
