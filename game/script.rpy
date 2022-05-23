@@ -121,7 +121,9 @@ label scene_1:
     scene black
     define talkingCharacter = "Akane"
     call phone_start(talkingCharacter, "21:30")
-    call message_start(talkingCharacter, "Salut! Je t'ai ajouté en amis comme ça tu pouras me joindre si tu a des questions.")
+    call message_start(talkingCharacter, "Salut! Je t'ai ajouté en amis comme ça tu pouras me joindre si tu a des questions: sur les devoirs, sur les élèves, les profs et tout et tout...")
+    call message(talkingCharacter, "Je pourais aussi t'aider à t'intégrer à la classe si tu veux")
+    call message(talkingCharacter, "Comme tu arrive en millieu d'année, je me doute bien que ça peu être difficile, mais tu peux compter sur moi!")
     pause 1.0
 
     label choiceMaking_WAY: # Use this template eatch time u want to make a phone menu
@@ -149,16 +151,16 @@ label scene_1:
 
     call message(talkingCharacter, "Bref, tu commence bien demain c'est ça?")
     call message(playerName, "Ouai")
-    call message(talkingCharacter, "Ok cool. Pense bien à aller me voir dans la cour demain matin pour que je t'explique le fonctionnement et que je te présente au reste de la classe")
+    call message(talkingCharacter, "Ok cool. Pense bien à aller me voir dans la cour demain matin pour que je t'explique deux-trois choses et que je te présente au reste de la classe")
     
     label choiceMaking_ST: # Use this template eatch time u want to make a phone menu
-        call screen phone_reply("Le fonctionnement?","choiceMaking_ST.choice1","Ok bonne nuit","choiceMaking_ST.choice2")
+        call screen phone_reply("\"Deux-trois choses?\"","choiceMaking_ST.choice1","Ok bonne nuit","choiceMaking_ST.choice2")
 
         label .choice1:    
             call phone_after_menu
-            call message_start(playerName, "Le fonctionnement?")
-            call message(talkingCharacter, "Ne t'inquiète pas, ce n'est pas grand chose: just un ou deux {i}petits{/i} détails")
-            call message(talkingCharacter, "Bon je vais aller me coucher. Bonne nuit.")
+            call message_start(playerName, "\"Deux-trois choses?\"")
+            call message(talkingCharacter, "Oui, il faut que je te préviènne: il y a cette fille, {b}Bomi{/b}. Elle terrorsie un peut qui elle veut...")
+            call message(talkingCharacter, "Attend, je t'envoie une photo")
             call message(playerName, "A demain")
 
             jump .aftermenu
