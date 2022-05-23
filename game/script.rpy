@@ -130,7 +130,7 @@ label scene_1:
         label .choice1:    
             call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
             call message_start(playerName, "Cool merci") # whenever you put the sender name to be playerName it is the player characters own message!
-            call message(talkingCharacter, "Pas de problème, ça me fais plaisir ;)")
+            call message(talkingCharacter, "Pas de problème, ça me fais plaisir :)")
             call message(talkingCharacter, "Je ne suis pas déléguée pour rien")
             call message(talkingCharacter, "(enfin celle de l'année dernière mais ce n'est pas important...)")
 
@@ -188,9 +188,24 @@ label scene_2:
     
     c_bomi "Bienvenue!"
     
-    c_bomi "Je m'appelle Bomi"
+    c_bomi """Je m'appelle Bomi!
+    
+    ...
+    
+    ..."""
 
-    c_bomi
+    menu:
+        c_bomi "..."
+
+        "Est-ce que ça vas?":
+            c_bomi "oui oui, je vais bien..."
+
+        "{i}Se retouner et commencer à partir...{/i}":
+            c_bomi "Non attend!"
+    
+    c_bomi """Désollé... Je suis un peut timide
+    
+    """
 
     return
 

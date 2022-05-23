@@ -28,11 +28,11 @@ init python:
 define c_mysteriousMan = Character("???", who_color="#000")
 define narrateur = Character(" ", callback=beepy_voice("audio/Narator_U_Voice.mp3"))
 
-define c_bomi = Character("Bomi", who_color="pink")
+define c_bomi = Character("Bomi", who_color="779b5a")
 
 #endregion
 
-#region Immages:
+#region Images:
 
 #Akane
 image akane armscrossed noeyes = "images/Characters/Akane/akane_armscrossed_noeyes.png"

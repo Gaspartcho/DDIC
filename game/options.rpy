@@ -47,11 +47,6 @@ transform phone_pickup:
     yoffset 900
     easein 0.3 yoffset 100
 
-transform phone_hide:
-    ypos -0.075 xalign 0.5
-    yoffset 100
-    easein 0.3 yoffset 1300
-
 transform scrolling_out_message:
     easeout 0.1 yoffset -30 alpha 0
         
@@ -110,6 +105,7 @@ label phone_end:
     hide text
     hide screen phone_object with fade
     pause (1.0)
+    window show
     return
 
 label message(who, what):
@@ -136,7 +132,7 @@ label reply_message(what):
     show screen phone_message3(what)
     return
 
-label message_img(who, what,img):
+label message_img(who, what, img):
     $ renpy.pause()
     hide screen phone_message
     hide screen phone_message2
