@@ -1257,7 +1257,7 @@ init 5: # Drfining the styles for the phone messages
     style phone_message_vbox:
         xalign 0.5
         yalign 0
-        ypos 380
+        ypos 300
         xsize 360
         xoffset -40
         
