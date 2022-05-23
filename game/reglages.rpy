@@ -5,7 +5,6 @@ define hasPlayBefore = False
 define defaultPlayerName = "Shujin"
 define playerName = defaultPlayerName
 define LovePoints = {"Akane":0, "Bomi":0, "Himeno":0}
-define charactersColors = {"Akane":"#efc87e", "Bomi":0, "Himeno":0}
 
 #endregion
 
@@ -35,15 +34,15 @@ define c_bomi = Character("Bomi", who_color="779b5a")
 #region Images:
 
 #Akane
-image akane armscrossed noeyes = "images/Characters/Akane/akane_armscrossed_noeyes.png"
-image akane chin noeyes = "images/Characters/Akane/akane_chin_noeyes.png"
+image akane armscrossed = "images/Characters/Akane/akane_armscrossed.png"
+image akane chin = "images/Characters/Akane/akane_chin.png"
 
 #Bomi
-image bomi armsback noeyes = "images/Characters/Bomi/bomi_armsback_noeyes.png"
-image bomi question noeyes = "images/Characters/Bomi/bomi_question_noeyes.png"
+image bomi armsback = "images/Characters/Bomi/bomi_armsback.png"
+image bomi fingie = "images/Characters/Bomi/bomi_fingie.png"
 
 #Himeno
-image himeno driveout noeyes = "images/Characters/Himeno/himeno_driveout_noeyes.png"
-image himeno phone noeyes = "images/Characters/Himeno/himeno_phone_noeyes.png"
+image himeno driveout = "images/Characters/Himeno/himeno_driveout.png"
+image himeno phone = "images/Characters/Himeno/himeno_phone.png"
 
 #endregion
