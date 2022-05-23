@@ -1,35 +1,3 @@
-#region Variables
-
-define hasPlayBefore = False
-define defaultPlayerName = "Shujin"
-define playerName = defaultPlayerName
-define LovePoints = {"Akane":0, "Bomi":0, "Himeno":0}
-define charactersColors = {"Akane":"#efc87e", "Bomi":0, "Himeno":0}
-
-#endregion
-
-#region Randoms Functions
-
-init python:
-    def beepy_voice(event, interact=True, sound="audio/Narator_U_Voice.mp3", **kwargs):
-        if not interact:
-            return
-
-        if event == "show_done":
-            renpy.sound.play(sound, loop=True)
-        elif event == "slow_done":
-            renpy.sound.stop()
-
-#endregion
-
-#region Characters
-
-define c_mysteriousMan = Character("???", who_color="#000")
-define narrateur = Character(" ", callback=beepy_voice)
-
-#endregion
-
-
 label splashscreen:
     scene black
     with Pause(1)
@@ -41,7 +9,6 @@ label splashscreen:
     with Pause(1)
 
     return
-
 
 label start:
 
@@ -131,7 +98,7 @@ label start:
 
     jump game_Launching
 
-label name_choose():
+label name_choose:
     $ playerName = renpy.input("Veuillez entrer votre nom:", length=32)
     $ playerName = playerName.strip()
 
@@ -149,7 +116,6 @@ label game_Launching:
     scene white with Dissolve (1.5)
     pause (1.5)
     jump scene_1
-
 
 label scene_1:
     scene black
@@ -210,9 +176,22 @@ label scene_1:
 
     jump scene_2
 
-
 label scene_2:
-    #blablabla
+    
+
+
+    c_bomi "Oh!"
+    
+    c_bomi "Bon... - Bonjour!"
+    
+    c_bomi "Tu es le nouvel élève c'est ça?"
+    
+    c_bomi "Bienvenue!"
+    
+    c_bomi "Je m'appelle Bomi"
+
+    c_bomi
+
     return
 
 

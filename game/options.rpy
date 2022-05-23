@@ -330,3 +330,11 @@ init python:
 ## by a slash.
 
 # define build.itch_project = "renpytom/test-project"
+
+
+
+#region Others Options
+
+define gui.choice_button_text_idle_color = '#555'
+
+#endregion
