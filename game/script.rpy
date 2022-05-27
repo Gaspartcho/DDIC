@@ -128,29 +128,30 @@ label scene_1:
     scene black
     define talkingCharacter = "Akane"
     call phone_start(talkingCharacter, "21:30")
-    call message_start(talkingCharacter, "Bienvenue à l'école X ! Je suis Akane Kousei, votre délégué de classe. Si vous avez des questions à poser, n'hésitez pas à les poser soit à moi, à vos camarades de classe ou aux enseignants :)","images\instagram\A1_insta.png")
+    call message_start(talkingCharacter, " Bienvenue à l'école X ! Je suis Akane Kousei, votre déléguée de classe. Si vous avez une question, n'hésitez pas à les poser soit à vos camarades, soit aux enseignants, ou vous pouvez venir me voir. Même si vous nous avez rejoint très tard dans l'année, nous vous accueillons toujours à bras ouverts :","images\instagram\A1_insta.png")
     call message(talkingCharacter, "Comme tu arrive en millieu d'année, je me doute bien que ça peu être difficile, mais tu peux compter sur moi!")
     pause 1.0
 
     label choiceMaking_WAY: # Use this template eatch time u want to make a phone menu
-        call screen phone_reply("Merci! Je serai à ta charge :)","choiceMaking_WAY.choice1","Merci! Tu es très belle, comme il se doit pour être déléguée de classe !","choiceMaking_WAY.choice2")
+        call screen phone_reply("Merci! Je vais essayer d’être sage :)","choiceMaking_WAY.choice1","Merci! Je te trouve très belle, ce qui est naturel pour une déléguée!","choiceMaking_WAY.choice2")
 
         label .choice1:    
             call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
             call message_start(playerName, "Merci! Je serai à ta charge :)") # whenever you put the sender name to be playerName it is the player characters own message!
-            call message(talkingCharacter, "Haha ! Si tu le souhaites, je t'enverrai par e-mail le travail que nous avons fait jusqu'à présent dans les cours que nous partageons ^^")
+            call message(talkingCharacter, "Haha ! Si tu veux, je t'enverrai par e-mail ce qu’on a fait depuis le début de l’année dans nos cours en commun^^")
             jump .aftermenu
             
         label .choice2:
             call phone_after_menu
             call message_start(playerName, "Merci! Tu es très belle, comme il se doit pour être déléguée de classe !")
-            call message(talkingCharacter, "Ahh… Merci beaucoup ^^J'aimerais avoir l'air aussi bien en personne.")
+            call message(talkingCharacter, "Ahh… Merci beaucoup ^^")
+            call message(talkingCharacter, "J'aimerais bien être aussi belle en vrai .")
             jump .aftermenu
             
         label .aftermenu:
 
-    call message(talkingCharacter, "Quoi qu'il en soit, envoies-moi un SMS quand tu le souhaites et je te répondrai le plus vite possible, je ne suis pas une personne très occupée.")
-    call message(talkingCharacter, "Ah ! Cela donne probablement l'impression que je ne fais pas mon travail de délégué de classe… Je jure que les choses se font ici !")
+    call message(talkingCharacter, "Quoi qu'il en soit, envoies-moi un SMS dès que t’as besoin de quoi que ce soit et je te répondrai le plus vite possible, je suis presque tout le temps dispo.")
+    call message(talkingCharacter, "Ah euh… Ça donne probablement l'impression que je ne fais pas mon travail de déléguée… Je te jure que c’est qu’une impression !")
     
     label choiceMaking_ST: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("\"Deux-trois choses?\"","choiceMaking_ST.choice1","Ok bonne nuit","choiceMaking_ST.choice2")
