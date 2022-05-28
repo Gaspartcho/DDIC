@@ -130,6 +130,7 @@ label scene_1:
     call phone_start(talkingCharacter, "21:30")
     call message_start(talkingCharacter, "Bienvenue à l'école X ! Je suis Akane Kousei, votre déléguée de classe. Si vous avez une question, n'hésitez pas à les poser soit à vos camarades, soit aux enseignants, ou vous pouvez venir me voir. Même si vous nous avez rejoint très tard dans l'année, nous vous accueillons toujours à bras ouverts :)")
     call message(talkingCharacter, "Comme tu arrive en millieu d'année, je me doute bien que ça peu être difficile, mais tu peux compter sur moi!")
+    call message_img(talkingCharacter, "Ça c'est moi.", "images\instagram\A1_insta.png")
     pause 1.0
 
     label choiceMaking_WAY: # Use this template eatch time u want to make a phone menu
