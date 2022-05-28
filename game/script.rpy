@@ -260,6 +260,7 @@ label scene_1:
     "Je devrais plus me concentrer en cours."
     jump mainmenuchoice
     label .mainmenuchoice:
+        scene 
 
     return
 
