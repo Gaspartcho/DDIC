@@ -77,11 +77,11 @@ label start:
         
         Tu es là !
         
-        Tout d'abors, merci d'avoir installé ce programme...
+        Tout d'abord, merci d'avoir installé ce programme...
         
-        Pour des raisons personnelles, je préfère te cacher mon identitée pour l'instant.
+        Pour des raisons personnelles, je préfère te cacher mon identité pour l'instant.
         
-        Sache juste que nous nous revérons pendant ton aventure.
+        Sache juste que nous nous reverons pendant ton aventure.
 
         Au fait, on m'a demandé de te poser une question avant que je puisse te laisser passer:
 
@@ -133,7 +133,7 @@ define bedroom_sleep = "images\scenes\bedroom_sleep.png"
 label scene_1:
     scene bedroom_sleep with fade
     call phone_start("Kousei.Akane", "21:30")
-    call message_start(ta, "Bienvenue à l'école X ! Je suis {b}Akane Kousei{b/}, votre déléguée de classe. Si vous avez une question, n'hésitez pas à la poser soit à vos camarades, soit aux enseignants, ou vous pouvez venir me voir. Même si vous nous avez rejoint très tard dans l'année, nous vous accueillons toujours à bras ouverts :)")
+    call message_start(ta, "Bienvenue à l'école X ! Je suis {b}Akane Kousei{/b}, votre déléguée de classe. Si vous avez une question, n'hésitez pas à la poser soit à vos camarades, soit aux enseignants, ou vous pouvez venir me voir. Même si vous nous avez rejoint très tard dans l'année, nous vous accueillons toujours à bras ouverts :)")
     call message_img(ta, "Ça c'est moi.", "images/instagram/A1_insta.png")
     call message(ta, "Comme tu arrive en millieu d'année, je me doute bien que ça peu être difficile, mais tu peux compter sur moi!")
     pause 1.0
@@ -177,7 +177,7 @@ label scene_1:
         label .aftermenu:
 
     call message_img(ta, "Tiens", "images/instagram/H1_insta.png")
-    call message(ta, "Elle s'appelle {b}Himeno Yuzu{/b}. Je ne veux pas que vous fassiez quoi que ce soit, ce serait gênant si les gens savaient que la déléguée se fait harceler. Haha.")
+    call message(ta, "Elle s'appelle {b}Himeno Yuzu{/b}. Je ne veux pas que tu fasses quoi que ce soit, ce serait gênant si les gens savaient que la déléguée se fait harceler. Haha.")
     call message(ta, "Oh! Mes parents m'appellent. Je te verrai demain :))")
     call phone_end # this one puts away the phone!
     call phone_start("yuzu.himi", "22:13")
