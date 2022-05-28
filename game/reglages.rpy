@@ -30,7 +30,8 @@ define c_mysteriousMan = Character("???", who_color="#000", callback=partial(bee
 define narrateur = Character(" ", callback=partial(beepy_voice, sound="audio/voices/Narator_U_Voice.mp3", level=1.0))
 
 define c_bomi = Character("Bomi", who_color="779b5a")
-
+define c_akane = Character("Akane", who_color="6d7aad")
+define c_himeno = Character("Himeno", who_color="db4cad")
 #endregion
 
 #region Images:

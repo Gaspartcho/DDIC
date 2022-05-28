@@ -228,33 +228,39 @@ label scene_2:
     "{i}Tu reçois un message d'un numéro inconnu{/i}"
     "???" "Je ne cliquerais pas dessus si j'étais toi."
     "Waouh!!"
-    "Akane" "Tu devrais être prudent avec ceux-là. Ils ont tendance à te gâcher la vie."
-    c_bomi "Oh!"
-    
-    c_bomi "Bon... - Bonjour!"
-    
-    c_bomi "Tu es le nouvel élève c'est ça?"
-    
-    c_bomi "Bienvenue!"
-    
-    c_bomi """Je m'appelle Bomi!
-    
-    ...
-    
-    ..."""
-
     menu:
-        c_bomi "..."
+        c_akane "Tu devrais être prudent avec ceux-là. Ils ont tendance à te gâcher la vie."
 
-        "Est-ce que ça vas?":
-            c_bomi "oui oui, je vais bien..."
+        "Tu parles d’expérience ?":
+            c_akane "Peut-être"
 
-        "{i}Se retouner et commencer à partir...{/i}":
-            c_bomi "Non attend!"
+        "J'allais le supprimer de toute façon.":
+            c_akane "..."
     
-    c_bomi """Désollé... Je suis un peut timide
-    
-    """
+    c_akane "Tu semble nouveau ici."
+    c_akane "Bienvenue dans notre classe."
+    playerName "On s’est pas déjà rencontrés ? Tu as mon compte instargam."
+    c_akane "Je m’en souviens pas."
+    c_akane "Peut-être que tu m’as confondu avec quelqu'un d'autre."
+    "..."
+    "C'est étrange"
+    "Je suis presque sûr que c'est la fille qui m'a envoyé un message hier soir."
+    "{i}Tu tournes la tête en te sentant mal à l'aise et aperçoit une fille étendue sur sa table avec son téléphone allumé.{/i}"
+    "{i}Tu t'approches du bureau et jette un coup d'œil à son téléphone.{/i}"
+    "..."
+    "Ça serait pas ma conversation avec Akane d’hier soir ?"
+    "..."
+    "{i}Tu tends la main pour essayer de la réveiller et de la confronter mais la cloche de l'école sonne.{/i}"
+    "{i}Tu te retournes à ta place a coté de Akane."
+    playerName "Qui est-ce ?"
+    c_akane "C'est {b}Bomi Park{/b}."
+    c_akane "Elle est en tête du classement de notre école."
+    c_akane "C’est assez impressionnant pour une première."
+    pause 3
+    "..."
+    "Je devrais plus me concentrer en cours."
+
+
 
     return
 
