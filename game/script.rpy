@@ -95,13 +95,13 @@ label start:
 
         stop music fadeout 1.0
 
-        narrateur """Preparation pour la première uttilisation du programme...
+        narrateur """Préparation pour la première utilisation du programme...
 
-        Erreur: Aucun nom d'uttilisateur enrengistré."""
+        Erreur: Aucun nom d'utilisateur enregistré."""
 
         call name_choose
     
-        narrateur "Initialisation pour le joueur \"%(playerName)s\": Terminé!"
+        narrateur "Initialisation pour le joueur \"%(playerName)s\":"
 
     jump game_Launching
 
@@ -124,15 +124,18 @@ label game_Launching:
     pause (1.5)
     jump scene_1
 
+define ta = "Akane"
+define tb = "Bomi"
+define th = "Himeno"
+define classroom = "images\scenes\classroom.png"
+define bedroom_sleep = "images\scenes\bedroom_sleep.png"
+
 label scene_1:
-    scene black
-    define ta = "Akane"
-    define tb = "Bomi"
-    define th = "Himeno"
+    scene bedroom_sleep with fade
     call phone_start("Kousei.Akane", "21:30")
-    call message_start(ta, "Bienvenue à l'école X ! Je suis Akane Kousei, votre déléguée de classe. Si vous avez une question, n'hésitez pas à les poser soit à vos camarades, soit aux enseignants, ou vous pouvez venir me voir. Même si vous nous avez rejoint très tard dans l'année, nous vous accueillons toujours à bras ouverts :)")
-    call message(ta, "Comme tu arrive en millieu d'année, je me doute bien que ça peu être difficile, mais tu peux compter sur moi!")
+    call message_start(ta, "Bienvenue à l'école X ! Je suis {b}Akane Kousei{b/}, votre déléguée de classe. Si vous avez une question, n'hésitez pas à la poser soit à vos camarades, soit aux enseignants, ou vous pouvez venir me voir. Même si vous nous avez rejoint très tard dans l'année, nous vous accueillons toujours à bras ouverts :)")
     call message_img(ta, "Ça c'est moi.", "images/instagram/A1_insta.png")
+    call message(ta, "Comme tu arrive en millieu d'année, je me doute bien que ça peu être difficile, mais tu peux compter sur moi!")
     pause 1.0
 
     label choiceMaking_WAY: # Use this template eatch time u want to make a phone menu
@@ -173,59 +176,55 @@ label scene_1:
             
         label .aftermenu:
 
-    call message_img(ta, "Attend, je t'envoie une photo", "images/instagram/H1_insta.png")
-    call message(ta, "C'est {b}Himeno Yuzu{/b}. Je ne veux pas que vous fassiez quoi que ce soit, ce serait gênant si les gens savaient que la déléguée se fait harceler. Haha.")
+    call message_img(ta, "Tiens", "images/instagram/H1_insta.png")
+    call message(ta, "Elle s'appelle {b}Himeno Yuzu{/b}. Je ne veux pas que vous fassiez quoi que ce soit, ce serait gênant si les gens savaient que la déléguée se fait harceler. Haha.")
     call message(ta, "Oh! Mes parents m'appellent. Je te verrai demain :))")
     call phone_end # this one puts away the phone!
-    scene black
-    define talkingCharacter = ""
     call phone_start("yuzu.himi", "22:13")
     label choiceMaking_LUV: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("heyy~ T'es magnifique!","choiceMaking_LUV.choice1","Yo, la personne la pluuuuus gentille du lycée","choiceMaking_LUV.choice2")
         label .choice1:    
             call phone_after_menu
             call message_start(playerName, "heyy~ T'es magnifique!")
-            call message(tb, "HAHA! Bien sûr que je le suis!!")
+            call message(th, "HAHA! Bien sûr que je le suis!!")
             jump .aftermenu
             
         label .choice2:
             call phone_after_menu
             call message_start(playerName, "Yo, la personne la pluuuuus gentille du lycée")
-            call message(tb, "La pire ici est cette petite frimeuse rose.")
+            call message(th, "La pire ici est cette petite frimeuse rose.")
             jump .aftermenu
         label .aftermenu:
-    call message(tb, "Je suis la plus intelligente, la plus belle et la meilleure de toutes !")
-    call message(tb, "Mais pourtant, je n'ai pas les meilleures notes et c'est super énervant.")
-    call message(tb, "Cette pourrie-gâtée rose est toujours la première.")
-    call message(tb, "Je jure que c'est parce qu’elle triche.")
-    call message(tb, "...")
-    call message(tb, "Je devrais le faire.")
+    call message(th, "Je suis la plus intelligente, la plus belle et la meilleure de toutes !")
+    call message(th, "Mais pourtant, je n'ai pas les meilleures notes et c'est super énervant.")
+    call message(th, "Cette pourrie-gâtée rose est toujours la première.")
+    call message(th, "Je jure que c'est parce qu’elle triche.")
+    call message(th, "...")
+    call message(th, "Je devrais le faire.")
     label choiceMaking_CH: 
         call screen phone_reply("Tu vas vraiment faire ça ?","choiceMaking_CH.choice1","Je suis sûr que si tu essayes de toutes tes forces, tu seras la meilleure","choiceMaking_CH.choice2")
         label .choice1:    
             call phone_after_menu
             call message_start(playerName, "Tu vas vraiment faire ça ?")
-            call message(tb, "ui")
+            call message(th, "ui")
             jump .aftermenu
             
         label .choice2:
             call phone_after_menu
             call message_start(playerName, "Je suis sûr que si tu essayes de toutes tes forces, tu seras la meilleure")
-            call message(tb, "J’en suis encore loin.")
+            call message(th, "J’en suis encore loin.")
             jump .aftermenu
         label .aftermenu:
-    call message(tb, "Ah ! Une de mes copines m'appelle.")
-    call message(tb, "Ne me manque pas trop <3")
-    pause 3
+    call message(th, "Ah ! Une de mes copines m'appelle.")
+    call message(th, "Essaie de ne pas me manquer <3")
+    call phone_end
     "..."
     "Je devrais aller dormir."
-    
-    jump scene_2
-
-label scene_2:
-    scene black
+    pause 5
+    scene classroom with fade
     "{i}Tu vas te coucher et pars à l'école le lendemain.{/i}"
-    "{i}Tu reçois un message d'un numéro inconnu{/i}"
+    "{i}Tu reçois un message d'un compt instargam inconnu{/i}"
+    "\"Salut %(playerName)s, veux-tu faire un appel vidéo gratuit? Trouves-moi ici http://cunscam.com/xxx xoxo\""
     "???" "Je ne cliquerais pas dessus si j'étais toi."
     "Waouh!!"
     menu:
@@ -259,12 +258,10 @@ label scene_2:
     pause 3
     "..."
     "Je devrais plus me concentrer en cours."
-
-
+    jump mainmenuchoice
+    label .mainmenuchoice:
 
     return
-
-
 
 # added an alternate way to reply from the player perspective, this time the name doesnt show if you think its extra
 call reply_message("oh really? what does it do lol")
