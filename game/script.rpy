@@ -158,11 +158,11 @@ label scene_1:
     call message(ta, "Il y a cette fille dont je te conseille de pas t’approcher. Elle juge très facilement et tu ne passeras pas un bon moment avec elle.")
     
     label choiceMaking_ST: # Use this template eatch time u want to make a phone menu
-        call screen phone_reply("\"Ah… Qu'a-t-elle fait ?\"","choiceMaking_ST.choice1","À quoi ressemble-t-elle?","choiceMaking_ST.choice2")
+        call screen phone_reply("Ah… Qu'a-t-elle fait ?","choiceMaking_ST.choice1","À quoi ressemble-t-elle?","choiceMaking_ST.choice2")
 
         label .choice1:    
             call phone_after_menu
-            call message_start(playerName, "\"Ah… Qu'a-t-elle fait ?\"")
+            call message_start(playerName, "Ah… Qu'a-t-elle fait ?")
             call message(ta, "Elle aime se moquer de moi... je ne sais pas pourquoi.")
             jump .aftermenu
             
@@ -184,7 +184,7 @@ label scene_1:
         call screen phone_reply("heyy~ T'es magnifique!","choiceMaking_LUV.choice1","Yo, la personne la pluuuuus gentille du lycée","choiceMaking_LUV.choice2")
         label .choice1:    
             call phone_after_menu
-            call message_start(playerName, "\"heyy~ T'es magnifique!\"")
+            call message_start(playerName, "heyy~ T'es magnifique!")
             call message(tb, "HAHA! Bien sûr que je le suis!!")
             jump .aftermenu
             
@@ -204,7 +204,7 @@ label scene_1:
         call screen phone_reply("Tu vas vraiment faire ça ?","choiceMaking_CH.choice1","Je suis sûr que si tu essayes de toutes tes forces, tu seras la meilleure","choiceMaking_CH.choice2")
         label .choice1:    
             call phone_after_menu
-            call message_start(playerName, "\"Tu vas vraiment faire ça ?\"")
+            call message_start(playerName, "Tu vas vraiment faire ça ?")
             call message(tb, "ui")
             jump .aftermenu
             
@@ -216,16 +216,19 @@ label scene_1:
         label .aftermenu:
     call message(tb, "Ah ! Une de mes copines m'appelle.")
     call message(tb, "Ne me manque pas trop <3")
-    pause 2
+    pause 3
     "..."
     "Je devrais aller dormir."
-    scene black
+    
     jump scene_2
 
 label scene_2:
-    
-    
-
+    scene black
+    "{i}Tu vas te coucher et pars à l'école le lendemain.{/i}"
+    "{i}Tu reçois un message d'un numéro inconnu{/i}"
+    "???" "Je ne cliquerais pas dessus si j'étais toi."
+    "Waouh!!"
+    "Akane" "Tu devrais être prudent avec ceux-là. Ils ont tendance à te gâcher la vie."
     c_bomi "Oh!"
     
     c_bomi "Bon... - Bonjour!"
