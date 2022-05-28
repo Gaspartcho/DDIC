@@ -205,7 +205,7 @@ label scene_1:
         label .choice1:    
             call phone_after_menu
             call message_start(playerName, "\"Tu vas vraiment faire ça ?\"")
-            call message(tab, "ui")
+            call message(tb, "ui")
             jump .aftermenu
             
         label .choice2:
@@ -216,12 +216,15 @@ label scene_1:
         label .aftermenu:
     call message(tb, "Ah ! Une de mes copines m'appelle.")
     call message(tb, "Ne me manque pas trop <3")
-
+    pause 2
+    "..."
+    "Je devrais aller dormir."
+    scene black
     jump scene_2
 
 label scene_2:
     
-
+    
 
     c_bomi "Oh!"
     
