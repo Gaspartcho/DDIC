@@ -130,7 +130,7 @@ label scene_1:
     call phone_start(talkingCharacter, "21:30")
     call message_start(talkingCharacter, "Bienvenue à l'école X ! Je suis Akane Kousei, votre déléguée de classe. Si vous avez une question, n'hésitez pas à les poser soit à vos camarades, soit aux enseignants, ou vous pouvez venir me voir. Même si vous nous avez rejoint très tard dans l'année, nous vous accueillons toujours à bras ouverts :)")
     call message(talkingCharacter, "Comme tu arrive en millieu d'année, je me doute bien que ça peu être difficile, mais tu peux compter sur moi!")
-    call message_img(talkingCharacter, "Ça c'est moi.", "images\instagram\A1_insta.png")
+    call message_img(talkingCharacter, "Ça c'est moi.", "images/instagram/A1_insta.png")
     pause 1.0
 
     label choiceMaking_WAY: # Use this template eatch time u want to make a phone menu
@@ -175,6 +175,11 @@ label scene_1:
     call message(talkingCharacter, "C'est {b}Himeno Yuzu{/b}. Je ne veux pas que vous fassiez quoi que ce soit, ce serait gênant si les gens savaient que la déléguée se fait harceler. Haha.")
     call message(talkingCharacter, "Oh! Mes parents m'appellent. Je te verrai demain :))")
     call phone_end # this one puts away the phone!
+    scene black
+    define talkingCharacter = "Himeno♡"
+    call phone_start(talkingCharacter, "22:13")
+    label choiceMaking_LUV: # Use this template eatch time u want to make a phone menu
+        call screen phone_reply("heyy~ T'es magnifique!","choiceMaking_LUV.choice1","Yo, la personne la pluuuuus gentille du lycée","choiceMaking_LUV.choice2")
 
     jump scene_2
 
