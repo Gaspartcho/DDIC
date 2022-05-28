@@ -128,8 +128,7 @@ label scene_1:
     scene black
     define talkingCharacter = "Akane"
     call phone_start(talkingCharacter, "21:30")
-    call message_start(talkingCharacter, "Bienvenue à l'école X ! Je suis Akane Kousei, votre déléguée de classe. Si vous avez une question, n'hésitez pas à les poser soit à vos camarades, soit aux enseignants, ou vous pouvez venir me voir. Même si vous nous avez rejoint très tard dans l'année, nous vous accueillons toujours à bras ouverts :)")
-    call message_img(talkingCharacter, "C'est moi :)","images\instagram\A1_insta.png")
+    call message_start(talkingCharacter, "Bienvenue à l'école X ! Je suis Akane Kousei, votre déléguée de classe. Si vous avez une question, n'hésitez pas à les poser soit à vos camarades, soit aux enseignants, ou vous pouvez venir me voir. Même si vous nous avez rejoint très tard dans l'année, nous vous accueillons toujours à bras ouverts :)","images\instagram\A1_insta.png")
     call message(talkingCharacter, "Comme tu arrive en millieu d'année, je me doute bien que ça peu être difficile, mais tu peux compter sur moi!")
     pause 1.0
 
@@ -138,47 +137,42 @@ label scene_1:
 
         label .choice1:    
             call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
-            call message_start(playerName, "Merci! Je serai à ta charge :)") # whenever you put the sender name to be playerName it is the player characters own message!
+            call message_start(playerName, "Merci! Je vais essayer d’être sage :)") # whenever you put the sender name to be playerName it is the player characters own message!
             call message(talkingCharacter, "Haha ! Si tu veux, je t'enverrai par e-mail ce qu’on a fait depuis le début de l’année dans nos cours en commun^^")
             jump .aftermenu
             
         label .choice2:
             call phone_after_menu
-            call message_start(playerName, "Merci! Tu es très belle, comme il se doit pour être déléguée de classe !")
+            call message_start(playerName, "Merci! Je te trouve très belle, ce qui est naturel pour une déléguée!")
             call message(talkingCharacter, "Ahh… Merci beaucoup ^^")
-            call message(talkingCharacter, "J'aimerais bien être aussi belle en vrai .")
+            call message(talkingCharacter, "J'aimerais bien être aussi belle en vrai.")
             jump .aftermenu
             
         label .aftermenu:
 
     call message(talkingCharacter, "Quoi qu'il en soit, envoies-moi un SMS dès que t’as besoin de quoi que ce soit et je te répondrai le plus vite possible, je suis presque tout le temps dispo.")
     call message(talkingCharacter, "Ah euh… Ça donne probablement l'impression que je ne fais pas mon travail de déléguée… Je te jure que c’est qu’une impression !")
+    call message(talkingCharacter, "Il y a cette fille dont je te conseille de pas t’approcher. Elle juge très facilement et tu ne passeras pas un bon moment avec elle.")
     
     label choiceMaking_ST: # Use this template eatch time u want to make a phone menu
-        call screen phone_reply("\"Deux-trois choses?\"","choiceMaking_ST.choice1","Ok bonne nuit","choiceMaking_ST.choice2")
+        call screen phone_reply("\"Ah… Qu'a-t-elle fait ?\"","choiceMaking_ST.choice1","À quoi ressemble-t-elle?","choiceMaking_ST.choice2")
 
         label .choice1:    
             call phone_after_menu
-            call message_start(playerName, "\"Deux-trois choses?\"")
-            call message(talkingCharacter, "Oui, il faut que je te préviènne: il y a cette fille, {b}Bomi{/b}. Elle terrorsie un peut qui elle veut...")
-            call message_img(talkingCharacter, "Attend, je t'envoie une photo", "images/instagram/H1_insta.png")
-            call message(talkingCharacter, "On ne dirais pas comme ça, mais c'est une vraie peste! Toujours à embêter des gens comme Bomi")
-            call message(talkingCharacter, "Bref, tout ça pour te dire de ne pas trop te rapprocher d'elle...")
-            call message(playerName, "D'accord, je ferais attention, merci.")
-            call message(talkingCharacter, "Oh, mais ne t'inquiète pas, il y a pleint d'autres bon trucs ici!")
-            call message(talkingCharacter, "Bon, je vais aller me coucher, il commence à faire tard. Bonne nuit")
-            call message(playerName, "Bonne nuit.")
+            call message_start(playerName, "\"Ah… Qu'a-t-elle fait ?\"")
+            call message(talkingCharacter, "Elle aime se moquer de moi... je ne sais pas pourquoi.")
             jump .aftermenu
             
         label .choice2:
             call phone_after_menu
-            call message_start(playerName, "Ok bonne nuit")
-            call message(talkingCharacter, "Bonne nuit")
-            
+            call message_start(playerName, "À quoi ressemble-t-elle?")
             jump .aftermenu
             
         label .aftermenu:
-            
+
+    call message_img(talkingCharacter, "Attend, je t'envoie une photo", "images/instagram/H1_insta.png")
+    call message(talkingCharacter, "C'est {b}Himeno Yuzu{/b}. Je ne veux pas que vous fassiez quoi que ce soit, ce serait gênant si les gens savaient que la déléguée se fait harceler. Haha.")
+    call message(talkingCharacter, "Oh! Mes parents m'appellent. Je te verrai demain :))")
     call phone_end # this one puts away the phone!
 
     jump scene_2
