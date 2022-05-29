@@ -187,45 +187,45 @@ label scene_1:
     Plutôt que d'essayer de lire un livre, vous décidez de faire connaissances avec d'autres membres de la classe:"""
 
     call phone_start("yuzu.himi", "22:13")
-    define ta = "Hoimeno"
+    define th = "Himeno"
     label choiceMaking_LUV: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("heyy~ T'es magnifique!","choiceMaking_LUV.choice1","Yo, la personne la pluuuuus gentille du lycée","choiceMaking_LUV.choice2")
         label .choice1:    
             call phone_after_menu
             call message_start(playerName, "heyy~ T'es magnifique!")
-            call message(ta, "HAHA! Bien sûr que je le suis!!")
+            call message(th, "HAHA! Bien sûr que je le suis!!")
             jump .aftermenu
             
         label .choice2:
             call phone_after_menu
             call message_start(playerName, "Yo, la personne la pluuuuus gentille du lycée")
-            call message(ta, "La pire ici est cette petite frimeuse rose.")
+            call message(th, "La pire ici est cette petite frimeuse rose.")
             jump .aftermenu
         label .aftermenu:
-    call message(ta, "Je suis la plus intelligente, la plus belle et la meilleure de toutes !")
-    call message(ta, "Mais pourtant, je n'ai pas les meilleures notes et c'est super énervant.")
-    call message(ta, "Cette pourrie-gâtée de cheveux roses est toujours la première.")
-    call message(ta, "Et il y a aussi la cette déléguée qui fait constament sa cheffe")
-    call message(ta, "Je te jure c'est parce qu’elles trichent.")
-    call message(ta, "...")
-    call message(ta, "Je devrais le faire.")
+    call message(th, "Je suis la plus intelligente, la plus belle et la meilleure de toutes !")
+    call message(th, "Mais pourtant, je n'ai pas les meilleures notes et c'est super énervant.")
+    call message(th, "Cette pourrie-gâtée de cheveux roses est toujours la première.")
+    call message(th, "Et il y a aussi la cette déléguée qui fait constament sa cheffe")
+    call message(th, "Je te jure c'est parce qu’elles trichent.")
+    call message(th, "...")
+    call message(th, "Je devrais le faire.")
     label choiceMaking_CH: 
         call screen phone_reply("Tu vas vraiment faire ça ?","choiceMaking_CH.choice1","Je suis sûr que si tu essayes de toutes tes forces, tu seras la meilleure","choiceMaking_CH.choice2")
         label .choice1:    
             call phone_after_menu
             call message_start(playerName, "Tu vas vraiment faire ça ?")
-            call message(ta, "ui")
+            call message(th, "ui")
             jump .aftermenu
             
         label .choice2:
             call phone_after_menu
             call message_start(playerName, "Je suis sûr que si tu essayes de toutes tes forces, tu seras la meilleure")
-            call message(ta, "C'est ça ouai... Pourquoi je devrais travailler {i}moi{/i} alors que je suis sure que tout le monde triche ici")
+            call message(th, "C'est ça ouai... Pourquoi je devrais travailler {i}moi{/i} alors que je suis sure que tout le monde triche ici")
             call reply_message("...")
             jump .aftermenu
         label .aftermenu:
-    call message(ta, "Ah ! Une de mes copines m'appelle.")
-    call message(ta, "Allé salut. Essaie de ne pas me manquer <3")
+    call message(th, "Ah ! Une de mes copines m'appelle.")
+    call message(th, "Allé salut. Essaie de ne pas me manquer <3")
     call phone_end
 
     """...
