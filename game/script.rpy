@@ -240,7 +240,7 @@ label scene_2:
     narrateur "Le lendemain, alors que tu allais à l'école, tu reçois un message d'un compte instargam inconnu:"
 
     call phone_start("REAL_BUISNESS", "08:02")
-    call message_start("REAL_BUISNESS", "Salut %(playerName)s, veux-tu faire un appel vidéo gratuit? Trouves-moi ici http://cunscam.com/xxx xoxo")
+    call message_start("REAL_BUISNESS", "Salut [playerName], veux-tu faire un appel vidéo gratuit? Trouves-moi ici http://cunscam.com/xxx xoxo")
     pause 2.0
     window show
     "???" "Je ne cliquerais pas dessus si j'étais toi."
@@ -293,15 +293,62 @@ label scene_2:
     c_akane "C'est {b}Bomi Park{/b}."
     c_akane "Elle est en tête du classement de notre école."
     c_akane "C’est assez impressionnant pour une première."
+    
     pause 3
-    "..."
-    "Je devrais plus me concentrer en cours."
-    jump mainmenuchoice
-    label .mainmenuchoice:
-        scene 
+    "{i}...{/i}"
+    "{i}Je devrais plus me concentrer en cours.{/i}"
+    narrateur "Alors que vous essayez d'écouter le cours, vous sentez que vos paupères sont de plus en plus lourdes..."
+    scene black with Fade(3.0, 0, 1.0)
+    narrateur "{cps=20}Vous vous endormez.{/cps}"
+
+    pause 3.0
+    play music "audio/musics/Ambiant_misterious.mp3" fadein 1.0 loop
+
+    c_mysteriousMan """...
+    
+    Ah, on y est enfin...
+    
+    Le moment tant attendu où tu poura choisir entre ces trois filles...
+    
+    Laquelle tu vas essayer d'aider?"""
+
+    show insta akane 1 at image_choose_path with fade
+    c_mysteriousMan "Akane la déléguée de la classe?"
+
+    show insta bomi 1 at image_choose_path with fade
+    c_mysteriousMan "Bomi la meilleure élève de l'école?"
+
+    show insta himeno 1 at image_choose_path with fade
+    c_mysteriousMan "Ou Himemo, la rebelle du lycée?"
+    hide insta himeno 1 with fade
+
+    c_mysteriousMan """En tout cas, choisis bien.
+    
+    Tes décisions ont une importance ici."""
+
+    menu:
+        "{i}Je choisis...{/i}"
+
+        "Akane":
+            define road = "1"
+        "Bomi":
+            define road = "2"
+        "Himeno":
+            define road = "3"
+    
+    c_mysteriousMan """Bien, et bien bonne chance pour la suite, on se revéra à la fin...
+
+    Allé, réveille-toi, c'est l'heure de la fin des cours.
+    
+    ;)"""
+
+    stop music fadeout 0.5
+
+    if road == "1":
+        jump route_A
+    if road == "2":
+        jump route_B
+    if road == "3":
+        jump route_H
 
     return
-
-# added an alternate way to reply from the player perspective, this time the name doesnt show if you think its extra
-call reply_message("oh really? what does it do lol")
-call message_img("nadia", "it works with images too!","images/pic1.png")

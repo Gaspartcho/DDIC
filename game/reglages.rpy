@@ -26,15 +26,15 @@ init python:
 
 #region Characters
 
-define c_mysteriousMan = Character("???", who_color="#000", callback=partial(beepy_voice, sound="audio/voices/MisteriousMan_voice.mp3", level=0.3))
-define narrateur = Character(" ", callback=partial(beepy_voice, sound="audio/voices/Narator_U_Voice.mp3", level=1.0))
+define c_mysteriousMan = Character("???", who_color="#000", callback=partial(beepy_voice, sound="audio/voices/MisteriousMan_voice.mp3", level=0.15))
+define narrateur = Character(" ", callback=partial(beepy_voice, sound="audio/voices/Narator_U_Voice.mp3", level=0.5))
 
 define c_bomi = Character("Bomi", who_color="779b5a")
 define c_akane = Character("Akane", who_color="6d7aad")
 define c_himeno = Character("Himeno", who_color="db4cad")
 #endregion
 
-#region Images:
+#region Images
 
 # Akane
 image akane armscrossed = "images/Characters/Akane/akane_armscrossed.png"
@@ -58,4 +58,16 @@ image insta himeno 1 = "images/instagram/H1_insta.png"
 image classroom = "images/scenes/classroom.png"
 image bedroom_sleep = "images/scenes/bedroom_sleep.png"
 
+#endregion
+
+#region Autres
+
+transform image_choose_path:
+    xsize 700
+    ysize 700
+    xalign 0.5
+    yalign 0.5
+    xpos 0.5
+    ypos 0.4
+    
 #endregion
