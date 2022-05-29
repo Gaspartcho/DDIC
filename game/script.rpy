@@ -332,7 +332,7 @@ label scene_2:
         "Himeno":
             define road = "3"
     
-    c_mysteriousMan """Bien, et bien bonne chance pour la suite, on se revéra à la fin...
+    c_mysteriousMan """Bien. Bonne chance pour la suite, on se revéra à la fin...
 
     Allé, réveille-toi, c'est l'heure de la fin des cours.
     
