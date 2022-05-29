@@ -260,13 +260,9 @@ label scene_2:
     playerName "On s’est déjà rencontrés non? Tu as mon compte instargam."
     c_akane """Ah bon? Je m’en souviens pas.
 
-    Peut-être que tu m’as confondu avec quelqu'un d'autre.
-    
-    Bon je dois y aller, a plus"""
+    Peut-être que tu m’as confondu avec quelqu'un d'autre."""
 
     ## akane part du champ
-
-    c_akane "Et si tu a des questions sur quoi que ce soit, n'hésite pas à me demander!"
     
     """{i}...{/i}
 
