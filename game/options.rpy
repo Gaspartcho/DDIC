@@ -65,6 +65,7 @@ transform incoming_message:
 
 label phone_start(usrName = "Messages", hour = "17:30"):
     window hide
+    play sound "audio/sound_effects/notification_sound.mp3"
     show screen phone_object(usrName, hour)
     pause(0.2)
     return
@@ -96,8 +97,9 @@ label phone_after_menu:
     $ renpy.pause(0.1)
     return    
     
-label phone_end:
-    $ renpy.pause()
+label phone_end(is_pausing=True):
+    if is_pausing:
+        pause
     hide screen phone_message
     hide screen phone_message2
     hide screen phone_message3

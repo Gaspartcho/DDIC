@@ -54,4 +54,8 @@ image insta bomi 2 = "images/instagram/B2_insta.png"
 image insta akane 1 = "images/instagram/A1_insta.png"
 image insta himeno 1 = "images/instagram/H1_insta.png"
 
+# Background
+image classroom = "images/scenes/classroom.png"
+image bedroom_sleep = "images/scenes/bedroom_sleep.png"
+
 #endregion
