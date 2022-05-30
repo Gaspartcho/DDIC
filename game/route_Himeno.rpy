@@ -136,7 +136,7 @@ label route_H1:
     Tu jetes un coup d'œil à la direction où Bomi Park était censé être mais elle n'était plus là"""
 
     "{i}Elle a dû partir quand Himeno l'a appelée.{/i}"
-
+    scene black with fade
     narrateur "Tu rentres aussi chez toi."
 
     "{i}Je me demande ce que va faire Himeno.{/i}"
@@ -250,6 +250,12 @@ label route_H2:
     
     c_himeno "Attends! Peux-tu me chercher un thé glacé ?"
     playerName "Okay"
+    if pts >2:
+        jump HGE
+    else: 
+        jump HBad2
+        
+    return 
 
 
     
