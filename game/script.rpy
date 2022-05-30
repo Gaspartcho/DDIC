@@ -317,7 +317,6 @@ label scene_2:
     
     Laquelle tu vas essayer d'aider?"""
 
-<<<<<<< HEAD
     show akane choose at image_choose_path with fade
     c_mysteriousMan "Akane la déléguée de la classe?"
 
@@ -325,15 +324,6 @@ label scene_2:
     c_mysteriousMan "Bomi la meilleure élève de l'école?"
 
     show himeno choose at image_choose_path with fade
-=======
-    #show "images/Characters/Akane/akane_menu.png" 1 at image_choose_path with fade
-    c_mysteriousMan "Akane la déléguée de la classe?"
-
-    #show "images/Characters/Bomi/bomi_menu.png" 1 at image_choose_path with fade
-    c_mysteriousMan "Bomi la meilleure élève de l'école?"
-
-    #show "images/Characters/Himeno/himeno_menu.png" 1 at image_choose_path with fade
->>>>>>> 7701eb3be992f5849c4da5a3892d9985026274eb
     c_mysteriousMan "Ou Himemo, la rebelle du lycée?"
     #hide insta himeno 1 with fade
 
