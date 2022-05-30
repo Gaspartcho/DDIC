@@ -204,7 +204,7 @@ label scene_1:
     call message(tph, "Mais pourtant, je n'ai pas les meilleures notes et c'est super énervant.")
     call message(tph, "Cette pourrie-gâtée de cheveux roses est toujours la première.")
     call message(tph, "Et il y a aussi la cette déléguée qui fait constament sa cheffe")
-    call message(tph, "Je te jure c'est parce qu’elles trichent.")
+    call message(tph, "Je te jure c'est parce qu'elles trichent.")
     call message(tph, "...")
     call message(tph, "Je devrais le faire.")
     label choiceMaking_CH: 
@@ -246,7 +246,7 @@ label scene_2:
     menu:
         c_akane "Tu devrais être prudent avec ceux-là. Ils ont tendance à te gâcher la vie."
 
-        "Tu parles d’expérience ?":
+        "Tu parles d'expérience ?":
             c_akane "Peut-être"
 
         "J'allais le supprimer de toute façon.":
@@ -255,10 +255,10 @@ label scene_2:
     
     c_akane "Tu semble nouveau ici."
     c_akane "Bienvenue dans notre classe."
-    playerName "On s’est déjà rencontrés non? Tu as mon compte instargam."
-    c_akane """Ah bon? Je m’en souviens pas.
+    playerName "On s'est déjà rencontrés non? Tu as mon compte instargam."
+    c_akane """Ah bon? Je m'en souviens pas.
 
-    Peut-être que tu m’as confondu avec quelqu'un d'autre."""
+    Peut-être que tu m'as confondu avec quelqu'un d'autre."""
 
     ## akane part du champ
     
