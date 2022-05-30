@@ -76,8 +76,14 @@ label after_load:
     #region Autres
 
     transform image_choose_path:
-        xsize 700
-        ysize 700
+        xalign 0.5
+        yalign 0.5
+        xpos 0.5
+        ypos 0.4
+
+    transform image_choose_path_h:
+        xsize 0.7
+        ysize 0.7
         xalign 0.5
         yalign 0.5
         xpos 0.5

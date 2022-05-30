@@ -308,13 +308,16 @@ label scene_2:
 
     show akane choose at image_choose_path with fade
     c_mysteriousMan "Akane la déléguée de la classe?"
+    hide akane choose
 
     show bomi choose at image_choose_path with fade
     c_mysteriousMan "Bomi la meilleure élève de l'école?"
+    hide bomi choose
 
-    show himeno choose at image_choose_path with fade
+    show himeno choose at image_choose_path_h with fade
     c_mysteriousMan "Ou Himemo, la rebelle du lycée?"
     #hide insta himeno 1 with fade
+    hide himeno choose
 
     c_mysteriousMan """En tout cas, choisis bien.
     
