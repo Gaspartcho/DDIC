@@ -43,7 +43,7 @@ label route_B:
     call message(tpb, "De toute façon, je ne suis pas la seule à l’admirer. Tant de gens voudraient être à sa place ou avec elle.")
     call message(tpb, "...")
     call message(tpb, "Est-ce que je devrais me coiffer ?")
-    call message_start(playerName, "coiffer?")
+    call reply_message(playerName, "coiffer?")
     call message(tpb, "Genre... changer mon style.")
     label choiceMaking_HAI: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("À mon avis, tu devrais faire ce que tu veux, à partir du moment où tu ne le regrettes pas.","choiceMaking_HAI.choice1","J'aime ta coupe.","choiceMaking_HAI.choice2")
@@ -55,7 +55,7 @@ label route_B:
         label .choice2:
             call phone_after_menu
             call message_start(playerName, "J'aime ta coupe.")
-            call message_start(playerName, "Je ne pense pas que tu devrais les couper pour l’instant")
+            call reply_message(playerName, "Je ne pense pas que tu devrais les couper pour l’instant")
             $ good_points += 1
             jump .aftermenu
         label .aftermenu:
@@ -65,7 +65,6 @@ label route_B:
     playerName "..."
     scene black with fade
     narrateur "Tu vas dormir et tu vas à l'école le lendemain."
-    pause 3
     scene classroom with fade
 
-    jump route_B
+    return
