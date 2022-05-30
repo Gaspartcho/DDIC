@@ -1,16 +1,21 @@
 label route_B:
-    label RA1:
+    label RB1:
         define good_points = 0
-        
-        narrateur "Pour une raison inconnue, vous décidez d'aller parler à Bomi."
+        call phone_start("bombomii", "21:30")
+        label choiceMaking_WAY: # Use this template eatch time u want to make a phone menu
+        call screen phone_reply("Merci! Je vais essayer d’être sage :)","choiceMaking_WAY.choice1","Merci! Je te trouve très belle, ce qui est naturel pour une déléguée!","choiceMaking_WAY.choice2")
 
-        c_bomi "Salut, ça vas?"
-        c_bomi "Tu es le nouveau non? Bienvenue à l'école X. J'espère que tu passera une bonne fin d'année ici."
-        c_bomi "..."
-        playerName "..."
-        c_bomi "Tu as vu mon téléphone non?"
-        playerName "..."
-        
+        label .choice1:    
+            call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
+            call message_start(playerName, "Merci! Je vais essayer d’être sage :)") # whenever you put the sender name to be playerName it is the player characters own message!
+            call message(ta, "Haha ! Si tu veux, je t'enverrai par e-mail ce qu’on a fait depuis le début de l’année dans nos cours en commun^^")
+            jump .aftermenu
+            
+        label .choice2:
+            call phone_after_menu
+            call message_start(playerName, "Merci! Je te trouve très belle, ce qui est naturel pour une déléguée!")
+            call message(ta, "Ahh… Merci beaucoup ^^")
+            jump .aftermenu
         menu:
             c_bomi "..."
 
@@ -61,4 +66,4 @@ label route_B:
         c_bomi "A demain."
 
 
-        jump route_A
+        jump route_B
