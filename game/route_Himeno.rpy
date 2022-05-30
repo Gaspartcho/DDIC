@@ -9,6 +9,7 @@ label route_H1:
     pause 2.0
     window show
     call phone_end(False)
+    #scene park with fade 
     """{i}Je me demande ce qu'elle veut.
     Le soleil se couchait juste derrière le bâtiment de l'école.
     Cette première journée était assez agréable.{/i}"""
@@ -139,13 +140,14 @@ label route_H1:
     narrateur "Tu rentres aussi chez toi."
 
     "{i}Je me demande ce que va faire Himeno.{/i}"
-    
+
     if pts>=4: 
         jump route_H2
     else:
         jump HBad1
 
 label HBad1:
+    scene classroom with fade
     """{i}Ça fait une semaine que j’étais au parc avec Himeno.
     Himeno a fini par publier cette photo et a répandu beaucoup de haine.
     Bomi a fini par subir beaucoup d'intimidation depuis que la cyberintimidation est devenue physique.{/i}"""
@@ -154,6 +156,7 @@ label HBad1:
     c_himeno "Viens avec moi."
     """{i}Pour être juste, ce n'est pas comme si je pouvais aller contre elle.
     Elle a fini par trouver des secrets sur moi.{/i}"""
+    #scene hallway with fade
     narrateur "Tu la suis dans le couloir quand une silhouette rose sortie de nulle part et attaque à Himeno"
     c_bomi """Tu!
     As!
@@ -171,11 +174,12 @@ label HBad1:
     c_bomi "..."
     """{i}Avant que je puisse attraper Bomi et lui demander de l'aider, elle s'est enfuie.
     Quelques heures plus tard.
-    Himeno a été transportée d'urgence à l'hôpital car elle ne se réveillait pas après sa chute.
-    Je suis allé lui rendre visite une fois qu'elle s'était réveillée quelques heures plus tard mais elle avait vraiment mal partout.
+    Himeno a été transportée d'urgence à l'hôpital car elle ne se réveillait pas après sa chute.{/i}"""
+    #scene bg bh1 with fade
+    """{i}Je suis allé lui rendre visite une fois qu'elle s'était réveillée quelques heures plus tard mais elle avait vraiment mal partout.
     Selon les médecins, les escaliers l'ont vraiment frappé.
     Je ne pense pas qu'elle s'en remettra mentalement puisque sa vie était basée sur son apparence.{/i}"""
-    return
+    jump game_over
 
 label route_H2:
     """{i}Cela fait une semaine que je n'étais pas au parc avec Himeno.
@@ -223,4 +227,30 @@ label route_H2:
         "J'ai l'impression qu'on devrait les vérifier.":
             $ pts += 1
             c_himeno "Comment?"
+
+    """{i}Un doux sonnerie vient du téléphone de Himeno
+    Un email.{/i}"""
+
+    c_himeno """Eh?! 
+    Il dit que mon compte bancaire a été compromis…"""
+
+    menu:
+        c_himeno "Pour récupérer mon compte, je dois me reconnecter avec ce lien."
+        "Himeno, je pense que tu devrais les vérifier avant de faire quoi que ce soit.":
+
+            playerName """C'est hyper sus.
+            Je vais chercher une boisson. 
+            Juste attends moi."""
+
+            c_himeno "Wahhhh ! Que devrais-je faire…"
+
+        "Appelle-moi si tu as besoin de quoi que ce soit, j'irai chercher du banana milk.":
+            $ pts += 1
+            c_himeno "Ok ~ Ce sera fait."
+    
+    c_himeno "Attends! Peux-tu me chercher un thé glacé ?"
+    playerName "Okay"
+
+
+    
 
