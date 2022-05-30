@@ -140,13 +140,8 @@ label scene_1:
 
         label .choice1:    
             call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
-<<<<<<< HEAD
             call message_start(playerName, "Merci! Je vais essayer d'être sage :)") # whenever you put the sender name to be playerName it is the player characters own message!
-            call message(ta, "Haha ! Si tu veux, je t'enverrai par e-mail ce qu'on a fait depuis le début de l'année dans nos cours en commun^^")
-=======
-            call message_start(playerName, "Merci! Je vais essayer d’être sage :)") # whenever you put the sender name to be playerName it is the player characters own message!
-            call message(tpa, "Haha ! Si tu veux, je t'enverrai par e-mail ce qu’on a fait depuis le début de l’année dans nos cours en commun^^")
->>>>>>> 7701eb3be992f5849c4da5a3892d9985026274eb
+            call message(tpa, "Haha ! Si tu veux, je t'enverrai par e-mail ce qu'on a fait depuis le début de l'année dans nos cours en commun^^")
             jump .aftermenu
             
         label .choice2:
@@ -157,15 +152,9 @@ label scene_1:
             
         label .aftermenu:
 
-<<<<<<< HEAD
     call message(ta, "Quoi qu'il en soit, envoies-moi un SMS dès que t'as besoin de quoi que ce soit et je te répondrai le plus vite possible, je suis dispo presque tout le temps.")
     call message(ta, "Ah euh... Ça donne probablement l'impression que je ne fais pas mon travail de déléguée... Mais il faut que je te prévienne")
     call message(ta, "Il y a cette fille dont je te conseille de pas t'approcher. Elle juge très facilement les gens et tu ne passeras pas un bon moment avec elle.")
-=======
-    call message(tpa, "Quoi qu'il en soit, envoies-moi un SMS dès que t’as besoin de quoi que ce soit et je te répondrai le plus vite possible, je suis dispo presque tout le temps.")
-    call message(tpa, "Ah euh... Ça donne probablement l'impression que je ne fais pas mon travail de déléguée... Mais il faut que je te prévienne")
-    call message(tpa, "Il y a cette fille dont je te conseille de pas t’approcher. Elle juge très facilement les gens et tu ne passeras pas un bon moment avec elle.")
->>>>>>> 7701eb3be992f5849c4da5a3892d9985026274eb
     
     label choiceMaking_ST: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("Ah… Qu'a-t-elle fait ?","choiceMaking_ST.choice1","À quoi ressemble-t-elle?","choiceMaking_ST.choice2")
