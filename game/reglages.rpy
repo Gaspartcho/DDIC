@@ -30,16 +30,16 @@ label after_load:
     define c_mysteriousMan = Character("???", who_color="#000", callback=partial(beepy_voice, sound="audio/voices/MisteriousMan_voice.mp3", level=0.15))
     define narrateur = Character(" ", callback=partial(beepy_voice, sound="audio/voices/Narator_U_Voice.mp3", level=0.5))
 
-define c_bomi = Character("Bomi", who_color="779b5a")
-define c_akane = Character("Akane", who_color="6d7aad")
-define c_himeno = Character("Himeno", who_color="db4cad")
-define tpb = "Bomi"
-define tpa = "Akane"
-define tph = "Himeno"
-define usrb = "bombomii"
-define usra = "kousei.akane"
-define usrh = "yuzu.himi"
-#endregion
+    define c_bomi = Character("Bomi", who_color="779b5a")
+    define c_akane = Character("Akane", who_color="6d7aad")
+    define c_himeno = Character("Himeno", who_color="db4cad")
+    define tpb = "Bomi"
+    define tpa = "Akane"
+    define tph = "Himeno"
+    define usrb = "bombomii"
+    define usra = "kousei.akane"
+    define usrh = "yuzu.himi"
+    #endregion
 
     #region Images
 
