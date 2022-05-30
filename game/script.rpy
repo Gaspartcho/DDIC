@@ -333,8 +333,6 @@ label scene_2:
         "Himeno":
             $ road = "3"
     
-    narrateur "[road]"
-    
     c_mysteriousMan """Bien. Bonne chance pour la suite, on se revéra à la fin...
 
     Allé, réveille-toi, c'est l'heure de la fin des cours.
