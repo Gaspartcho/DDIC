@@ -1,6 +1,7 @@
 label route_B:
     label RA1:
         define good_points = 0
+        
         narrateur "Pour une raison inconnue, vous décidez d'aller parler à Bomi."
 
         c_bomi "Salut, ça vas?"
@@ -42,8 +43,6 @@ label route_B:
         c_bomi "De toute façon, je ne suis pas la seule à l'admirer. Beaucoup de gens voudraient être à sa place ou avec elle."
         c_bomi "..."
         c_bomi "Est-ce que je devrais me coifer?"
-        playerName "Te coifer?"
-        c_bomi "Je veut dire me coifer comme elle, avec les cheveux plus courts, en bleux..."
 
         menu:
             "Oui":
