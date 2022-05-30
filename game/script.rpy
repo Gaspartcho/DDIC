@@ -152,9 +152,9 @@ label scene_1:
             
         label .aftermenu:
 
-    call message(ta, "Quoi qu'il en soit, envoies-moi un SMS dès que t'as besoin de quoi que ce soit et je te répondrai le plus vite possible, je suis dispo presque tout le temps.")
-    call message(ta, "Ah euh... Ça donne probablement l'impression que je ne fais pas mon travail de déléguée... Mais il faut que je te prévienne")
-    call message(ta, "Il y a cette fille dont je te conseille de pas t'approcher. Elle juge très facilement les gens et tu ne passeras pas un bon moment avec elle.")
+    call message(tpa, "Quoi qu'il en soit, envoies-moi un SMS dès que t'as besoin de quoi que ce soit et je te répondrai le plus vite possible, je suis dispo presque tout le temps.")
+    call message(tpa, "Ah euh... Ça donne probablement l'impression que je ne fais pas mon travail de déléguée... Mais il faut que je te prévienne")
+    call message(tpa, "Il y a cette fille dont je te conseille de pas t'approcher. Elle juge très facilement les gens et tu ne passeras pas un bon moment avec elle.")
     
     label choiceMaking_ST: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("Ah… Qu'a-t-elle fait ?","choiceMaking_ST.choice1","À quoi ressemble-t-elle?","choiceMaking_ST.choice2")
@@ -348,8 +348,6 @@ label scene_2:
     narrateur """L'horlogle affcihe \"17:06\".
     
     Il est tard, vous avez dormis toute la journée."""
-    scene black with fade
-    pause 3
 
     if road == "1":
         jump route_A
