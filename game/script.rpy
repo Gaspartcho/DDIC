@@ -13,7 +13,7 @@ label splashscreen:
 label start:
     stop music
 
-    play music "audio/musics/Ambiant_misterious.mp3" fadein 1.0 loop
+    play music MisteriousMan_theme fadein 1.0 loop
 
     if hasPlayBefore:
         c_mysteriousMan """...
@@ -83,9 +83,11 @@ label start:
         
         Sache juste que nous nous reverons pendant ton aventure.
 
+        Juste de temps en temps... Quand je me sentirais seul...
+
         Au fait, on m'a demandé de te poser une question avant que je puisse te laisser passer:
 
-        Selon toi, comment faire pour développer ou entretenir des relations sur internet?
+        Selon toi, comment faire pour développer ou entretenir des relations saines sur internet?
 
         Réfléchis bien.
         
@@ -278,7 +280,7 @@ label scene_2:
     {i}...{/i}"""
 
     narrateur "Tu tends la main pour essayer de la réveiller... "
-    play audio "audio/sound_effects/School Bell.mp3"
+    play audio class_bell
     narrateur """... mais la cloche de l'école sonne.
     
     Tu retournes à ta place a coté de Akane."""
@@ -296,7 +298,7 @@ label scene_2:
     narrateur "{cps=20}Vous vous endormez.{/cps}"
 
     pause 3.0
-    play music "audio/musics/Ambiant_misterious.mp3" fadein 1.0 loop
+    play music MisteriousMan_theme fadein 1.0 loop
 
     c_mysteriousMan """...
     
@@ -316,13 +318,15 @@ label scene_2:
 
     show himeno choose at image_choose_path_h with fade
     c_mysteriousMan "Ou Himemo, la rebelle du lycée?"
-    #hide insta himeno 1 with fade
     hide himeno choose
 
     c_mysteriousMan """En tout cas, choisis bien.
     
     Tes décisions ont une importance ici."""
 
+    jump road_menu
+
+label road_menu:
     menu:
         "{i}Je choisis...{/i}"
 
@@ -354,4 +358,39 @@ label scene_2:
     if road == "3":
         jump route_H
 
-    return
+label game_over:
+    scene black with fade
+    play music MisteriousMan_theme fadein 1.0 loop
+    c_mysteriousMan """...
+    
+    Tu as perdu.
+    
+    Tu as fais les mauvais choix et tu a perdu.
+    
+    Que veut-tu faire maintenant?"""
+
+    menu:
+        "Recommencer au choix des routes":
+            playerName """Recommencer au choix des routes.
+            
+            Recommencer, encore et encore.
+            
+            Jusqu'à que j'y arrive enfin."""
+
+            c_mysteriousMan "Bien. J'aime cet état d'espris!"
+            c_mysteriousMan "Qui vas-tu choisir à présent?"
+            jump road_menu
+
+        "Quiter le jeu":
+            playerName "Quiter le jeu."
+            c_mysteriousMan """Bien. A la prochaine alors.
+
+            Je t'aurais surement oulillé d'ici là, mais tu me ré-écoutera débiter mon discours ennuillant comme la pluie non?
+            
+            Dépèche toi quand même de revenir, je me sent si seul ici...
+            
+            ;)"""
+
+            stop music fadeout 1.5
+
+            return

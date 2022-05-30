@@ -65,7 +65,7 @@ transform incoming_message:
 
 label phone_start(usrName = "Messages", hour = "17:30"):
     window hide
-    play sound "audio/sound_effects/notification_sound.mp3"
+    play sound phone_jingle
     show screen phone_object(usrName, hour)
     pause(0.2)
     return

@@ -1,5 +1,6 @@
 label after_load:
-    #region Variables
+
+#region Variables
 
     define hasPlayBefore = False
 
@@ -7,9 +8,9 @@ label after_load:
     define playerName = defaultPlayerName
     define LovePoints = {"Akane":0, "Bomi":0, "Himeno":0}
 
-    #endregion
+#endregion
 
-    #region Randoms Functions
+#region Randoms Functions
 
     init python:
         from functools import partial
@@ -23,9 +24,9 @@ label after_load:
             elif event == "slow_done":
                 renpy.sound.stop()
 
-    #endregion
+#endregion
 
-    #region Characters
+#region Characters
 
     define c_mysteriousMan = Character("???", who_color="#000", callback=partial(beepy_voice, sound="audio/voices/MisteriousMan_voice.mp3", level=0.15))
     define narrateur = Character(" ", callback=partial(beepy_voice, sound="audio/voices/Narator_U_Voice.mp3", level=0.5))
@@ -39,41 +40,51 @@ label after_load:
     define usrb = "bombomii"
     define usra = "kousei.akane"
     define usrh = "yuzu.himi"
-    #endregion
+    
+#endregion
 
-    #region Images
+#region Images
 
-    # Akane
+# Akane
     image akane armscrossed = "images/Characters/Akane/akane_armscrossed.png"
     image akane chin = "images/Characters/Akane/akane_chin.png"
 
     image akane choose = "images/Characters/Akane/akane_menu.png"
 
-    # Bomi
+# Bomi
     image bomi armsback = "images/Characters/Bomi/bomi_armsback.png"
     image bomi fingie = "images/Characters/Bomi/bomi_fingie.png"
 
     image bomi choose = "images/Characters/Bomi/bomi_menu.png"
 
-    # Himeno
+# Himeno
     image himeno driveout = "images/Characters/Himeno/himeno_driveout.png"
     image himeno phone = "images/Characters/Himeno/himeno_phone.png"
 
     image himeno choose = "images/Characters/Himeno/himeno_menu.png"
 
-    # Insta
+# Insta
     image insta bomi 1 = "images/instagram/B1_insta.png"
     image insta bomi 2 = "images/instagram/B2_insta.png"
     image insta akane 1 = "images/instagram/A1_insta.jpg"
     image insta himeno 1 = "images/instagram/H1_insta.png"
 
-    # Background
+# Background
     image classroom = "images/scenes/classroom.png"
     image bedroom_sleep = "images/scenes/bedroom_sleep.png"
 
-    #endregion
+#endregion
 
-    #region Autres
+#regions Sons et musiques
+
+    define audio.MisteriousMan_theme = "audio/musics/Ambiant_misterious.mp3"
+
+    define audio.phone_jingle = "audio/sound_effects/notification_sound.mp3"
+    define audio.class_bell = "audio/sound_effects/School Bell.mp3"
+
+#endregion
+
+#region Autres
 
     transform image_choose_path:
         xalign 0.5
@@ -88,5 +99,5 @@ label after_load:
         yalign 0.5
         xpos 0.5
         ypos 0.4
-        
-    #endregion
+            
+#endregion
