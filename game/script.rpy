@@ -136,12 +136,12 @@ label scene_1:
     pause 1.0
 
     label choiceMaking_WAY: # Use this template eatch time u want to make a phone menu
-        call screen phone_reply("Merci! Je vais essayer d’être sage :)","choiceMaking_WAY.choice1","Merci! Je te trouve très belle, ce qui est naturel pour une déléguée!","choiceMaking_WAY.choice2")
+        call screen phone_reply("Merci! Je vais essayer d'être sage :)","choiceMaking_WAY.choice1","Merci! Je te trouve très belle, ce qui est naturel pour une déléguée!","choiceMaking_WAY.choice2")
 
         label .choice1:    
             call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
-            call message_start(playerName, "Merci! Je vais essayer d’être sage :)") # whenever you put the sender name to be playerName it is the player characters own message!
-            call message(tpa, "Haha ! Si tu veux, je t'enverrai par e-mail ce qu’on a fait depuis le début de l’année dans nos cours en commun^^")
+            call message_start(playerName, "Merci! Je vais essayer d'être sage :)") # whenever you put the sender name to be playerName it is the player characters own message!
+            call message(tpa, "Haha ! Si tu veux, je t'enverrai par e-mail ce qu'on a fait depuis le début de l'année dans nos cours en commun^^")
             jump .aftermenu
             
         label .choice2:
@@ -152,9 +152,9 @@ label scene_1:
             
         label .aftermenu:
 
-    call message(tpa, "Quoi qu'il en soit, envoies-moi un SMS dès que t’as besoin de quoi que ce soit et je te répondrai le plus vite possible, je suis dispo presque tout le temps.")
-    call message(tpa, "Ah euh... Ça donne probablement l'impression que je ne fais pas mon travail de déléguée... Mais il faut que je te prévienne")
-    call message(tpa, "Il y a cette fille dont je te conseille de pas t’approcher. Elle juge très facilement les gens et tu ne passeras pas un bon moment avec elle.")
+    call message(ta, "Quoi qu'il en soit, envoies-moi un SMS dès que t'as besoin de quoi que ce soit et je te répondrai le plus vite possible, je suis dispo presque tout le temps.")
+    call message(ta, "Ah euh... Ça donne probablement l'impression que je ne fais pas mon travail de déléguée... Mais il faut que je te prévienne")
+    call message(ta, "Il y a cette fille dont je te conseille de pas t'approcher. Elle juge très facilement les gens et tu ne passeras pas un bon moment avec elle.")
     
     label choiceMaking_ST: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("Ah… Qu'a-t-elle fait ?","choiceMaking_ST.choice1","À quoi ressemble-t-elle?","choiceMaking_ST.choice2")
@@ -286,7 +286,7 @@ label scene_2:
     playerName "Qui est-ce ?"
     c_akane "C'est {b}Bomi Park{/b}."
     c_akane "Elle est en tête du classement de notre école."
-    c_akane "C’est assez impressionnant pour une première."
+    c_akane "C'est assez impressionnant pour une première."
     
     pause 1.0
     "{i}...{/i}"
@@ -306,13 +306,13 @@ label scene_2:
     
     Laquelle tu vas essayer d'aider?"""
 
-    #show "images/Characters/Akane/akane_menu.png" 1 at image_choose_path with fade
+    show akane choose at image_choose_path with fade
     c_mysteriousMan "Akane la déléguée de la classe?"
 
-    #show "images/Characters/Bomi/bomi_menu.png" 1 at image_choose_path with fade
+    show bomi choose at image_choose_path with fade
     c_mysteriousMan "Bomi la meilleure élève de l'école?"
 
-    #show "images/Characters/Himeno/himeno_menu.png" 1 at image_choose_path with fade
+    show himeno choose at image_choose_path with fade
     c_mysteriousMan "Ou Himemo, la rebelle du lycée?"
     #hide insta himeno 1 with fade
 
