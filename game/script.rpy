@@ -101,7 +101,9 @@ label start:
 
         call name_choose
     
-        narrateur "Initialisation pour le joueur \"%(playerName)s\":"
+        narrateur """Initialisation du programme pour le joueur \"%(playerName)s\":
+            
+        Terminé!"""
 
     jump game_Launching
 
@@ -131,7 +133,7 @@ label scene_1:
     define ta = "Akane"
 
     call message_start(ta, "Bienvenue à l'école X ! Je suis {b}Akane Kousei{/b}, la déléguée de classe. Si tu as une question, n'hésite pas à venir me voir. Même si tu nous as rejoint très tard dans l'année, je suis sure que toute la classe t'accueillera à bras ouverts :)")
-    call message_img(ta, "Au fait, ça c'est moi!", "images/instagram/A1_insta.png")
+    call message_img(ta, "Au fait, ça c'est moi!", "images/instagram/A1_insta.jpg")
     call message(ta, "Comme tu arrives en millieu d'année, je me doute bien que ça peu être difficile, mais tu peux compter sur moi!")
     pause 1.0
 
@@ -179,7 +181,6 @@ label scene_1:
     call reply_message("A demain.")
     call phone_end # this one puts away the phone!
 
-    pause
     narrateur """Il est tard...
 
     Vous n'arrivez pas à vous endormir...
@@ -228,14 +229,14 @@ label scene_1:
     call message(ta, "Allé salut. Essaie de ne pas me manquer <3")
     call phone_end
 
-    """...
+    """{i}...
     
-    Je devrais vraiment dormir maintenant."""
+    {i}Je devrais vraiment dormir maintenant."""
     
     jump scene_2
 
 label scene_2:
-    scene classroom with fade
+    scene classroom with Fade(1.0, 2.0, 1.0)
 
     narrateur "Le lendemain, alors que tu allais à l'école, tu reçois un message d'un compte instargam inconnu:"
 
@@ -290,7 +291,7 @@ label scene_2:
     c_akane "Elle est en tête du classement de notre école."
     c_akane "C’est assez impressionnant pour une première."
     
-    pause 3
+    pause 1.0
     "{i}...{/i}"
     "{i}Je devrais plus me concentrer en cours.{/i}"
     narrateur "Alors que vous essayez d'écouter le cours, vous sentez que vos paupères sont de plus en plus lourdes..."
@@ -326,11 +327,13 @@ label scene_2:
         "{i}Je choisis...{/i}"
 
         "Akane":
-            define road = "1"
+            $ road = "1"
         "Bomi":
-            define road = "2"
+            $ road = "2"
         "Himeno":
-            define road = "3"
+            $ road = "3"
+    
+    narrateur "[road]"
     
     c_mysteriousMan """Bien. Bonne chance pour la suite, on se revéra à la fin...
 
@@ -338,7 +341,13 @@ label scene_2:
     
     ;)"""
 
-    stop music fadeout 0.5
+    stop music fadeout 1.5
+    narrateur "Vous vous réveillez."
+    scene classroom with fade
+    
+    narrateur """L'horlogle affcihe \"17:06\".
+    
+    Il est tard, vous avez dormis toute la journée."""
 
     if road == "1":
         jump route_A

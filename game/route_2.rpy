@@ -1,3 +1,3 @@
-label route_B:
+label route_A:
     "Rien encore ici"
     jump route_B

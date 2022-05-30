@@ -51,7 +51,7 @@ image himeno phone = "images/Characters/Himeno/himeno_phone.png"
 # Insta
 image insta bomi 1 = "images/instagram/B1_insta.png"
 image insta bomi 2 = "images/instagram/B2_insta.png"
-image insta akane 1 = "images/instagram/A1_insta.png"
+image insta akane 1 = "images/instagram/A1_insta.jpg"
 image insta himeno 1 = "images/instagram/H1_insta.png"
 
 # Background
