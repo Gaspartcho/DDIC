@@ -133,11 +133,7 @@ label scene_1:
     define ta = "Akane"
 
     call message_start(ta, "Bienvenue à l'école X ! Je suis {b}Akane Kousei{/b}, la déléguée de classe. Si tu as une question, n'hésite pas à venir me voir. Même si tu nous as rejoint très tard dans l'année, je suis sure que toute la classe t'accueillera à bras ouverts :)")
-<<<<<<< HEAD
     call message_img(ta, "Au fait, ça c'est moi!", "images/instagram/A1_insta.jpg")
-=======
-    call message_img(ta, "Au fait, ça c'est moi!", "images/instagram/A2_insta.png")
->>>>>>> 44aa36aee7e2cd29b8eeba7e3d7b6a43dbc04c0a
     call message(ta, "Comme tu arrives en millieu d'année, je me doute bien que ça peu être difficile, mais tu peux compter sur moi!")
     pause 1.0
 
@@ -313,13 +309,13 @@ label scene_2:
     
     Laquelle tu vas essayer d'aider?"""
 
-    show "images\Characters\Akane\akane_menu.png" 1 at image_choose_path with fade
+    show "images/Characters/Akane/akane_menu.png" 1 at image_choose_path with fade
     c_mysteriousMan "Akane la déléguée de la classe?"
 
-    show "images\Characters\Bomi\bomi_menu.png" 1 at image_choose_path with fade
+    show "images/Characters/Bomi/bomi_menu.png" 1 at image_choose_path with fade
     c_mysteriousMan "Bomi la meilleure élève de l'école?"
 
-    show "images\Characters\Himeno\himeno_menu.png" 1 at image_choose_path with fade
+    show "images/Characters/Himeno/himeno_menu.png" 1 at image_choose_path with fade
     c_mysteriousMan "Ou Himemo, la rebelle du lycée?"
     hide insta himeno 1 with fade
 
