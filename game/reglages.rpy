@@ -32,6 +32,12 @@ define narrateur = Character(" ", callback=partial(beepy_voice, sound="audio/voi
 define c_bomi = Character("Bomi", who_color="779b5a")
 define c_akane = Character("Akane", who_color="6d7aad")
 define c_himeno = Character("Himeno", who_color="db4cad")
+define tpb = "Bomi"
+define tpa = "Akane"
+define tph = "Himeno"
+define usrb = "bombomii"
+define usra = "kousei.akane"
+define usrh = "yuzu.himi"
 #endregion
 
 #region Images

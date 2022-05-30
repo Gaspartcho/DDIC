@@ -131,7 +131,7 @@ label scene_1:
     call phone_start(usra, "21:30")
 
     call message_start(tpa, "Bienvenue à l'école X ! Je suis {b}Akane Kousei{/b}, la déléguée de classe. Si tu as une question, n'hésite pas à venir me voir. Même si tu nous as rejoint très tard dans l'année, je suis sure que toute la classe t'accueillera à bras ouverts :)")
-    call message_img(tpa, "Au fait, ça c'est moi!", "images/instagram/A1_insta.jpg")
+    call message_img(tpa, "Au fait, ça c'est moi!", "images/instagram/A2_insta.png")
     call message(tpa, "Comme tu arrives en millieu d'année, je me doute bien que ça peu être difficile, mais tu peux compter sur moi!")
     pause 1.0
 
@@ -345,7 +345,8 @@ label scene_2:
     narrateur """L'horlogle affcihe \"17:06\".
     
     Il est tard, vous avez dormis toute la journée."""
-    scene black
+    scene black with fade
+    pause 3
 
     if road == "1":
         jump route_A

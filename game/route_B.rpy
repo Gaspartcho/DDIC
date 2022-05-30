@@ -5,27 +5,24 @@ label route_B:
     label choiceMaking_HID: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("Hey Bomi, pourquoi tu te caches?","choiceMaking_HID.choice1","Hé bien madame la déléguée, tu n'as pas du tout la même tête en vrai.","choiceMaking_HID.choice2")
 
-    label .choice1:    
-        call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
-        call message_start(playerName, "Hey Bomi, pourquoi tu te caches?") # whenever you put the sender name to be playerName it is the player characters own message!
-        call message(tpb, "Ah, tu m'as trouvé?")
-        $ good_points += 1
-        jump .aftermenu
+        label .choice1:    
+            call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
+            call message_start(playerName, "Hey Bomi, pourquoi tu te caches?") # whenever you put the sender name to be playerName it is the player characters own message!
+            call message(tpb, "Ah, tu m'as trouvé?")
+            $ good_points += 1
+            jump .aftermenu
             
-    label .choice2:
-        call phone_after_menu
-        call message_start(playerName, "Hé bien madame la déléguée, tu n'as pas du tout la même tête en vrai.")
-        call message(tpb, "...")
-        jump .aftermenu
-
-    call message(tb, """Ecoute, je suis désollé de t'avoir menti
-
-        J'admire beaucoup Akane. Elle est intelligente, elle est belle, elle est confiante...
-
-        Mon seul atout est mon niveau scolaire.
-
-        Comparé à elle, ce n'est pas grand chose.""")
-
+        label .choice2:
+            call phone_after_menu
+            call message_start(playerName, "Hé bien madame la déléguée, tu n'as pas du tout la même tête en vrai.")
+            call message(tpb, "...")
+            jump .aftermenu
+        label .aftermenu:
+    call message(tpb, "Ecoute, je suis désollé de t'avoir menti")
+    call message(tpb, "J'admire beaucoup Akane. Elle est intelligente, elle est belle, elle est confiante...")
+    call message(tpb, "Mon seul atout est mon niveau scolaire.")
+    call message(tpb, "Comparé à elle, ce n'est pas grand chose.")
+        
     menu:
         c_bomi "..."
 
