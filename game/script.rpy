@@ -308,13 +308,13 @@ label scene_2:
     
     Laquelle tu vas essayer d'aider?"""
 
-    show insta akane 1 at image_choose_path with fade
+    show "images\Characters\Akane\menu_pose_A.png" 1 at image_choose_path with fade
     c_mysteriousMan "Akane la déléguée de la classe?"
 
-    show insta bomi 1 at image_choose_path with fade
+    show "images\Characters\Bomi\menu_pose_B.png" 1 at image_choose_path with fade
     c_mysteriousMan "Bomi la meilleure élève de l'école?"
 
-    show insta himeno 1 at image_choose_path with fade
+    show "images\Characters\Himeno\menu_pose_H.png" 1 at image_choose_path with fade
     c_mysteriousMan "Ou Himemo, la rebelle du lycée?"
     hide insta himeno 1 with fade
 
