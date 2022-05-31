@@ -17,24 +17,33 @@ label route_H1:
     scene park with fade
 
     narrateur "Tu trouves Himeno à l'arrière du parc assis à l'ombre."
+    show hhbw 
 
     c_himeno "Hey [playerName]"
-
+    hide hhbw
+    show hslh
     menu:
         c_himeno "Tu es prêt à ruiner des vies ?"
         "On fait quoi? j'espère rien de mal":
+            hide hslh
+            show htbh
             c_himeno """Mais bien sûr! 
+
             On va exécuter le plan le plus diabolique de l'humanité"""
 
         "C’est sûr et certain qu'on ne va pas faire de bonnes choses.":
             $ pts += 1
+            hide hslh
+            show htbh
             c_himeno "Ne sois pas bête c'est pour le plus grand bien"
-
+    hide htbh
+    show hslh
     c_himeno """Mon maquillage est superbe aujourd'hui.
 
-    Je te fais prendre des photos de moi pour ma page instargam.
-
-    On va ruiner la vie des gens en leur montrant ce qu'ils ratent."""
+    Je te fais prendre des photos de moi pour ma page instargam."""
+    hide hslh
+    show hglh
+    c_himeno "On va ruiner la vie des gens en leur montrant ce qu'ils ratent."
 
     menu:
         c_himeno "Tu peux le faire, n'est-ce pas ?"
