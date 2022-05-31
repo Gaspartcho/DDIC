@@ -12,6 +12,7 @@ label splashscreen:
 
 label start:
     stop music
+    jump route_A
 
     play music MisteriousMan_theme fadein 1.0 loop
 

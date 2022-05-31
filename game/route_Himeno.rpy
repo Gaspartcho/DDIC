@@ -436,15 +436,3 @@ label HGE:
     {i}Elle est vraiment faite pour le public.{/i}"""
 
     return
-
-
-
-
-
-    
-
-
-
-
-    
-
