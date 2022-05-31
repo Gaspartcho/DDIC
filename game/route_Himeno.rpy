@@ -235,7 +235,7 @@ label HBad1:
 
     {i}Selon les médecins, les escaliers l'ont vraiment frappé.{/i}
 
-    {i}e ne pense pas qu'elle s'en remettra mentalement puisque sa vie était basée sur son apparence.{/i}"""
+    {i}Je ne pense pas qu'elle s'en remettra mentalement puisque sa vie était basée sur son apparence.{/i}"""
 
     jump game_over
 
@@ -256,7 +256,7 @@ label route_H2:
 
     Je peux gagner de l'argent maintenant!"""
 
-    "{i}sort son téléphone et me montre ses demandes sur instargam.{/i}"
+    "{i}Himeno sort son téléphone et me montre ses demandes sur instargam.{/i}"
 
     c_himeno "C'est fou ici. Ta pote devient populaire ~~"
 
@@ -337,7 +337,81 @@ label route_H2:
         jump HBad2
         
 label HBad2:
+    scene hallway day with fade
+    """{i}Hmm…{/i}
+
+    {i}C’est est tellement bizarre.{/i}
+
+    {i}J'ai l'impression que j'aurais dû m'assurer qu'elle ne fasse rien.{/i}"""
     
+    narrateur "Tu sens ton téléphone vibrer lorsque tu prends le thé glacé et le banana milk."
+    call phone_start(usrh, "10:12")
+    call message_start(tph, "Reviens! J’ai soif!!")
+    call reply_message(playerName, "Okay okay!")
+    call message(tph, "Je l'ai fait! J'espère qu'ils envoient les articles bientôt!")
+    call phone_end(False)
+    scene black with fade
+    """{i}...{/i}
+
+    {i}Ça fait 2 semaines que j' ai parlé à Himeno de ses offres.{/i}
+
+    {i}La fille a juste arrêté de venir en cours.{/i}
+
+    {i}Ce qui est plus inquiétant, c'est que des adultes sont venus dans notre classe pour demander où elle se trouvait.{/i}
+
+    {i}Je devrais aller lui rendre visite.{/i}"""
+
+    narrateur "Tu vas lui dire que tu as eu de l'école."
+
+    """{i}Huh??? {/i}
+
+    {i}Pourquoi les gens sortent-ils ses meubles ?{/i}"""
+
+    narrateur "Une foule séparée de personnes scandait son nom."
+
+    """{i}Sont-ce des fans ?{/i}
+
+    {i}… {/i}
+
+    {i}Je ne pense pas que les fans soient censés savoir où vous vivez.{/i}"""
+
+    narrateur "Tu regardes autour de toi pour voir si tu peux repérer Himeno mais tu ne le fais pas."
+
+    """{i}…{/i}
+
+    {i}Je suppose que je vais aller chercher quelque chose à manger avant de rentrer à la maison. {/i}"""
+
+    narrateur "Tu vas au 7-12 le plus proche et tu achètes un onigiri au saumon, des sandwichs japonais au riz."
+
+    """{i}Zut.{/i}
+
+    {i}J'ai oublié mon porte-monnaie.{/i}"""
+
+    narrateur "Tu regardes la caissière."
+
+    "{i}…{/i}"
+
+    c_himeno """???
+    
+    Ah!?? [playerName]?! N-non! Ne me regarde pas !
+    
+    Ils ont tout pris ! Mon argent, ma maison, et ma vie."""
+
+    """{i}Des larmes commencent à se former dans ses yeux fatigués.{/i}
+    
+    {i}Je n'aurais jamais pensé voir Himeno dans cet état.{/i}"""
+
+    jump game_over
+
+label HGE:
+
+
+
+
+
+    
+
+
 
 
     
