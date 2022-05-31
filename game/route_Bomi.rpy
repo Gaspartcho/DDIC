@@ -7,7 +7,7 @@ label route_B1:
     narrateur "Après cette longue journée de cours, vous décidez d'aller vous coucher pour vous reposer et vous remettre de toutes vos émotions"
     c_mysteriousMan "Arrette de faire genre... Tu viens de passer la journée à dormir..."
 
-    scene bedroom_sleep with fade
+    scene bedroom with fade
     pause 2.0
     "{i} ..."
     "{i} Je vais essayer de lui parler quand même"
@@ -81,7 +81,7 @@ label route_B1:
     c_mysteriousMan "FORESHAOWING!!!"
     scene black with fade
     narrateur "Le lendemain..."
-    scene classroom with fade
+    scene classroom day with fade
     pause 2.0
 
     c_bomi "Bonjour [playerName]."
@@ -162,13 +162,21 @@ label route_B1:
 label RBB1:
     scene black with fade
     c_bomi """...
+
     Je ne lui ressemble pas du tout.
+
     Pourquoi?
+
     J'ai tout essayé...
+
     J'ai essayé de me couper les cheveux, d'ajouter des extensions, d'avoir des lentilles teintées...
+
     Rien ne marche.
+
     Comment faire pour lui ressembler?
+
     COMMENT FAIRE POUR LUI RESSEMBLER !?!
+
     Je n'en peut plus."""
 
     jump game_over
