@@ -49,28 +49,30 @@ label after_load:
     image akane armscrossed = "images/Characters/Akane/akane_armscrossed.png"
     image akane chin = "images/Characters/Akane/akane_chin.png"
 
-    image akane choose = "images/Characters/Akane/akane_menu.png"
+    image akane default = "images/Characters/Akane/akane_default.png"
 
 # Bomi
     image bomi armsback = "images/Characters/Bomi/bomi_armsback.png"
     image bomi fingie = "images/Characters/Bomi/bomi_fingie.png"
 
-    image bomi choose = "images/Characters/Bomi/bomi_menu.png"
+    image bomi = "images/Characters/Bomi/bomi_default.png"
 
 # Himeno
     image himeno driveout = "images/Characters/Himeno/himeno_driveout.png"
     image himeno phone = "images/Characters/Himeno/himeno_phone.png"
 
-    image himeno choose = "images/Characters/Himeno/himeno_menu.png"
+    image himeno = "images/Characters/Himeno/himeno_default.png"
 
 # Insta
-    image insta bomi 1 = "images/instagram/B1_insta.png"
-    image insta bomi 2 = "images/instagram/B2_insta.png"
-    image insta akane 1 = "images/instagram/A1_insta.jpg"
-    image insta himeno 1 = "images/instagram/H1_insta.png"
+    image insta bomi1 = "images/instagram/B1_insta.png"
+    image insta bomi2 = "images/instagram/B2_insta.png"
+    image insta akane1 = "images/instagram/A1_insta.png"
+    image insta akane2 = "images/instagram/A2_insta.png"
+    image insta himeno1 = "images/instagram/H1_insta.png"
+    image insta himeno2 = "images/instagram/H2_insta.png"
 
 # Background
-    image classroom day= "images/scenes/classroom_day.png"
+    image classroom day = "images/scenes/classroom_day.png"
     image classroom late = "images/scenes/classroom_late.png"
     image bedroom = "images/scenes/bedroom.png"
     image hallway day = "images/scenes/hallway_day.png"

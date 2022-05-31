@@ -133,7 +133,7 @@ label scene_1:
     call phone_start(usra, "21:30")
 
     call message_start(tpa, "Bienvenue à l'école X ! Je suis {b}Akane Kousei{/b}, la déléguée de classe. Si tu as une question, n'hésite pas à venir me voir. Même si tu nous as rejoint très tard dans l'année, je suis sure que toute la classe t'accueillera à bras ouverts :)")
-    call message_img(tpa, "Au fait, ça c'est moi!", "images/instagram/A2_insta.png")
+    call message_img(tpa, "Au fait, ça c'est moi!", insta akane1)
     call message(tpa, "Comme tu arrives en millieu d'année, je me doute bien que ça peu être difficile, mais tu peux compter sur moi!")
     pause 1.0
 
@@ -174,7 +174,7 @@ label scene_1:
             
         label .aftermenu:
 
-    call message_img(tpa, "Tiens", "images/instagram/H1_insta.png")
+    call message_img(tpa, "Tiens", insta himeno1)
     call message(tpa, "Elle s'appelle {b}Himeno Yuzu{/b}. Mais garde ça pour toi s'il te plais: ce serait gênant si les gens savaient que la déléguée se fait harceler. Haha.")
     call message(tpa, "Bon, oublies tout ça. Il n'y a aucune raison pour que tu passe un mauvais moment ici.")
     call message(tpa, "Oh! Mes parents m'appellent. Je te verrai demain :)")
@@ -308,15 +308,15 @@ label scene_2:
     
     Laquelle tu vas essayer d'aider?"""
 
-    show akane choose at image_choose_path with fade
+    show akane at image_choose_path with fade
     c_mysteriousMan "Akane la déléguée de la classe?"
     hide akane choose
 
-    show bomi choose at image_choose_path with fade
+    show bomi at image_choose_path with fade
     c_mysteriousMan "Bomi la meilleure élève de l'école?"
     hide bomi choose
 
-    show himeno choose at image_choose_path_h with fade
+    show himeno at image_choose_path_h with fade
     c_mysteriousMan "Ou Himemo, la rebelle du lycée?"
     hide himeno choose
 
@@ -345,18 +345,18 @@ label road_menu:
 
     stop music fadeout 1.5
     narrateur "Vous vous réveillez."
-    scene classroom with fade
+    #scene classroom sunset with fade
     
     narrateur """L'horlogle affcihe \"17:06\".
     
     Il est tard, vous avez dormis toute la journée."""
 
     if road == "1":
-        jump route_A
+        jump route_A1
     if road == "2":
-        jump route_B
+        jump route_B1
     if road == "3":
-        jump route_H
+        jump route_H1
 
 label game_over:
     scene black with fade
