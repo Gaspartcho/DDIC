@@ -182,3 +182,128 @@ label RBB1:
     jump game_over
 
 label RBF1:
+    scene black with fade
+    narrateur "Le lendemain."
+    scene classroom with fade
+
+    c_bomi "Hey! [playerName]!"
+    c_bomi "Elles commençaient à devenir lourdes..."
+    c_bomi "Et puis, je prèfère mon style d'avant finalement."
+
+    menu:
+        c_bomi "..."
+        "Je suis sûr qu'elle ne l'a pas encore postée":
+            c_bomi "J'aimerais aller la voir quand même."
+        
+        "Allons chercher Himeno":
+            c_bomi "Ok, c'est partis."
+    
+    c_bomi "..."
+    c_bomi "Je pense qu'elle est sur le toit en train de déjeuner et de prendre des photos pour Instagram."
+    "{i} A-t-elle déjà posté?"
+
+    # call phone_start(usrb, "10:18")
+    # call message_img() ATTENTION ICI: Mettre une image puis des commentaires méhants (pour + tard)
+    # call message()
+    # ...
+
+    "{i}Wow..."
+    "{i}Ces commentaires sont stupides et méchants..."
+    "{i}Himeno n'a aucune pitié."
+
+    # call phone_end
+
+    c_bomi "Ah..."
+    c_bomi "J'espérais que tu n'allais pas le voir"
+    c_bomi "Je ne pensais pas que c'était si reconnaissable..."
+
+    menu:
+        "Tu devrais répliquer":
+            c_bomi "..."
+
+        "On devrait le signaler":
+            $ good_points += 1
+            playerName "N'y fais pas attention."
+            playerName "On devrait signaler l'incident sur insta et à l'administration."
+    
+    playerName "Bon, allons voir Himeno."
+    c_bomi "Non!!" # surpirsed ?
+    c_bomi "J-je veux dire qu'on ne devrait pas."
+    c_bomi "J'ai peur que ça se passe mal..."
+
+    menu:
+        c_bomi "..."
+        "Tu n'es pas obligée d'y aller":
+            playerName "Tu n'es pas obligée d'y aller tu sais?"
+            playerName "De toute façon, on a déja la preuve qu'elle t'envoie de la haine"
+            playerName "Elle finira par payer de toute façon"
+            define final_choice = 0
+
+        "Tu devrais aller lui parler":
+            playerName "Tu devrais aller lui parler."
+            playerName "Lui dire ce que tu ressent, lui faire comprendre qu'elle te fais du mal."
+            define final_choice = 1
+        
+    c_bomi "Oui mais..."
+    c_bomi "Je voudrais pas lui attirer de problèmes..."
+    playerName "On dois lui faire comprendre que chaque actions a des conséquences!"
+    c_bomi "..."
+    playerName "Comment tu te sens?"
+    c_bomi "Mal."
+    c_bomi "C'est atroce."
+    c_bomi "J'ai l'impression que ces commentaires me hantent..."
+    c_bomi "Ils m'ont empêché de dormir hier soir."
+    c_bomi "Et chaque fois que j'en lis, je me sens encore moins bien."
+
+    menu:
+        "On devrait aller voir la psychologue scolaire.":
+            $ good_points += 1
+            c_bomi "Et risquer qu'ils le disent à ma famille ?"
+            c_bomi "Certainement pas!"
+            playerName "Oui mais c'est important d'en parler à des personnes qualifiées..."
+            playerName "Ils pouront t'aider beaucoup mieu que moi et te donner des vais conseils!"
+            c_bomi "..."
+            define good_ending = True
+        
+        "Ils ne veulent rien dire. Ça ira.":
+            c_bomi "..." # Triste
+            c_bomi "Si tu le dis"
+            define good_ending = False
+
+    c_bomi "Bon ok."
+    c_bomi "Je ferai ce que tu m'as dit."
+    c_bomi "J'espère que tu as raison."
+
+    if good_ending and good_points > 8:
+        jump RBG
+    else:
+        jump RBB2
+
+label RBB2:
+    # A changer et a sénariser au fil du temps.
+
+    scene bedroom_sleep with fade
+    playerName """Ça fait un mois que j'ai parlé à Bomi du post.
+
+    Le post s'est propagé et les gens à l'école ont commencé à le voir.
+
+    Parfois, je trouvais des lettres dans son casier ou des mots méchants écrits sur son bureau.
+
+    Apparemment, Akane a beaucoup d'admirateurs et puisque les gens essayaient d'imiter leur “déesse”, leurs commentaires finissaient par être ciblés.
+
+    J'ai essayé de les cacher du mieux que je pouvais mais ce n'était pas assez.
+
+    Bomi a fini par les découvrir. 
+
+    Au fil des jours, elle semblait se sentir de plus en plus mal.
+
+    À la fin, elle n'est plus venue en cours.
+
+    Personne n'a entendu parler d'elle depuis et je pense que la majorité n'ont rien fait pour essayer de prendre de ses nouvelles.
+
+    Sa chaise est vide, ramassant la poussière au fil du temps."""
+
+    jump game_over
+
+label RBG:
+    
