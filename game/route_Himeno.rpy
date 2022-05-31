@@ -316,15 +316,16 @@ label route_H2:
     menu:
         c_himeno "Pour récupérer mon compte, je dois me reconnecter avec ce lien."
         "Himeno, je pense que tu devrais les vérifier avant de faire quoi que ce soit.":
-
+            $ pts += 1
             playerName """C'est hyper sus.
+
             Je vais chercher une boisson. 
+
             Juste attends moi."""
 
             c_himeno "Wahhhh ! Que devrais-je faire…"
 
         "Appelle-moi si tu as besoin de quoi que ce soit, j'irai chercher du banana milk.":
-            $ pts += 1
             c_himeno "Ok ~ Ce sera fait."
     
     c_himeno "Attends! Peux-tu me chercher un thé glacé ?"
@@ -404,6 +405,37 @@ label HBad2:
     jump game_over
 
 label HGE:
+    scene hallway day with fade
+    """{i}Hmm…{/i}
+
+    {i}C’est est tellement bizarre.{/i}
+
+    {i}J'ai l'impression que j'aurais dû m'assurer qu'elle ne fasse rien.{/i}"""
+    
+    narrateur "Tu sens ton téléphone vibrer lorsque tu prends le thé glacé et le banana milk."
+    call phone_start(usrh, "10:12")
+    call message_start(tph, "Reviens! J’ai soif!!")
+    call reply_message(playerName, "Okay okay!")
+    call message(tph, "Je l'ai fait! J'espère qu'ils envoient les articles bientôt!")
+    call phone_end(False)
+    scene black with fade
+    """{i}...{/i}
+
+    {i}Ça fait 2 semaines que j' ai parlé à Himeno de ses offres.{/i}"""
+
+    #scene 
+
+    """{i}Avec le mannequinat et les sponsors qu'elle a continué à obtenir, Himeno n'avait plus vraiment besoin de venir à l'école.{/i}
+
+    {i}Malgré cela, elle est toujours venue m'accompagner tout au long des journée.{/i}"""
+
+    c_bomi "[playerName]! N'est-ce pas mignon?"
+
+    """{i}Elle montre sa séance photo Lewis Vitton qu'elle a eue l'autre jour.{/i}
+
+    {i}Elle est vraiment faite pour le public.{/i}"""
+
+    return
 
 
 
