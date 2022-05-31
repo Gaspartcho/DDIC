@@ -1,4 +1,4 @@
-label route_B:
+label route_B1:
     define good_points = 0
 
     "{i} Je devrais aller voir Bomi et lu demander pourquoi elle fais ça."
@@ -154,7 +154,7 @@ label route_B:
     
     c_bomi "..."
 
-    if good_points > 4:
+    if good_points >= 4:
         jump RBB1
     else:
         jump RBF1

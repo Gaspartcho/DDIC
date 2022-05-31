@@ -129,11 +129,11 @@ label game_Launching:
     jump scene_1
 
 label scene_1:
-    scene bedroom_sleep with fade
+    scene bedroom with fade
     call phone_start(usra, "21:30")
 
     call message_start(tpa, "Bienvenue à l'école X ! Je suis {b}Akane Kousei{/b}, la déléguée de classe. Si tu as une question, n'hésite pas à venir me voir. Même si tu nous as rejoint très tard dans l'année, je suis sure que toute la classe t'accueillera à bras ouverts :)")
-    call message_img(tpa, "Au fait, ça c'est moi!", "images/instagram/A2_insta.png")
+    call message_img(tpa, "Au fait, ça c'est moi!", "images/instagram/A1_insta.png")
     call message(tpa, "Comme tu arrives en millieu d'année, je me doute bien que ça peu être difficile, mais tu peux compter sur moi!")
     pause 1.0
 
@@ -235,7 +235,7 @@ label scene_1:
     jump scene_2
 
 label scene_2:
-    scene classroom with Fade(1.0, 2.0, 1.0)
+    scene classroom day with Fade(1.0, 2.0, 1.0)
 
     narrateur "Le lendemain, alors que tu allais à l'école, tu reçois un message d'un compte instargam inconnu:"
 
@@ -308,15 +308,15 @@ label scene_2:
     
     Laquelle tu vas essayer d'aider?"""
 
-    show akane choose at image_choose_path with fade
+    show akane at image_choose_path with fade
     c_mysteriousMan "Akane la déléguée de la classe?"
     hide akane choose
 
-    show bomi choose at image_choose_path with fade
+    show bomi at image_choose_path with fade
     c_mysteriousMan "Bomi la meilleure élève de l'école?"
     hide bomi choose
 
-    show himeno choose at image_choose_path_h with fade
+    show himeno at image_choose_path_h with fade
     c_mysteriousMan "Ou Himemo, la rebelle du lycée?"
     hide himeno choose
 
@@ -345,18 +345,18 @@ label road_menu:
 
     stop music fadeout 1.5
     narrateur "Vous vous réveillez."
-    scene classroom with fade
+    scene classroom late with fade 
     
     narrateur """L'horlogle affcihe \"17:06\".
     
     Il est tard, vous avez dormis toute la journée."""
 
     if road == "1":
-        jump route_A
+        jump route_A1
     if road == "2":
-        jump route_B
+        jump route_B1
     if road == "3":
-        jump route_H
+        jump route_H1
 
 label game_over:
     scene black with fade
