@@ -70,8 +70,13 @@ label after_load:
     image insta himeno 1 = "images/instagram/H1_insta.png"
 
 # Background
-    image classroom = "images/scenes/classroom.png"
-    image bedroom_sleep = "images/scenes/bedroom_sleep.png"
+    image classroom day= "images/scenes/classroom_day.png"
+    image classroom late = "images/scenes/classroom_late.png"
+    image bedroom = "images/scenes/bedroom.png"
+    image hallway day = "images/scenes/hallway_day.png"
+    image hallway late = "images/scenes/hallway_late.png"
+    image park = "images/scenes/park.png"
+
 
 #endregion
 
