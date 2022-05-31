@@ -129,11 +129,11 @@ label game_Launching:
     jump scene_1
 
 label scene_1:
-    scene bedroom_sleep with fade
+    scene bedroom with fade
     call phone_start(usra, "21:30")
 
     call message_start(tpa, "Bienvenue à l'école X ! Je suis {b}Akane Kousei{/b}, la déléguée de classe. Si tu as une question, n'hésite pas à venir me voir. Même si tu nous as rejoint très tard dans l'année, je suis sure que toute la classe t'accueillera à bras ouverts :)")
-    call message_img(tpa, "Au fait, ça c'est moi!", insta akane1)
+    call message_img(tpa, "Au fait, ça c'est moi!", "images/instagram/A1_insta.png")
     call message(tpa, "Comme tu arrives en millieu d'année, je me doute bien que ça peu être difficile, mais tu peux compter sur moi!")
     pause 1.0
 
@@ -174,7 +174,7 @@ label scene_1:
             
         label .aftermenu:
 
-    call message_img(tpa, "Tiens", insta himeno1)
+    call message_img(tpa, "Tiens", "images/instagram/H1_insta.png")
     call message(tpa, "Elle s'appelle {b}Himeno Yuzu{/b}. Mais garde ça pour toi s'il te plais: ce serait gênant si les gens savaient que la déléguée se fait harceler. Haha.")
     call message(tpa, "Bon, oublies tout ça. Il n'y a aucune raison pour que tu passe un mauvais moment ici.")
     call message(tpa, "Oh! Mes parents m'appellent. Je te verrai demain :)")
@@ -235,7 +235,7 @@ label scene_1:
     jump scene_2
 
 label scene_2:
-    scene classroom with Fade(1.0, 2.0, 1.0)
+    scene classroom day with Fade(1.0, 2.0, 1.0)
 
     narrateur "Le lendemain, alors que tu allais à l'école, tu reçois un message d'un compte instargam inconnu:"
 
@@ -345,7 +345,7 @@ label road_menu:
 
     stop music fadeout 1.5
     narrateur "Vous vous réveillez."
-    #scene classroom sunset with fade
+    scene classroom late with fade 
     
     narrateur """L'horlogle affcihe \"17:06\".
     

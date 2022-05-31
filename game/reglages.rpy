@@ -49,7 +49,7 @@ label after_load:
     image akane armscrossed = "images/Characters/Akane/akane_armscrossed.png"
     image akane chin = "images/Characters/Akane/akane_chin.png"
 
-    image akane default = "images/Characters/Akane/akane_default.png"
+    image akane = "images/Characters/Akane/akane_default.png"
 
 # Bomi
     image bomi armsback = "images/Characters/Bomi/bomi_armsback.png"
@@ -78,6 +78,7 @@ label after_load:
     image hallway day = "images/scenes/hallway_day.png"
     image hallway late = "images/scenes/hallway_late.png"
     image park = "images/scenes/park.png"
+    image BH1 = "images/scenes/BH1.png"
 
 
 #endregion

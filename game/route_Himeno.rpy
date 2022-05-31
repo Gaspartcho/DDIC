@@ -9,14 +9,16 @@ label route_H1:
     pause 2.0
     window show
     call phone_end(False)
-    #scene park with fade 
-    """{i}Je me demande ce qu'elle veut.
-    Le soleil se couchait juste derrière le bâtiment de l'école.
-    Cette première journée était assez agréable.{/i}"""
+    """{i}Je me demande ce qu'elle veut.{/i}
+
+    {i}Le soleil se couchait juste derrière le bâtiment de l'école.{/i}
+
+    {i}Cette première journée était assez agréable.{/i}"""
+    scene park with fade
 
     narrateur "Tu trouves Himeno à l'arrière du parc assis à l'ombre."
 
-    c_himeno "Hey [Player]"
+    c_himeno "Hey [playerName]"
 
     menu:
         c_himeno "Tu es prêt à ruiner des vies ?"
@@ -29,7 +31,9 @@ label route_H1:
             c_himeno "Ne sois pas bête c'est pour le plus grand bien"
 
     c_himeno """Mon maquillage est superbe aujourd'hui.
+
     Je te fais prendre des photos de moi pour ma page instargam.
+
     On va ruiner la vie des gens en leur montrant ce qu'ils ratent."""
 
     menu:
@@ -37,20 +41,25 @@ label route_H1:
         "Je suis le meilleur photographe que vous trouverez":
             $ pts += 1
             c_himeno """C'est parfait!
+
             Tu vois? On est un pair parfait"""
 
         "Je ne suis pas très doué avec l'appareil photo":
             c_himeno "C'est pas grave, je vais te guider"
 
     narrateur """Tu prends des photos de Himeno dans diverses poses.
+
     Elle demande finalement à voir comment ils sont sortis après quelques minutes"""
 
     c_himeno "Hé! N'est-ce pas…"
 
-    """{i}Quoi
-    Est-ce que j'ai mal fait ça ?
-    J'ai suivi des règles de photographie que j'ai vues en ligne.
-    Elle exagère sûrement-{/i}"""
+    """{i}Quoi{/i}
+
+    {i}Est-ce que j'ai mal fait ça ?{/i}
+
+    {i}J'ai suivi des règles de photographie que j'ai vues en ligne.{/i}
+
+    {i}Elle exagère sûrement-{/i}"""
 
     c_himeno "C'est Bomi à l'arrière."
 
@@ -59,12 +68,15 @@ label route_H1:
     "{i}Hein...{/i}"
 
     c_himeno """Pfft
+
     Elle ressemble à un harceleur.
+
     Qu'est-ce qu'elle fout ?"""
 
     narrateur "Himeno agite son bras, essayant d'attirer l'attention de Bomi."
 
     c_himeno """Hey! 
+
     Je vais dire à tout le monde que tu es un harceleur !"""
 
     menu:
@@ -75,6 +87,7 @@ label route_H1:
 
         "Elle s'en ira, ignore-la.":
             c_himeno """Quoi et la laisser me suivre? 
+
             Certainement pas."""
     c_himeno "Je refuse d'accepter et d'endurer un événement aussi effrayant."
 
@@ -89,6 +102,7 @@ label route_H1:
             Ouais"""
 
     c_himeno """Et elle a toujours pris ma place au sommet du classement
+
     comme je l'ai dit,"""
 
     menu:
@@ -96,43 +110,56 @@ label route_H1:
         "Comment le sais-tu ? Je suis sûr qu'elle a travaillé dur pour être là où elle est maintenant. Je crois que tu peux la battre aussi.":
             $ pts += 1
             c_himeno """…
+
             Vraiment?"""
 
         "Peut-être qu'elle est juste plus intelligente que toi. ":
             c_himeno "..."
 
     """{i}Himeno a l'air énervé.{/i}
-    Peut-être que je n'aurais pas dû dire ça."""
+
+    {i}Peut-être que je n'aurais pas dû dire ça.{/i}"""
 
     c_himeno "… Tais-toi…"
 
     playerName "Hein?"
 
     c_himeno """De quel droit tu me dis cela ?
+
     tu penses que je n'essaie pas?
+
     tout ce que je veux
+
     c'est que mon père me remarque
+
     il est jamais a la maison
+
     et même si je vais du bien ou du mal
+
     il ne me regarde jamais 
+
     …
+
     ah
+
     t’es nul
+
     t’as ruiné mon maquillage"""
 
     "…"
 
     menu:
-        c_himeno "Je devrais peut-être dire quelque chose"
+        "{i}Je devrais peut-être dire quelque chose{/i}"
         "Il te verra un jour. C'est pour ca que tu devras rester bon pour le jour où il le fera.":
             $ pts += 1
 
         "... ":
+            c_himeno "..."
 
-    c_himeno """
-    Je vais rentrer à la maison."""
+    c_himeno "Je vais rentrer à la maison."
 
     narrateur """Elle se lève du banc et se dirige vers l'entrée du parc.
+
     Tu jetes un coup d'œil à la direction où Bomi Park était censé être mais elle n'était plus là"""
 
     "{i}Elle a dû partir quand Himeno l'a appelée.{/i}"
@@ -147,49 +174,89 @@ label route_H1:
         jump HBad1
 
 label HBad1:
-    scene classroom with fade
-    """{i}Ça fait une semaine que j’étais au parc avec Himeno.
-    Himeno a fini par publier cette photo et a répandu beaucoup de haine.
-    Bomi a fini par subir beaucoup d'intimidation depuis que la cyberintimidation est devenue physique.{/i}"""
-    c_himeno "Hey [Player]"
+    pause 5
+    scene classroom late with fade
+    """{i}Ça fait une semaine que j’étais au parc avec Himeno.{/i}
+
+    {i}Himeno a fini par publier cette photo et a répandu beaucoup de haine.{/i}
+
+    {i}Bomi a fini par subir beaucoup d'intimidation depuis que la cyberintimidation est devenue physique.{/i}"""
+
+    c_himeno "Hey [playerName]"
+
     "{i}Le regard de Himeno semble devenir froid chaque fois qu'elle me regarde.{/i}"
+
     c_himeno "Viens avec moi."
-    """{i}Pour être juste, ce n'est pas comme si je pouvais aller contre elle.
-    Elle a fini par trouver des secrets sur moi.{/i}"""
-    #scene hallway with fade
+
+    """{i}Pour être juste, ce n'est pas comme si je pouvais aller contre elle.{/i}
+
+    {i}Elle a fini par trouver des secrets sur moi.{/i}"""
+
+    scene hallway late with fade
     narrateur "Tu la suis dans le couloir quand une silhouette rose sortie de nulle part et attaque à Himeno"
+
     c_bomi """Tu!
+
     As!
+
     Fais!
+
     Ca!
+
     T’es terrible!
+
     Tu m’as ruine!"""
-    """{i}Himeno et Bomi se sont battus l'un contre l'autre.
-    Il ne semblait pas y avoir de limites.{/i}"""
+
+    """{i}Himeno et Bomi se sont battus l'un contre l'autre.{/i}
+
+    {i}Il ne semblait pas y avoir de limites.{/i}"""
+
     c_himeno "Lâche-moi espèce de - !"
+
     narrateur "Tu remarques que Himeno recule sur le bord de l'escalier"
+
     playerName "Attends--"
-    """{i}C'était trop tard.
-    Avant que je ne puisse faire quoi que ce soit, Himeno tombe à la renverse dans deux volées d'escaliers.{/i}"""
+    scene black with fade
+
+    """{i}C'était trop tard.{/i}
+
+    {i}Avant que je ne puisse faire quoi que ce soit, Himeno tombe à la renverse dans deux volées d'escaliers.{/i}"""
+
     c_bomi "..."
-    """{i}Avant que je puisse attraper Bomi et lui demander de l'aider, elle s'est enfuie.
-    Quelques heures plus tard.
-    Himeno a été transportée d'urgence à l'hôpital car elle ne se réveillait pas après sa chute.{/i}"""
-    #scene bg bh1 with fade
-    """{i}Je suis allé lui rendre visite une fois qu'elle s'était réveillée quelques heures plus tard mais elle avait vraiment mal partout.
-    Selon les médecins, les escaliers l'ont vraiment frappé.
-    Je ne pense pas qu'elle s'en remettra mentalement puisque sa vie était basée sur son apparence.{/i}"""
+
+    """{i}Avant que je puisse attraper Bomi et lui demander de l'aider, elle s'est enfuie.{/i}
+
+    {i}Quelques heures plus tard.{/i}
+
+    {i}Himeno a été transportée d'urgence à l'hôpital car elle ne se réveillait pas après sa chute.{/i}"""
+
+    scene BH1 with fade
+    """{i}Je suis allé lui rendre visite une fois qu'elle s'était réveillée quelques heures plus tard mais elle avait vraiment mal partout.{/i}
+
+    {i}Selon les médecins, les escaliers l'ont vraiment frappé.{/i}
+
+    {i}e ne pense pas qu'elle s'en remettra mentalement puisque sa vie était basée sur son apparence.{/i}"""
+
     jump game_over
 
+
 label route_H2:
-    """{i}Cela fait une semaine que je n'étais pas au parc avec Himeno.
-    Himeno a posté les photos que nous avons prises d'elle et elles ont explosé.
-    Heureusement, Himeno a été miséricordieux et l'a supprimée.{/i}"""
+    """{i}Cela fait une semaine que je n'étais pas au parc avec Himeno.{/i}
+
+    {i}Himeno a posté les photos que nous avons prises d'elle et elles ont explosé.{/i}
+
+    {i}Heureusement, Himeno a été miséricordieux et l'a supprimée.{/i}"""
+
     c_himeno "Hey! [Player]! T’as vraiment bien travaillé avec la caméra."
-    """{i}Elle attrape mon bras.{/i}"""
+
+    "{i}Elle attrape mon bras.{/i}"
+
     c_himeno """T’as si bien réussi que j’ai reçu des offres d'entreprises !
+
     Je peux gagner de l'argent maintenant!"""
+
     "{i}sort son téléphone et me montre ses demandes sur instargam.{/i}"
+
     c_himeno "C'est fou ici. Ta fille devient populaire ~~"
 
     menu:
@@ -200,23 +267,33 @@ label route_H2:
 
         "C'est incroyable Himeno ! ":
             c_himeno "Ha ha ! Attends que j'accepte les offres et que je devienne le visage de grandes marques !!"
-    """{i}Elle a ouvert un des messages.
-    C'était une demande de guzzi.
-    Une marque très connue de pratiquement tout le monde.{/i}"""
+
+    """{i}Elle a ouvert un des messages.{/i}
+
+    {i}C'était une demande de guzzi.{/i}
+
+    {i}Une marque très connue de pratiquement tout le monde.{/i}"""
 
     menu:
         "{i}Mais le site officiel n'était-il pas guzzi.com et non guzzi_official.com ?{/i}"
+
         "Hey… certains ne semblent pas corrects.":
             $ pts += 1
             c_himeno "Que veux-tu dire?"
 
         "T’as une demande d'une marque de luxe ?":
             c_himeno "Que veux-tu dire par là?"
+
     playerName "Je dis ça comme ça…"
-    """{i}Himeno roule des yeux et ouvre quand même le lien.
-    Le site Web s'ouvre sur une section où on devait entrer nos coordonnées Guugle.
-    mais pourquoi?{/i}"""
+
+    """{i}Himeno roule des yeux et ouvre quand même le lien.{/i}
+
+    {i}Le site Web s'ouvre sur une section où on devait entrer nos coordonnées Guugle.{/i}
+
+    {i}mais pourquoi?{/i}"""
+
     playerName "Attends"
+
     c_himeno "Hein?"
 
     menu:
@@ -228,8 +305,9 @@ label route_H2:
             $ pts += 1
             c_himeno "Comment?"
 
-    """{i}Un doux sonnerie vient du téléphone de Himeno
-    Un email.{/i}"""
+    """{i}Un doux sonnerie vient du téléphone de Himeno{/i}
+
+    {i}Un email.{/i}"""
 
     c_himeno """Eh?! 
     Il dit que mon compte bancaire a été compromis…"""
@@ -249,7 +327,9 @@ label route_H2:
             c_himeno "Ok ~ Ce sera fait."
     
     c_himeno "Attends! Peux-tu me chercher un thé glacé ?"
+
     playerName "Okay"
+    
     if pts >2:
         jump HGE
     else: 
