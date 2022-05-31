@@ -246,8 +246,9 @@ label route_H2:
     {i}Himeno a posté les photos que nous avons prises d'elle et elles ont explosé.{/i}
 
     {i}Heureusement, Himeno a été miséricordieux et l'a supprimée.{/i}"""
+    scene classroom day with fade
 
-    c_himeno "Hey! [Player]! T’as vraiment bien travaillé avec la caméra."
+    c_himeno "Hey! [playerName]! T’as vraiment bien travaillé avec la caméra."
 
     "{i}Elle attrape mon bras.{/i}"
 
@@ -257,7 +258,7 @@ label route_H2:
 
     "{i}sort son téléphone et me montre ses demandes sur instargam.{/i}"
 
-    c_himeno "C'est fou ici. Ta fille devient populaire ~~"
+    c_himeno "C'est fou ici. Ta pote devient populaire ~~"
 
     menu:
         "{i}C'était un mélange de bijoux, de vêtements et de maquillage. Certains d'entre eux étaient des cadeaux gratuits et beaucoup d'entre eux étaient des compliments de fans.{/i}"
@@ -329,13 +330,14 @@ label route_H2:
     c_himeno "Attends! Peux-tu me chercher un thé glacé ?"
 
     playerName "Okay"
-    
+
     if pts >2:
         jump HGE
     else: 
         jump HBad2
         
-    return 
+label HBad2:
+    
 
 
     
