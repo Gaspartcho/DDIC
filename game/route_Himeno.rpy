@@ -239,7 +239,7 @@ label HBad1:
 
     {i}Himeno a été transportée d'urgence à l'hôpital car elle ne se réveillait pas après sa chute.{/i}"""
 
-    scene BH1 with fade
+    scene HB1 with fade
     """{i}Je suis allé lui rendre visite une fois qu'elle s'était réveillée quelques heures plus tard mais elle avait vraiment mal partout.{/i}
 
     {i}Selon les médecins, les escaliers l'ont vraiment frappé.{/i}
@@ -398,7 +398,7 @@ label HBad2:
     {i}J'ai oublié mon porte-monnaie.{/i}"""
 
     narrateur "Tu regardes la caissière."
-
+    scene HB2 with fade
     "{i}…{/i}"
 
     c_himeno """???

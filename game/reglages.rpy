@@ -79,7 +79,10 @@ label after_load:
     image hallway day = "images/scenes/hallway_day.png"
     image hallway late = "images/scenes/hallway_late.png"
     image park = "images/scenes/park.png"
-    image BH1 = "images/scenes/BH1.png"
+    image HB1 = "images/scenes/himeno_b1.png"
+    image HB2 = "images/scenes/himeno_b2.png"
+
+#Himeno expressions
     image hhbw = "images/Characters/Himeno/expressions/hhbw.png"
     image hslh = "images/Characters/Himeno/expressions/hslh.png"
     image htbh = "images/Characters/Himeno/expressions/htbh.png"
