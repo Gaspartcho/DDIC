@@ -81,6 +81,9 @@ label after_load:
     image park = "images/scenes/park.png"
     image HB1 = "images/scenes/himeno_b1.png"
     image HB2 = "images/scenes/himeno_b2.png"
+    image HGE = "images/scenes/himeno_ge.png"
+    image BGE = "images/scenes/bomi_ge.png"
+    image AB1 = "images/scenes/akane_b1.png"
 
 #Himeno expressions
     image hhbw = "images/Characters/Himeno/expressions/hhbw.png"

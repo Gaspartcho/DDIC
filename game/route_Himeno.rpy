@@ -25,6 +25,7 @@ label route_H1:
     menu:
         c_himeno "Tu es prêt à ruiner des vies ?"
         "On fait quoi? j'espère rien de mal":
+            playerName "On fait quoi? j'espère rien de mal"
             hide hslh
             show htbh
             c_himeno """Mais bien sûr! 
@@ -32,6 +33,7 @@ label route_H1:
             On va exécuter le plan le plus diabolique de l'humanité"""
 
         "C’est sûr et certain qu'on ne va pas faire de bonnes choses.":
+            playerName "C’est sûr et certain qu'on ne va pas faire de bonnes choses."
             $ pts += 1
             hide hslh
             show htbh
@@ -48,12 +50,14 @@ label route_H1:
     menu:
         c_himeno "Tu peux le faire, n'est-ce pas ?"
         "Je suis le meilleur photographe que vous trouverez":
+            playerName "Je suis le meilleur photographe que vous trouverez"
             $ pts += 1
             c_himeno """C'est parfait!
 
             Tu vois? On est un pair parfait"""
 
         "Je ne suis pas très doué avec l'appareil photo":
+            playerName "Je ne suis pas très doué avec l'appareil photo"
             c_himeno "C'est pas grave, je vais te guider"
 
     narrateur """Tu prends des photos de Himeno dans diverses poses.
@@ -91,10 +95,12 @@ label route_H1:
     menu:
         c_himeno "Laisse-moi tranquille !"
         "Je ne pense pas que tu devrais faire ça… On ne connaît pas toute l'histoire.":
+            playerName "Je ne pense pas que tu devrais faire ça… On ne connaît pas toute l'histoire."
             $ pts += 1
             c_himeno "Elle me suit, je pense que c'est suffisant pour la punir"
 
         "Elle s'en ira, ignore-la.":
+            playerName "Elle s'en ira, ignore-la."
             c_himeno """Quoi et la laisser me suivre? 
 
             Certainement pas."""
@@ -103,9 +109,11 @@ label route_H1:
     menu:
         c_himeno "Surtout d’elle."
         "Elle apprendra les conséquences de ses actes":
+            playerName "Elle apprendra les conséquences de ses actes"
             c_himeno "Ouais, évidemment."
 
         "On pourrait juste lui demander pourquoi elle te suit. Est-ce la seule chose qu'elle t'ait faite qui te dérange ? ":
+            playerName "On pourrait juste lui demander pourquoi elle te suit. Est-ce la seule chose qu'elle t'ait faite qui te dérange ? "
             $ pts += 1
             c_himeno """…
             Ouais"""
@@ -117,12 +125,14 @@ label route_H1:
     menu:
         c_himeno "Je suis tellement sûr qu'elle triche."
         "Comment le sais-tu ? Je suis sûr qu'elle a travaillé dur pour être là où elle est maintenant. Je crois que tu peux la battre aussi.":
+            playerName "Comment le sais-tu ? Je suis sûr qu'elle a travaillé dur pour être là où elle est maintenant. Je crois que tu peux la battre aussi."
             $ pts += 1
             c_himeno """…
 
             Vraiment?"""
 
         "Peut-être qu'elle est juste plus intelligente que toi. ":
+            playerName "Peut-être qu'elle est juste plus intelligente que toi. "
             c_himeno "..."
 
     """{i}Himeno a l'air énervé.{/i}
@@ -160,9 +170,11 @@ label route_H1:
     menu:
         "{i}Je devrais peut-être dire quelque chose{/i}"
         "Il te verra un jour. C'est pour ca que tu devras rester bon pour le jour où il le fera.":
+            playerName "Il te verra un jour. C'est pour ca que tu devras rester bon pour le jour où il le fera."
             $ pts += 1
 
         "... ":
+            playerName "... "
             c_himeno "..."
 
     c_himeno "Je vais rentrer à la maison."
@@ -184,6 +196,7 @@ label route_H1:
 
 label HBad1:
     pause 5
+    define pts = 0
     scene classroom late with fade
     """{i}Ça fait une semaine que j’étais au parc avec Himeno.{/i}
 
@@ -272,10 +285,12 @@ label route_H2:
     menu:
         "{i}C'était un mélange de bijoux, de vêtements et de maquillage. Certains d'entre eux étaient des cadeaux gratuits et beaucoup d'entre eux étaient des compliments de fans.{/i}"
         "Haha c'est super ! En T’en as accepté ?":
+            playerName "Haha c'est super ! En T’en as accepté ?"
             $ pts += 1
             c_himeno "Non, je voulais te montrer tout avant d'accepter l'un d'eux!"
 
         "C'est incroyable Himeno ! ":
+            playerName "C'est incroyable Himeno ! "
             c_himeno "Ha ha ! Attends que j'accepte les offres et que je devienne le visage de grandes marques !!"
 
     """{i}Elle a ouvert un des messages.{/i}
@@ -288,10 +303,12 @@ label route_H2:
         "{i}Mais le site officiel n'était-il pas guzzi.com et non guzzi_official.com ?{/i}"
 
         "Hey… certains ne semblent pas corrects.":
+            playerName "Hey… certains ne semblent pas corrects."
             $ pts += 1
             c_himeno "Que veux-tu dire?"
 
         "T’as une demande d'une marque de luxe ?":
+            playerName "T’as une demande d'une marque de luxe ?"
             c_himeno "Que veux-tu dire par là?"
 
     playerName "Je dis ça comme ça…"
@@ -309,9 +326,11 @@ label route_H2:
     menu:
         c_himeno "Qu’est-ce qu’il y a?"
         "Ne mets pas tes coordonnées pendant que je suis à côté de toi !":
+            playerName "Ne mets pas tes coordonnées pendant que je suis à côté de toi !"
             c_himeno "C'est pas comme si ça me dérangeait de toute façon"
 
         "J'ai l'impression qu'on devrait les vérifier.":
+            playerName "J'ai l'impression qu'on devrait les vérifier."
             $ pts += 1
             c_himeno "Comment?"
 
@@ -325,6 +344,7 @@ label route_H2:
     menu:
         c_himeno "Pour récupérer mon compte, je dois me reconnecter avec ce lien."
         "Himeno, je pense que tu devrais les vérifier avant de faire quoi que ce soit.":
+            playerName "Himeno, je pense que tu devrais les vérifier avant de faire quoi que ce soit."
             $ pts += 1
             playerName """C'est hyper sus.
 
@@ -335,18 +355,19 @@ label route_H2:
             c_himeno "Wahhhh ! Que devrais-je faire…"
 
         "Appelle-moi si tu as besoin de quoi que ce soit, j'irai chercher du banana milk.":
+            playerName "Appelle-moi si tu as besoin de quoi que ce soit, j'irai chercher du banana milk."
             c_himeno "Ok ~ Ce sera fait."
     
     c_himeno "Attends! Peux-tu me chercher un thé glacé ?"
 
     playerName "Okay"
 
-    if pts >2:
+    if pts>2:
         jump HGE
     else: 
-        jump HBad2
+        jump HB2
         
-label HBad2:
+label HB2:
     scene hallway day with fade
     """{i}Hmm…{/i}
 
@@ -357,7 +378,7 @@ label HBad2:
     narrateur "Tu sens ton téléphone vibrer lorsque tu prends le thé glacé et le banana milk."
     call phone_start(usrh, "10:12")
     call message_start(tph, "Reviens! J’ai soif!!")
-    call reply_message(playerName, "Okay okay!")
+    call reply_message("Okay okay!")
     call message(tph, "Je l'ai fait! J'espère qu'ils envoient les articles bientôt!")
     call phone_end(False)
     scene black with fade
@@ -424,23 +445,25 @@ label HGE:
     narrateur "Tu sens ton téléphone vibrer lorsque tu prends le thé glacé et le banana milk."
     call phone_start(usrh, "10:12")
     call message_start(tph, "Reviens! J’ai soif!!")
-    call reply_message(playerName, "Okay okay!")
+    call reply_message("Okay okay!")
     call message(tph, "Je l'ai fait! J'espère qu'ils envoient les articles bientôt!")
     call phone_end(False)
     scene black with fade
     """{i}...{/i}
 
-    {i}Ça fait 2 semaines que j' ai parlé à Himeno de ses offres.{/i}"""
-
-    #scene 
+    {i}Ça fait 2 semaines que j'ai parlé à Himeno de ses offres.{/i}"""
 
     """{i}Avec le mannequinat et les sponsors qu'elle a continué à obtenir, Himeno n'avait plus vraiment besoin de venir à l'école.{/i}
 
     {i}Malgré cela, elle est toujours venue m'accompagner tout au long des journée.{/i}"""
 
-    c_bomi "[playerName]! N'est-ce pas mignon?"
+    c_himeno "[playerName]!"
+    scene HGE with fade
+    c_himeno """Concentre-toi!
+    
+    Il faut finir la séance pour ce soir."""
 
-    """{i}Elle montre sa séance photo Lewis Vitton qu'elle a eue l'autre jour.{/i}
+    """{i}Wow{/i}
 
     {i}Elle est vraiment faite pour le public.{/i}"""
 

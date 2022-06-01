@@ -157,8 +157,9 @@ label route_A:
             playerName "Est-ce que tu pourais me laisser un peut plus de temps?"
             playerName "Histoire que je fasse bien connaissance avec tout le monde..."
     
-    c_akane "Bon, si tu n'as pas envie de le faire, je vais m'en occuper" # fachée
+    c_akane "Bon, si tu n'as pas envie de le faire, je vais m'en occuper" 
     c_akane "Je dois y aller, on se revéras plus tard."
+    scene black with fade
 
     if good_points >= 4:
         jump RAF1
@@ -178,9 +179,10 @@ label RAB1:
 
     …
 
-    …
+    …"""
+    scene classroom late with fade 
 
-    {i}Cela fait trois jours que j'ai envoyé ce lien à Himeno.{/i}
+    """{i}Cela fait trois jours que j'ai envoyé ce lien à Himeno.{/i}
 
     {i}Je me demande ce que c'était, mais je passe à autre chose et je continue ma journée.{/i}"""
     "Professeur" "Les deux solutions à ces fonctions sont-"
@@ -197,6 +199,7 @@ label RAB1:
     {i}On a appris par Himeno que Akane était responsable de vol parce que Himeno ne faisait pas attention à ce qu’elle achète.{/i}"""
 
     "{i}Un an plus tard, Akane a été mise en procès.{/i}"
+    scene AB1 with fade
     "Juges" """Kousei Akane.
 
     Vous êtes accusé de vol contre la famille Yuzu.

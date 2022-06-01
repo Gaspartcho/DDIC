@@ -12,7 +12,6 @@ label splashscreen:
 
 label start:
     stop music
-
     play music MisteriousMan_theme fadein 1.0 loop
 
     if hasPlayBefore:

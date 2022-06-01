@@ -312,6 +312,7 @@ label RBG:
     {i}J'ai accompagné Bomi à ses séances de thérapie et lentement mais sûrement, elle se reprenait en main.{/i}
 
     {i}Même si la publication est devenue virale et que certains fans d'Akane l'ont encore insultée, Bomi a reçu beaucoup de soutien.{/i}"""
+    scene BGE with fade
 
     "Serveur" "Voici votre plat."
     playerName "Tiens, c'est chaud."
@@ -325,7 +326,7 @@ label RBG:
 
     c_bomi "H-Hey!!"
 
-    playerName "T'inquetes, t'inquetes... C une bonne photo."
+    playerName "T'inquetes, t'inquetes... C'est une bonne photo."
 
     "{i}Tu lui montre la photo."
 
