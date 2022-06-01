@@ -306,4 +306,5 @@ label RBB2:
     jump game_over
 
 label RBG:
-    
+    scene black with fade
+    narrateur "YOU WON!!!!!"

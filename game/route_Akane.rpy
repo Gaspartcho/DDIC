@@ -118,7 +118,7 @@ label route_A:
     narrateur "Tu as décidé d'attendre de pouvoir faire le travail avant lui transmettre tes coordonnées."
     narrateur "Tu poses ton téléphone et tu t'endors..."
     scene black with fade
-    narrateur "Le landemain..."
+    narrateur "Le lendemain..."
     scene classroom day with fade
     pause 1.0
     c_akane "{cps=50}Bonjour, [playerName].{nw}"
@@ -174,3 +174,103 @@ label RAF1:
     narrateur "Quelques jours plus tard..."
     call phone_start(usra, "20:36")
     call message_start (tpa "Bonjour, [playerName]. Je sais que ca fait une semaine que je t'ai dit d'envoyer ce lien à Himeno, mais au final t'as plus besoin de le faire.")
+    call messsage (playerName, "Ok...")
+    call message (tpa, "Au fait, Je sais pas si tu as remarqué, mais il y a quelqu'un en ligne qui se fait passer pour moi.")
+    call message (tpa, "Il prend des photos de moi, vole mes photos de mon compte et les publient comme les siennes.")
+    call message (tpa "C'est légèrement inquiétant...")
+
+    window show
+    "{i}Elle parle de Bomi?"
+    window hide
+    
+    label choiceMaking_WGD:
+        call screen phone_reply("Ca fait peur","choiceMaking_WGD.choice1","Tu devrais le dénoncer","choiceMaking_WGD.choice2")
+        label .choice1:
+            call phone_after_menu
+            call message_start(playerName, "Ca fait peur.")
+            call message(playerName, "Qu'est-ce que tu vas faire?")
+            call message(tpa, "Non, pas vraiment. Je ne me sent pas menaçée à ce point.")
+            jump .aftermenu
+        label .choice2:
+            call phone_after_menu
+            call message_start(playerName, "Tu devrais le dénoncer")
+            call message(tpa, "C'est inutile, Ils ne feront sûrement rien")
+            call message(tpa, "Je ne peux même pas si je le voulais de toute façon")
+            call message(tpa, "Je n'ai aucune idée de qui il s'agit.")
+
+            jump .aftermenu
+        label .aftermenu:
+    
+    window show
+    "{i}..."
+    window hide
+
+    label choiceMaking_USP:
+        call screen phone_reply("Tu devrais prendre des précautions","choiceMaking_USP.choice1","Je ne veut pas que tu ais des problèmes","choiceMaking_USP.choice2")
+        label .choice1:
+            call phone_after_menu
+            call message_start(playerName, "Tu devrais prendre des précautions.")
+            call message(playerName, "Ok mais comment?")
+            jump .aftermenu
+        label .choice2:
+            call phone_after_menu
+            call message_start(playerName, "Je ne veut pas que tu ais des problèmes")
+            call message(tpa, "Je peux prendre soin de moi, ne t'inquiète pas")
+            jump .aftermenu
+        label .aftermenu:
+    
+    call message (tpa, "Je dois manger, salut.")
+    call phone_end
+
+    "{i}..."
+    "{i}Est-ce que je lui dit?"
+    "{i}..."
+
+    call phone_start (usra, "20:38")
+    call message_start(tpa, " Bonjour, [playerName]!")
+    call message(tpa, "Comment se passe les cours depuis la semaine dernière?")
+    call message(tpa, "Tout vas bien j'espère?")
+    call message(playerName, "...")
+    call message(playerName, "Bomi Park?")
+    call message(tpa, "Quoi?")
+    call message(tpa, "Pourquoi est-ce que tu mentionnes son nom ?")
+
+    label choiceMaking_KUR:
+        call screen phone_reply("Je sais qui tu es","choiceMaking_KUR.choice1","Non, rien...","choiceMaking_KUR.choice2")
+        label .choice1:
+            call phone_after_menu
+            call message_start(playerName, "Je sais qui tu es.")
+            call message(tpa, "...")
+            call message(tpa, "Ne parle jamais de ça!")
+            jump .aftermenu
+        label .choice2:
+            call phone_after_menu
+            call message_start(playerName, "Ah, rien. J'aimerais en savoir plus sur elle")
+            call message(playerName, "Elle semble être la plus forte de notre classe et j'aimerais savoir comment elle fait")
+            call message(tpa, "Je pourais...")
+            call message(tpa, "Mais non.")
+            jump .aftermenu
+        label .aftermenu:
+    call phone_end
+
+    "{i}..."
+    "{i}Je devrais avertir Akane..."
+
+    call phone_start("kousei.akane (Real)")
+    label choiceMaking_PBC:
+        call screen phone_reply("Sois super prudente","choiceMaking_PBC.choice1","Je vais t'aider à te protéger","choiceMaking_PBC.choice2")
+        label .choice1:
+            call phone_after_menu
+            call message_start(playerName, "Je sais qui tu es.")
+            call message(tpa, "...")
+            call message(tpa, "Ne parle jamais de ça!")
+            jump .aftermenu
+        label .choice2:
+            call phone_after_menu
+            call message_start(playerName, "Ah, rien. J'aimerais en savoir plus sur elle")
+            call message(playerName, "Elle semble être la plus forte de notre classe et j'aimerais savoir comment elle fait")
+            call message(tpa, "Je pourais...")
+            call message(tpa, "Mais non.")
+            jump .aftermenu
+        label .aftermenu:
+    call phone_end
