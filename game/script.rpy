@@ -78,7 +78,7 @@ label start:
         
         Tu es là !
         
-        Tout d'abord, merci d'avoir installé ce programme...
+        Tout d'abord, merci d'avoir installé ce petit jeu...
         
         Pour des raisons personnelles, je préfère te cacher mon identité pour l'instant.
         
