@@ -40,6 +40,7 @@ label after_load:
     define usrb = "bombomii"
     define usra = "kousei.akane"
     define usrh = "yuzu.himi"
+    define usraf = "akanekouseii"
     
 #endregion
 

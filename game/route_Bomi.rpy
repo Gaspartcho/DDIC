@@ -184,7 +184,7 @@ label RBF1:
     narrateur "Le lendemain."
     scene classroom day with fade
 
-    ??? "Hey! [playerName]!"
+    "???" "Hey! [playerName]!"
     c_bomi "J'ai retiré mes extensions."
     c_bomi "Elles commençaient à devenir lourdes haha"
 
@@ -254,6 +254,7 @@ label RBF1:
 
     menu:
         "On devrait aller voir la psychologue scolaire.":
+            playerName "On devrait aller voir la psychologue scolaire."
             $ good_points += 1
             c_bomi "Et risquer qu'ils le disent à ma famille ?"
             c_bomi "Certainement pas!"
@@ -262,6 +263,7 @@ label RBF1:
             c_bomi "..."
         
         "Ils ne veulent rien dire. Ça ira.":
+            playerName "Ils ne veulent rien dire. Ça ira."
             c_bomi "..." # Triste
 
     c_bomi "Bon ok."
