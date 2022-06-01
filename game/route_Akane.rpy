@@ -37,8 +37,7 @@ label route_A:
             call phone_after_menu
             call message_start(playerName, "...")
             call message(playerName, "C'est un ip grabber ça non?")
-            call message(tpa, "...")
-            call message(tpa, "non...")
+            call message(tpa, "non.")
             jump .aftermenu
         label .choice2:
             $ good_points += 1

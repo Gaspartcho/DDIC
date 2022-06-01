@@ -79,6 +79,11 @@ label after_load:
     image hallway late = "images/scenes/hallway_late.png"
     image park = "images/scenes/park.png"
     image BH1 = "images/scenes/BH1.png"
+    image hhbw = "images/Characters/Himeno/expressions/hhbw.png"
+    image hslh = "images/Characters/Himeno/expressions/hslh.png"
+    image htbh = "images/Characters/Himeno/expressions/htbh.png"
+    image hslh = "images/Characters/Himeno/expressions/hslh.png"
+    image hglh = "images/Characters/Himeno/expressions/hglh.png"
 
 
 #endregion

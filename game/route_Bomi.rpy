@@ -184,7 +184,7 @@ label RBB1:
 label RBF1:
     scene black with fade
     narrateur "Le lendemain."
-    scene classroom with fade
+    scene classroom day with fade
 
     c_bomi "Hey! [playerName]!"
     c_bomi "Elles commençaient à devenir lourdes..."
@@ -282,7 +282,7 @@ label RBF1:
 label RBB2:
     # A changer et a sénariser au fil du temps.
 
-    scene bedroom_sleep with fade
+    scene bedroom with fade
     playerName """Ça fait un mois que j'ai parlé à Bomi du post.
 
     Le post s'est propagé et les gens à l'école ont commencé à le voir.
