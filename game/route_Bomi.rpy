@@ -303,6 +303,32 @@ label RBB2:
     jump game_over
 
 label RBG:
+    """{i}Ça fait un mois que j'ai parlé à Bomi du post.{/i}
+
+    {i}Bomi avait réussi à le supprimer pour “diffamation” et le compte de Himeno a été suspendu pendant un certain temps.{/i}
+
+    {i}J'ai accompagné Bomi à ses séances de thérapie et lentement mais sûrement, elle se reprenait en main.{/i}
+
+    {i}Même si la publication est devenue virale et que certains fans d'Akane l'ont encore insultée, Bomi a reçu beaucoup de soutien.{/i}"""
+
+    "Serveur" "Voici votre plat."
+    playerName "Tiens, c'est chaud."
+    playerName "Tu peux le prendre d'abord."
+    c_bomi "Non, non, c'est pas grave je peux attendre."
+    narrateur """Elle détourne le regard en pensant du ramen.
     
+    Tu sors ton portable et prends une photo d’elle et le plat.
+    
+    {i}Ma copine est tellement mignonne{/i}"""
+
+    c_bomi "H-Hey!!"
+
+    playerName "T'inquetes, t'inquetes... C une bonne photo."
+
+    "{i}Tu lui montre la photo."
+
+    c_bomi "...
+
+    Je peux la poster?" 
     scene black with fade
     narrateur "YOU WON!!!!!"
