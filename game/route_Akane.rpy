@@ -126,3 +126,52 @@ label route_A:
 
     "{i}Holy Sweet Baby Jesus!!"
     "{i}Elle doit arrêter d'apparaître de nulle part."
+    playerName "Salut Akane, t'as besoin de quelque chose?"
+    c_akane "Oui, j'aurais besoin de ton aide."
+    c_akane "Tu vois Himeno, la fille dont je t'ai parlé l'autre jour."
+    playerName "Oui et?"
+    c_akane "J'aurais besoin que tu lui envoies ce lien."
+    c_akane "C'est un chèque caudeau pour la remercier."
+    c_akane "Tu vois, sa famille est très riche: elle donne beaucoup pour financer l'école."
+    c_akane "Donc j'aimerais lui faire un petit cdeau de la part de toute la classe pour la remercier."
+
+    menu:
+        "Euhh. Ton chèque à l'air bizarre":
+            c_akane "Il est crypté pour que personne d'autre que Himeno peut l'ouvrir..."
+
+        "Tu ne peut pas le faire toi-même?":
+            c_akane "C'est pour le simbolisme tu vois..."
+            c_akane "Un vouvel élève qui remercie déja les bienfaiteurs de l'école, ça donnera un message positif."
+    
+    "{i}..."
+    "{i}C'est la deuxième fois qu'Akane m'envoie quelque chose à ouvrir..."
+    playerName "Tu essayerais pas de nous arnaquer Himeno et moi par hasard?"
+    c_akane "..."
+    c_akane "Non." #sourit
+
+    menu:
+        "Tu ne devrais pas prendre l'argent des autres":
+            playerName "Akane, tu ne devrais pas avoir envie de prendre l'argent des autres. Tu n'e pense qu'à l'autre plus misérable et causer plus de chaos en prenant le peu qu'il a."
+            c_akane "Pardon?"
+
+        "Je peux attendre un peu plus longtemps ?":
+            playerName "Est-ce que tu pourais me laisser un peut plus de temps?"
+            playerName "Histoire que je fasse bien connaissance avec tout le monde..."
+    
+    c_akane "Bon, si tu n'as pas envie de le faire, je vais m'en occuper" # fachée
+    c_akane "Je dois y aller, on se revéras plus tard."
+
+    if good_points > 4:
+        jump RAB1
+    else:
+        jump RAF1
+
+label RAB1:
+    #a changer parce que j'aime pas (ou au moins on refait un ou 2 trucs)
+    jump game_over
+
+label RAF1:
+    scene bedroom with fade
+    narrateur "Quelques jours plus tard..."
+    call phone_start(usra, "20:36")
+    call message_start (tpa "Bonjour, [playerName]. Je sais que ca fait une semaine que je t'ai dit d'envoyer ce lien à Himeno, mais au final t'as plus besoin de le faire.")
