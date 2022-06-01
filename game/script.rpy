@@ -133,7 +133,7 @@ label scene_1:
     scene bedroom with fade
     call phone_start(usra, "21:30")
 
-    call message_start(tpa, "Bienvenue à l'école X ! Je suis {b}Akane Kousei{/b}, la déléguée de classe. Si tu as une question, n'hésite pas à venir me voir. Même si tu nous as rejoint très tard dans l'année, je suis sure que toute la classe t'accueillera à bras ouverts :)")
+    call message_start(tpa, "Bienvenue à l'école X ! Je suis {b}Akane Kousei{/b}, la déléguée de classe. Si tu as des questions, n'hésite pas à les poser soit à tes camarades, soit aux enseignants, ou tu peux venir me voir. Même si tu nous as rejoints très tard dans l'année, nous t’accueillons toujours à bras ouverts :)")
     call message_img(tpa, "Au fait, ça c'est moi!", "images/instagram/A1_insta.png")
     call message(tpa, "Comme tu arrives en millieu d'année, je me doute bien que ça peu être difficile, mais tu peux compter sur moi!")
     pause 1.0
@@ -155,7 +155,7 @@ label scene_1:
             
         label .aftermenu:
 
-    call message(tpa, "Quoi qu'il en soit, envoies-moi un SMS dès que t'as besoin de quoi que ce soit et je te répondrai le plus vite possible, je suis dispo presque tout le temps.")
+    call message(tpa, "Quoi qu'il en soit, envoie-moi un SMS dès que t'as besoin de quoi que ce soit et je te répondrai le plus vite possible, je suis dispo presque tout le temps.")
     call message(tpa, "Ah euh... Ça donne probablement l'impression que je ne fais pas mon travail de déléguée... Mais il faut que je te prévienne")
     call message(tpa, "Il y a cette fille dont je te conseille de pas t'approcher. Elle juge très facilement les gens et tu ne passeras pas un bon moment avec elle.")
     
@@ -176,7 +176,7 @@ label scene_1:
         label .aftermenu:
 
     call message_img(tpa, "Tiens", "images/instagram/H1_insta.png")
-    call message(tpa, "Elle s'appelle {b}Himeno Yuzu{/b}. Mais garde ça pour toi s'il te plais: ce serait gênant si les gens savaient que la déléguée se fait harceler. Haha.")
+    call message(tpa, "Elle s'appelle {b}Himeno Yuzu{/b}. Je ne veux pas que tu en parles, ce serait gênant si les gens savaient que la déléguée se fait harceler. Haha.")
     call message(tpa, "Bon, oublies tout ça. Il n'y a aucune raison pour que tu passe un mauvais moment ici.")
     call message(tpa, "Oh! Mes parents m'appellent. Je te verrai demain :)")
     call reply_message("A demain.")
@@ -209,7 +209,7 @@ label scene_1:
     call message(tph, "Et il y a aussi la cette déléguée qui fait constament sa cheffe")
     call message(tph, "Je te jure c'est parce qu'elles trichent.")
     call message(tph, "...")
-    call message(tph, "Je devrais le faire.")
+    call message(tph, "Je devrais le faire aussi.")
     label choiceMaking_CH: 
         call screen phone_reply("Tu vas vraiment faire ça ?","choiceMaking_CH.choice1","Je suis sûr que si tu essayes de toutes tes forces, tu seras la meilleure","choiceMaking_CH.choice2")
         label .choice1:    
@@ -226,7 +226,7 @@ label scene_1:
             jump .aftermenu
         label .aftermenu:
     call message(tph, "Ah ! Une de mes copines m'appelle.")
-    call message(tph, "Allé salut. Essaie de ne pas me manquer <3")
+    call message(tph, "J’espère que je ne te manquerai pas trop <3")
     call phone_end
 
     """{i}...
