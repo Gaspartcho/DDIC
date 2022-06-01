@@ -161,9 +161,9 @@ label route_A:
     c_akane "Je dois y aller, on se revéras plus tard."
 
     if good_points >= 4:
-        jump RAB1
-    else:
         jump RAF1
+    else:
+        jump RAB1
 
 label RAB1:
     """{i}Qu’est-ce qui pourrait se passer?{/i}
@@ -306,8 +306,48 @@ label RAF1:
             call phone_after_menu
             call message_start(playerName, "Akane, je vais t'aider à mettre en place des précautions.")
             call reply_message("On devrait également le signaler pendant qu'on y est comme ça la situation ne deviendra pas incontrôlable.")
-            call message(tpa, "Je pourais...")
-            call message(tpa, "Mais non.")
+            call message(tpa, "Ok")
             jump .aftermenu
         label .aftermenu:
     call phone_end
+    "..."
+    if good_points > 2:
+        jump RAF
+    else:
+        jump RAB2
+
+label RAB2:
+    "{i}Une semaine plus tard, tu reçois une notification de ton tel et tu vois Himeno est live."
+
+    c_himeno """Oh.
+
+    Mon.
+
+    Dieu.
+
+    Akane a transfert d’ecole!
+
+    Elle est maintenant à l'ecole Z.
+
+    Venons lui dire au revoirs </3"""
+
+    "{i}..."
+
+    narrateur "Tu vas à l'école le lendemain et Akane est absente."
+
+    "???" "Bonjour mes camarades de classe. Malheureusement, notre amie Akane Kousei a été transférée à l'école Z."
+    c_bomi "On m'a donné le rôle de déléguée de classe. J'espère que vous me permettrez de vous guider tous."
+    jump game_over
+
+label RAF:
+    "{i}J'ai rencontré Akane le lendemain à l'école."
+    c_akane "Alors que veux-tu que je fasse ?"
+    playerName "Alors…"
+    """{i}J'ai expliqué à Akane les choses les plus élémentaires sur la façon de protéger son identité en ligne, mais elle semblait en savoir plus que moi.{/i}
+    
+    {i}Elle a fini par me guider pendant qu'elle mettait en place les précautions pour elle-même.{/i}"""
+    c_akane """Merci de penser à moi.
+    
+    Allons rentrer à la maison?"""
+
+
