@@ -250,9 +250,11 @@ label scene_2:
         c_akane "Tu devrais être prudent avec ceux-là. Ils ont tendance à te gâcher la vie."
 
         "Tu parles d'expérience ?":
+            playerName "Tu parles d'expérience ?"
             c_akane "Peut-être"
 
         "J'allais le supprimer de toute façon.":
+            playerName "J'allais le supprimer de toute façon."
             c_akane "..."
             c_akane "... Mouai ..."
     
