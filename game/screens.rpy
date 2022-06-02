@@ -1671,3 +1671,10 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+init -1 style say_label:
+    color gui.accent_color
+    size gui.name_text_size
+    xalign gui.name_xalign
+    yalign 0.5
+    outlines [(3, "#ffff", 0, 0), (1, "#ffff", 1, 1)]
