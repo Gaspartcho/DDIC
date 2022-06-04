@@ -353,7 +353,7 @@ label road_menu:
     Il est tard, vous avez dormis toute la journée."""
 
     if road == "1":
-        jump route_A1
+        jump route_A
     if road == "2":
         jump route_B1
     if road == "3":

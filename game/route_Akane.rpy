@@ -72,6 +72,7 @@ label route_A:
         label .choice1:
             call phone_after_menu
             call message_start(playerName, "Mais, les gens ne sont pas des chiens...")
+            $ good_points += 1
             call reply_message("Ils ont besoin de leur vie privée, de leur libre arbitre...")
             call message(tpa, "Peut-être.")
             call message(tpa, "Mais au moins ce serait plus facile de maintenir l'ordre")
@@ -96,6 +97,7 @@ label route_A:
         label .choice1:
             call phone_after_menu
             call message_start(playerName, "Bien sûr!")
+            $ good_points += 1
             call reply_message("Je viendrai avec toi après avoir fini tous mes devoirs!")
             call message(tpa, "Parfait")
             call message(tpa, "Au fait, c'est juste une formalité, mais...")
@@ -134,6 +136,7 @@ label route_A:
 
     menu:
         "Euhh. Ca m’a l’air bizarre":
+            $ good_points += 1
             playerName "Euhh. Ca m’a l’air bizarre"
             c_akane "Il est crypté pour que personne d'autre que Himeno peut l'ouvrir..."
 
@@ -150,6 +153,7 @@ label route_A:
 
     menu:
         "Tu ne devrais pas prendre l'argent des autres":
+            $ good_points += 1
             playerName "Akane, tu ne devrais pas avoir envie de prendre l'argent des autres. Tu n'e pense qu'à l'autre plus misérable et causer plus de chaos en prenant le peu qu'il a."
             c_akane "Pardon?"
 
@@ -211,14 +215,15 @@ label RAB1:
     jump game_over
 
 label RAF1:
+    define good_points = 0
     scene bedroom with fade
     narrateur "Quelques jours plus tard..."
     call phone_start(usra, "20:36")
-    call message_start (tpa "Bonjour, [playerName]. Je sais que ça fait une semaine que je t'ai dit d'envoyer ce lien à Himeno, mais au final t'as plus besoin de le faire.")
-    call reply_messsage ("Ok...")
+    call message_start (tpa, "Bonjour, [playerName]. Je sais que ça fait une semaine que je t'ai dit d'envoyer ce lien à Himeno, mais au final t'as plus besoin de le faire.")
+    call reply_message ("Ok...")
     call message (tpa, "Au fait, Je sais pas si tu as remarqué, mais il y a quelqu'un en ligne qui se fait passer pour moi.")
     call message (tpa, "Il prend des photos de moi, vole mes photos de mon compte et les publient comme les siennes.")
-    call message (tpa "C'est légèrement inquiétant...")
+    call message (tpa, "C'est légèrement inquiétant...")
 
     window show
     "{i}Elle parle de Bomi?"
