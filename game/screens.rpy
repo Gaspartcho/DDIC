@@ -1382,6 +1382,8 @@ screen phone_reply3(reply1, label1, reply2, label2, reply3, label3,):
 
 style phone_reply_text:
     xalign 0.5
+    idle_color "#EEE"
+    hover_color "#333"
 
 style message_image_resize:
     xsize 300
