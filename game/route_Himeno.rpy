@@ -52,6 +52,8 @@ label route_H1:
         "Je suis le meilleur photographe que vous trouverez":
             playerName "Je suis le meilleur photographe que vous trouverez"
             $ pts += 1
+            hide hslh
+            show hhbh
             c_himeno """C'est parfait!
 
             Tu vois? On est un pair parfait"""
