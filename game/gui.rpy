@@ -26,18 +26,18 @@ init python:
 define gui.accent_color = '#ffffff'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#aaaaaa'
+define gui.idle_color = '#ffff'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
 define gui.idle_small_color = '#333'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#f4a370'
+define gui.hover_color = '#f8e4e1'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#e78969'
+define gui.selected_color = '#f8b9af'
 
 ## The color used for a text button when it cannot be selected.
 define gui.insensitive_color = '#aaaaaa7f'
