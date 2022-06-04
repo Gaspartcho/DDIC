@@ -339,7 +339,7 @@ label RAB2:
     Je devrais la chercher"
     
     "..."
-    
+    scene AB2 with fade
     playerName "Akane!"
     c_akane "Ah. [playerName]."
     playerName "Tu fais quoi?"

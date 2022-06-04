@@ -87,6 +87,7 @@ label after_load:
     image BB1 = "images/scenes/bomi_b1.png"
     image BGE = "images/scenes/bomi_ge.png"
     image AB1 = "images/scenes/akane_b1.png"
+    image AB2 = "images/scenes/akane_b2.png"
 
 #Himeno expressions
     image hhbw = "images/Characters/Himeno/expressions/hhbw.png"
