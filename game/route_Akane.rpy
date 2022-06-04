@@ -334,13 +334,22 @@ label RAB2:
 
     Venons lui dire au revoirs </3"""
 
-    "{i}..."
+    "{i}...
 
-    narrateur "Tu vas à l'école le lendemain et Akane est absente."
+    Je devrais la chercher"
+    
+    "..."
+    
+    playerName "Akane!"
+    c_akane "Ah. [playerName]."
+    playerName "Tu fais quoi?"
+    c_akane "Je déménage."
+    playerName "???"
+    c_akane "Le faux Akane m'a déménage à l'école Z."
+    playerName "Mais pourquoi tu ne fais rien?"
+    c_akane """Mes parents ont déjà accepté. Je ne peux rien faire.
 
-    "???" "Bonjour mes camarades de classe. Malheureusement, notre amie Akane Kousei a été transférée à l'école Z."
-    c_bomi "On m'a donné le rôle de déléguée de classe. J'espère que vous me permettrez de vous guider tous."
-    jump game_over
+    au revoir, [playerName]."""
 
 label RAF:
     "{i}J'ai rencontré Akane le lendemain à l'école."
