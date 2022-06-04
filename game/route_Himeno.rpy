@@ -52,7 +52,7 @@ label route_H1:
         "Je suis le meilleur photographe que vous trouverez":
             playerName "Je suis le meilleur photographe que vous trouverez"
             $ pts += 1
-            hide hslh
+            hide hglh
             show hhbh
             c_himeno """C'est parfait!
 
@@ -60,12 +60,18 @@ label route_H1:
 
         "Je ne suis pas très doué avec l'appareil photo":
             playerName "Je ne suis pas très doué avec l'appareil photo"
+            hide hglh
+            show htlw
             c_himeno "C'est pas grave, je vais te guider"
-
-    narrateur """Tu prends des photos de Himeno dans diverses poses.
-
-    Elle demande finalement à voir comment ils sont sortis après quelques minutes"""
-
+    hide hhbh
+    hide htlw
+    show hsbh
+    narrateur "Tu prends des photos de Himeno dans diverses poses."
+    hide hsbh
+    show hslw
+    narrateur "Elle demande finalement à voir comment ils sont sortis après quelques minutes"
+    hide hslw
+    show hmah
     c_himeno "Hé! N'est-ce pas…"
 
     """{i}Quoi{/i}
@@ -75,7 +81,8 @@ label route_H1:
     {i}J'ai suivi des règles de photographie que j'ai vues en ligne.{/i}
 
     {i}Elle exagère sûrement-{/i}"""
-
+    hide haah
+    show hmlh
     c_himeno "C'est Bomi à l'arrière."
 
     narrateur "Tu te rapproche du tel de Himeno et il y avait une silhouette rose à l'arrière d’une des photos qui se cachait derrière l'un des arbres."
