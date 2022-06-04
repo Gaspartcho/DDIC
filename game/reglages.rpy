@@ -1,5 +1,7 @@
 label after_load:
 
+    define menu_video = Movie(play="videos/Main_menu_icon.mp4")
+
 #region Variables
 
     define hasPlayBefore = False
