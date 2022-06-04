@@ -154,11 +154,12 @@ label route_B1:
     scene black with fade 
 
     if good_points >= 4:
-        jump RBB1
-    else:
         jump RBF1
+    else:
+        jump RBB1
 
 label RBB1:
+    scene BB1 with fade
     c_bomi """...
 
     Je ne lui ressemble pas du tout.
