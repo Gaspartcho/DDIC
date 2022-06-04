@@ -37,7 +37,7 @@ define gui.hover_color = '#f4a370'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#bb5588'
+define gui.selected_color = '#e78969'
 
 ## The color used for a text button when it cannot be selected.
 define gui.insensitive_color = '#aaaaaa7f'
