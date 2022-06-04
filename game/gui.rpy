@@ -258,7 +258,7 @@ define gui.notify_ypos = 45
 define gui.choice_spacing = 22
 
 ## Buttons in the navigation section of the main and game menus.
-define gui.navigation_spacing = 6
+define gui.navigation_spacing = 7
 
 ## Controls the amount of spacing between preferences.
 define gui.pref_spacing = 10
