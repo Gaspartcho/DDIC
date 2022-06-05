@@ -277,7 +277,7 @@ label scene_2:
 
     """{i}...{/i}
 
-    {i}Ça serait pas ma conversation avec Akane d'hier soir?{/i}
+    {i}Ça ne serait pas ma conversation avec Akane d'hier soir?{/i}
 
     {i}...{/i}"""
 
@@ -307,6 +307,8 @@ label scene_2:
     Ah, on y est enfin...
     
     Le moment tant attendu où tu poura choisir entre ces trois filles...
+
+    Je pense que tu as du comprendre quels sont leur problèmes...
     
     Laquelle tu vas essayer d'aider?"""
 
@@ -334,10 +336,13 @@ label road_menu:
 
         "Akane":
             $ road = "1"
+            playerName "Akane!"
         "Bomi":
             $ road = "2"
+            playerName "Bomi!"
         "Himeno":
             $ road = "3"
+            playerName "Himeno!"
     
     c_mysteriousMan """Bien. Bonne chance pour la suite, on se revéra à la fin...
 

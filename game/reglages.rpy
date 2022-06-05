@@ -66,6 +66,12 @@ label after_load:
 
     image himeno = "images/Characters/Himeno/himeno_default.png"
 
+    image himeno happy hand eyesclosed = "images/Characters/Himeno/expressions/hhbw.png"
+    image hslh = "images/Characters/Himeno/expressions/hslh.png"
+    image htbh = "images/Characters/Himeno/expressions/htbh.png"
+    image hslh = "images/Characters/Himeno/expressions/hslh.png"
+    image hglh = "images/Characters/Himeno/expressions/hglh.png"
+
 # Insta
     image insta bomi1 = "images/instagram/B1_insta.png"
     image insta bomi2 = "images/instagram/B2_insta.png"
@@ -92,14 +98,6 @@ label after_load:
     image BGE = "images/scenes/bomi_ge.png"
     image AB1 = "images/scenes/akane_b1.png"
     image AB2 = "images/scenes/akane_b2.png"
-
-#Himeno expressions
-    image hhbw = "images/Characters/Himeno/expressions/hhbw.png"
-    image hslh = "images/Characters/Himeno/expressions/hslh.png"
-    image htbh = "images/Characters/Himeno/expressions/htbh.png"
-    image hslh = "images/Characters/Himeno/expressions/hslh.png"
-    image hglh = "images/Characters/Himeno/expressions/hglh.png"
-
 
 #endregion
 

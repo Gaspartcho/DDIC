@@ -2,18 +2,20 @@ label route_H1:
     define pts = 0
     narrateur """La cloche sonne trois fois, ce qui signifie que les cours sont terminés.
 
-    Tu te lèves pour t'étirer après une longue journée de travail, lorsque ton téléphone sonne dans ta poche."""
-    playerName "Hmm"
+    Tu vois le soleil se coucher juste derrière le bâtiment de l'école."""
+
+    "Cette première journée était assez agréable.{/i}"
+
+    narrateur "Tu te lèves pour t'étirer après une longue journée de travail, lorsque ton téléphone sonne dans ta poche."
+    playerName "Hmm?"
+
     call phone_start(usrh, "17:05")
     call message_start(tph, "Retrouve-moi au parc dès que possible, je sais que tu as fini tes cours <3")
-    pause 2.0
-    window show
-    call phone_end(False)
-    """{i}Je me demande ce qu'elle veut.{/i}
+    call phone_end
+    "{i}..."
+    
+    "{i}Je me demande ce qu'elle veut.{/i}"
 
-    {i}Le soleil se couchait juste derrière le bâtiment de l'école.{/i}
-
-    {i}Cette première journée était assez agréable.{/i}"""
     scene park with fade
 
     narrateur "Tu trouves Himeno à l'arrière du parc assis à l'ombre."
