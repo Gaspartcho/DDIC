@@ -363,10 +363,10 @@ transform main_menu_image_move:
 transform Logo_pos:
     xalign 0.5
     yalign 0.5
-    xpos 0.18
-    ypos 0.25
-    linear 0.3 zoom 0.22
-    linear 0.3 zoom 0.23
+    xpos 0.12
+    ypos 0.2
+    linear 0.5 zoom 0.15
+    linear 0.5 zoom 0.155
     repeat
 
 screen main_menu():

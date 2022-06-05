@@ -272,7 +272,7 @@ label scene_2:
 
     {i}Je suis presque sûr que c'est la fille qui m'a envoyé un message hier soir.{/i}"""
 
-    narrateur "Tu tournes la tête en te sentant mal à l'aise et aperçoit une fille étendue sur sa table avec son téléphone allumé."
+    narrateur "Tu tournes la tête en te sentant mal à l'aise et aperçoit une fille endormie sur sa table avec son téléphone allumé."
     narrateur "Tu t'approches du bureau et jette un coup d'œil à son téléphone."
 
     """{i}...{/i}
