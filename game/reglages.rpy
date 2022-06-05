@@ -74,6 +74,10 @@ label after_load:
     image insta himeno1 = "images/instagram/H1_insta.png"
     image insta himeno2 = "images/instagram/H2_insta.png"
 
+    image Bomi pfp = "images/Phone/Bomi_Pfp.png"
+    image Akane pfp = "images/Phone/Akane_Pfp.png"
+    image Himeno pfp = "images/Phone/Himeno_Pfp.png"
+
 # Background
     image classroom day = "images/scenes/classroom_day.png"
     image classroom late = "images/scenes/classroom_late.png"

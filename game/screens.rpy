@@ -1323,12 +1323,25 @@ init 5: # Drfining the styles for the phone messages
         ypadding 10
         xpadding 10
 
+transform pfp_placement:
+    zoom 0.03
+    xpos 0.058
+    ypos 0.071
 
 screen phone_object(caller, hour):
     fixed at phone_pickup:
         add "images/Phone/phone.png"
-        text caller xpos 0.06 ypos 0.085 font "gui/font/roboto-bold.ttf" color "000"
         text hour xpos 0.24 ypos 0.04 font "gui/font/roboto-bold.ttf" color "000" size 25
+        text caller ypos 0.085 xpos 0.095 font "gui/font/roboto-bold.ttf" color "000"
+
+        if caller == usrb:
+            add "Bomi pfp" at pfp_placement
+        if caller == usra or caller == usraf:
+            add "Akane pfp" at pfp_placement
+        if caller == usrh:
+            add "Himeno pfp" at pfp_placement
+        
+
 
 screen phone_message(who, what):
     vbox at incoming_message:
