@@ -393,7 +393,7 @@ screen main_menu():
 
             text "[config.version]":
                 style "main_menu_version"
-    add "images/Logo.png" at Logo_pos
+    add "images/logo.png" at Logo_pos
 
 
 style main_menu_frame is empty
