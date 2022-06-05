@@ -11,6 +11,7 @@ label splashscreen:
     return
 
 label start:
+    pause 1.5
     stop music
     play music MisteriousMan_theme fadein 1.0 loop
 
