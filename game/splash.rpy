@@ -3,4 +3,3 @@ image menu_logo:
     subpixel True
     xcenter 240
     ycenter 120
-    zoom 0
