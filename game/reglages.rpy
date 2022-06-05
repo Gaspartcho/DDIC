@@ -105,6 +105,7 @@ label after_load:
 
     define audio.phone_jingle = "audio/sound_effects/notification_sound.mp3"
     define audio.class_bell = "audio/sound_effects/School Bell.mp3"
+    define audio.camera_effect = "audio/sound_effects/Camera_effect.mp3"
 
 #endregion
 
@@ -117,11 +118,10 @@ label after_load:
         ypos 0.4
 
     transform image_choose_path_h:
-        xsize 0.7
-        ysize 0.7
+        zoom 0.85
         xalign 0.5
         yalign 0.5
         xpos 0.5
-        ypos 0.4
+        ypos 0.45
             
 #endregion

@@ -360,6 +360,15 @@ transform main_menu_image_move:
     linear 2.0 yalign 0.0
     repeat
 
+transform Logo_pos:
+    xalign 0.5
+    yalign 0.5
+    xpos 0.18
+    ypos 0.25
+    linear 0.3 zoom 0.22
+    linear 0.3 zoom 0.23
+    repeat
+
 screen main_menu():
 
     ## This ensures that any other menu screen is replaced.
@@ -384,6 +393,7 @@ screen main_menu():
 
             text "[config.version]":
                 style "main_menu_version"
+    add "images/Logo.png" at Logo_pos
 
 
 style main_menu_frame is empty

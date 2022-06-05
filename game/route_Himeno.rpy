@@ -2,7 +2,7 @@ label route_H1:
     define pts = 0
     narrateur """La cloche sonne trois fois, ce qui signifie que les cours sont terminés.
 
-    Tu te lèves pour s'étirer après une longue journée de travail, lorsque ton téléphone sonne dans ta poche."""
+    Tu te lèves pour t'étirer après une longue journée de travail, lorsque ton téléphone sonne dans ta poche."""
     playerName "Hmm"
     call phone_start(usrh, "17:05")
     call message_start(tph, "Retrouve-moi au parc dès que possible, je sais que tu as fini tes cours <3")
