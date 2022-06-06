@@ -64,8 +64,19 @@ label after_load:
 # Bomi
     image bomi armsback = "images/Characters/Bomi/bomi_armsback.png"
     image bomi fingie = "images/Characters/Bomi/bomi_fingie.png"
+    image bomi armsback blue = "images/Characters/Bomi/bomi_armsback_blue.png"
+    image bomi fngie blue = "images/Characters/Bomi/bomi_fingie_blue.png"
 
-    image bomi = "images/Characters/Bomi/bomi_default.png"
+    image bomi eyebrows mad = "images/Characters/Bomi/expressions/bomi_eyebrows_mad.png"
+    image bomi eyebrows neutral = "images/Characters/Bomi/expressions/bomi_eyebrows_neutral.png"
+    image bomi eyebrows sad = "images/Characters/Bomi/expressions/bomi_eyebrows_sad.png"
+    image bomi eyes blink = "images/Characters/Bomi/expressions/bomi_eyes_blink.png"
+    image bomi eyes left = "images/Characters/Bomi/expressions/bomi_eyes_left.png"
+    image bomi eyes right = "images/Characters/Bomi/expressions/bomi_eyes_right.png"
+    image bomi mouth happy = "images/Characters/Bomi/expressions/bomi_mouth_happy.png"
+    image bomi mouth neutral = "images/Characters/Bomi/expressions/bomi_mouth_neutral.png"
+    image bomi mouth sad = "images/Characters/Bomi/expressions/bomi_mouth_sad.png"
+    image bomi mouth talk = "images/Characters/Bomi/expressions/bomi_mouth_talk.png"
 
 # Himeno
     image himeno driveout = "images/Characters/Himeno/himeno_driveout.png"
