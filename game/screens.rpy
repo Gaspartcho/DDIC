@@ -369,6 +369,16 @@ transform Logo_pos:
     linear 0.3 zoom 0.23
     repeat
 
+transform menu_logo_move:
+    subpixel True
+    yoffset -300
+    xalign 0.5
+    yalign 0.5
+    xpos 0.18
+    ypos 0.25
+    time 1.925
+    easein_bounce 1.5 yoffset 0
+
 screen main_menu():
 
     ## This ensures that any other menu screen is replaced.
