@@ -259,23 +259,26 @@ label scene_2:
         "J'allais le supprimer de toute façon.":
             playerName "J'allais le supprimer de toute façon."
             c_akane "..."
+            show screen cexp("apc", "ael", "ams", "abn")
             c_akane "... Mouai ..."
-    
+    show screen cexp("apr", "ael", "ams", "abn")
     c_akane "Tu semble nouveau ici."
+    show screen cexp("apc", "aeb", "ams", "abn")
     c_akane "Bienvenue dans notre classe."
     playerName "On s'est déjà rencontrés non? Tu as mon compte instargam."
+    show screen cexp("apc", "ael", "amt", "abn")
     c_akane """Ah bon? Je m'en souviens pas.
 
     Peut-être que tu m'as confondu avec quelqu'un d'autre."""
 
-    ## akane part du champ
+    show screen cexp("apr", "aeb", "ams", "abn")
     
     """{i}...{/i}
 
     {i}C'est étrange{/i}
 
     {i}Je suis presque sûr que c'est la fille qui m'a envoyé un message hier soir.{/i}"""
-
+    show screen cexp("bpb", "beb", "bms", "bbn")
     narrateur "Tu tournes la tête en te sentant mal à l'aise et aperçoit une fille endormie sur sa table avec son téléphone allumé."
     narrateur "Tu t'approches du bureau et jette un coup d'œil à son téléphone."
 
@@ -290,13 +293,17 @@ label scene_2:
     narrateur """... mais la cloche de l'école sonne.
     
     Tu retournes à ta place a coté de Akane."""
-
+    show screen cexp("apr", "aeb", "ams", "abn")
     playerName "Qui est-ce ?"
+    show screen cexp("apr", "ael", "amt", "abn")
     c_akane "C'est {b}Bomi Park{/b}."
+    show screen cexp("apr", "ael", "ams", "abn")
     c_akane "Elle est en tête du classement de notre école."
+    show screen cexp("apr", "aeb", "ams", "abn")
     c_akane "C'est assez impressionnant pour une première."
     
     pause 1.0
+    hide screen cexp with fade
     "{i}...{/i}"
     "{i}Je devrais plus me concentrer en cours.{/i}"
     narrateur "Alors que vous essayez d'écouter le cours, vous sentez que vos paupères sont de plus en plus lourdes..."
@@ -316,15 +323,15 @@ label scene_2:
     
     Laquelle tu vas essayer d'aider?"""
 
-    show akane at image_choose_path with fade
+    show screen cexp("apr", "ael", "ams", "abn") with fade
     c_mysteriousMan "Akane la déléguée de la classe?"
     hide akane choose
 
-    show bomi at image_choose_path with fade
+    show screen cexp("bpf", "bel", "bms", "bbn") with fade
     c_mysteriousMan "Bomi la meilleure élève de l'école?"
     hide bomi choose
 
-    show himeno at image_choose_path_h with fade
+    show screen cexp("hph", "hel", "hms", "hbn") with fade
     c_mysteriousMan "Ou Himemo, la rebelle du lycée?"
     hide himeno choose
 
