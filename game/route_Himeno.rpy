@@ -1,10 +1,10 @@
 label route_H1:
     define pts = 0
-    narrateur """La cloche sonne trois fois, ce qui signifie que les cours sont terminés.
+    narrateur """{i}La cloche sonne trois fois, ce qui signifie que les cours sont terminés.{/i}
 
-    Tu vois le soleil se coucher juste derrière le bâtiment de l'école."""
+    {i}Tu vois le soleil se coucher juste derrière le bâtiment de l'école.{/i}"""
 
-    "Cette première journée était assez agréable.{/i}"
+    "{i}Cette première journée était assez agréable."
 
     narrateur "Tu te lèves pour t'étirer après une longue journée de travail, lorsque ton téléphone sonne dans ta poche."
     playerName "Hmm?"
@@ -14,7 +14,7 @@ label route_H1:
     call phone_end
     "{i}..."
     
-    "{i}Je me demande ce qu'elle veut.{/i}"
+    "{i}Je me demande ce qu'elle veut."
 
     scene park with fade
 
