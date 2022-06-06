@@ -23,7 +23,6 @@ label route_H1:
 
     c_himeno "Hey [playerName]"
     show screen cexp("hph", "hel", "hms", "hbn")
-    show hslh
     menu:
         c_himeno "Tu es prêt à ruiner des vies ?"
         "On fait quoi? j'espère rien de mal":
