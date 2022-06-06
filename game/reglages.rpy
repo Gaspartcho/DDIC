@@ -1,7 +1,5 @@
 label after_load:
 
-    define menu_video = Movie(play="videos/Main_menu_icon.mp4")
-
 #region Variables
 
     define hasPlayBefore = False
@@ -49,10 +47,19 @@ label after_load:
 #region Images
 
 # Akane
-    image akane armscrossed = "images/Characters/Akane/akane_armscrossed.png"
+    image akane armscrossed = "images/Characters/Akane/akane_default.png"
     image akane chin = "images/Characters/Akane/akane_chin.png"
 
-    image akane = "images/Characters/Akane/akane_default.png"
+    image akane eyebrows happy = "images/Characters/Akane/expression/akane_eyebrows_happy.png"
+    image akane eyebrows mad = "images/Characters/Akane/expression/akane_eyebrows_mad.png"
+    image akane eyebrows neutral = "images/Characters/Akane/expression/akane_eyebrows_neutral.png"
+    image akane eyes blink = "images/Characters/Akane/expression/akane_eyes_blink.png"
+    image akane eyes left = "images/Characters/Akane/expression/akane_eyes_left.png"
+    image akane eyes right = "images/Characters/Akane/expression/akane_eyes_right.png"
+    image akane mouth neutral = "images/Characters/Akane/expression/akane_mouth_neutral.png"
+    image akane mouth smile = "images/Characters/Akane/expression/akane_mouth_smile.png"
+    image akane mouth talk = "images/Characters/Akane/expression/akane_mouth_talk.png"
+    image akane vein = "images/Characters/Akane/expression/Akane_vein.png"
 
 # Bomi
     image bomi armsback = "images/Characters/Bomi/bomi_armsback.png"
@@ -125,5 +132,20 @@ label after_load:
         yalign 0.5
         xpos 0.5
         ypos 0.45
-            
+    
+    transform character_expression_pos:
+        xalign 0.5
+        yalign 0.5
+        xpos 0.85
+        ypos 0.6
+    
+    screen character_expression(c=None, m=None, e=None, eb=None, o=None, t=None):
+        fixed at character_expression_pos:
+            add c
+            add m
+            add e
+            add eb
+            add o
+            add t
+
 #endregion

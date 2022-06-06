@@ -245,6 +245,9 @@ label scene_2:
     window show
     "???" "Je ne cliquerais pas dessus si j'étais toi."
     call phone_end(False)
+
+    show screen character_expression("akane armscrossed", "akane eyes left", "akane mouth neutral", "akane eyebrows neutral")
+
     menu:
         c_akane "Tu devrais être prudent avec ceux-là. Ils ont tendance à te gâcher la vie."
 
