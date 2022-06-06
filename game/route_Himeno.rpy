@@ -27,8 +27,7 @@ label route_H1:
         c_himeno "Tu es prêt à ruiner des vies ?"
         "On fait quoi? j'espère rien de mal":
             playerName "On fait quoi? j'espère rien de mal"
-            hide hslh
-            show htbh
+            show screen cexp("hph", "heb", "hmt", "hbn")
             c_himeno """Mais bien sûr! 
 
             On va exécuter le plan le plus diabolique de l'humanité"""
@@ -36,16 +35,13 @@ label route_H1:
         "C’est sûr et certain qu'on ne va pas faire de bonnes choses.":
             playerName "C’est sûr et certain qu'on ne va pas faire de bonnes choses."
             $ pts += 1
-            hide hslh
-            show htbh
+            show screen cexp("hph", "heb", "hmt", "hbn")
             c_himeno "Ne sois pas bête c'est pour le plus grand bien"
-    hide htbh
-    show hslh
+    show screen cexp("hph", "hel", "hms", "hbn")
     c_himeno """Mon maquillage est superbe aujourd'hui.
 
     Je te fais prendre des photos de moi pour ma page instargam."""
-    hide hslh
-    show hglh
+    show screen cexp("hph", "hes", "hmm", "hbn")
     c_himeno "On va ruiner la vie des gens en leur montrant ce qu'ils ratent."
 
     menu:
@@ -53,29 +49,22 @@ label route_H1:
         "Je suis le meilleur photographe que vous trouverez":
             playerName "Je suis le meilleur photographe que vous trouverez"
             $ pts += 1
-            hide hglh
-            show hhbh
+            show screen cexp("hph", "heb", "hms", "hbn")
             c_himeno """C'est parfait!
 
             Tu vois? On est un pair parfait"""
 
         "Je ne suis pas très doué avec l'appareil photo":
             playerName "Je ne suis pas très doué avec l'appareil photo"
-            hide hglh
-            show htlw
+            show screen cexp("hpw", "hes", "hmt", "hbn")
             c_himeno "C'est pas grave, je vais te guider"
-    hide hhbh
-    hide htlw
-    show hsbh
+    show screen cexp("hph", "heb", "hms", "hbn")
     narrateur "Tu prends des photos de Himeno dans diverses poses."
-    hide hsbh
-    show hslw
+    show screen cexp("hpw", "hel", "hms", "hbn")
     narrateur "Elle demande finalement à voir comment ils sont sortis après quelques minutes"
-    hide hslw
-    show hmah
+    show screen cexp("hph", "hea", "hmf", "hba")
     c_himeno "Hé! N'est-ce pas…"
-    hide hmah
-    show haah
+    show screen cexp("hph", "hea", "hmn", "hba")
 
     """{i}Quoi{/i}
 
@@ -84,24 +73,19 @@ label route_H1:
     {i}J'ai suivi des règles de photographie que j'ai vues en ligne.{/i}
 
     {i}Elle exagère sûrement-{/i}"""
-    hide haah
-    show hmlh
+    show screen cexp("hph", "hel", "hmf", "hba")
     c_himeno "C'est Bomi à l'arrière."
 
     narrateur "Tu te rapproche du tel de Himeno et il y avait une silhouette rose à l'arrière d’une des photos qui se cachait derrière l'un des arbres."
 
     "{i}Hein...{/i}"
-    hide hmlh
-    show hgah
+    show screen cexp("hph", "hea", "hml", "hba")
     c_himeno "Pfft"
-    hide hgah
-    show helh
+    show screen cexp("hph", "hel", "hml", "hba")
     c_himeno """Elle ressemble à un harceleur.
 
     Qu'est-ce qu'elle fout ?"""
-    hide helh
-    show hmlw
-
+    show screen cexp("hpw", "hel", "hml", "hba")
     narrateur "Himeno agite son bras, essayant d'attirer l'attention de Bomi."
 
     c_himeno """Hey! 
@@ -112,11 +96,13 @@ label route_H1:
         c_himeno "Laisse-moi tranquille !"
         "Je ne pense pas que tu devrais faire ça… On ne connaît pas toute l'histoire.":
             playerName "Je ne pense pas que tu devrais faire ça… On ne connaît pas toute l'histoire."
+            show screen cexp("hph", "hel", "hmn", "hba")
             $ pts += 1
             c_himeno "Elle me suit, je pense que c'est suffisant pour la punir"
 
         "Elle s'en ira, ignore-la.":
             playerName "Elle s'en ira, ignore-la."
+            show screen cexp("hph", "hel", "hmf", "hba")
             c_himeno """Quoi et la laisser me suivre? 
 
             Certainement pas."""
