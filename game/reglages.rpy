@@ -79,16 +79,25 @@ label after_load:
     image bmt = "images/Characters/Bomi/expressions/bomi_mouth_talk.png"
 
 # Himeno
-    image himeno driveout = "images/Characters/Himeno/himeno_driveout.png"
-    image himeno phone = "images/Characters/Himeno/himeno_phone.png"
+    image hpw = "images/Characters/Himeno/himeno_driveout.png"
+    image hph = "images/Characters/Himeno/himeno_phone.png"
 
-    image himeno = "images/Characters/Himeno/himeno_default.png"
-
-    image himeno happy hand eyesclosed = "images/Characters/Himeno/expressions/hhbw.png"
-    image hslh = "images/Characters/Himeno/expressions/hslh.png"
-    image htbh = "images/Characters/Himeno/expressions/htbh.png"
-    image hslh = "images/Characters/Himeno/expressions/hslh.png"
-    image hglh = "images/Characters/Himeno/expressions/hglh.png"
+    image hbn = "images/Characters/Himeno/hbn.png"
+    image hea = "images/Characters/Himeno/hea.png"
+    image heb = "images/Characters/Himeno/heb.png"
+    image hel = "images/Characters/Himeno/hel.png"
+    image hes = "images/Characters/Himeno/hes.png"
+    image hmd = "images/Characters/Himeno/hmd.png"
+    image hmf = "images/Characters/Himeno/hmf.png"
+    image hml = "images/Characters/Himeno/hml.png"
+    image hmm = "images/Characters/Himeno/hmm.png"
+    image hmn = "images/Characters/Himeno/hmn.png"
+    image hms = "images/Characters/Himeno/hms.png"
+    image hmt = "images/Characters/Himeno/hmt.png"
+    image hba = "images/Characters/Himeno/hba.png"
+    image hbs = "images/Characters/Himeno/hbs.png"
+    image hlc = "images/Characters/Himeno/hlc.png"
+    image hbc = "images/Characters/Himeno/hbc.png" 
 
 # Insta
     image insta bomi1 = "images/instagram/B1_insta.png"
