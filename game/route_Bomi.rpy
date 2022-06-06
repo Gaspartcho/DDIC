@@ -1,9 +1,9 @@
 label route_B1:
     define good_points = 0
 
-    "{i} Je devrais aller voir Bomi et lu demander pourquoi elle fais ça."
+    "{i} Je devrais aller voir Bomi et lui demander pourquoi elle fais ça."
     "{i} ..."
-    "{i} La classe est vide."
+    "{i} Sa chaise est déjà vide."
     narrateur "Après cette longue journée de cours, tu décides de rentrer chez toi et te coucher."
     c_mysteriousMan "Arrette de faire genre... Tu viens de passer la journée à dormir..."
 
@@ -11,12 +11,16 @@ label route_B1:
     pause 2.0
     "{i} ..."
     "{i} Je vais essayer de lui parler quand même"
-    "{i}Je me demande si elle a un compte instargam propre à elle."
-    "{i}Ah! je l'ai trouvé..."
+    "{i}Je me demande si elle a un compte instargam..."
+    "{i}A elle, je veut dire..."
+    "{i}Ah! je l'ai trouvé...{/i}"
+
+    #Il ya a un bug ici, jredais pas pourquoi...
     call phone_start(usrb, "20:23")
 
     label choiceMaking_HID: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("Hey Bomi, pourquoi tu te caches?","choiceMaking_HID.choice1","Hé bien madame la déléguée, tu n'as pas du tout la même tête en vrai.","choiceMaking_HID.choice2")
+        
         label .choice1:    
             call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
             call message_start(playerName, "Hey Bomi, pourquoi tu te caches?") # whenever you put the sender name to be playerName it is the player characters own message!

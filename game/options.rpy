@@ -67,7 +67,7 @@ label phone_start(usrName = "Messages", hour = "17:30"):
     window hide
     play sound phone_jingle
     show screen phone_object(usrName, hour)
-    pause(0.2)
+    $ renpy.pause(0.2)
     return
     
 label phone_msg:
