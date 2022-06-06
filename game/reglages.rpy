@@ -116,6 +116,7 @@ label after_load:
     image BGE = "images/scenes/bomi_ge.png"
     image AB1 = "images/scenes/akane_b1.png"
     image AB2 = "images/scenes/akane_b2.png"
+    image AGE = "images/scenes/akane_ge.png"
 
 #endregion
 
