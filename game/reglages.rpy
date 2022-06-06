@@ -160,7 +160,7 @@ label after_load:
         xpos 0.85
         ypos 0.6
     
-    screen character_expression(c=None, m=None, e=None, eb=None, o=None, t=None):
+    screen cexp(c=None, m=None, e=None, eb=None, o=None, t=None):
         fixed at character_expression_pos:
             add c
             add m

@@ -246,13 +246,14 @@ label scene_2:
     "???" "Je ne cliquerais pas dessus si j'étais toi."
     call phone_end(False)
 
-    show screen character_expression("apc", "ael", "amn", "abn")
+    show screen cexp("apc", "ael", "amn", "abn")
 
     menu:
         c_akane "Tu devrais être prudent avec ceux-là. Ils ont tendance à te gâcher la vie."
 
         "Tu parles d'expérience ?":
             playerName "Tu parles d'expérience ?"
+            show screen cexp("apc", "aeb", "ams", "abn")
             c_akane "Peut-être"
 
         "J'allais le supprimer de toute façon.":
