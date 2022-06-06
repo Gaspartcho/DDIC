@@ -371,7 +371,7 @@ transform Logo_pos:
 
 transform menu_logo_move:
     subpixel True
-    yoffset -500
+    yoffset -300
     xalign 0.5
     yalign 0.5
     xpos 0.18
