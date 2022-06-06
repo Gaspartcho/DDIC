@@ -365,6 +365,10 @@ label RAF:
     {i}Elle a fini par me guider pendant qu'elle mettait en place les précautions pour elle-même.{/i}"""
     c_akane """Merci de penser à moi.
     
-    Allons rentrer à la maison?"""
+    Aller, on rentre?"""
+    
+    scene AGE with fade
+    pause
+    jump happy_ending
 
 

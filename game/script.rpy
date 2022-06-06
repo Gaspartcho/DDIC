@@ -261,6 +261,7 @@ label scene_2:
             c_akane "..."
             show screen cexp("apc", "ael", "ams", "abn")
             c_akane "... Mouai ..."
+    
     show screen cexp("apr", "ael", "ams", "abn")
     c_akane "Tu semble nouveau ici."
     show screen cexp("apc", "aeb", "ams", "abn")
@@ -278,7 +279,7 @@ label scene_2:
     {i}C'est étrange{/i}
 
     {i}Je suis presque sûr que c'est la fille qui m'a envoyé un message hier soir.{/i}"""
-    show screen cexp("bpb", "beb", "bms", "bbn")
+    show screen cexp("bpb", "beb", "bms", "bbn") with slideleft
     narrateur "Tu tournes la tête en te sentant mal à l'aise et aperçoit une fille endormie sur sa table avec son téléphone allumé."
     narrateur "Tu t'approches du bureau et jette un coup d'œil à son téléphone."
 
@@ -410,4 +411,96 @@ label game_over:
 
             stop music fadeout 1.5
 
+            return
+    
+label happy_ending:
+    scene black with fade
+    play music MisteriousMan_theme fadein 1.0 loop
+    c_mysteriousMan """Bravo!
+    
+    Tu as gagné!
+    
+    Tu as réussi!
+    
+    Tu as triomphé!
+    
+    Tu as fait quelque chose de bien.
+    
+    Tu as aidé des gens.
+    
+    Tu as rendu le monde meilleur...
+    
+    ...
+    
+    ...
+    
+    Qu'est-ce que tu fais encore là?
+    
+    Tu peut partir tu sais?
+    
+    Rien ne t'oblige à rester ici..."""
+
+    menu:
+        "Non non rien, je m'en vais":
+            c_mysteriousMan """Tu es bizare tu sais...
+            
+            J'ai eu peur que tu te sois endormis devant ton écran.
+            
+            Bon, et bien c'est un au revoirs alors...
+            
+            N'hésite pas à revenir me voir de temps en temps...
+            
+            Je t'aurais oublillé mais...
+            
+            Ce sera toujours amusant.
+            
+            ;)"""
+
+        "Tu m'avais promis quelque chose...":
+            c_mysteriousMan """...
+            
+            Moi?
+            
+            Et qu'es-ce que je pourais bien t'avoir promis?"""
+
+            playerName "Ton identitée?"
+
+            c_mysteriousMan """Ah!
+            
+            Oui c'est vrais...
+            
+            Et bien c'est simple...
+            
+            Je suis juste un bout de code écris par un dévelopeur de ce jeu.
+            
+            Il avais juste envie que je sois là...
+            
+            Donc je suis là.
+            
+            Rien de plus compliqué.
+            
+            Déçu?
+            
+            Oui, je sais...
+            
+            Mais bon, tous les histoires ne sont pas forcément palpitantes, non?
+            
+            ;)"""
+    
+    stop music fadeout 1.5
+
+    narrateur """Fin du programme.
+    
+    Vous avez terminé le jeu \"Doki-Doki Litterature Club\"!
+    
+    Une création de \"NSI122\"
+    
+    Merci d'avoir jouer."""
+
+    menu:
+        narrateur "Voulez-vous recommencer une partie?"
+
+        "oui":
+            jump start
+        "non":
             return
