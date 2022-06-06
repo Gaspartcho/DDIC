@@ -327,14 +327,13 @@ label scene_2:
     c_mysteriousMan "Akane la déléguée de la classe?"
     hide akane choose
 
-    show screen cexp("bpf", "bel", "bms", "bbn") with fade
+    show screen cexp("bpf", "bel", "bmh", "bbn") with fade
     c_mysteriousMan "Bomi la meilleure élève de l'école?"
     hide bomi choose
 
     show screen cexp("hph", "hel", "hms", "hbn") with fade
     c_mysteriousMan "Ou Himemo, la rebelle du lycée?"
-    hide himeno choose
-
+    hide screen cexp with fade
     c_mysteriousMan """En tout cas, choisis bien.
     
     Tes décisions ont une importance ici."""
