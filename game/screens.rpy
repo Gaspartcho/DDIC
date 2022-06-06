@@ -372,8 +372,8 @@ transform Logo_pos:
 
 transform menu_logo_move:
     subpixel True
-    yoffset -400
-    time 1.925
+    yoffset -425
+    time 1
     easein_bounce 1.5 yoffset 0
 
 screen main_menu():
