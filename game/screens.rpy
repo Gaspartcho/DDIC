@@ -22,6 +22,7 @@ style hyperlink_text:
 
 style gui_text:
     properties gui.text_properties("interface")
+    outlines [(3, "#ffff", 0, 0), (1, "#ffff", 1, 1)]
 
 
 style button:
@@ -371,11 +372,7 @@ transform Logo_pos:
 
 transform menu_logo_move:
     subpixel True
-    yoffset -300
-    xalign 0.5
-    yalign 0.5
-    xpos 0.18
-    ypos 0.25
+    yoffset -400
     time 1.925
     easein_bounce 1.5 yoffset 0
 
