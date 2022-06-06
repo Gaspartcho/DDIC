@@ -75,6 +75,8 @@ label route_H1:
     hide hslw
     show hmah
     c_himeno "Hé! N'est-ce pas…"
+    hide hmah
+    show haah
 
     """{i}Quoi{/i}
 
@@ -90,7 +92,8 @@ label route_H1:
     narrateur "Tu te rapproche du tel de Himeno et il y avait une silhouette rose à l'arrière d’une des photos qui se cachait derrière l'un des arbres."
 
     "{i}Hein...{/i}"
-
+    hide hmlh
+    show hgah
     c_himeno """Pfft
 
     Elle ressemble à un harceleur.
