@@ -221,8 +221,8 @@ style choice_button is button
 style choice_button_text is button_text
 
 style choice_vbox:
-    xalign 0.95
-    yalign 0.5
+    xalign 0.5
+    ypos 405
     yanchor 0.5
 
     spacing gui.choice_spacing
@@ -363,10 +363,10 @@ transform main_menu_image_move:
 transform Logo_pos:
     xalign 0.5
     yalign 0.5
-    xpos 0.12
-    ypos 0.2
-    linear 0.5 zoom 0.15
-    linear 0.5 zoom 0.155
+    xpos 0.18
+    ypos 0.25
+    linear 0.3 zoom 0.22
+    linear 0.3 zoom 0.23
     repeat
 
 screen main_menu():
@@ -393,7 +393,7 @@ screen main_menu():
 
             text "[config.version]":
                 style "main_menu_version"
-    add "images/logo.png" at Logo_pos
+    add "gui/title.png" at menu_logo_move
 
 
 style main_menu_frame is empty
@@ -440,6 +440,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     if main_menu:
         add gui.main_menu_background
+        add "menu_logo"
     else:
         add gui.game_menu_background
 
@@ -1323,25 +1324,12 @@ init 5: # Drfining the styles for the phone messages
         ypadding 10
         xpadding 10
 
-transform pfp_placement:
-    zoom 0.03
-    xpos 0.058
-    ypos 0.071
 
 screen phone_object(caller, hour):
     fixed at phone_pickup:
         add "images/Phone/phone.png"
+        text caller xpos 0.06 ypos 0.085 font "gui/font/roboto-bold.ttf" color "000"
         text hour xpos 0.24 ypos 0.04 font "gui/font/roboto-bold.ttf" color "000" size 25
-        text caller ypos 0.085 xpos 0.095 font "gui/font/roboto-bold.ttf" color "000"
-
-        if caller == usrb:
-            add "Bomi pfp" at pfp_placement
-        if caller == usra or caller == usraf:
-            add "Akane pfp" at pfp_placement
-        if caller == usrh:
-            add "Himeno pfp" at pfp_placement
-        
-
 
 screen phone_message(who, what):
     vbox at incoming_message:
