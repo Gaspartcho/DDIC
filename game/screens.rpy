@@ -1333,7 +1333,7 @@ init 5: # Drfining the styles for the phone messages
 
 transform pfp_pos:
     zoom 0.03
-    xpos 0.0555
+    xpos 0.06
     ypos 0.073
 
 
@@ -1341,7 +1341,7 @@ transform pfp_pos:
 screen phone_object(caller, hour):
     fixed at phone_pickup:
         add "images/Phone/phone.png"
-        text caller xpos 0.09 ypos 0.086 font "gui/font/roboto-bold.ttf" color "000"
+        text caller xpos 0.097 ypos 0.086 font "gui/font/roboto-bold.ttf" color "000"
         text hour xpos 0.24 ypos 0.04 font "gui/font/roboto-bold.ttf" color "000" size 25
         if caller == usrb:
             add "Bomi_Pfp" at pfp_pos
