@@ -94,11 +94,14 @@ label route_H1:
     "{i}Hein...{/i}"
     hide hmlh
     show hgah
-    c_himeno """Pfft
-
-    Elle ressemble à un harceleur.
+    c_himeno "Pfft"
+    hide hgah
+    show helh
+    c_himeno """Elle ressemble à un harceleur.
 
     Qu'est-ce qu'elle fout ?"""
+    hide helh
+    show hmlw
 
     narrateur "Himeno agite son bras, essayant d'attirer l'attention de Bomi."
 
