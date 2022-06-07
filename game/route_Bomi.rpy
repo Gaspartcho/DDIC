@@ -8,7 +8,7 @@ label route_B1:
     c_mysteriousMan "Arrette de faire genre... Tu viens de passer la journée à dormir..."
 
     scene bedroom with fade
-    pause 2.0
+    pause 0.2
     "{i} ..."
     "{i} Je vais essayer de lui parler quand même"
     "{i}Je me demande si elle a un compte instargam..."
@@ -17,7 +17,6 @@ label route_B1:
 
     #Il ya a un bug ici, jredais pas pourquoi...
     call phone_start(usrb, "20:23")
-
     label choiceMaking_HID: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("Hey Bomi, pourquoi tu te caches?","choiceMaking_HID.choice1","Hé bien madame la déléguée, tu n'as pas du tout la même tête en vrai.","choiceMaking_HID.choice2")
         
