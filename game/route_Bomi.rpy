@@ -5,10 +5,13 @@ label route_B1:
     "{i} ..."
     "{i} Sa chaise est déjà vide."
     narrateur "Après cette longue journée de cours, tu décides de rentrer chez toi et te coucher."
-    c_mysteriousMan "Arrette de faire genre... Tu viens de passer la journée à dormir..."
-
     scene bedroom with fade
+<<<<<<< HEAD
     pause 0.2
+=======
+    pause 5
+    c_mysteriousMan "Arrette de faire genre... Tu viens de passer la journée à dormir..."
+>>>>>>> 36891cd680e382013a4e8102cdfe1894542624ac
     "{i} ..."
     "{i} Je vais essayer de lui parler quand même"
     "{i}Je me demande si elle a un compte instargam..."
