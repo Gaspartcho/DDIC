@@ -77,6 +77,7 @@ label after_load:
     image bmn = "images/Characters/Bomi/expressions/bomi_mouth_neutral.png"
     image bms = "images/Characters/Bomi/expressions/bomi_mouth_sad.png"
     image bmt = "images/Characters/Bomi/expressions/bomi_mouth_talk.png"
+    image bmw = "images/Characters/Bomi/expressions/bmn.png"
 
 # Himeno
     image hpw = "images/Characters/Himeno/himeno_driveout.png"

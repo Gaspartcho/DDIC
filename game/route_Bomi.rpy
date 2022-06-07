@@ -90,7 +90,7 @@ label route_B1:
     pause 2.0
     show screen cexp("bpbb", "beb", "bmh", "bbn")
     c_bomi "Bonjour [playerName]."
-    show screen cexp("bpbb", "bel", "bmn", "bbn")
+    show screen cexp("bpfb", "bel", "bmn", "bbn")
     c_bomi "..."
     show screen cexp("bpbb", "bel", "bmt", "bbn")
 
@@ -98,31 +98,38 @@ label route_B1:
         c_bomi "Qu'en penses-tu?"
         "Je pense que c'est superbe!":
             playerName "Je pense que c'est superbe!"
+            show screen cexp("bpbb", "beb", "bmh", "bbn")
             c_bomi "Vraiment? Je suis tellement heureuse!"
         
         "Tu m'as l'air familière...":
             $ good_points += 1
             playerName "Tu m'as l'air familière..."
+            show screen cexp("bpfb", "bea", "bms", "bbs")
             c_bomi "Ah!? J-je, n-non..."
 
     c_himeno "Pfft t'as l'air ridicule"
     with Fade(0.1, 0.0, 0.5, color="#fff")
+    show screen cexp("bpfb", "bel", "bmt", "bbs")
     c_bomi "E-eh!? A-attends !!"
+    show screen cexp("bpfb", "beb", "bms", "bbs")
     c_bomi "Ne prends pas de photos!"
     narrateur "Himeno s'enfuit."
+    show screen cexp("bpbb", "beb", "bms", "bbs")
     narrateur "Bomi essaie de la poursuivre et trébuche."
-
+    show screen cexp("bpbb", "bea", "bms", "bbs")
     menu:
         narrateur "Tu l'aides à se relever"
         "Tu veux que je la poursuive ?":
             playerName "Tu veux que je la poursuive ?"
             $ good_points += 1
+            show screen cexp("bpbb", "bel", "bms", "bbs")
             c_bomi "..."
 
         "Je ne pense pas que les gens y prêteront attention de toute façon":
             playerName "Je ne pense pas que les gens y prêteront attention de toute façon"
+            show screen cexp("bpbb", "beb", "bmh", "bbs")
             c_bomi "Ahahah... Tu as surement raison"
-    
+    show screen cexp("bpbb", "bea", "bms", "bbs")
     c_bomi "..."
     c_bomi "Je ne veut pas que ça circule."
 
@@ -137,9 +144,10 @@ label route_B1:
             playerName "Quelqu'un a pris une photo d'elle!"
             c_akane "Ah. Je pense avoir une idée de qui tu parles."
             c_akane "Je ne peux pas vraiment faire quoi que ce soit puisque sa famille a beaucoup d'influence sur l'école."
-    
+    show screen cexp("bpbb", "bel", "bmt", "bbs")
     c_bomi "[playerName]!"
     scene hallway day with fade
+    show screen cexp("bpbb", "bea", "bmt", "bbs")
     c_bomi "C'est la honte!"
     c_bomi "Si cette photo sort, je ne pense pas que je m'en remettrais..."
 

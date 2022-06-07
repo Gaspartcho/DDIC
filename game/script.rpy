@@ -356,7 +356,7 @@ label road_menu:
         "Himeno":
             $ road = "3"
             playerName "Himeno!"
-    
+    hide screen mlt with fade
     c_mysteriousMan """Bien. Bonne chance pour la suite, on se revéra à la fin...
 
     Allé, réveille-toi, c'est l'heure de la fin des cours.
