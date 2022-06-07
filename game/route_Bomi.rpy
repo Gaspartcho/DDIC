@@ -4,9 +4,10 @@ label route_B1:
     "{i} Je devrais aller voir Bomi et lui demander pourquoi elle fais ça."
     "{i} ..."
     "{i} Sa chaise est déjà vide."
-    narrateur "Après cette longue journée de cours, tu décides de rentrer chez toi et te coucher."
+    narrateur "Après cette longue journée de cours, tu décides de rentrer chez toi et te coucher..."
+
     scene bedroom with fade
-    pause 0.2
+    pause 2
     "{i} ..."
     "{i} Je vais essayer de lui parler quand même"
     "{i}Je me demande si elle a un compte instargam..."
