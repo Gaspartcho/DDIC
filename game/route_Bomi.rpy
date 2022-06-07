@@ -4,9 +4,10 @@ label route_B1:
     "{i} Je devrais aller voir Bomi et lui demander pourquoi elle fais ça."
     "{i} ..."
     "{i} Sa chaise est déjà vide."
-    narrateur "Après cette longue journée de cours, tu décides de rentrer chez toi et te coucher."
+    narrateur "Après cette longue journée de cours, tu décides de rentrer chez toi et te coucher..."
+
     scene bedroom with fade
-    pause 0.2
+    pause 2
     "{i} ..."
     "{i} Je vais essayer de lui parler quand même"
     "{i}Je me demande si elle a un compte instargam..."
@@ -15,7 +16,11 @@ label route_B1:
 
     #Il ya a un bug ici, jredais pas pourquoi...
     call phone_start(usrb, "20:23")
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 2b638b857f2278b05fd5ed211786ef72d6030876
     label choiceMaking_HID: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("Hey Bomi, pourquoi tu te caches?","choiceMaking_HID.choice1","Hé bien madame la déléguée, tu n'as pas du tout la même tête en vrai.","choiceMaking_HID.choice2")
         
