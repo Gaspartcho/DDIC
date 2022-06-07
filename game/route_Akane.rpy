@@ -1,5 +1,5 @@
 label route_A:
-    define good_points = 0
+    define ptsa1 = 0
     narrateur "Vous décidez de rentrer chez vous dirrectement."
     scene bedroom with fade
 
@@ -12,7 +12,7 @@ label route_A:
             call message(tpa, "Tkt. Je ne fais que mon devoir après tout")
             jump .aftermenu
         label .choice2:
-            $ good_points += 1
+            $ ptsa1 += 1
             call phone_after_menu
             call message_start(playerName, "J'ai l'impression que tu fais beaucoup pour la classe")
             call message(tpa, "Je suis content qu'on ait quelqu'un d'aussi responsable comme déléguée.")
@@ -36,7 +36,7 @@ label route_A:
             call message(tpa, "non.")
             jump .aftermenu
         label .choice2:
-            $ good_points += 1
+            $ ptsa1 += 1
             call phone_after_menu
             call message_start(playerName, "ah ok, j'irai peut-être voir")
             call message(tpa, "^^")
@@ -49,7 +49,7 @@ label route_A:
     label choiceMaking_DOC:
         call screen phone_reply("J'aime les deux","choiceMaking_DOC.choice1","Je préfère les chats","choiceMaking_DOC.choice2")
         label .choice1:
-            $ good_points += 1
+            $ ptsa1 += 1
             call phone_after_menu
             call message_start(playerName, "J'aime les deux.")
             call message(tpa, "Je vois, eh bien au moins tu penses aussi que les chiens sont mignons.")
@@ -72,7 +72,7 @@ label route_A:
         label .choice1:
             call phone_after_menu
             call message_start(playerName, "Mais, les gens ne sont pas des chiens...")
-            $ good_points += 1
+            $ ptsa1 += 1
             call reply_message("Ils ont besoin de leur vie privée, de leur libre arbitre...")
             call message(tpa, "Peut-être.")
             call message(tpa, "Mais au moins ce serait plus facile de maintenir l'ordre")
@@ -97,7 +97,7 @@ label route_A:
         label .choice1:
             call phone_after_menu
             call message_start(playerName, "Bien sûr!")
-            $ good_points += 1
+            $ ptsa1 += 1
             call reply_message("Je viendrai avec toi après avoir fini tous mes devoirs!")
             call message(tpa, "Parfait")
             call message(tpa, "Au fait, c'est juste une formalité, mais...")
@@ -142,7 +142,7 @@ label route_A:
     menu:
         c_akane "Donc j'aimerais lui faire un petit cadeau de la part de toute la classe pour la remercier."
         "Euhh. Ca m’a l’air bizarre":
-            $ good_points += 1
+            $ ptsa1 += 1
             playerName "Euhh. Ca m’a l’air bizarre"
             show screen cexp("apr", "ael", "ams", "abn")
             c_akane "Il est crypté pour que personne d'autre que Himeno peut l'ouvrir..."
@@ -165,7 +165,7 @@ label route_A:
     menu:
         c_akane "Non." 
         "Tu ne devrais pas prendre l'argent des autres":
-            $ good_points += 1
+            $ ptsa1 += 1
             playerName "Akane, tu ne devrais pas avoir envie de prendre l'argent des autres. Penses à l'autre qui est plus misérable et en prenant le peu qu'il a, tu lui fout du chaos."
             show screen cexp("apr", "ael", "amt", "abn")
             c_akane "Pardon?"
@@ -180,7 +180,7 @@ label route_A:
     hide screen cexp 
     scene black with fade
 
-    if good_points >= 4:
+    if ptsa1 >= 4:
         jump RAF1
     else:
         jump RAB1
@@ -215,10 +215,11 @@ label RAB1:
 
     Veuillez sortir et venir avec moi."""
     show screen cexp("apc", "aea", "ams", "abn")
-    """{i}Je m'attendais à ce que Akane commence enfin à montrer de l'émotion et à se battre, mais elle les a simplement suivis calmement avec un sourire.{/i}
-
-    {i}On a appris par Himeno que Akane était responsable de vol parce que Himeno ne faisait pas attention à ce qu’elle achète.{/i}"""
-
+    """{i}Je m'attendais à ce que Akane commence enfin à montrer de l'émotion et à se battre, mais elle les a simplement suivis calmement avec un sourire.{/i}"""
+    hide screen cexp with fade
+    scene black with fade
+    """{i}On a appris par Himeno que Akane était responsable de vol parce que Himeno ne faisait pas attention à ce qu’elle achète.{/i}"""
+    scene black with fade
     "{i}Un an plus tard, Akane a été mise en procès.{/i}"
     scene AB1 with fade
     "Juges" """Kousei Akane.
@@ -232,7 +233,7 @@ label RAB1:
     jump game_over
 
 label RAF1:
-    define good_points = 0
+    define ptsa2 = 0
     scene bedroom with fade
     narrateur "Quelques jours plus tard..."
     call phone_start(usra, "20:36")
@@ -257,6 +258,7 @@ label RAF1:
         label .choice2:
             call phone_after_menu
             call message_start(playerName, "Tu devrais le dénoncer")
+            $ ptsa2 += 1
             call message(tpa, "C'est inutile, Ils ne feront sûrement rien")
             call message(tpa, "Je ne peux même pas si je le voulais de toute façon")
             call message(tpa, "Je n'ai aucune idée de qui il s'agit.")
@@ -273,6 +275,7 @@ label RAF1:
         label .choice1:
             call phone_after_menu
             call message_start(playerName, "Tu devrais prendre des précautions.")
+            $ ptsa2 += 1
             call message(tpa, "Ok mais comment?")
             jump .aftermenu
         label .choice2:
@@ -307,6 +310,7 @@ label RAF1:
         label .choice2:
             call phone_after_menu
             call message_start(playerName, "Ah, rien. J'aimerais en savoir plus sur elle")
+            $ ptsa2 += 1
             call reply_message("Elle semble être la plus forte de notre classe et j'aimerais savoir comment elle fait")
             call message(tpa, "Je pourais...")
             call message(tpa, "Mais non.")
@@ -325,6 +329,7 @@ label RAF1:
         label .choice1:
             call phone_after_menu
             call message_start(playerName, "Akane. S'il te plaît, sois super prudente.")
+            $ ptsa2 += 1
             call message(tpa, "Je le serai.")
             jump .aftermenu
         label .choice2:
@@ -336,7 +341,7 @@ label RAF1:
         label .aftermenu:
     call phone_end
     "..."
-    if good_points > 2:
+    if ptsa2 > 2:
         jump RAF
     else:
         jump RAB2
@@ -374,7 +379,9 @@ label RAB2:
     au revoir, [playerName]."""
 
 label RAF:
+    scene blacks with fade
     "{i}J'ai rencontré Akane le lendemain à l'école."
+    scene AGE with fade
     c_akane "Alors que veux-tu que je fasse ?"
     playerName "Alors…"
     """{i}J'ai expliqué à Akane les choses les plus élémentaires sur la façon de protéger son identité en ligne, mais elle semblait en savoir plus que moi.{/i}
@@ -383,8 +390,6 @@ label RAF:
     c_akane """Merci de penser à moi.
     
     Aller, on rentre?"""
-    
-    scene AGE with fade
     pause
     jump happy_ending
 
