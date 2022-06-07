@@ -88,8 +88,9 @@ label route_B1:
     narrateur "Le lendemain..."
     scene classroom day with fade
     pause 2.0
-
+    show screen cexp("bpbb", "beb", "bmh", "bbn")
     c_bomi "Bonjour [playerName]."
+    show screen cexp("bpbb", "bel", "bmn", "bbn")
     c_bomi "..."
 
     menu:
