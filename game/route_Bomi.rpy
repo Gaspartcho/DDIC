@@ -92,6 +92,7 @@ label route_B1:
     c_bomi "Bonjour [playerName]."
     show screen cexp("bpbb", "bel", "bmn", "bbn")
     c_bomi "..."
+    show screen cexp("bpbb", "bel", "bmt", "bbn")
 
     menu:
         c_bomi "Qu'en penses-tu?"
