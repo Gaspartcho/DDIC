@@ -154,19 +154,35 @@ label after_load:
         xpos 0.5
         ypos 0.45
     
-    transform character_expression_pos:
+    transform character_expression_pos(p):
         xalign 0.5
         yalign 0.5
-        xpos 0.85
         ypos 0.6
+
+    transform p_center:
+        xpos 0.3
+
+    transform p_left:
+        xpos 0.0
+
+    transform p_right:
+        xpos 0.6
+
     
-    screen cexp(c=None, m=None, e=None, eb=None, o=None, t=None):
+    screen cexp(c=None, m=None, e=None, eb=None, o=None, t=None, p=p_center):
+        modal False
         fixed at character_expression_pos:
-            add c
-            add m
-            add e
-            add eb
-            add o
-            add t
+            fixed at p:
+                add c
+                add m
+                add e
+                add eb
+                add o
+                add t
+
+    screen mlt:
+        use cexp("apr", "ael", "ams", "abn", p=p_left)
+        use cexp("bpf", "bel", "bmh", "bbn", p=p_center)
+        use cexp("hph", "hel", "hms", "hbn", p=p_right)
 
 #endregion

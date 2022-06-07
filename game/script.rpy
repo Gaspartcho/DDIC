@@ -339,6 +339,8 @@ label scene_2:
     
     Tes décisions ont une importance ici."""
 
+    show screen mlt
+
     jump road_menu
 
 label road_menu:

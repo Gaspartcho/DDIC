@@ -223,7 +223,7 @@ style choice_button_text is button_text
 
 style choice_vbox:
     xalign 0.9
-    ypos 405
+    yalign 0.6
     yanchor 0.5
 
     spacing gui.choice_spacing
