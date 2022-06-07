@@ -121,37 +121,49 @@ label route_A:
     narrateur "Le lendemain..."
     scene classroom day with fade
     pause 1.0
+    show screen cexp("apc", "aeb", "ams", "abn")
     c_akane "{cps=50}Bonjour, [playerName].{nw}"
 
     "{i}Holy Sweet Baby Jesus!!"
     "{i}Elle doit arrêter d'apparaître de nulle part."
+    show screen cexp("apc", "ael", "ams", "abn")
     playerName "Salut Akane, t'as besoin de quelque chose?"
+    show screen cexp("apc", "ael", "amt", "abn")
     c_akane "Oui, j'aurais besoin de ton aide."
     c_akane "Tu vois Himeno?"
     c_akane "La blonde un peu bronzée."
+    show screen cexp("apc", "aeb", "ams", "abn")
     c_akane "Tu peux lui envoyer ce lien?"
+    show screen cexp("apc", "ael", "ams", "abn")
     c_akane "C'est un chèque cadeau pour la remercier."
     c_akane "Tu vois, sa famille est très riche: elle donne beaucoup pour financer l'école."
-    c_akane "Donc j'aimerais lui faire un petit cadeau de la part de toute la classe pour la remercier."
+    show screen cexp("apr", "aeb", "ams", "abn")
 
     menu:
+        c_akane "Donc j'aimerais lui faire un petit cadeau de la part de toute la classe pour la remercier."
         "Euhh. Ca m’a l’air bizarre":
             $ good_points += 1
             playerName "Euhh. Ca m’a l’air bizarre"
+            show screen cexp("apr", "ael", "ams", "abn")
             c_akane "Il est crypté pour que personne d'autre que Himeno peut l'ouvrir..."
 
         "D’accord, mais pourquoi ne le fais-tu pas toi-même?":
             playerName "D’accord, mais pourquoi ne le fais-tu pas toi-même?"
+            show screen cexp("apr", "ael", "amt", "abn")
             c_akane "C'est pour le symbolisme tu vois..."
+            show screen cexp("apr", "aeb", "ams", "abn")
             c_akane "Un nouvel élève qui remercie déja les bienfaiteurs de l'école, ça donnera un message positif."
     
     "{i}..."
     "{i}C'est la deuxième fois qu'Akane m'envoie quelque chose à ouvrir..."
+    show screen cexp("apc", "ael", "ams", "abn")
     playerName "Tu essayerais pas de nous arnaquer Himeno et moi par hasard?"
+    show screen cexp("apr", "aea", "ams", "abn")
     c_akane "..."
-    c_akane "Non." #sourit
+    show screen cexp("apr", "aeb", "ams", "abn")
 
     menu:
+        c_akane "Non." 
         "Tu ne devrais pas prendre l'argent des autres":
             $ good_points += 1
             playerName "Akane, tu ne devrais pas avoir envie de prendre l'argent des autres. Tu n'e pense qu'à l'autre plus misérable et causer plus de chaos en prenant le peu qu'il a."

@@ -229,7 +229,7 @@ label HB1:
 
     scene hallway late with fade
     narrateur "Tu la suis dans le couloir quand une silhouette rose sortie de nulle part et attaque à Himeno"
-    show screen cexp("hph", "hel", "hmn", "hba")
+    show screen cexp("hph", "hel", "hmf", "hbs")
     c_bomi """Tu!
 
     As!
