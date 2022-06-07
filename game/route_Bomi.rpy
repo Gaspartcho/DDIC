@@ -16,11 +16,6 @@ label route_B1:
 
     #Il ya a un bug ici, jredais pas pourquoi...
     call phone_start(usrb, "20:23")
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> 2b638b857f2278b05fd5ed211786ef72d6030876
     label choiceMaking_HID: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("Hey Bomi, pourquoi tu te caches?","choiceMaking_HID.choice1","Hé bien madame la déléguée, tu n'as pas du tout la même tête en vrai.","choiceMaking_HID.choice2")
         

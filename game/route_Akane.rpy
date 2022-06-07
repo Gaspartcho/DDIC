@@ -379,7 +379,9 @@ label RAB2:
     au revoir, [playerName]."""
 
 label RAF:
+    scene blacks with fade
     "{i}J'ai rencontré Akane le lendemain à l'école."
+    scene AGE with fade
     c_akane "Alors que veux-tu que je fasse ?"
     playerName "Alors…"
     """{i}J'ai expliqué à Akane les choses les plus élémentaires sur la façon de protéger son identité en ligne, mais elle semblait en savoir plus que moi.{/i}
@@ -388,8 +390,6 @@ label RAF:
     c_akane """Merci de penser à moi.
     
     Aller, on rentre?"""
-    
-    scene AGE with fade
     pause
     jump happy_ending
 
