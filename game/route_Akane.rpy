@@ -173,9 +173,11 @@ label route_A:
         "Je peux attendre un peu plus longtemps ?":
             playerName "Est-ce que tu pourais me laisser un peut plus de temps?"
             playerName "Histoire que je fasse bien connaissance avec tout le monde..."
-    
+    show screen cexp("apr", "ael", "amn", "abn")
     c_akane "Bon, si tu n'as pas envie de le faire, je vais m'en occuper" 
+    show screen cexp("apr", "aeb", "ams", "abn")
     c_akane "Je dois y aller, on se revéras plus tard."
+    hide screen cexp 
     scene black with fade
 
     if good_points >= 4:
@@ -202,15 +204,17 @@ label RAB1:
     """{i}Cela fait trois jours que j'ai envoyé ce lien à Himeno.{/i}
 
     {i}Je me demande ce que c'était, mais je passe à autre chose et je continue ma journée.{/i}"""
-    "Professeur" "Les deux solutions à ces fonctions sont-"
+    "Prof" "Les deux solutions à ces fonctions sont-"
     "???" "Excusez-moi. Est-ce que Akane Kousei est là ?"
+    show screen cexp("apc", "aea", "amn", "abn")
     """{i}Je jette un coup d'œil à Akane.{/i}
 
     {i}Elle semble pâle mais calme.{/i}"""
-    "Teacher" "Qui êtes-vous? Ceci est une salle de classe. Vous ne pouvez pas simplement rentrer comme ça."
-    "Detective Aki" """Je suis le détective Aki. Je suis là pour une enquête sur une affaire impliquant Akane Kousei.
+    "Prof" "Qui êtes-vous? Ceci est une salle de classe. Vous ne pouvez pas simplement rentrer comme ça."
+    "Mr. Aki" """Je suis le détective Aki. Je suis là pour une enquête sur une affaire impliquant Akane Kousei.
 
     Veuillez sortir et venir avec moi."""
+    show screen cexp("apc", "aea", "ams", "abn")
     """{i}Je m'attendais à ce que Akane commence enfin à montrer de l'émotion et à se battre, mais elle les a simplement suivis calmement avec un sourire.{/i}
 
     {i}On a appris par Himeno que Akane était responsable de vol parce que Himeno ne faisait pas attention à ce qu’elle achète.{/i}"""

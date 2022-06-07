@@ -16,8 +16,14 @@ label route_B1:
 
     #Il ya a un bug ici, jredais pas pourquoi...
     call phone_start(usrb, "20:23")
+<<<<<<< HEAD
+
     label choiceMaking_HID: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("Hey Bomi, pourquoi tu te caches?","choiceMaking_HID.choice1","Hé bien madame la déléguée, tu n'as pas du tout la même tête en vrai.","choiceMaking_HID.choice2")
+=======
+    label choiceMaking_HID: # Use this template eatch time u want to make a phone menu
+        call screen phone_reply("Hey Bomi, pourquoi tu te caches?","choiceMaking_HID.choice1","Hé bien madame la déléguée, tu n'as pas du tout la même tête en vrai.","choiceMaking_HID.choice2")
+>>>>>>> 132db0c4d10720fcd575b431523f052fc270f5be
         
         label .choice1:    
             call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
