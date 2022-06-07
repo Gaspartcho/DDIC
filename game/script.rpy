@@ -279,7 +279,7 @@ label scene_2:
     {i}C'est étrange{/i}
 
     {i}Je suis presque sûr que c'est la fille qui m'a envoyé un message hier soir.{/i}"""
-    show screen cexp("bpb", "beb", "bms", "bbn") with slideleft
+    show screen cexp("bpb", "beb", "bms", "bbn") 
     narrateur "Tu tournes la tête en te sentant mal à l'aise et aperçoit une fille endormie sur sa table avec son téléphone allumé."
     narrateur "Tu t'approches du bureau et jette un coup d'œil à son téléphone."
 
@@ -374,7 +374,7 @@ label road_menu:
     if road == "2":
         jump route_B1
     if road == "3":
-        jump route_H1
+        jump RH1
 
 label game_over:
     scene black with fade
