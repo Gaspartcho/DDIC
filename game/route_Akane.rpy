@@ -166,7 +166,8 @@ label route_A:
         c_akane "Non." 
         "Tu ne devrais pas prendre l'argent des autres":
             $ good_points += 1
-            playerName "Akane, tu ne devrais pas avoir envie de prendre l'argent des autres. Tu n'e pense qu'à l'autre plus misérable et causer plus de chaos en prenant le peu qu'il a."
+            playerName "Akane, tu ne devrais pas avoir envie de prendre l'argent des autres. Penses à l'autre qui est plus misérable et en prenant le peu qu'il a, tu lui fout du chaos."
+            show screen cexp("apr", "ael", "amt", "abn")
             c_akane "Pardon?"
 
         "Je peux attendre un peu plus longtemps ?":
