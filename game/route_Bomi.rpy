@@ -234,8 +234,9 @@ label RBF1:
     "{i}Ces commentaires sont stupides et méchants..."
     "{i}Himeno n'a aucune pitié."
     "..."
-    show screen cexp("bpf", "beb", "bms", "bbs")
+    show screen cexp("bpb", "beb", "bms", "bbs")
     narrateur "Tu trouves la photo de Bomi avec ses extensions de cheveux, postée et virale."
+    show screen cexp("bpb", "bel", "bmf", "bbs")
     c_bomi "Ah..."
     c_bomi "J'espérais que tu n'allais pas le voir"
     c_bomi "Je ne pensais pas que c'était si reconnaissable..."
