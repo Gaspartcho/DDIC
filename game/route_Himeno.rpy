@@ -14,7 +14,7 @@ label RH1:
     call phone_end
     "{i}..."
     
-    "{i}Je me demande ce qu'elle veut."
+    "{i}Je me demande ce qu'elle me veut."
 
     scene park with fade
 
@@ -28,74 +28,91 @@ label RH1:
         "On fait quoi? j'espère rien de mal":
             playerName "On fait quoi? j'espère rien de mal"
             show screen cexp("hph", "heb", "hmt", "hbn")
-            c_himeno """Mais bien sûr! 
+            c_himeno """Mais bien sûr que si! 
 
             On va exécuter le plan le plus diabolique de l'humanité"""
 
-        "C’est sûr et certain qu'on ne va pas faire de bonnes choses.":
-            playerName "C’est sûr et certain qu'on ne va pas faire de bonnes choses."
+        "C'est sûr et certain qu'on ne va pas faire de bonnes choses.":
+            playerName "C'est sûr et certain qu'on ne va pas faire de bonnes choses."
             $ ptsh1 += 1
             show screen cexp("hph", "heb", "hmt", "hbn")
             c_himeno "Ne sois pas bête c'est pour le plus grand bien"
+    
+    playerName "..."
     show screen cexp("hph", "hel", "hms", "hbn")
     c_himeno """Mon maquillage est superbe aujourd'hui.
 
-    Je te fais prendre des photos de moi pour ma page instargam."""
+    Donc mon plan, c'est que je t'engage pour faire mes photos de ma page instargam."""
     show screen cexp("hph", "hes", "hmm", "hbn")
-    c_himeno "On va ruiner la vie des gens en leur montrant ce qu'ils ratent."
+    c_himeno """Tu vas voir, ça vas être marant
+        
+    On va ruiner la vie des gens en leur montrant ce qu'ils ratent."""
 
     menu:
         c_himeno "Tu peux le faire, n'est-ce pas ?"
-        "Je suis le meilleur photographe que vous trouverez":
-            playerName "Je suis le meilleur photographe que vous trouverez"
+        "Je suis le meilleur photographe que tu trouveras":
+            playerName "Je suis le meilleur photographe que tu trouveras ici."
             $ ptsh1 += 1
+            define himeno_help = False
             show screen cexp("hph", "heb", "hms", "hbn")
             c_himeno """C'est parfait!
 
-            Tu vois? On est un pair parfait"""
+            Tu vois? On est une paire parfaite"""
 
         "Je ne suis pas très doué avec l'appareil photo":
+            define himeno_help = True
             playerName "Je ne suis pas très doué avec l'appareil photo"
             show screen cexp("hpw", "hes", "hmt", "hbn")
             c_himeno "C'est pas grave, je vais te guider"
+    
     show screen cexp("hph", "heb", "hms", "hbn")
+
+    play sound camera_effect
+    with Fade(0.1, 0.0, 0.5, color="#fff")
+    play sound camera_effect
+    with Fade(0.1, 0.0, 0.5, color="#fff")
+    play sound camera_effect
+    with Fade(0.1, 0.0, 0.5, color="#fff")
+
     narrateur "Tu prends des photos de Himeno dans diverses poses."
     show screen cexp("hpw", "hel", "hms", "hbn")
-    narrateur "Elle demande finalement à voir comment ils sont sortis après quelques minutes"
+    c_himeno "Je me demande comment elles rendent..."
     show screen cexp("hph", "hea", "hmf", "hba")
-    c_himeno "Hé! N'est-ce pas…"
+    c_himeno "Hé! Mais ce n'est pas..."
     show screen cexp("hph", "hea", "hmn", "hba")
 
     """{i}Quoi{/i}
 
-    {i}Est-ce que j'ai mal fait ça ?{/i}
+    {i}Est-ce que j'ai mal fait ça ?{/i}"""
 
-    {i}J'ai suivi des règles de photographie que j'ai vues en ligne.{/i}
+    if himeno_help:
+        "{i}J'ai pourtant tout fait comme elle m'as dit...{/i}"
+    else:
+        "{i}J'ai pourtant suivi les règles de photographie que j'ai vues en ligne...{/i}"
 
-    {i}Elle exagère sûrement-{/i}"""
+    "{i}Elle exagère sûrement-{/i}"
     show screen cexp("hph", "hel", "hmf", "hba")
     c_himeno "C'est Bomi à l'arrière."
 
-    narrateur "Tu te rapproche du tel de Himeno et il y avait une silhouette rose à l'arrière d’une des photos qui se cachait derrière l'un des arbres."
+    narrateur "Tu te rapproche du tel de Himeno et il y avait une silhouette rose à l'arrière d'une des photos qui se cachait derrière l'un des arbres."
 
-    "{i}Hein...{/i}"
+    playerName "Hein?"
     show screen cexp("hph", "hea", "hml", "hba")
     c_himeno "Pfft"
     show screen cexp("hph", "hel", "hml", "hba")
-    c_himeno """Elle ressemble à un harceleur.
-
-    Qu'est-ce qu'elle fout ?"""
+    c_himeno "Elle ressemble à une harceleuse."
+    show screen cexp("hph", "hea", "hml", "hba")
+    c_himeno "Qu'est-ce qu'elle fout ?"
     show screen cexp("hpw", "hel", "hml", "hba")
-    narrateur "Himeno agite son bras, essayant d'attirer l'attention de Bomi."
 
-    c_himeno """Hey! 
+    c_himeno """(A Bomi) Hey! 
 
-    Je vais dire à tout le monde que tu es un harceleur !"""
+    Je vais dire à tout le monde que tu es une harceleuse !"""
 
     menu:
         c_himeno "Laisse-moi tranquille !"
-        "Je ne pense pas que tu devrais faire ça… On ne connaît pas toute l'histoire.":
-            playerName "Je ne pense pas que tu devrais faire ça… On ne connaît pas toute l'histoire."
+        "Elle est sûrement là par hasard":
+            playerName "Je ne pense pas que tu devrais faire ça... On ne connaît pas toute l'histoire."
             show screen cexp("hph", "hel", "hmn", "hba")
             $ ptsh1 += 1
             c_himeno "Elle me suit, je pense que c'est suffisant pour la punir"
@@ -109,7 +126,7 @@ label RH1:
     c_himeno "Je refuse d'accepter et d'endurer un événement aussi effrayant."
     show screen cexp("hpw", "hel", "hmn", "hba")
     menu:
-        c_himeno "Surtout d’elle."
+        c_himeno "Surtout d'elle."
         "Elle apprendra les conséquences de ses actes":
             playerName "Elle apprendra les conséquences de ses actes"
             show screen cexp("hph", "hea", "hmn", "hba")
@@ -171,9 +188,9 @@ label RH1:
     show screen cexp("hph", "hel", "hmf", "hbs", "hlc")
     c_himeno """ah
 
-    t’es nul
+    t'es nul
 
-    t’as ruiné mon maquillage"""
+    t'as ruiné mon maquillage"""
     show screen cexp("hph", "hea", "hmn", "hbs", "hlc")
     "…"
 
@@ -211,7 +228,7 @@ label RH1:
 label HB1:
     pause 5
     scene classroom late with fade
-    """{i}Ça fait une semaine que j’étais au parc avec Himeno.{/i}
+    """{i}Ça fait une semaine que j'étais au parc avec Himeno.{/i}
 
     {i}Himeno a fini par publier cette photo et a répandu beaucoup de haine.{/i}
 
@@ -238,9 +255,9 @@ label HB1:
 
     Ca!
 
-    T’es terrible!
+    T'es terrible!
 
-    Tu m’as ruine!"""
+    Tu m'as ruine!"""
 
     """{i}Himeno et Bomi se sont battus l'un contre l'autre.{/i}
 
@@ -284,9 +301,9 @@ label RH2:
     {i}Heureusement, Himeno a été miséricordieux et l'a supprimée.{/i}"""
     scene classroom day with fade
     show screen cexp("hpw", "heb", "hml", "hbn")
-    c_himeno "Hey! [playerName]! T’as vraiment bien travaillé avec la caméra."
+    c_himeno "Hey! [playerName]! T'as vraiment bien travaillé avec la caméra."
     show screen cexp("hph", "hes", "hml", "hbn")
-    c_himeno """T’as si bien réussi que j’ai reçu des offres d'entreprises !"""
+    c_himeno """T'as si bien réussi que j'ai reçu des offres d'entreprises !"""
     show screen cexp("hph", "heb", "hml", "hbn")
     c_himeno """Je peux gagner de l'argent maintenant!"""
     show screen cexp("hph", "hea", "hms", "hbn")
@@ -296,8 +313,8 @@ label RH2:
     show screen cexp("hph", "hea", "hms", "hbn")
     menu:
         "{i}C'était un mélange de bijoux, de vêtements et de maquillage. Certains d'entre eux étaient des cadeaux gratuits et beaucoup d'entre eux étaient des compliments de fans.{/i}"
-        "Haha c'est super ! En T’en as accepté ?":
-            playerName "Haha c'est super ! En T’en as accepté ?"
+        "Haha c'est super ! En T'en as accepté ?":
+            playerName "Haha c'est super ! En T'en as accepté ?"
             $ ptsh2 += 1
             show screen cexp("hpw", "hes", "hmt", "hbn")
             c_himeno "Non, je voulais te montrer tout avant d'accepter l'un d'eux!"
@@ -322,8 +339,8 @@ label RH2:
             show screen cexp("hph", "hel", "hmt", "hbn")
             c_himeno "Que veux-tu dire?"
 
-        "T’as une demande d'une marque de luxe ?":
-            playerName "T’as une demande d'une marque de luxe ?"
+        "T'as une demande d'une marque de luxe ?":
+            playerName "T'as une demande d'une marque de luxe ?"
             show screen cexp("hph", "hel", "hmf", "hbn")
             c_himeno "Que veux-tu dire par là?"
 
@@ -340,7 +357,7 @@ label RH2:
     c_himeno "Hein?"
 
     menu:
-        c_himeno "Qu’est-ce qu’il y a?"
+        c_himeno "Qu'est-ce qu'il y a?"
         "Ne mets pas tes coordonnées pendant que je suis à côté de toi !":
             playerName "Ne mets pas tes coordonnées pendant que je suis à côté de toi !"
             show screen cexp("hph", "hea", "hml", "hbn")
@@ -393,13 +410,13 @@ label HB2:
     scene hallway day with fade
     """{i}Hmm…{/i}
 
-    {i}C’est est tellement bizarre.{/i}
+    {i}C'est est tellement bizarre.{/i}
 
     {i}J'ai l'impression que j'aurais dû m'assurer qu'elle ne fasse rien.{/i}"""
     
     narrateur "Tu sens ton téléphone vibrer lorsque tu prends le thé glacé et le banana milk."
     call phone_start(usrh, "10:12")
-    call message_start(tph, "Reviens! J’ai soif!!")
+    call message_start(tph, "Reviens! J'ai soif!!")
     call reply_message("Okay okay!")
     call message(tph, "Je l'ai fait! J'espère qu'ils envoient les articles bientôt!")
     call phone_end(False)
@@ -461,13 +478,13 @@ label HGE:
     scene hallway day with fade
     """{i}Hmm…{/i}
 
-    {i}C’est est tellement bizarre.{/i}
+    {i}C'est est tellement bizarre.{/i}
 
     {i}J'ai l'impression que j'aurais dû m'assurer qu'elle ne fasse rien.{/i}"""
     
     narrateur "Tu sens ton téléphone vibrer lorsque tu prends le thé glacé et le banana milk."
     call phone_start(usrh, "10:12")
-    call message_start(tph, "Reviens! J’ai soif!!")
+    call message_start(tph, "Reviens! J'ai soif!!")
     call reply_message("Okay okay!")
     call message(tph, "Je l'ai fait! J'espère qu'ils envoient les articles bientôt!")
     call phone_end(False)
