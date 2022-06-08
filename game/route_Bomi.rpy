@@ -318,6 +318,7 @@ label RBF1:
     c_bomi "Je ferai ce que tu m'as dit."
     show screen cexp("bpf", "bel", "bmt", "bbs", p=p_center, h=h_down)
     c_bomi "J'espère que tu as raison."
+    hide screen cexp 
     scene black with fade
 
     if ptsb2 > 2:
@@ -338,13 +339,15 @@ label RBB2:
     {i}J'ai essayé de les cacher du mieux que je pouvais mais ce n'était pas assez.{/i}"""
     scene classroom late with fade
     "{i}Bomi a fini par les découvrir."
-
+    show screen cexp("bpb", "bea", "bms", "bbs", p=p_center, h=h_down)
     c_bomi "..."
+    show screen cexp("bpb", "bel", "bms", "bbs", p=p_center, h=h_down)
     c_bomi "..."
+    show screen cexp("bpb", "bea", "bms", "bbs", p=p_center, h=h_down)
     c_bomi "..."
 
     "{i}Au fil des jours, elle semblait se sentir de plus en plus mal."
-
+    hide screen cexp with fade
     """{i}À la fin, elle n'est plus venue en cours.{/i}
 
     {i}Personne n'a entendu parler d'elle depuis et je pense que la majorité n'ont rien fait pour essayer de prendre de ses nouvelles.{/i}
