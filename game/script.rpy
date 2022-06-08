@@ -149,7 +149,7 @@ label scene_1:
         label .choice2:
             call phone_after_menu
             call message_start(playerName, "Merci! Je te trouve très belle, ce qui est naturel pour une déléguée!")
-            call message(tpa, "Ahh… Merci beaucoup ^^")
+            call message(tpa, "Ahh... Merci beaucoup ^^")
             jump .aftermenu
             
         label .aftermenu:
@@ -159,11 +159,11 @@ label scene_1:
     call message(tpa, "Il y a cette fille dont je te conseille de pas t'approcher. Elle juge très facilement les gens et tu ne passeras pas un bon moment avec elle.")
     
     label choiceMaking_ST: # Use this template eatch time u want to make a phone menu
-        call screen phone_reply("Ah… Qu'a-t-elle fait ?","choiceMaking_ST.choice1","À quoi ressemble-t-elle?","choiceMaking_ST.choice2")
+        call screen phone_reply("Ah... Qu'a-t-elle fait ?","choiceMaking_ST.choice1","À quoi ressemble-t-elle?","choiceMaking_ST.choice2")
 
         label .choice1:    
             call phone_after_menu
-            call message_start(playerName, "Ah… Qu'a-t-elle fait ?")
+            call message_start(playerName, "Ah... Qu'a-t-elle fait ?")
             call message(tpa, "Elle aime se moquer de moi... de tout le monde en fait... je ne sais pas pourquoi.")
             jump .aftermenu
             

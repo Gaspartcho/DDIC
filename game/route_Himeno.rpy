@@ -81,20 +81,20 @@ label RH1:
     c_himeno "Hé! Mais ce n'est pas..."
     show screen cexp("hph", "hea", "hmn", "hba")
 
-    """{i}Quoi{/i}
+    """{i}Quoi{/i}{nw}
 
-    {i}Est-ce que j'ai mal fait ça ?{/i}"""
+    {i}Est-ce que j'ai mal fait ça ?{/i}{nw}"""
 
     if himeno_help:
-        "{i}J'ai pourtant tout fait comme elle m'as dit...{/i}"
+        "{i}J'ai pourtant tout fait comme elle m'as dit...{/i}{nw}"
     else:
-        "{i}J'ai pourtant suivi les règles de photographie que j'ai vues en ligne...{/i}"
+        "{i}J'ai pourtant suivi les règles de photographie que j'ai vues en ligne...{/i}{nw}"
 
-    "{i}Elle exagère sûrement-{/i}"
+    "{i}Elle exagère sûrement-{/i}{nw}"
     show screen cexp("hph", "hel", "hmf", "hba")
     c_himeno "C'est Bomi à l'arrière."
 
-    narrateur "Tu te rapproche du tel de Himeno et il y avait une silhouette rose à l'arrière d'une des photos qui se cachait derrière l'un des arbres."
+    narrateur "Tu te rapproche du tel de Himeno et tu vois qu'il y avait une silhouette rose à l'arrière d'une des photos qui se cachait derrière l'un des arbres."
 
     playerName "Hein?"
     show screen cexp("hph", "hea", "hml", "hba")
@@ -111,8 +111,9 @@ label RH1:
 
     menu:
         c_himeno "Laisse-moi tranquille !"
-        "Elle est sûrement là par hasard":
+        "Je ne pense pas que tu devrais faire ça... Elle est sûrement là par hasard":
             playerName "Je ne pense pas que tu devrais faire ça... On ne connaît pas toute l'histoire."
+            playerName "Si ça se trouve, elle est sûrement là par hasard..."
             show screen cexp("hph", "hel", "hmn", "hba")
             $ ptsh1 += 1
             c_himeno "Elle me suit, je pense que c'est suffisant pour la punir"
@@ -120,7 +121,7 @@ label RH1:
         "Elle s'en ira, ignore-la.":
             playerName "Elle s'en ira, ignore-la."
             show screen cexp("hph", "hel", "hmf", "hba")
-            c_himeno """Quoi et la laisser me suivre? 
+            c_himeno """Quoi et la laisser continuer de me suivre?
 
             Certainement pas."""
     c_himeno "Je refuse d'accepter et d'endurer un événement aussi effrayant."
@@ -131,23 +132,25 @@ label RH1:
             playerName "Elle apprendra les conséquences de ses actes"
             show screen cexp("hph", "hea", "hmn", "hba")
             c_himeno "Ouais, évidemment."
+            c_himeno "Et puis zut! Elle fais tout pour m'énerver celle-là!"
 
-        "On pourrait juste lui demander pourquoi elle te suit. Est-ce la seule chose qu'elle t'ait faite qui te dérange ? ":
-            playerName "On pourrait juste lui demander pourquoi elle te suit."
-            playerName "Est-ce la seule chose qu'elle t'ait faite qui te dérange ? "
+        "On pourrait juste lui demander pourquoi elle te suit":
+            playerName "On pourrait juste lui demander pourquoi elle te suit..."
+            playerName "Est-ce qu'elle t'as fais d'autres choses qui te dérangent?"
             $ ptsh1 += 1
             show screen cexp("hph", "hea", "hmn", "hba")
-            c_himeno """…
+            c_himeno """...
 
             Ouais"""
-    show screen cexp("hph", "hea", "hmf", "hba")
-    c_himeno """Et elle a toujours pris ma place au sommet du classement
 
-    comme je l'ai dit,"""
+    show screen cexp("hph", "hea", "hmf", "hba")
+    c_himeno """Et elle occupe {b}ma{/b} place au sommet du classement.
+
+    Comme je l'ai dit,"""
     show screen cexp("hph", "hel", "hmf", "hba")
     menu:
-        c_himeno "Je suis tellement sûr qu'elle triche."
-        "Comment le sais-tu ? Je suis sûr qu'elle a travaillé dur pour être là où elle est maintenant. Je crois que tu peux la battre aussi.":
+        c_himeno "Je suis certaine qu'elle triche."
+        "Je suis sûr qu'elle a travaillé dur pour être là où elle est maintenant.":
             playerName """Comment le sais-tu ? 
             
             Je suis sûr qu'elle a travaillé dur pour être là où elle est maintenant. 
@@ -155,7 +158,7 @@ label RH1:
             Je crois que tu peux la battre aussi."""
             show screen cexp("hph", "hea", "hmn", "hba")
             $ ptsh1 += 1
-            c_himeno "…"
+            c_himeno "..."
 
         "Peut-être qu'elle est juste plus intelligente que toi. ":
             playerName "Peut-être qu'elle est juste plus intelligente que toi. "
@@ -166,46 +169,52 @@ label RH1:
 
     {i}Peut-être que je n'aurais pas dû dire ça.{/i}"""
     show screen cexp("hph", "hel", "hmf", "hba", "hlc")
-    c_himeno "… Tais-toi…"
+    c_himeno "... Tais-toi..."
     show screen cexp("hph", "hel", "hmn", "hba", "hlc")
     playerName "Hein?"
     show screen cexp("hph", "hea", "hmf", "hba", "hlc")
     c_himeno "De quel droit tu me dis cela ?"
     show screen cexp("hph", "hel", "hmf", "hba", "hlc")
-    c_himeno "tu penses que je n'essaie pas?"
+    c_himeno "Tu penses que je n'essaie pas?"
     show screen cexp("hph", "hel", "hmf", "hbs", "hlc")
-    c_himeno """tout ce que je veux
+    c_himeno """Tout ce que je veux...
 
-    c'est que mon père me remarque"""
+    ... c'est que mon père me remarque"""
     show screen cexp("hph", "hea", "hmf", "hbs", "hlc")
-    c_himeno """il est jamais a la maison
+    c_himeno """Il est jamais a la maison.
 
-    et même si je vais du bien ou du mal"""
+    Que je fasse tout pour faire le bien ou le mal..."""
     show screen cexp("hph", "hel", "hmf", "hbs", "hlc")
-    c_himeno "il ne me regarde jamais "
+    c_himeno "... Il ne me regarde jamais."
     show screen cexp("hph", "hea", "hmn", "hbs", "hlc")
-    c_himeno "…"
+    c_himeno "..."
     show screen cexp("hph", "hel", "hmf", "hbs", "hlc")
     c_himeno """ah
 
-    t'es nul
-
-    t'as ruiné mon maquillage"""
+    t'es nul"""
+    show screen cexp("hph", "heb", "hmf", "hbs", "hlc")
+    c_himeno "t'as ruiné mon maquillage"
     show screen cexp("hph", "hea", "hmn", "hbs", "hlc")
-    "…"
+    "..."
 
     menu:
         "{i}Je devrais peut-être dire quelque chose{/i}"
-        "Il te verra un jour. C'est pour ca que tu devras rester bon pour le jour où il le fera.":
+        "Il te verra un jour.":
             show screen cexp("hph", "hel", "hmn", "hbs", "hlc")
-            playerName "Il te verra un jour. C'est pour ca que tu devras rester bon pour le jour où il le fera."
+            playerName "Il te verra un jour, ne t'inquiète pas."
+            playerName "C'est pour ça que tu devras rester gentille,"
+            playerName "... pour que le jour où il le fera,"
+            playerName "... il te voie sous le plus beau jour possible."
             $ ptsh1 += 1
+            show screen cexp("hph", "hea", "hmn", "hbs", "hlc")
+            c_himeno "Merci."
 
         "... ":
             playerName "... "
+            show screen cexp("hph", "hea", "hmn", "hbs", "hlc")
+            c_himeno "..."
     
-    show screen cexp("hph", "hea", "hmn", "hbs", "hlc")
-    c_himeno "..."
+
     show screen cexp("hph", "hel", "hmf", "hbs", "hlc")
     c_himeno "Je vais rentrer à la maison."
     hide screen cexp with fade
@@ -333,8 +342,8 @@ label RH2:
     menu:
         "{i}Mais le site officiel n'était-il pas guzzi.com et non guzzi_official.com ?{/i}"
 
-        "Hey… certains ne semblent pas corrects.":
-            playerName "Hey… certains ne semblent pas corrects."
+        "Hey... certains ne semblent pas corrects.":
+            playerName "Hey... certains ne semblent pas corrects."
             $ ptsh2 += 1
             show screen cexp("hph", "hel", "hmt", "hbn")
             c_himeno "Que veux-tu dire?"
@@ -344,7 +353,7 @@ label RH2:
             show screen cexp("hph", "hel", "hmf", "hbn")
             c_himeno "Que veux-tu dire par là?"
 
-    playerName "Je dis ça comme ça…"
+    playerName "Je dis ça comme ça..."
     show screen cexp("hph", "hea", "hmn", "hbn")
     """{i}Himeno roule des yeux et ouvre quand même le lien.{/i}
 
@@ -374,7 +383,7 @@ label RH2:
     {i}Un email.{/i}"""
     show screen cexp("hph", "hea", "hmt", "hbs")
     c_himeno """Eh?! 
-    Il dit que mon compte bancaire a été compromis…"""
+    Il dit que mon compte bancaire a été compromis..."""
     show screen cexp("hph", "hel", "hmt", "hbs")
     menu:
         c_himeno "Pour récupérer mon compte, je dois me reconnecter avec ce lien."
@@ -388,7 +397,7 @@ label RH2:
 
             Juste attends moi."""
             show screen cexp("hph", "hea", "hmf", "hbs")
-            c_himeno "Wahhhh ! Que devrais-je faire…"
+            c_himeno "Wahhhh ! Que devrais-je faire..."
 
         "Appelle-moi si tu as besoin de quoi que ce soit, j'irai chercher du banana milk.":
             show screen cexp("hph", "hel", "hmn", "hbs")
@@ -408,7 +417,7 @@ label RH2:
         
 label HB2:
     scene hallway day with fade
-    """{i}Hmm…{/i}
+    """{i}Hmm...{/i}
 
     {i}C'est est tellement bizarre.{/i}
 
@@ -441,13 +450,13 @@ label HB2:
 
     """{i}Sont-ce des fans ?{/i}
 
-    {i}… {/i}
+    {i}... {/i}
 
     {i}Je ne pense pas que les fans soient censés savoir où vous vivez.{/i}"""
 
     narrateur "Tu regardes autour de toi pour voir si tu peux repérer Himeno mais tu ne la vois pas."
 
-    """{i}…{/i}
+    """{i}...{/i}
 
     {i}Je vais aller chercher quelque chose à manger avant de rentrer à la maison. {/i}"""
 
@@ -459,7 +468,7 @@ label HB2:
 
     narrateur "Tu regardes la caissière."
     scene HB2 with fade
-    "{i}…{/i}"
+    "{i}...{/i}"
 
     c_himeno """???
     
@@ -476,7 +485,7 @@ label HB2:
 
 label HGE:
     scene hallway day with fade
-    """{i}Hmm…{/i}
+    """{i}Hmm...{/i}
 
     {i}C'est est tellement bizarre.{/i}
 

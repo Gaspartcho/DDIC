@@ -141,14 +141,14 @@ label route_A:
 
     menu:
         c_akane "Donc j'aimerais lui faire un petit cadeau de la part de toute la classe pour la remercier."
-        "Euhh. Ca m’a l’air bizarre":
+        "Euhh. Ca m'a l'air bizarre":
             $ ptsa1 += 1
-            playerName "Euhh. Ca m’a l’air bizarre"
+            playerName "Euhh. Ca m'a l'air bizarre"
             show screen cexp("apr", "ael", "ams", "abn")
             c_akane "Il est crypté pour que personne d'autre que Himeno peut l'ouvrir..."
 
-        "D’accord, mais pourquoi ne le fais-tu pas toi-même?":
-            playerName "D’accord, mais pourquoi ne le fais-tu pas toi-même?"
+        "D'accord, mais pourquoi ne le fais-tu pas toi-même?":
+            playerName "D'accord, mais pourquoi ne le fais-tu pas toi-même?"
             show screen cexp("apr", "ael", "amt", "abn")
             c_akane "C'est pour le symbolisme tu vois..."
             show screen cexp("apr", "aeb", "ams", "abn")
@@ -186,7 +186,7 @@ label route_A:
         jump RAB1
 
 label RAB1:
-    """{i}Qu’est-ce qui pourrait se passer?{/i}
+    """{i}Qu'est-ce qui pourrait se passer?{/i}
 
     {i}Ça fait une semaine que je suis arrivé à l'école.{/i}
 
@@ -196,9 +196,9 @@ label RAB1:
 
     {i}Je suis sûr que ce n'est rien de grave.{/i}
 
-    …
+    ...
 
-    …"""
+    ..."""
     scene classroom late with fade 
 
     """{i}Cela fait trois jours que j'ai envoyé ce lien à Himeno.{/i}
@@ -218,7 +218,7 @@ label RAB1:
     """{i}Je m'attendais à ce que Akane commence enfin à montrer de l'émotion et à se battre, mais elle les a simplement suivis calmement avec un sourire.{/i}"""
     hide screen cexp with fade
     scene black with fade
-    """{i}On a appris par Himeno que Akane était responsable de vol parce que Himeno ne faisait pas attention à ce qu’elle achète.{/i}"""
+    """{i}On a appris par Himeno que Akane était responsable de vol parce que Himeno ne faisait pas attention à ce qu'elle achète.{/i}"""
     scene black with fade
     "{i}Un an plus tard, Akane a été mise en procès.{/i}"
     scene AB1 with fade
@@ -355,7 +355,7 @@ label RAB2:
 
     Dieu.
 
-    Akane a transfert d’ecole!
+    Akane a transfert d'ecole!
 
     Elle est maintenant à l'ecole Z.
 
@@ -383,7 +383,7 @@ label RAF:
     "{i}J'ai rencontré Akane le lendemain à l'école."
     scene AGE with fade
     c_akane "Alors que veux-tu que je fasse ?"
-    playerName "Alors…"
+    playerName "Alors..."
     """{i}J'ai expliqué à Akane les choses les plus élémentaires sur la façon de protéger son identité en ligne, mais elle semblait en savoir plus que moi.{/i}
     
     {i}Elle a fini par me guider pendant qu'elle mettait en place les précautions pour elle-même.{/i}"""

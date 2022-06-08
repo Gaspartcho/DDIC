@@ -250,7 +250,7 @@ label RBF1:
     c_bomi "Non!!" # surpirsed ?
     c_bomi "J-je veux dire qu'on ne devrait pas."
     c_bomi "Ça deviendrait plus compliqué que voulu."
-    c_bomi "Ça passera… n'est-ce pas ?"
+    c_bomi "Ça passera... n'est-ce pas ?"
 
     menu:
         c_bomi "..."
