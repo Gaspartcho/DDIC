@@ -258,8 +258,11 @@ label RBF1:
     c_bomi "Non!!" 
     show screen cexp("bpf", "bea", "bmt", "bbs", p=p_center, h=h_down)
     c_bomi "J-je veux dire qu'on ne devrait pas."
+    show screen cexp("bpf", "bel", "bmt", "bbs", p=p_center, h=h_down)
     c_bomi "Ça deviendrait plus compliqué que voulu."
+    show screen cexp("bpb", "bea", "bmt", "bbs", p=p_center, h=h_down)
     c_bomi "Ça passera... n'est-ce pas ?"
+    show screen cexp("bpb", "bel", "bms", "bbs", p=p_center, h=h_down)
 
     menu:
         c_bomi "..."
@@ -272,26 +275,38 @@ label RBF1:
             playerName "Defends-toi. "
             playerName "Ils finiront par te croire."
             playerName "Himeno a ce qui lui arrive."
-        
+    show screen cexp("bpb", "bea", "bmf", "bbs", p=p_center, h=h_down)
     c_bomi "Oui mais..."
+    show screen cexp("bpb", "beb", "bmf", "bbs", p=p_center, h=h_down)
     c_bomi "Je voudrais pas lui attirer de problèmes..."
+    show screen cexp("bpb", "bel", "bms", "bbs", p=p_center, h=h_down)
     playerName "On dois lui faire comprendre que chaque actions a des conséquences!"
+    show screen cexp("bpb", "bea", "bms", "bbs", p=p_center, h=h_down)
     c_bomi "..."
     playerName "Comment tu te sens?"
+    show screen cexp("bpb", "bel", "bmf", "bbs", p=p_center, h=h_down)
     c_bomi "Mal."
+    show screen cexp("bpb", "bea", "bmf", "bbs", p=p_center, h=h_down)
     c_bomi "C'est atroce."
+    show screen cexp("bpb", "bel", "bmf", "bbs", p=p_center, h=h_down)
     c_bomi "J'ai l'impression que ces commentaires me hantent..."
+    show screen cexp("bpb", "beb", "bmf", "bbs", p=p_center, h=h_down)
     c_bomi "Ils m'ont empêché de dormir hier soir."
-    c_bomi "Et chaque fois que j'en lis, je me sens encore moins bien."
+    show screen cexp("bpb", "bel", "bmf", "bbs", p=p_center, h=h_down)
 
     menu:
+        c_bomi "Et chaque fois que j'en lis, je me sens encore moins bien."
         "On devrait aller voir la psychologue scolaire.":
             playerName "On devrait aller voir la psychologue scolaire."
             $ ptsb2 += 1
+            show screen cexp("bpb", "bel", "bmt", "bbn", p=p_center, h=h_down)
             c_bomi "Et risquer qu'ils le disent à ma famille ?"
+            show screen cexp("bpb", "bea", "bmt", "bbs", p=p_center, h=h_down)
             c_bomi "Certainement pas!"
+            show screen cexp("bpb", "bel", "bms", "bbs", p=p_center, h=h_down)
             playerName "Oui mais c'est important d'en parler à des personnes qualifiées..."
             playerName "Ils pouront t'aider beaucoup mieux que moi et te donner des vrais conseils!"
+            show screen cexp("bpb", "bea", "bms", "bbs", p=p_center, h=h_down)
             c_bomi "..."
         
         "Ils ne veulent rien dire. Ça ira.":
