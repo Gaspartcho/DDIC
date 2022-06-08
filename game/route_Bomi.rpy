@@ -210,26 +210,31 @@ label RBF1:
     c_bomi "J'ai retiré mes extensions."
     show screen cexp("bpf", "beb", "bmh", "bbs")
     c_bomi "Elles commençaient à devenir lourdes haha"
-    show screen cexp("bpf", "bea", "bmh", "bbs")
+    show screen cexp("bpf", "bea", "bms", "bbs")
     menu:
         c_bomi "..."
         "Je suis sûr qu'elle ne l'a pas encore postée":
+            show screen cexp("bpf", "bel", "bms", "bbs")
             playerName "Je suis sûr qu'elle ne l'a pas encore postée"
             
         "Allons chercher Himeno":
+            show screen cexp("bpf", "bel", "bms", "bbs")
             playerName "Allons chercher Himeno"
             $ ptsb2 += 1
-    
+    show screen cexp("bpf", "bea", "bms", "bbs")
     c_bomi "..."
+    show screen cexp("bpf", "bel", "bmt", "bbs")
     c_bomi "Je pense qu'elle est sur le toit en train de déjeuner et de prendre des photos pour Instagram."
+    show screen cexp("bpf", "bel", "bms", "bbs")
     "{i} A-t-elle déjà posté?"
     narrateur """Tu sors ton tel pour vérifier.
-    
     D’abord, tu regardes le compte de Bomi"""
+    show screen cexp("bpf", "bea", "bms", "bbs")
     "{i}Wow..."
     "{i}Ces commentaires sont stupides et méchants..."
     "{i}Himeno n'a aucune pitié."
     "..."
+    show screen cexp("bpf", "beb", "bms", "bbs")
     narrateur "Tu trouves la photo de Bomi avec ses extensions de cheveux, postée et virale."
     c_bomi "Ah..."
     c_bomi "J'espérais que tu n'allais pas le voir"
