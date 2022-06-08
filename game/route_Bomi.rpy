@@ -311,10 +311,12 @@ label RBF1:
         
         "Ils ne veulent rien dire. Ça ira.":
             playerName "Ils ne veulent rien dire. Ça ira."
-            c_bomi "..." # Triste
-
+            show screen cexp("bpb", "bea", "bms", "bbs", p=p_center, h=h_down)
+            c_bomi "..." 
+    show screen cexp("bpb", "bel", "bmf", "bbs", p=p_center, h=h_down)
     c_bomi "Bon ok."
     c_bomi "Je ferai ce que tu m'as dit."
+    show screen cexp("bpf", "bel", "bmt", "bbs", p=p_center, h=h_down)
     c_bomi "J'espère que tu as raison."
     scene black with fade
 
