@@ -106,7 +106,8 @@ label phone_end(is_pausing=True):
     hide screen phone_message_image
     hide text
     hide screen phone_object with fade
-    pause (1.0)
+    if is_pausing:
+        pause (1.0)
     window show
     return
 

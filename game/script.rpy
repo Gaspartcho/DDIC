@@ -208,7 +208,7 @@ label scene_1:
     call message(tph, "Et il y a aussi la cette déléguée qui fait constament sa cheffe")
     call message(tph, "Je te jure c'est parce qu'elles trichent.")
     call message(tph, "...")
-    call message(tph, "Je devrais le faire aussi.")
+    call message(tph, "Je devrais faire pareil.")
     label choiceMaking_CH: 
         call screen phone_reply("Tu vas vraiment faire ça ?","choiceMaking_CH.choice1","Je suis sûr que si tu essayes de toutes tes forces, tu seras la meilleure","choiceMaking_CH.choice2")
         label .choice1:    
@@ -304,21 +304,21 @@ label scene_2:
     c_akane "C'est assez impressionnant pour une première."
     
     pause 1.0
-    hide screen cexp with fade
     "{i}...{/i}"
     "{i}Je devrais plus me concentrer en cours.{/i}"
+    hide screen cexp with fade
     narrateur "Alors que vous essayez d'écouter le cours, vous sentez que vos paupères sont de plus en plus lourdes..."
     scene black with Fade(3.0, 0, 1.0)
     narrateur "{cps=20}Vous vous endormez.{/cps}"
 
-    pause 3.0
+    pause 2.0
     play music MisteriousMan_theme fadein 1.0 loop
 
     c_mysteriousMan """...
     
     Ah, on y est enfin...
     
-    Le moment tant attendu où tu poura choisir entre ces trois filles...
+    Le moment tant attendu où tu poura choisir l'une de ces trois filles...
 
     Je pense que tu as du comprendre quels sont leur problèmes...
     
@@ -339,7 +339,7 @@ label scene_2:
     
     Tes décisions ont une importance ici."""
 
-    show screen mlt
+    show screen mlt with fade
 
     jump road_menu
 
@@ -369,7 +369,7 @@ label road_menu:
     
     narrateur """L'horlogle affcihe \"17:06\".
     
-    Il est tard, vous avez dormis toute la journée."""
+    Il est tard, vous avez dormi toute la journée."""
 
     if road == "1":
         jump route_A

@@ -108,6 +108,7 @@ label route_B1:
             c_bomi "Ah!? J-je, n-non..."
 
     c_himeno "Pfft t'as l'air ridicule"
+    play sound camera_effect
     with Fade(0.1, 0.0, 0.5, color="#fff")
     show screen cexp("bpfb", "bel", "bmf", "bbs")
     c_bomi "E-eh!? A-attends !!"
