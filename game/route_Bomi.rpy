@@ -1,5 +1,5 @@
 label route_B1:
-    define good_points = 0
+    define ptsb1 = 0
 
     "{i} Je devrais aller voir Bomi et lui demander pourquoi elle fais ça."
     "{i} ..."
@@ -22,7 +22,7 @@ label route_B1:
         label .choice1:    
             call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
             call message_start(playerName, "Hey Bomi, pourquoi tu te caches?") # whenever you put the sender name to be playerName it is the player characters own message!
-            $ good_points += 1
+            $ ptsb1 += 1
             call message(tpb, "Ah, tu m'as trouvé?")
             jump .aftermenu
         label .choice2:
@@ -41,7 +41,7 @@ label route_B1:
     label choiceMaking_CHA: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("Je pense que chacun a son charme.","choiceMaking_CHA.choice1","T'as pas tort.","choiceMaking_CHA.choice2")
         label .choice1:
-            $ good_points += 1
+            $ ptsb1 += 1
             call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
             call message_start(playerName, "Je pense que chacun a son charme.") # whenever you put the sender name to be playerName it is the player characters own message!
             call reply_message("Je suis sûr que tu es tout aussi adorable")
@@ -70,7 +70,7 @@ label route_B1:
             call message(tpb, "...")
             jump .aftermenu
         label .choice2:
-            $ good_points += 1
+            $ ptsb1 += 1
             call phone_after_menu
             call message_start(playerName, "J'aime ta coupe.")
             call reply_message("Je ne pense pas que tu devrais les couper pour l'instant")
@@ -102,14 +102,14 @@ label route_B1:
             c_bomi "Vraiment? Je suis tellement heureuse!"
         
         "Tu m'as l'air familière...":
-            $ good_points += 1
+            $ ptsb1 += 1
             playerName "Tu m'as l'air familière..."
             show screen cexp("bpfb", "bea", "bms", "bbs")
             c_bomi "Ah!? J-je, n-non..."
 
     c_himeno "Pfft t'as l'air ridicule"
     with Fade(0.1, 0.0, 0.5, color="#fff")
-    show screen cexp("bpfb", "bel", "bmt", "bbs")
+    show screen cexp("bpfb", "bel", "bmf", "bbs")
     c_bomi "E-eh!? A-attends !!"
     show screen cexp("bpfb", "beb", "bms", "bbs")
     c_bomi "Ne prends pas de photos!"
@@ -121,7 +121,7 @@ label route_B1:
         narrateur "Tu l'aides à se relever"
         "Tu veux que je la poursuive ?":
             playerName "Tu veux que je la poursuive ?"
-            $ good_points += 1
+            $ ptsb1 += 1
             show screen cexp("bpbb", "bel", "bms", "bbs")
             c_bomi "..."
 
@@ -140,7 +140,7 @@ label route_B1:
             c_akane "Si tu le dis."
         
         "Quelqu'un a pris une photo d'elle!":
-            $ good_points += 1
+            $ ptsb1 += 1
             playerName "Quelqu'un a pris une photo d'elle!"
             c_akane "Ah. Je pense avoir une idée de qui tu parles."
             c_akane "Je ne peux pas vraiment faire quoi que ce soit puisque sa famille a beaucoup d'influence sur l'école."
@@ -149,23 +149,29 @@ label route_B1:
     scene hallway day with fade
     show screen cexp("bpbb", "bea", "bmt", "bbs")
     c_bomi "C'est la honte!"
+    show screen cexp("bpbb", "bel", "bms", "bbs")
     c_bomi "Si cette photo sort, je ne pense pas que je m'en remettrais..."
 
     menu:
         "Tu es superbe pourtant.":
+            show screen cexp("bpfb", "bel", "bmh", "bbs")
             playerName "Tu es superbe pourtant."
             playerName "Je pense que les extensions etaient une bonne idee"
         
         "Les cheveux bleus sont jolis mais ils ne te vont pas trop.":
+            show screen cexp("bpfb", "bel", "bmn", "bbs")
             playerName "Les cheveux bleus sont jolis mais ils ne te vont pas trop."
             playerName "Viens. On va récupérer cette image et ça ira mieux."
-    
+    show screen cexp("bpbb", "bea", "bmn", "bbs")
     c_bomi "..."
+    show screen cexp("bpbb", "bel", "bmt", "bbs")
     c_bomi "C'est pas grave."
+    show screen cexp("bpbb", "beb", "bmh", "bbs")
     c_bomi "Retournons en classe."
+    hide screen cexp
     scene black with fade 
 
-    if good_points >= 4:
+    if ptsb1 >= 4:
         jump RBF1
     else:
         jump RBB1
@@ -193,11 +199,13 @@ label RBB1:
     jump game_over
 
 label RBF1:
+    define ptsb2 = 0
     scene black with fade
     narrateur "Le lendemain."
     scene classroom day with fade
 
     "???" "Hey! [playerName]!"
+    show screen cexp("bpb", "bel", "bmh", "bbn")
     c_bomi "J'ai retiré mes extensions."
     c_bomi "Elles commençaient à devenir lourdes haha"
 
@@ -208,7 +216,7 @@ label RBF1:
             
         "Allons chercher Himeno":
             playerName "Allons chercher Himeno"
-            $ good_points += 1
+            $ ptsb2 += 1
     
     c_bomi "..."
     c_bomi "Je pense qu'elle est sur le toit en train de déjeuner et de prendre des photos pour Instagram."
@@ -231,7 +239,7 @@ label RBF1:
             c_bomi "..."
 
         "N'y fais pas attention.":
-            $ good_points += 1
+            $ ptsb2 += 1
             playerName "N'y fais pas attention."
             playerName "On devrait signaler l'incident sur instar et à l'administration."
     
@@ -245,7 +253,7 @@ label RBF1:
     menu:
         c_bomi "..."
         "Ouais. T'as juste à les ignorer et garder une preuve qu'on t’a envoyé de la haine.":
-            $ good_points += 1
+            $ ptsb2 += 1
             playerName "Ouais. T'as juste à les ignorer et garder une preuve qu'on t’a envoyé de la haine."
             playerName "Elle finira par payer de toute façon."
 
@@ -268,7 +276,7 @@ label RBF1:
     menu:
         "On devrait aller voir la psychologue scolaire.":
             playerName "On devrait aller voir la psychologue scolaire."
-            $ good_points += 1
+            $ ptsb2 += 1
             c_bomi "Et risquer qu'ils le disent à ma famille ?"
             c_bomi "Certainement pas!"
             playerName "Oui mais c'est important d'en parler à des personnes qualifiées..."
@@ -284,7 +292,7 @@ label RBF1:
     c_bomi "J'espère que tu as raison."
     scene black with fade
 
-    if good_points > 8:
+    if ptsb2 > 2:
         jump RBG
     else:
         jump RBB2
