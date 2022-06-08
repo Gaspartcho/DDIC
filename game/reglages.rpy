@@ -174,6 +174,10 @@ label after_load:
 
     transform h_down:
         ypos 0.65
+
+    transform h_mid:
+        ypos 0.6
+
     
     screen cexp(c=None, m=None, e=None, eb=None, o=None, t=None, p=p_center, h=h_center):
         modal False
