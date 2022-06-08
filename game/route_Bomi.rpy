@@ -88,52 +88,52 @@ label route_B1:
     narrateur "Le lendemain..."
     scene classroom day with fade
     pause 2.0
-    show screen cexp("bpbb", "beb", "bmh", "bbn")
+    show screen cexp("bpbb", "beb", "bmh", "bbn", p=p_center, h=h_down)
     c_bomi "Bonjour [playerName]."
-    show screen cexp("bpfb", "bel", "bmn", "bbn")
+    show screen cexp("bpfb", "bel", "bmn", "bbn", p=p_center, h=h_down)
     c_bomi "..."
-    show screen cexp("bpbb", "bel", "bmt", "bbn")
+    show screen cexp("bpbb", "bel", "bmt", "bbn", p=p_center, h=h_down)
 
     menu:
         c_bomi "Qu'en penses-tu?"
         "Je pense que c'est superbe!":
             playerName "Je pense que c'est superbe!"
-            show screen cexp("bpbb", "beb", "bmh", "bbn")
+            show screen cexp("bpbb", "beb", "bmh", "bbn", p=p_center, h=h_down)
             c_bomi "Vraiment? Je suis tellement heureuse!"
         
         "Tu m'as l'air familière...":
             $ ptsb1 += 1
             playerName "Tu m'as l'air familière..."
-            show screen cexp("bpfb", "bea", "bms", "bbs")
+            show screen cexp("bpfb", "bea", "bms", "bbs", p=p_center, h=h_down)
             c_bomi "Ah!? J-je, n-non..."
 
     c_himeno "Pfft t'as l'air ridicule"
     play sound camera_effect
     with Fade(0.1, 0.0, 0.5, color="#fff")
-    show screen cexp("bpfb", "bel", "bmf", "bbs")
+    show screen cexp("bpfb", "bel", "bmf", "bbs", p=p_center, h=h_down)
     c_bomi "E-eh!? A-attends !!"
-    show screen cexp("bpfb", "beb", "bms", "bbs")
+    show screen cexp("bpfb", "beb", "bms", "bbs", p=p_center, h=h_down)
     c_bomi "Ne prends pas de photos!"
     narrateur "Himeno s'enfuit."
-    show screen cexp("bpbb", "beb", "bms", "bbs")
+    show screen cexp("bpbb", "beb", "bms", "bbs", p=p_center, h=h_down)
     narrateur "Bomi essaie de la poursuivre et trébuche."
-    show screen cexp("bpbb", "bea", "bms", "bbs")
+    show screen cexp("bpbb", "bea", "bms", "bbs", p=p_center, h=h_down)
     menu:
         narrateur "Tu l'aides à se relever"
         "Tu veux que je la poursuive ?":
             playerName "Tu veux que je la poursuive ?"
             $ ptsb1 += 1
-            show screen cexp("bpbb", "bel", "bms", "bbs")
+            show screen cexp("bpbb", "bel", "bms", "bbs", p=p_center, h=h_down)
             c_bomi "..."
 
         "Je ne pense pas que les gens y prêteront attention de toute façon":
             playerName "Je ne pense pas que les gens y prêteront attention de toute façon"
-            show screen cexp("bpbb", "beb", "bmh", "bbs")
+            show screen cexp("bpbb", "beb", "bmh", "bbs", p=p_center, h=h_down)
             c_bomi "Ahahah... Tu as surement raison"
-    show screen cexp("bpbb", "bea", "bms", "bbs")
+    show screen cexp("bpbb", "bea", "bms", "bbs", p=p_center, h=h_down)
     c_bomi "..."
     c_bomi "Je ne veut pas que ça circule."
-
+    show screen cexp("bpbb", "bea", "bms", "bbs", p=p_left, h=h_down)
     menu:
         c_akane "Que se passe t-il ici?"
         "Tout va bien.":
@@ -145,29 +145,29 @@ label route_B1:
             playerName "Quelqu'un a pris une photo d'elle!"
             c_akane "Ah. Je pense avoir une idée de qui tu parles."
             c_akane "Je ne peux pas vraiment faire quoi que ce soit puisque sa famille a beaucoup d'influence sur l'école."
-    show screen cexp("bpbb", "bel", "bmt", "bbs")
+    show screen cexp("bpbb", "bel", "bmt", "bbs", p=p_left, h=h_down)
     c_bomi "[playerName]!"
     scene hallway day with fade
-    show screen cexp("bpbb", "bea", "bmt", "bbs")
+    show screen cexp("bpbb", "bea", "bmt", "bbs", p=p_center, h=h_down)
     c_bomi "C'est la honte!"
-    show screen cexp("bpbb", "bel", "bms", "bbs")
+    show screen cexp("bpbb", "bel", "bms", "bbs", p=p_center, h=h_down)
     c_bomi "Si cette photo sort, je ne pense pas que je m'en remettrais..."
 
     menu:
         "Tu es superbe pourtant.":
-            show screen cexp("bpfb", "bel", "bmh", "bbs")
+            show screen cexp("bpfb", "bel", "bmh", "bbs", p=p_center, h=h_down)
             playerName "Tu es superbe pourtant."
             playerName "Je pense que les extensions etaient une bonne idee"
         
         "Les cheveux bleus sont jolis mais ils ne te vont pas trop.":
-            show screen cexp("bpfb", "bel", "bmn", "bbs")
+            show screen cexp("bpfb", "bel", "bmn", "bbs", p=p_center, h=h_down)
             playerName "Les cheveux bleus sont jolis mais ils ne te vont pas trop."
             playerName "Viens. On va récupérer cette image et ça ira mieux."
-    show screen cexp("bpbb", "bea", "bmn", "bbs")
+    show screen cexp("bpbb", "bea", "bmn", "bbs", p=p_center, h=h_down)
     c_bomi "..."
-    show screen cexp("bpbb", "bel", "bmt", "bbs")
+    show screen cexp("bpbb", "bel", "bmt", "bbs", p=p_center, h=h_down)
     c_bomi "C'est pas grave."
-    show screen cexp("bpbb", "beb", "bmh", "bbs")
+    show screen cexp("bpbb", "beb", "bmh", "bbs", p=p_center, h=h_down)
     c_bomi "Retournons en classe."
     hide screen cexp
     scene black with fade 
@@ -206,54 +206,57 @@ label RBF1:
     scene classroom day with fade
 
     "???" "Hey! [playerName]!"
-    show screen cexp("bpb", "bel", "bmh", "bbn")
+    show screen cexp("bpb", "bel", "bmh", "bbn", p=p_center, h=h_down)
     c_bomi "J'ai retiré mes extensions."
-    show screen cexp("bpf", "beb", "bmh", "bbs")
+    show screen cexp("bpf", "beb", "bmh", "bbs", p=p_center, h=h_down)
     c_bomi "Elles commençaient à devenir lourdes haha"
-    show screen cexp("bpf", "bea", "bms", "bbs")
+    show screen cexp("bpf", "bea", "bms", "bbs", p=p_center, h=h_down)
     menu:
         c_bomi "..."
         "Je suis sûr qu'elle ne l'a pas encore postée":
-            show screen cexp("bpf", "bel", "bms", "bbs")
+            show screen cexp("bpf", "bel", "bms", "bbs", p=p_center, h=h_down)
             playerName "Je suis sûr qu'elle ne l'a pas encore postée"
             
         "Allons chercher Himeno":
-            show screen cexp("bpf", "bel", "bms", "bbs")
+            show screen cexp("bpf", "bel", "bms", "bbs", p=p_center, h=h_down)
             playerName "Allons chercher Himeno"
             $ ptsb2 += 1
-    show screen cexp("bpf", "bea", "bms", "bbs")
+    show screen cexp("bpf", "bea", "bms", "bbs", p=p_center, h=h_down)
     c_bomi "..."
-    show screen cexp("bpf", "bel", "bmt", "bbs")
+    show screen cexp("bpf", "bel", "bmt", "bbs", p=p_center, h=h_down)
     c_bomi "Je pense qu'elle est sur le toit en train de déjeuner et de prendre des photos pour Instagram."
-    show screen cexp("bpf", "bel", "bms", "bbs")
+    show screen cexp("bpf", "bel", "bms", "bbs", p=p_center, h=h_down)
     "{i} A-t-elle déjà posté?"
     narrateur """Tu sors ton tel pour vérifier.
     D’abord, tu regardes le compte de Bomi"""
-    show screen cexp("bpf", "bea", "bms", "bbs")
+    show screen cexp("bpf", "bea", "bms", "bbs", p=p_center, h=h_down)
     "{i}Wow..."
     "{i}Ces commentaires sont stupides et méchants..."
     "{i}Himeno n'a aucune pitié."
     "..."
-    show screen cexp("bpb", "beb", "bms", "bbs")
+    show screen cexp("bpb", "beb", "bms", "bbs", p=p_center, h=h_down)
     narrateur "Tu trouves la photo de Bomi avec ses extensions de cheveux, postée et virale."
-    show screen cexp("bpb", "bel", "bmf", "bbs")
+    show screen cexp("bpb", "bel", "bmf", "bbs", p=p_center, h=h_down)
     c_bomi "Ah..."
+    show screen cexp("bpb", "bea", "bmf", "bbs", p=p_center, h=h_down)
     c_bomi "J'espérais que tu n'allais pas le voir"
+    show screen cexp("bpb", "beb", "bmf", "bbs", p=p_center, h=h_down)
     c_bomi "Je ne pensais pas que c'était si reconnaissable..."
-
+    show screen cexp("bpb", "bel", "bms", "bbs", p=p_center, h=h_down)
     menu:
         "Tu devrais y repondre":
             playerName "Tu devrais y repondre"
-            c_bomi "..."
 
         "N'y fais pas attention.":
             $ ptsb2 += 1
             playerName "N'y fais pas attention."
             playerName "On devrait signaler l'incident sur instar et à l'administration."
-    
+    show screen cexp("bpb", "bea", "bms", "bbs", p=p_center, h=h_down)
     c_bomi "..."
     playerName "Bon, allons voir Himeno."
-    c_bomi "Non!!" # surpirsed ?
+    show screen cexp("bpb", "bel", "bmt", "bbs", p=p_center, h=h_down)
+    c_bomi "Non!!" 
+    show screen cexp("bpf", "bea", "bmt", "bbs", p=p_center, h=h_down)
     c_bomi "J-je veux dire qu'on ne devrait pas."
     c_bomi "Ça deviendrait plus compliqué que voulu."
     c_bomi "Ça passera... n'est-ce pas ?"
