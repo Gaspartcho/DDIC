@@ -207,8 +207,9 @@ label RBF1:
     "???" "Hey! [playerName]!"
     show screen cexp("bpb", "bel", "bmh", "bbn")
     c_bomi "J'ai retiré mes extensions."
+    show screen cexp("bpf", "beb", "bmh", "bbs")
     c_bomi "Elles commençaient à devenir lourdes haha"
-
+    show screen cexp("bpf", "bea", "bmh", "bbs")
     menu:
         c_bomi "..."
         "Je suis sûr qu'elle ne l'a pas encore postée":
