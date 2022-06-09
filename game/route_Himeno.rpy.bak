@@ -9,9 +9,9 @@ label RH1:
     narrateur "Tu te lèves pour t'étirer après une longue journée de travail, lorsque ton téléphone sonne dans ta poche."
     playerName "Hmm?"
 
-    call phone_start(usrh, "17:05") from _call_phone_start_1
-    call message_start(tph, "Retrouve-moi au parc dès que possible, je sais que tu as fini tes cours <3") from _call_message_start_6
-    call phone_end from _call_phone_end_1
+    call phone_start(usrh, "17:05")
+    call message_start(tph, "Retrouve-moi au parc dès que possible, je sais que tu as fini tes cours <3")
+    call phone_end
     "{i}..."
     
     "{i}Je me demande ce qu'elle me veut."
@@ -445,14 +445,14 @@ label HB2:
     {i}C'est est tellement bizarre.{/i}"""
     narrateur "Tu sens ton téléphone vibrer lorsque tu prends le thé glacé et le banana milk."
 
-    call phone_start(usrh, "10:12") from _call_phone_start_2
-    call message_start(tph, "Reviens! J'ai soif!!") from _call_message_start_7
-    call reply_message("Okay okay!") from _call_reply_message_4
-    call message(tph, "Au fait, c'est bon, je l'ai fait!") from _call_message_18
-    call message(tph, "Normalement c'est bon") from _call_message_19
-    call message(tph, "Il falais juste écrire ses codes banquaires.") from _call_message_20
-    call message(playerName, "Ok cool.") from _call_message_21
-    call phone_end(False) from _call_phone_end_2
+    call phone_start(usrh, "10:12")
+    call message_start(tph, "Reviens! J'ai soif!!")
+    call reply_message("Okay okay!")
+    call message(tph, "Au fait, c'est bon, je l'ai fait!")
+    call message(tph, "Normalement c'est bon")
+    call message(tph, "Il falais juste écrire ses codes banquaires.")
+    call message(playerName, "Ok cool.")
+    call phone_end(False)
 
     scene black with fade
     narrateur "Quelques semaines plus tard..."
@@ -523,11 +523,11 @@ label HGE:
     {i}J'ai l'impression que j'aurais dû m'assurer qu'elle ne fasse rien.{/i}"""
     
     narrateur "Tu sens ton téléphone vibrer lorsque tu t'aprette à prendre le thé glacé et le banana milk."
-    call phone_start(usrh, "10:12") from _call_phone_start_3
-    call message_start(tph, "Reviens! J'ai soif!!") from _call_message_start_8
-    call reply_message("Okay okay!") from _call_reply_message_5
+    call phone_start(usrh, "10:12")
+    call message_start(tph, "Reviens! J'ai soif!!")
+    call reply_message("Okay okay!")
     pause
-    call phone_end(False) from _call_phone_end_3
+    call phone_end(False)
     scene classroom day
 
     pause 1

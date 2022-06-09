@@ -63,7 +63,7 @@ label start:
                 jump .after_menu
 
             "Non (Changer de nom avant de continuer à jouer)":
-                call name_choose from _call_name_choose
+                call name_choose
 
         label .after_menu:
             narrateur """Rénitialisation du jeu pour \"%(playerName)s\"...
@@ -101,7 +101,7 @@ label start:
 
         Erreur: Aucun nom d'utilisateur enregistré."""
 
-        call name_choose from _call_name_choose_1
+        call name_choose
     
         narrateur """Initialisation du programme pour le joueur \"%(playerName)s\":
             
@@ -130,56 +130,56 @@ label game_Launching:
 
 label scene_1:
     scene bedroom with fade
-    call phone_start(usraf, "21:30") from _call_phone_start_8
+    call phone_start(usraf, "21:30")
 
-    call message_start(tpa, "Bienvenue à l'école X ! Je suis {b}Akane Kousei{/b}, la déléguée de classe. Si tu as des questions, n'hésite pas à les poser soit à tes camarades, soit aux enseignants, ou tu peux venir me voir. Même si tu nous as rejoints très tard dans l'année, nous t’accueillons toujours à bras ouverts :)") from _call_message_start_29
-    call message_img(tpa, "Au fait, ça c'est moi!", "images/instagram/A1_insta.png") from _call_message_img_1
-    call message(tpa, "Comme tu arrives en millieu d'année, je me doute bien que ça peu être difficile, mais tu peux compter sur moi!") from _call_message_80
+    call message_start(tpa, "Bienvenue à l'école X ! Je suis {b}Akane Kousei{/b}, la déléguée de classe. Si tu as des questions, n'hésite pas à les poser soit à tes camarades, soit aux enseignants, ou tu peux venir me voir. Même si tu nous as rejoints très tard dans l'année, nous t’accueillons toujours à bras ouverts :)")
+    call message_img(tpa, "Au fait, ça c'est moi!", "images/instagram/A1_insta.png")
+    call message(tpa, "Comme tu arrives en millieu d'année, je me doute bien que ça peu être difficile, mais tu peux compter sur moi!")
     pause 1.0
 
     label choiceMaking_WAY: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("Merci! Je vais essayer d'être sage :)","choiceMaking_WAY.choice1","Merci! Je te trouve très belle, ce qui est naturel pour une déléguée!","choiceMaking_WAY.choice2")
 
         label .choice1:    
-            call phone_after_menu from _call_phone_after_menu_24 # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
-            call message_start(playerName, "Merci! Je vais essayer d'être sage :)") from _call_message_start_30 # whenever you put the sender name to be playerName it is the player characters own message!
-            call message(tpa, "Haha ! Si tu veux, je t'enverrai par e-mail ce qu'on a fait depuis le début de l'année dans nos cours en commun^^") from _call_message_81
+            call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
+            call message_start(playerName, "Merci! Je vais essayer d'être sage :)") # whenever you put the sender name to be playerName it is the player characters own message!
+            call message(tpa, "Haha ! Si tu veux, je t'enverrai par e-mail ce qu'on a fait depuis le début de l'année dans nos cours en commun^^")
             jump .aftermenu
             
         label .choice2:
-            call phone_after_menu from _call_phone_after_menu_25
-            call message_start(playerName, "Merci! Je te trouve très belle, ce qui est naturel pour une déléguée!") from _call_message_start_31
-            call message(tpa, "Ahh... Merci beaucoup ^^") from _call_message_82
+            call phone_after_menu
+            call message_start(playerName, "Merci! Je te trouve très belle, ce qui est naturel pour une déléguée!")
+            call message(tpa, "Ahh... Merci beaucoup ^^")
             jump .aftermenu
             
         label .aftermenu:
 
-    call message(tpa, "Quoi qu'il en soit, envoie-moi un SMS dès que t'as besoin de quoi que ce soit et je te répondrai le plus vite possible, je suis dispo presque tout le temps.") from _call_message_83
-    call message(tpa, "Ah euh... Ça donne probablement l'impression que je ne fais pas mon travail de déléguée... Mais il faut que je te prévienne") from _call_message_84
-    call message(tpa, "Il y a cette fille dont je te conseille de pas t'approcher. Elle juge très facilement les gens et tu ne passeras pas un bon moment avec elle.") from _call_message_85
+    call message(tpa, "Quoi qu'il en soit, envoie-moi un SMS dès que t'as besoin de quoi que ce soit et je te répondrai le plus vite possible, je suis dispo presque tout le temps.")
+    call message(tpa, "Ah euh... Ça donne probablement l'impression que je ne fais pas mon travail de déléguée... Mais il faut que je te prévienne")
+    call message(tpa, "Il y a cette fille dont je te conseille de pas t'approcher. Elle juge très facilement les gens et tu ne passeras pas un bon moment avec elle.")
     
     label choiceMaking_ST: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("Ah... Qu'a-t-elle fait ?","choiceMaking_ST.choice1","À quoi ressemble-t-elle?","choiceMaking_ST.choice2")
 
         label .choice1:    
-            call phone_after_menu from _call_phone_after_menu_26
-            call message_start(playerName, "Ah... Qu'a-t-elle fait ?") from _call_message_start_32
-            call message(tpa, "Elle aime se moquer de moi... de tout le monde en fait... je ne sais pas pourquoi.") from _call_message_86
+            call phone_after_menu
+            call message_start(playerName, "Ah... Qu'a-t-elle fait ?")
+            call message(tpa, "Elle aime se moquer de moi... de tout le monde en fait... je ne sais pas pourquoi.")
             jump .aftermenu
             
         label .choice2:
-            call phone_after_menu from _call_phone_after_menu_27
-            call message_start(playerName, "À quoi ressemble-t-elle?") from _call_message_start_33
+            call phone_after_menu
+            call message_start(playerName, "À quoi ressemble-t-elle?")
             jump .aftermenu
             
         label .aftermenu:
 
-    call message_img(tpa, "Tiens", "images/instagram/H1_insta.png") from _call_message_img_2
-    call message(tpa, "Elle s'appelle {b}Himeno Yuzu{/b}. Je ne veux pas que tu en parles, ce serait gênant si les gens savaient que la déléguée se fait harceler. Haha.") from _call_message_87
-    call message(tpa, "Bon, oublies tout ça. Il n'y a aucune raison pour que tu passe un mauvais moment ici.") from _call_message_88
-    call message(tpa, "Oh! Mes parents m'appellent. Je te verrai demain :)") from _call_message_89
-    call reply_message("A demain.") from _call_reply_message_17
-    call phone_end from _call_phone_end_8 # this one puts away the phone!
+    call message_img(tpa, "Tiens", "images/instagram/H1_insta.png")
+    call message(tpa, "Elle s'appelle {b}Himeno Yuzu{/b}. Je ne veux pas que tu en parles, ce serait gênant si les gens savaient que la déléguée se fait harceler. Haha.")
+    call message(tpa, "Bon, oublies tout ça. Il n'y a aucune raison pour que tu passe un mauvais moment ici.")
+    call message(tpa, "Oh! Mes parents m'appellent. Je te verrai demain :)")
+    call reply_message("A demain.")
+    call phone_end # this one puts away the phone!
 
     narrateur """Il est tard...
 
@@ -187,45 +187,45 @@ label scene_1:
 
     Plutôt que d'essayer de lire un livre, vous décidez de faire connaissance avec d'autres membres de la classe:"""
 
-    call phone_start(usrh, "22:13") from _call_phone_start_9
+    call phone_start(usrh, "22:13")
     label choiceMaking_LUV: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("heyy~ T'es magnifique!","choiceMaking_LUV.choice1","Yo, la personne la pluuuuus gentille du lycée","choiceMaking_LUV.choice2")
         label .choice1:    
-            call phone_after_menu from _call_phone_after_menu_28
-            call message_start(playerName, "heyy~ T'es magnifique!") from _call_message_start_34
-            call message(tph, "HAHA! Bien sûr que je le suis!!") from _call_message_90
+            call phone_after_menu
+            call message_start(playerName, "heyy~ T'es magnifique!")
+            call message(tph, "HAHA! Bien sûr que je le suis!!")
             jump .aftermenu
             
         label .choice2:
-            call phone_after_menu from _call_phone_after_menu_29
-            call message_start(playerName, "Yo, la personne la pluuuuus gentille du lycée") from _call_message_start_35
-            call message(tph, "La pire ici est cette petite frimeuse rose.") from _call_message_91
+            call phone_after_menu
+            call message_start(playerName, "Yo, la personne la pluuuuus gentille du lycée")
+            call message(tph, "La pire ici est cette petite frimeuse rose.")
             jump .aftermenu
         label .aftermenu:
-    call message(tph, "Je suis la plus intelligente, la plus belle et la meilleure de toutes !") from _call_message_92
-    call message(tph, "Mais pourtant, je n'ai pas les meilleures notes et c'est super énervant.") from _call_message_93
-    call message(tph, "Cette pourrie-gâtée aux cheveux roses est toujours la première.") from _call_message_94
-    call message(tph, "Je te jure c'est parce qu'elle triche.") from _call_message_95
-    call message(tph, "...") from _call_message_96
-    call message(tph, "Je devrais faire pareil.") from _call_message_97
+    call message(tph, "Je suis la plus intelligente, la plus belle et la meilleure de toutes !")
+    call message(tph, "Mais pourtant, je n'ai pas les meilleures notes et c'est super énervant.")
+    call message(tph, "Cette pourrie-gâtée aux cheveux roses est toujours la première.")
+    call message(tph, "Je te jure c'est parce qu'elle triche.")
+    call message(tph, "...")
+    call message(tph, "Je devrais faire pareil.")
     label choiceMaking_CH: 
         call screen phone_reply("Tu vas vraiment faire ça ?","choiceMaking_CH.choice1","Je suis sûr que si tu essayes de toutes tes forces, tu seras la meilleure","choiceMaking_CH.choice2")
         label .choice1:    
-            call phone_after_menu from _call_phone_after_menu_30
-            call message_start(playerName, "Tu vas vraiment faire ça ?") from _call_message_start_36
-            call message(tph, "ui") from _call_message_98
+            call phone_after_menu
+            call message_start(playerName, "Tu vas vraiment faire ça ?")
+            call message(tph, "ui")
             jump .aftermenu
             
         label .choice2:
-            call phone_after_menu from _call_phone_after_menu_31
-            call message_start(playerName, "Je suis sûr que si tu essayes de toutes tes forces, tu seras la meilleure") from _call_message_start_37
-            call message(tph, "C'est ça ouais... Pourquoi je devrais travailler {i}moi{/i} alors que je suis sure que tout le monde triche ici") from _call_message_99
-            call reply_message("...") from _call_reply_message_18
+            call phone_after_menu
+            call message_start(playerName, "Je suis sûr que si tu essayes de toutes tes forces, tu seras la meilleure")
+            call message(tph, "C'est ça ouais... Pourquoi je devrais travailler {i}moi{/i} alors que je suis sure que tout le monde triche ici")
+            call reply_message("...")
             jump .aftermenu
         label .aftermenu:
-    call message(tph, "Ah ! Une de mes copines m'appelle.") from _call_message_100
-    call message(tph, "J’espère que je ne te manquerai pas trop <3") from _call_message_101
-    call phone_end from _call_phone_end_9
+    call message(tph, "Ah ! Une de mes copines m'appelle.")
+    call message(tph, "J’espère que je ne te manquerai pas trop <3")
+    call phone_end
 
     """{i}...
     
@@ -238,12 +238,12 @@ label scene_2:
 
     narrateur "Le lendemain, alors que tu allais à l'école, tu reçois un message d'un compte instargam inconnu:"
 
-    call phone_start("REAL_BUISNESS", "08:02") from _call_phone_start_10
-    call message_start("REAL_BUISNESS", "Salut [playerName], veux-tu faire un appel vidéo gratuit? Trouves-moi ici http://cunscam.com/xxx xoxo") from _call_message_start_38
+    call phone_start("REAL_BUISNESS", "08:02")
+    call message_start("REAL_BUISNESS", "Salut [playerName], veux-tu faire un appel vidéo gratuit? Trouves-moi ici http://cunscam.com/xxx xoxo")
     pause 2.0
     window show
     "???" "Je ne cliquerais pas dessus si j'étais toi."
-    call phone_end(False) from _call_phone_end_10
+    call phone_end(False)
 
     show screen cexp("apc", "ael", "amn", "abn", p=p_center, h=h_down)
 

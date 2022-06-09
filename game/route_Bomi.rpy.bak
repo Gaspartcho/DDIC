@@ -14,72 +14,72 @@ label route_B1:
     "{i}A elle, je veut dire..."
     "{i}Ah! je l'ai trouvé...{/i}"
 
-    call phone_start(usrb, "20:23") from _call_phone_start
+    call phone_start(usrb, "20:23")
     label choiceMaking_HID: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("Hey Bomi, pourquoi tu te caches?","choiceMaking_HID.choice1","Hé bien madame la déléguée, tu n'as pas du tout la même tête en vrai.","choiceMaking_HID.choice2")
         
         label .choice1:    
-            call phone_after_menu from _call_phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
-            call message_start(playerName, "Hey Bomi, pourquoi tu te caches?") from _call_message_start # whenever you put the sender name to be playerName it is the player characters own message!
+            call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
+            call message_start(playerName, "Hey Bomi, pourquoi tu te caches?") # whenever you put the sender name to be playerName it is the player characters own message!
             $ ptsb1 += 1
-            call message(tpb, "Ah, tu m'as trouvé?") from _call_message
+            call message(tpb, "Ah, tu m'as trouvé?")
             jump .aftermenu
         label .choice2:
-            call phone_after_menu from _call_phone_after_menu_1
-            call message_start(playerName, "Hé bien madame la déléguée, tu n'as pas du tout la même tête en vrai.") from _call_message_start_1
-            call message(tpb, "...") from _call_message_1
+            call phone_after_menu
+            call message_start(playerName, "Hé bien madame la déléguée, tu n'as pas du tout la même tête en vrai.")
+            call message(tpb, "...")
             jump .aftermenu
         label .aftermenu:
     
-    call message(tpb, "Je suis désollé de t'avoir menti") from _call_message_2
-    call message(tpb, "J'admire beaucoup Akane. Elle est intelligente, elle est belle, elle est confiante...") from _call_message_3
-    call message(tpb, "Mon seul atout est mon niveau scolaire.") from _call_message_4
-    call message(tpb, "Comparé à elle, ce n'est pas grand chose.") from _call_message_5
-    call message(tpb, "C'est normal de vouloir être comme elle...") from _call_message_6
+    call message(tpb, "Je suis désollé de t'avoir menti")
+    call message(tpb, "J'admire beaucoup Akane. Elle est intelligente, elle est belle, elle est confiante...")
+    call message(tpb, "Mon seul atout est mon niveau scolaire.")
+    call message(tpb, "Comparé à elle, ce n'est pas grand chose.")
+    call message(tpb, "C'est normal de vouloir être comme elle...")
 
     label choiceMaking_CHA: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("Je pense que chacun a son charme.","choiceMaking_CHA.choice1","T'as pas tort.","choiceMaking_CHA.choice2")
         label .choice1:
             $ ptsb1 += 1
-            call phone_after_menu from _call_phone_after_menu_2 # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
-            call message_start(playerName, "Je pense que chacun a son charme.") from _call_message_start_2 # whenever you put the sender name to be playerName it is the player characters own message!
-            call reply_message("Je suis sûr que tu es tout aussi adorable") from _call_reply_message
-            call message(tpb, "Peut-être.") from _call_message_7
+            call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
+            call message_start(playerName, "Je pense que chacun a son charme.") # whenever you put the sender name to be playerName it is the player characters own message!
+            call reply_message("Je suis sûr que tu es tout aussi adorable")
+            call message(tpb, "Peut-être.")
             jump .aftermenu
         label .choice2:
-            call phone_after_menu from _call_phone_after_menu_3
-            call message_start(playerName, "T'as pas tort.") from _call_message_start_3
-            call reply_message("Elle est impressionnante") from _call_reply_message_1
-            call message(tpb, "...") from _call_message_8
+            call phone_after_menu
+            call message_start(playerName, "T'as pas tort.")
+            call reply_message("Elle est impressionnante")
+            call message(tpb, "...")
             jump .aftermenu
         label .aftermenu:
 
-    call message(tpb, "De toute façon, je ne suis pas la seule à l'admirer. Tant de gens voudraient être à sa place ou avec elle.") from _call_message_9
-    call message(tpb, "...") from _call_message_10
-    call message(tpb, "Est-ce que je devrais me coiffer ?") from _call_message_11
-    call reply_message("Te coiffer?") from _call_reply_message_2
-    call message(tpb, "Genre changer mon style...") from _call_message_12
-    call message(tpb, "Quelque chose qui me correspondrais plus") from _call_message_13
+    call message(tpb, "De toute façon, je ne suis pas la seule à l'admirer. Tant de gens voudraient être à sa place ou avec elle.")
+    call message(tpb, "...")
+    call message(tpb, "Est-ce que je devrais me coiffer ?")
+    call reply_message("Te coiffer?")
+    call message(tpb, "Genre changer mon style...")
+    call message(tpb, "Quelque chose qui me correspondrais plus")
 
     label choiceMaking_HAI: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("je ne sais pas","choiceMaking_HAI.choice1","J'aime ta coupe.","choiceMaking_HAI.choice2")
         label .choice1:    
-            call phone_after_menu from _call_phone_after_menu_4 # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
-            call message_start(playerName, "je ne sais pas, je ne me souviens plus vraiment de ta coiffure actuelle.") from _call_message_start_4 # whenever you put the sender name to be playerName it is the player characters own message!
-            call message(tpb, "...") from _call_message_14
+            call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
+            call message_start(playerName, "je ne sais pas, je ne me souviens plus vraiment de ta coiffure actuelle.") # whenever you put the sender name to be playerName it is the player characters own message!
+            call message(tpb, "...")
             jump .aftermenu
         label .choice2:
             $ ptsb1 += 1
-            call phone_after_menu from _call_phone_after_menu_5
-            call message_start(playerName, "J'aime ta coupe.") from _call_message_start_5
-            call reply_message("Je ne pense pas que tu devrais les couper pour l'instant") from _call_reply_message_3
-            call message(tpb, "Oui mais quand même...") from _call_message_15
-            call message(tpb, "...") from _call_message_16
+            call phone_after_menu
+            call message_start(playerName, "J'aime ta coupe.")
+            call reply_message("Je ne pense pas que tu devrais les couper pour l'instant")
+            call message(tpb, "Oui mais quand même...")
+            call message(tpb, "...")
             jump .aftermenu
         label .aftermenu:
 
-    call message(tpb, "à demain.") from _call_message_17
-    call phone_end from _call_phone_end
+    call message(tpb, "à demain.")
+    call phone_end
     "{i} Un peut bizarre... Mais elle à l'air gentille"
     "{i} J'espère juste qu'elle ne fera rien de stupide..."
     c_mysteriousMan "FORESHAOWING!!!"
