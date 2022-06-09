@@ -346,8 +346,8 @@ label RBB2:
     show screen cexp("bpb", "bea", "bms", "bbs", p=p_center, h=h_down)
     c_bomi "..."
     "{i}Au fil des jours, elle semblait se sentir de plus en plus mal."
-    hide screen cexp with fade
-    scene BB1 with fade
+    hide screen cexp
+    scene BB2 with fade
     """{i}À la fin, elle n'est plus venue en cours.{/i}
 
     {i}Personne n'a entendu parler d'elle depuis et je pense que la majorité n'ont rien fait pour essayer de prendre de ses nouvelles.{/i}
