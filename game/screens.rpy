@@ -1,4 +1,70 @@
-﻿################################################################################
+﻿
+#region Autres
+
+    transform image_choose_path:
+        xalign 0.5
+        yalign 0.5
+        xpos 0.5
+        ypos 0.4
+
+    transform image_choose_path_h:
+        zoom 0.85
+        xalign 0.5
+        yalign 0.5
+        xpos 0.5
+        ypos 0.45
+    
+    transform character_expression_pos(p):
+        xalign 0.5
+        yalign 0.5
+
+    transform p_center:
+        xpos 0.8
+
+    transform p_left:
+        xpos 0.5
+
+    transform p_right:
+        xpos 1.1
+
+    transform h_center:
+        ypos 0.5
+
+    transform h_down:
+        ypos 0.65
+
+    transform h_mid:
+        ypos 0.6
+
+    
+    screen cexp(c=None, m=None, e=None, eb=None, o=None, t=None, p=p_center, h=h_center):
+        modal False
+        fixed at character_expression_pos, p, h:
+            add c
+            add m
+            add e
+            add eb
+            add o
+            add t
+
+    screen mlt:
+        use cexp("apr", "ael", "ams", "abn", p=p_left, h=h_down)
+        use cexp("bpf", "bel", "bmh", "bbn", p=p_center, h=h_down)
+        use cexp("hph", "hel", "hms", "hbn", p=p_right)
+    
+    screen h_and_bomi:
+        use cexp("hph", "hel", "hmf", "hbs", p=p_right)
+        use cexp("bpfb", "bbm", "bel", "bmt", p=p_left, h=h_down)
+
+
+#endregion
+
+
+
+
+
+
+################################################################################
 ## Initialization
 ################################################################################
 
