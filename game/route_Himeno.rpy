@@ -83,16 +83,16 @@ label RH1:
     c_himeno "Hé! Mais ce n'est pas..."
     show screen cexp("hph", "hea", "hmn", "hba")
 
-    """{i}Quoi{/i}{nw}
+    """{cps=30}{i}Quoi{/i}{nw}
 
-    {i}Est-ce que j'ai mal fait ça ?{/i}{nw}"""
+    {i}{cps=30}Est-ce que j'ai mal fait ça ?{/i}{nw}"""
 
     if himeno_help:
-        "{i}J'ai pourtant tout fait comme elle m'as dit...{/i}{nw}"
+        "{cps=30}{i}J'ai pourtant tout fait comme elle m'as dit...{/i}{nw}"
     else:
-        "{i}J'ai pourtant suivi les règles de photographie que j'ai vues en ligne...{/i}{nw}"
+        "{cps=30}{i}J'ai pourtant suivi les règles de photographie que j'ai vues en ligne...{/i}{nw}"
 
-    "{i}Elle exagère sûrement-{/i}{nw}"
+    "{cps=30}{i}Elle exagère sûrement-{/i}{nw}"
     show screen cexp("hph", "hel", "hmf", "hba")
     c_himeno "C'est Bomi à l'arrière."
 
@@ -509,7 +509,7 @@ label HB2:
     """{i}Des larmes commencent à se former dans ses yeux fatigués.{/i}
     
     {i}Je n'aurais jamais pensé voir Himeno dans cet état.{/i}"""
-    
+
     window hide
     pause
     jump game_over

@@ -199,4 +199,10 @@ label after_load:
         use cexp("hph", "hel", "hmf", "hbs", p=p_right)
         use cexp("bpfb", "bbm", "bel", "bmt", p=p_left, h=h_down)
 
+    screen h_photo_bomi:
+        use cexp("hph", "hel", "hms", "hba", p=p_left)
+    
+    screen a_and_b:
+        use cexp("apc", "ael", "amt", "abn", p=p_right, h=h_mid)
+
 #endregion
