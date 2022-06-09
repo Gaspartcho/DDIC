@@ -311,9 +311,7 @@ label HB1:
 
     window hide
     pause
-
     jump game_over
-
 
 label RH2:
     define ptsh2 = 0
