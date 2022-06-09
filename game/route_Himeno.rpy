@@ -551,9 +551,9 @@ label HGE:
 
     {i}Himeno est très rapidement devenue une mannequin très renommée.{/i}
     
-    {i}Avec le mannequinat et les sponsors qu'elle a réussi à obtenir, Himeno a commencée à faire beaucoup d'argent.{/i}
+    {i}Avec le mannequinat et les sponsors qu'elle a réussi à obtenir, Himeno a commencé à gagner beaucoup d'argent.{/i}
 
-    {i}Malgré ça, elle a décidée de continuer de venir à l'école, pour m'accompagner surement...{/i}"""
+    {i}Malgré ça, elle a décidé de continuer de venir à l'école, pour m'accompagner surement...{/i}"""
 
     c_himeno "[playerName]!"
     scene HGE with fade
