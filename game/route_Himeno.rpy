@@ -68,12 +68,16 @@ label RH1:
     show screen cexp("hph", "heb", "hms", "hbn")
 
     play sound camera_effect
+    show screen cexp("hpw", "hel", "hms", "hbn")
     with Fade(0.1, 0.0, 0.5, color="#fff")
     play sound camera_effect
+    show screen cexp("hph", "hel", "hms", "hbn")
     with Fade(0.1, 0.0, 0.5, color="#fff")
     play sound camera_effect
+    show screen cexp("hpw", "heb", "hml", "hbn")
     with Fade(0.1, 0.0, 0.5, color="#fff")
     play sound camera_effect
+    show screen cexp("hph", "hel", "hml", "hbn")
     with Fade(0.1, 0.0, 0.5, color="#fff")
 
     narrateur "Tu prends des photos de Himeno dans diverses poses."
@@ -209,14 +213,12 @@ label RH1:
             playerName "... il te voie sous le plus beau jour possible."
             $ ptsh1 += 1
             show screen cexp("hph", "hea", "hmn", "hbs", "hlc")
-            c_himeno "Merci."
 
         "... ":
             playerName "... "
             show screen cexp("hph", "hea", "hmn", "hbs", "hlc")
-            c_himeno "..."
     
-
+    c_himeno "..."
     show screen cexp("hph", "hel", "hmf", "hbs", "hlc")
     c_himeno "Je pense que je vais rentrer chez moi..."
     hide screen cexp with fade
