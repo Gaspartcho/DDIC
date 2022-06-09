@@ -191,12 +191,14 @@ label after_load:
             add t
 
     screen mlt:
-        use cexp("apr", "ael", "ams", "abn", p=p_left)
-        use cexp("bpf", "bel", "bmh", "bbn", p=p_center)
+        use cexp("apr", "ael", "ams", "abn", p=p_left, h=h_down)
+        use cexp("bpf", "bel", "bmh", "bbn", p=p_center, h=h_down)
         use cexp("hph", "hel", "hms", "hbn", p=p_right)
     
     screen h_and_bomi:
         use cexp("hph", "hel", "hmf", "hbs", p=p_right)
         use cexp("bpfb", "bbm", "bel", "bmt", p=p_left, h=h_down)
+
+
 
 #endregion

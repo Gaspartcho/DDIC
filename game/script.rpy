@@ -185,7 +185,7 @@ label scene_1:
 
     Vous n'arrivez pas à vous endormir...
 
-    Plutôt que d'essayer de lire un livre, vous décidez de faire connaissances avec d'autres membres de la classe:"""
+    Plutôt que d'essayer de lire un livre, vous décidez de faire connaissance avec d'autres membres de la classe:"""
 
     call phone_start(usrh, "22:13")
     label choiceMaking_LUV: # Use this template eatch time u want to make a phone menu
@@ -204,9 +204,8 @@ label scene_1:
         label .aftermenu:
     call message(tph, "Je suis la plus intelligente, la plus belle et la meilleure de toutes !")
     call message(tph, "Mais pourtant, je n'ai pas les meilleures notes et c'est super énervant.")
-    call message(tph, "Cette pourrie-gâtée de cheveux roses est toujours la première.")
-    call message(tph, "Et il y a aussi la cette déléguée qui fait constament sa cheffe")
-    call message(tph, "Je te jure c'est parce qu'elles trichent.")
+    call message(tph, "Cette pourrie-gâtée aux cheveux roses est toujours la première.")
+    call message(tph, "Je te jure c'est parce qu'elle triche.")
     call message(tph, "...")
     call message(tph, "Je devrais faire pareil.")
     label choiceMaking_CH: 
@@ -220,7 +219,7 @@ label scene_1:
         label .choice2:
             call phone_after_menu
             call message_start(playerName, "Je suis sûr que si tu essayes de toutes tes forces, tu seras la meilleure")
-            call message(tph, "C'est ça ouai... Pourquoi je devrais travailler {i}moi{/i} alors que je suis sure que tout le monde triche ici")
+            call message(tph, "C'est ça ouais... Pourquoi je devrais travailler {i}moi{/i} alors que je suis sure que tout le monde triche ici")
             call reply_message("...")
             jump .aftermenu
         label .aftermenu:
@@ -246,46 +245,46 @@ label scene_2:
     "???" "Je ne cliquerais pas dessus si j'étais toi."
     call phone_end(False)
 
-    show screen cexp("apc", "ael", "amn", "abn")
+    show screen cexp("apc", "ael", "amn", "abn", p=p_center, h=h_down)
 
     menu:
         c_akane "Tu devrais être prudent avec ceux-là. Ils ont tendance à te gâcher la vie."
 
         "Tu parles d'expérience ?":
             playerName "Tu parles d'expérience ?"
-            show screen cexp("apc", "aeb", "ams", "abn")
+            show screen cexp("apc", "aeb", "ams", "abn", p=p_center, h=h_down)
             c_akane "Peut-être"
 
         "J'allais le supprimer de toute façon.":
             playerName "J'allais le supprimer de toute façon."
             c_akane "..."
-            show screen cexp("apc", "ael", "ams", "abn")
-            c_akane "... Mouai ..."
+            show screen cexp("apc", "ael", "ams", "abn", p=p_center, h=h_down)
+            c_akane "... Mouais ..."
     
-    show screen cexp("apr", "ael", "ams", "abn")
-    c_akane "Tu semble nouveau ici."
-    show screen cexp("apc", "aeb", "ams", "abn")
+    show screen cexp("apr", "ael", "ams", "abn", p=p_center, h=h_down)
+    c_akane "Tu sembles nouveau ici."
+    show screen cexp("apc", "aeb", "ams", "abn", p=p_center, h=h_down)
     c_akane "Bienvenue dans notre classe."
     playerName "On s'est déjà rencontrés non? Tu as mon compte instargam."
-    show screen cexp("apc", "ael", "amt", "abn")
+    show screen cexp("apc", "ael", "amt", "abn", p=p_center, h=h_down)
     c_akane """Ah bon? Je m'en souviens pas.
 
     Peut-être que tu m'as confondu avec quelqu'un d'autre."""
 
-    show screen cexp("apr", "aeb", "ams", "abn")
+    show screen cexp("apr", "aeb", "ams", "abn", p=p_center, h=h_down)
     
     """{i}...{/i}
 
     {i}C'est étrange{/i}
 
     {i}Je suis presque sûr que c'est la fille qui m'a envoyé un message hier soir.{/i}"""
-    show screen cexp("bpb", "beb", "bms", "bbn") 
+    show screen cexp("bpb", "beb", "bms", "bbn", p=p_center, h=h_down) 
     narrateur "Tu tournes la tête en te sentant mal à l'aise et aperçoit une fille endormie sur sa table avec son téléphone allumé."
-    narrateur "Tu t'approches du bureau et jette un coup d'œil à son téléphone."
+    narrateur "Tu t'approches du bureau et jettes un coup d'œil à son téléphone."
 
     """{i}...{/i}
 
-    {i}Ça ne serait pas ma conversation avec Akane d'hier soir?{/i}
+    {i}Ça ne serait pas ma conversation d'hier soir avec Akane ?{/i}
 
     {i}...{/i}"""
 
@@ -293,21 +292,21 @@ label scene_2:
     play audio class_bell
     narrateur """... mais la cloche de l'école sonne.
     
-    Tu retournes à ta place a coté de Akane."""
-    show screen cexp("apr", "aeb", "ams", "abn")
+    Tu retournes à ta place à coté d'Akane."""
+    show screen cexp("apr", "aeb", "ams", "abn", p=p_center, h=h_down)
     playerName "Qui est-ce ?"
-    show screen cexp("apr", "ael", "amt", "abn")
+    show screen cexp("apr", "ael", "amt", "abn", p=p_center, h=h_down)
     c_akane "C'est {b}Bomi Park{/b}."
-    show screen cexp("apr", "ael", "ams", "abn")
+    show screen cexp("apr", "ael", "ams", "abn", p=p_center, h=h_down)
     c_akane "Elle est en tête du classement de notre école."
-    show screen cexp("apr", "aeb", "ams", "abn")
+    show screen cexp("apr", "aeb", "ams", "abn", p=p_center, h=h_down)
     c_akane "C'est assez impressionnant pour une première."
     
     pause 1.0
     "{i}...{/i}"
     "{i}Je devrais plus me concentrer en cours.{/i}"
     hide screen cexp with fade
-    narrateur "Alors que vous essayez d'écouter le cours, vous sentez que vos paupères sont de plus en plus lourdes..."
+    narrateur "Alors que vous essayez d'écouter le cours, vous sentez que vos paupières sont de plus en plus lourdes..."
     scene black with Fade(3.0, 0, 1.0)
     narrateur "{cps=20}Vous vous endormez.{/cps}"
 
@@ -318,22 +317,22 @@ label scene_2:
     
     Ah, on y est enfin...
     
-    Le moment tant attendu où tu poura choisir l'une de ces trois filles...
+    Le moment tant attendu où tu pourras choisir l'une de ces trois filles...
 
-    Je pense que tu as du comprendre quels sont leur problèmes...
+    Je pense que tu as dû comprendre quels sont leur problèmes...
     
-    Laquelle tu vas essayer d'aider?"""
+    Laquelle vas-tu essayer d'aider?"""
 
-    show screen cexp("apr", "ael", "ams", "abn") with fade
+    show screen cexp("apr", "ael", "ams", "abn", p=p_center, h=h_down) with fade
     c_mysteriousMan "Akane la déléguée de la classe?"
     hide akane choose
 
-    show screen cexp("bpf", "bel", "bmh", "bbn") with fade
+    show screen cexp("bpf", "bel", "bmh", "bbn", p=p_center, h=h_down) with fade
     c_mysteriousMan "Bomi la meilleure élève de l'école?"
     hide bomi choose
 
-    show screen cexp("hph", "hel", "hms", "hbn") with fade
-    c_mysteriousMan "Ou Himemo, la rebelle du lycée?"
+    show screen cexp("hph", "hel", "hms", "hbn", p=p_center, h=h_down) with fade
+    c_mysteriousMan "Ou Himeno, la rebelle du lycée?"
     hide screen cexp with fade
     c_mysteriousMan """En tout cas, choisis bien.
     
@@ -357,9 +356,9 @@ label road_menu:
             $ road = "3"
             playerName "Himeno!"
     hide screen mlt with fade
-    c_mysteriousMan """Bien. Bonne chance pour la suite, on se revéra à la fin...
+    c_mysteriousMan """Bien. Bonne chance pour la suite, on se reverra à la fin...
 
-    Allé, réveille-toi, c'est l'heure de la fin des cours.
+    Allez, réveille-toi, c'est l'heure de la fin des cours.
     
     ;)"""
 
@@ -367,7 +366,7 @@ label road_menu:
     narrateur "Vous vous réveillez."
     scene classroom late with fade 
     
-    narrateur """L'horlogle affcihe \"17:06\".
+    narrateur """L'horloge affiche \"17:06\".
     
     Il est tard, vous avez dormi toute la journée."""
 
