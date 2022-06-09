@@ -223,7 +223,7 @@ label RH1:
     c_himeno "Je pense que je vais rentrer chez moi..."
     hide screen cexp with fade
     pause 2.0
-    narrateur "Tu jetes un coup d'œil à la direction où Bomi était censée être mais elle n'était plus là"
+    narrateur "Tu jetes un coup d'œil à la direction où Bomi était censée être mais elle n'est plus là"
 
     "{i}Elle a dû partir quand Himeno l'a appelée.{/i}"
     narrateur "Tu décide également de rentrer chez toi."
@@ -321,7 +321,7 @@ label RH2:
 
     {i}Himeno a posté les photos que j'avais prises d'elle et elles ont explosées.{/i}
 
-    {i}Heureusement, Himeno a été gentille et n'a pas publillé celle où l'on voyait clairement Bomi.{/i}"""
+    {i}Heureusement, Himeno a été gentille et n'a pas publié celle où l'on voyait clairement Bomi.{/i}"""
 
     scene classroom day with fade
     pause 1.0
@@ -334,11 +334,11 @@ label RH2:
     show screen cexp("hph", "hea", "hms", "hbn")
     narrateur "Himeno montre les demandes qu'elle a reçu sur instargam."
     show screen cexp("hph", "hes", "hml", "hbn")
-    c_himeno "C'est fou ça tu te rend compte? Ta pote devient populaire même en dehors du lycée!"
+    c_himeno "C'est fou ça tu te rends compte? Ta pote devient populaire même en dehors du lycée!"
     show screen cexp("hph", "hea", "hms", "hbn")
     menu:
-        "{i}Ouah, c'est vrais qu'il y en a beaucoup... Il y a même certains messages qui sont des propositions de cadeaux provenant de marques de luxe.{/i}"
-        "Haha c'est super ! Et t'en as accepté ?":
+        "{i}Ouah, c'est vrai qu'il y en a beaucoup... Il y a même certains messages qui sont des propositions de cadeaux provenant de marques de luxe.{/i}"
+        "Haha c'est super ! Et t'en as acceptées ?":
             playerName "Haha c'est super ! Et t'en as accepté ?"
             show screen cexp("hpw", "hes", "hmt", "hbn")
             c_himeno "Non, je voulais te montrer tout avant d'accepter l'un d'eux!"
