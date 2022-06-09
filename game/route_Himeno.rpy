@@ -406,7 +406,7 @@ label RH2:
     show screen cexp("hph", "hel", "hmt", "hbs")
     c_himeno "Pour récupérer mon compte, je dois me reconnecter avec ce lien."
     show screen cexp("hph", "hea", "hmf", "hbs")
-    c_himeno "Et apparament, je n'ai que 20 mins pour le faire, sinon je vais tout perdre..."
+    c_himeno "Et apparemment, je n'ai que 20 mins pour le faire, sinon je vais tout perdre..."
     show screen cexp("hph", "hea", "hmn", "hbs")
     menu:
         c_himeno "..."
@@ -427,11 +427,11 @@ label RH2:
             playerName "Appelle-moi si tu as besoin de quoi que ce soit, je vais chercher du banana milk."
             show screen cexp("hph", "heb", "hml", "hbs")
             c_himeno "Ok ~"
-
-    hide screen cexp
-    scene hallway day with fade
+    show screen cexp("hpw", "hel", "hml", "hbn")
     c_himeno "Attends! Peux-tu me chercher un thé glacé ?"
     playerName "Okay"
+    hide screen cexp
+    scene hallway day with fade
 
     if ptsh2 > 2:
         jump HGE
@@ -439,10 +439,9 @@ label RH2:
         jump HB2
         
 label HB2:
-    scene park with fade
     """{i}Hmm...{/i}
 
-    {i}C'est est tellement bizarre.{/i}"""
+    {i}C'est tellement bizarre.{/i}"""
     narrateur "Tu sens ton téléphone vibrer lorsque tu prends le thé glacé et le banana milk."
 
     call phone_start(usrh, "10:12") from _call_phone_start_2
@@ -515,7 +514,6 @@ label HB2:
     jump game_over
 
 label HGE:
-    scene park with fade
     """{i}Hmm...{/i}
 
     {i}C'est est tellement bizarre.{/i}
@@ -536,7 +534,7 @@ label HGE:
     show screen cexp("hph", "hea", "hmt", "hbn")
     c_himeno "Même l'e-mail est un faux."
     show screen cexp("hph", "hea", "hmf", "hbn")
-    c_himeno "Quand je pense que j'ai failli me faire avoir si failement..."
+    c_himeno "Quand je pense que j'ai failli me faire avoir si facilement..."
     show screen cexp("hph", "hea", "hmn", "hbn")
     c_himeno "Bon, vérifions ces propositions maintenant"
     c_himeno "..."
@@ -551,11 +549,11 @@ label HGE:
 
     {i}Finalement, certaines demandes se sont avérées être des vraies.{/i}
 
-    {i}Himeno est très rapidement devenue une manequin très renommée.{/i}
+    {i}Himeno est très rapidement devenue une mannequin très renommée.{/i}
     
-    {i}Avec le mannequinat et les sponsors qu'elle a réussie à obtenir, Himeno a commencée à faire beaucoup d'argent.{/i}
+    {i}Avec le mannequinat et les sponsors qu'elle a réussi à obtenir, Himeno a commencé à gagner beaucoup d'argent.{/i}
 
-    {i}Malgré ça, elle a décidée de continuer de venir à l'école, pour m'accompagner surement...{/i}"""
+    {i}Malgré ça, elle a décidé de continuer de venir à l'école, pour m'accompagner surement...{/i}"""
 
     c_himeno "[playerName]!"
     scene HGE with fade
