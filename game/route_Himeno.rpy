@@ -534,7 +534,7 @@ label HGE:
     show screen cexp("hph", "hea", "hmt", "hbn")
     c_himeno "Même l'e-mail est un faux."
     show screen cexp("hph", "hea", "hmf", "hbn")
-    c_himeno "Quand je pense que j'ai failli me faire avoir si failement..."
+    c_himeno "Quand je pense que j'ai failli me faire avoir si facilement..."
     show screen cexp("hph", "hea", "hmn", "hbn")
     c_himeno "Bon, vérifions ces propositions maintenant"
     c_himeno "..."
@@ -549,9 +549,9 @@ label HGE:
 
     {i}Finalement, certaines demandes se sont avérées être des vraies.{/i}
 
-    {i}Himeno est très rapidement devenue une manequin très renommée.{/i}
+    {i}Himeno est très rapidement devenue une mannequin très renommée.{/i}
     
-    {i}Avec le mannequinat et les sponsors qu'elle a réussie à obtenir, Himeno a commencée à faire beaucoup d'argent.{/i}
+    {i}Avec le mannequinat et les sponsors qu'elle a réussi à obtenir, Himeno a commencée à faire beaucoup d'argent.{/i}
 
     {i}Malgré ça, elle a décidée de continuer de venir à l'école, pour m'accompagner surement...{/i}"""
 
