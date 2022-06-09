@@ -66,7 +66,7 @@ label route_B1:
         call screen phone_reply("je ne sais pas","choiceMaking_HAI.choice1","J'aime ta coupe.","choiceMaking_HAI.choice2")
         label .choice1:    
             call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
-            call message_start(playerName, "je ne sais pas, je ne me souviens plus de ta coiffure actuelle.") # whenever you put the sender name to be playerName it is the player characters own message!
+            call message_start(playerName, "je ne sais pas, je ne me souviens plus vraiment de ta coiffure actuelle.") # whenever you put the sender name to be playerName it is the player characters own message!
             call message(tpb, "...")
             jump .aftermenu
         label .choice2:
