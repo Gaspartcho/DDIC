@@ -397,6 +397,10 @@ label RAB2:
 
     au revoir, [playerName]."""
 
+    window hide
+    pause
+    jump game_over
+
 label RAF:
     scene blacks with fade
     "{i}J'ai rencontré Akane le lendemain à l'école."
@@ -409,6 +413,8 @@ label RAF:
     c_akane """Merci de penser à moi.
     
     Aller, on rentre?"""
+
+    window hide
     pause
     jump happy_ending
 

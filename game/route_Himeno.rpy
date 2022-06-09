@@ -511,9 +511,9 @@ label HB2:
     """{i}Des larmes commencent à se former dans ses yeux fatigués.{/i}
     
     {i}Je n'aurais jamais pensé voir Himeno dans cet état.{/i}"""
+    
     window hide
     pause
-
     jump game_over
 
 label HGE:
@@ -570,4 +570,6 @@ label HGE:
 
     {i}Elle est vraiment faite pour le public.{/i}"""
 
+    window hide
+    pause
     jump happy_ending
