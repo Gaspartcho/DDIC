@@ -2,6 +2,8 @@ label route_A:
     define ptsa1 = 0
     narrateur "Vous décidez de rentrer chez vous dirrectement."
     scene bedroom with fade
+    pause 2.0
+    "{i}Je devrais quand même remercier Akane pour son acceuil..."
 
     call phone_start(usra, "18:45")
     label choiceMaking_UAG: # Use this template eatch time u want to make a phone menu
@@ -15,7 +17,7 @@ label route_A:
             $ ptsa1 += 1
             call phone_after_menu
             call message_start(playerName, "J'ai l'impression que tu fais beaucoup pour la classe")
-            call message(tpa, "Je suis content qu'on ait quelqu'un d'aussi responsable comme déléguée.")
+            call message(playerName, "Je suis content qu'on ait quelqu'un d'aussi responsable comme déléguée.")
             call message(tpa, "Merci beaucoup.")
             jump .aftermenu
         label .aftermenu:
@@ -28,15 +30,15 @@ label route_A:
     call message (tpa, "{u}http://totallynotabadwebsite.com{/u}")
 
     label choiceMaking_IPG:
-        call screen phone_reply("Le site est un peu bizarre, est-ce qu'il est sûr ?","choiceMaking_IPG.choice1","ah ok, j'irai peut-être voir.","choiceMaking_IPG.choice2")
+        call screen phone_reply("Le site est un peu bizarre","choiceMaking_IPG.choice1","ah ok, j'irai peut-être voir.","choiceMaking_IPG.choice2")
         label .choice1:
             call phone_after_menu
+            $ ptsa1 += 1
             call message_start(playerName, "...")
             call reply_message("Le site est un peu bizarre, est-ce qu'il est sûr ?")
             call message(tpa, "non.")
             jump .aftermenu
         label .choice2:
-            $ ptsa1 += 1
             call phone_after_menu
             call message_start(playerName, "ah ok, j'irai peut-être voir")
             call message(tpa, "^^")
@@ -63,9 +65,9 @@ label route_A:
     
     call message (tpa, "J'adore les chiens")
     call message (tpa, "Ils sont fidèles à leurs maîtres et font ce qu'on leur dit")
-    call message (tpa, "Au moins la plupart du temps...")
+    call message (tpa, "Du moins la plupart du temps...")
     call message (tpa, "Si la plupart des gens avaient le même état d'esprit que les chiens, on aurait la paix dans le monde.")
-    call message (tpa, "Ou quelque chose de mieux que ce qu'on a")
+    call message (tpa, "Ou en tout cas quelque chose de mieux que ce qu'on a")
 
     label choiceMaking_DAP:
         call screen phone_reply("Les gens ne sont pas des chiens","choiceMaking_DAP.choice1","Je suis d'accord","choiceMaking_DAP.choice2")
@@ -76,6 +78,8 @@ label route_A:
             call reply_message("Ils ont besoin de leur vie privée, de leur libre arbitre...")
             call message(tpa, "Peut-être.")
             call message(tpa, "Mais au moins ce serait plus facile de maintenir l'ordre")
+            call message(playerName, "Tu te rend compte au moins de ce que tu dis?")
+            call message(tpa, "Oui.")
             jump .aftermenu
         label .choice2:
             call phone_after_menu
@@ -90,7 +94,7 @@ label route_A:
     call message (tpa, "Cela rapporte un peut d'argent.")
     call message (tpa, "Ma famille est plutôt aisée")
     call message (tpa, "Mais un peut d'argent de poche de temps en temps, ça ne fais de mal à personne")
-    call message (tpa, "Tu veux m'accompagner un jour ?")
+    call message (tpa, "Ca te dirais de m'accompagner un jour ?")
 
     label choiceMaking_DSA:
         call screen phone_reply("Bien sûr!","choiceMaking_DSA.choice1","J'ai beaucoup à rattraper avec l'école","choiceMaking_DSA.choice2")
@@ -112,8 +116,8 @@ label route_A:
         label .aftermenu:
 
     call message(tpa, "Tu peut me donner tes coordonnées banquaires?")
-    call message(tpa, "Comme ça on poura te faire un compte en avance...")
-    call phone_end
+    call message(tpa, "Comme ça on poura te faire un virement en avance...")
+    call phone_end(False)
 
     narrateur "Tu as décidé d'attendre de pouvoir faire le travail avant lui transmettre tes coordonnées."
     narrateur "Tu poses ton téléphone et tu t'endors..."
@@ -121,80 +125,83 @@ label route_A:
     narrateur "Le lendemain..."
     scene classroom day with fade
     pause 1.0
-    show screen cexp("apc", "aeb", "ams", "abn")
     c_akane "{cps=50}Bonjour, [playerName].{nw}"
-
+    show screen cexp("apc", "aeb", "ams", "abn", h=h_mid)
     "{i}Holy Sweet Baby Jesus!!"
     "{i}Elle doit arrêter d'apparaître de nulle part."
-    show screen cexp("apc", "ael", "ams", "abn")
+    show screen cexp("apc", "ael", "ams", "abn", h=h_mid)
     playerName "Salut Akane, t'as besoin de quelque chose?"
-    show screen cexp("apc", "ael", "amt", "abn")
+    show screen cexp("apc", "ael", "amt", "abn", h=h_mid)
     c_akane "Oui, j'aurais besoin de ton aide."
     c_akane "Tu vois Himeno?"
     c_akane "La blonde un peu bronzée."
-    show screen cexp("apc", "aeb", "ams", "abn")
+    show screen cexp("apc", "aeb", "ams", "abn", h=h_mid)
     c_akane "Tu peux lui envoyer ce lien?"
-    show screen cexp("apc", "ael", "ams", "abn")
+    show screen cexp("apc", "ael", "ams", "abn", h=h_mid)
     c_akane "C'est un chèque cadeau pour la remercier."
     c_akane "Tu vois, sa famille est très riche: elle donne beaucoup pour financer l'école."
-    show screen cexp("apr", "aeb", "ams", "abn")
+    show screen cexp("apr", "aeb", "ams", "abn", h=h_mid)
 
     menu:
         c_akane "Donc j'aimerais lui faire un petit cadeau de la part de toute la classe pour la remercier."
         "Euhh. Ca m'a l'air bizarre":
             $ ptsa1 += 1
             playerName "Euhh. Ca m'a l'air bizarre"
-            show screen cexp("apr", "ael", "ams", "abn")
+            show screen cexp("apr", "ael", "ams", "abn", h=h_mid)
             c_akane "Il est crypté pour que personne d'autre que Himeno peut l'ouvrir..."
 
         "D'accord, mais pourquoi ne le fais-tu pas toi-même?":
             playerName "D'accord, mais pourquoi ne le fais-tu pas toi-même?"
-            show screen cexp("apr", "ael", "amt", "abn")
+            show screen cexp("apr", "ael", "amt", "abn", h=h_mid)
             c_akane "C'est pour le symbolisme tu vois..."
-            show screen cexp("apr", "aeb", "ams", "abn")
+            show screen cexp("apr", "aeb", "ams", "abn", h=h_mid)
             c_akane "Un nouvel élève qui remercie déja les bienfaiteurs de l'école, ça donnera un message positif."
     
     "{i}..."
-    "{i}C'est la deuxième fois qu'Akane m'envoie quelque chose à ouvrir..."
-    show screen cexp("apc", "ael", "ams", "abn")
+    "{i}C'est la deuxième fois qu'Akane m'envoie quelque chose de suspect..."
+    show screen cexp("apc", "ael", "ams", "abn", h=h_mid)
     playerName "Tu essayerais pas de nous arnaquer Himeno et moi par hasard?"
-    show screen cexp("apr", "aea", "ams", "abn")
+    show screen cexp("apr", "aea", "ams", "abn", h=h_mid)
     c_akane "..."
-    show screen cexp("apr", "aeb", "ams", "abn")
-
+    show screen cexp("apr", "aeb", "ams", "abn", h=h_mid)
+    c_akane "Non."
+    show screen cexp("apr", "aeb", "amt", "abn", h=h_mid)
+    c_akane "C'a m'arrive de faire des blagues aux gens parfois..."
+    c_akane "Mais rien de méchant."
+    show screen cexp("apr", "aeb", "ams", "abn", h=h_mid)
     menu:
-        c_akane "Non." 
+        c_akane "Et donc sinon, pour le lien?"
         "Tu ne devrais pas prendre l'argent des autres":
             $ ptsa1 += 1
-            playerName "Akane, tu ne devrais pas avoir envie de prendre l'argent des autres. Penses à l'autre qui est plus misérable et en prenant le peu qu'il a, tu lui fout du chaos."
-            show screen cexp("apr", "ael", "amt", "abn")
+            playerName "Akane, tu ne devrais pas avoir envie de prendre l'argent des autres."
+            playerName "Penses à l'autre qui est plus misérable et en prenant le peu qu'il a, tu lui ruine sa vie!"
+            show screen cexp("apr", "ael", "amt", "abn", h=h_mid)
             c_akane "Pardon?"
 
         "Je peux attendre un peu plus longtemps ?":
+            playerName "..."
             playerName "Est-ce que tu pourais me laisser un peut plus de temps?"
             playerName "Histoire que je fasse bien connaissance avec tout le monde..."
-    show screen cexp("apr", "ael", "amn", "abn")
+    show screen cexp("apr", "ael", "amn", "abn", h=h_mid)
     c_akane "Bon, si tu n'as pas envie de le faire, je vais m'en occuper" 
-    show screen cexp("apr", "aeb", "ams", "abn")
+    show screen cexp("apr", "aeb", "ams", "abn", h=h_mid)
     c_akane "Je dois y aller, on se revéras plus tard."
-    hide screen cexp 
-    scene black with fade
-
+    hide screen cexp
+    
     if ptsa1 >= 4:
         jump RAF1
     else:
         jump RAB1
 
 label RAB1:
-    """{i}Qu'est-ce qui pourrait se passer?{/i}
+    "{i}Bon, et puis zut! Qu'est-ce qui pourai mal se passer de toute façon?"
+    scene black with fade
 
-    {i}Ça fait une semaine que je suis arrivé à l'école.{/i}
+    """{i}Ça fait une semaine que je suis arrivé à l'école.{/i}
 
     {i}J'ai appris les noms de tout le monde, mais je ne me suis pas fait de véritables amis.{/i}
 
-    {i}J'ai décidé d'envoyer le cadeau d'Akane à Himeno. {/i}
-
-    {i}Je suis sûr que ce n'est rien de grave.{/i}
+    {i}J'ai décidé d'envoyer le \"cadeau\" d'Akane à Himeno. {/i}
 
     ...
 
@@ -206,21 +213,26 @@ label RAB1:
     {i}Je me demande ce que c'était, mais je passe à autre chose et je continue ma journée.{/i}"""
     "Prof" "Les deux solutions à ces fonctions sont-"
     "???" "Excusez-moi. Est-ce que Akane Kousei est là ?"
-    show screen cexp("apc", "aea", "amn", "abn")
-    """{i}Je jette un coup d'œil à Akane.{/i}
+    show screen cexp("apc", "aea", "amn", "abn", h=h_mid)
+    playerName "Akane, qu'est-ce qui se passe?"
+    c_akane "..."
 
-    {i}Elle semble pâle mais calme.{/i}"""
-    "Prof" "Qui êtes-vous? Ceci est une salle de classe. Vous ne pouvez pas simplement rentrer comme ça."
+    "{i}Elle semble pâle mais calme.{/i}"
+    "Prof" "Qui êtes-vous? Ceci est une salle de classe. Vous ne pouvez pas simplement rentrer comme ça!"
     "Mr. Aki" """Je suis le détective Aki. Je suis là pour une enquête sur une affaire impliquant Akane Kousei.
 
-    Veuillez sortir et venir avec moi."""
-    show screen cexp("apc", "aea", "ams", "abn")
-    """{i}Je m'attendais à ce que Akane commence enfin à montrer de l'émotion et à se battre, mais elle les a simplement suivis calmement avec un sourire.{/i}"""
-    hide screen cexp with fade
+    Mademoiselle Kousei, veuillez sortir et venir avec moi."""
+    show screen cexp("apc", "aea", "ams", "abn", h=h_mid)
+    pause
+    hide screen cexp
     scene black with fade
-    """{i}On a appris par Himeno que Akane était responsable de vol parce que Himeno ne faisait pas attention à ce qu'elle achète.{/i}"""
-    scene black with fade
-    "{i}Un an plus tard, Akane a été mise en procès.{/i}"
+    """{i}On a appris par Himeno que Akane était responsable de vol et de diverses arnaques en ligne.
+    
+    {i}Himeno étais l'une des victimes, elle avais perdu beaucoup d'argent à cause de ça.
+
+    {i}Il faudrais qu'elle fasse plus attention à ce qu'elle achète.
+    
+    {i}Un an plus tard, Akane a été mise en procès.{/i}"""
     scene AB1 with fade
     "Juges" """Kousei Akane.
 
@@ -228,7 +240,10 @@ label RAB1:
 
     Vous plaidez coupable ?"""
     c_akane "Oui, messieurs."
+    "{i}..."
     "{i}Je pense qu'Akane ne pourra jamais finir sa scolarité...{/i}"
+    window hide
+    pause
 
     jump game_over
 
@@ -240,9 +255,10 @@ label RAF1:
     call message_start (tpa, "Bonjour, [playerName]. Je sais que ça fait une semaine que je t'ai dit d'envoyer ce lien à Himeno, mais au final t'as plus besoin de le faire.")
     call reply_message ("Ok...")
     call message (tpa, "Au fait, Je sais pas si tu as remarqué, mais il y a quelqu'un en ligne qui se fait passer pour moi.")
-    call message (tpa, "Il prend des photos de moi, vole mes photos de mon compte et les publient comme les siennes.")
+    call message (tpa, "Il prend des photos de moi, vole mes photos de {b}mon{/b} compte et les publient comme les siennes.")
     call message (tpa, "C'est légèrement inquiétant...")
 
+    pause
     window show
     "{i}Elle parle de Bomi?"
     window hide
@@ -266,12 +282,13 @@ label RAF1:
             jump .aftermenu
         label .aftermenu:
     
+    pause
     window show
     "{i}..."
     window hide
 
     label choiceMaking_USP:
-        call screen phone_reply("Tu devrais prendre des précautions","choiceMaking_USP.choice1","Je ne veut pas que tu ais des problèmes","choiceMaking_USP.choice2")
+        call screen phone_reply("Tu devrais prendre des précautions","choiceMaking_USP.choice1","Tu as raison","choiceMaking_USP.choice2")
         label .choice1:
             call phone_after_menu
             call message_start(playerName, "Tu devrais prendre des précautions.")
@@ -280,8 +297,8 @@ label RAF1:
             jump .aftermenu
         label .choice2:
             call phone_after_menu
-            call message_start(playerName, "Je ne veut pas que tu ais des problèmes")
-            call message(tpa, "Je peux prendre soin de moi, ne t'inquiète pas")
+            call message_start(playerName, "Tu as raison, il n'y a aucune raison pour que cette personne ne devienne un danger pour toi...")
+            call message(tpa, "Bien sûr que j'ai raison.")
             jump .aftermenu
         label .aftermenu:
     
@@ -305,19 +322,19 @@ label RAF1:
         call screen phone_reply("Je sais qui tu es","choiceMaking_KUR.choice1","Non, rien...","choiceMaking_KUR.choice2")
         label .choice1:
             call phone_after_menu
+            $ ptsa2 += 1
             call message_start(playerName, "Je sais qui tu es.")
+            call message(tpa, "...")
+            call message(tpa, "Ne parle jamais de ça.")
             jump .aftermenu
         label .choice2:
             call phone_after_menu
             call message_start(playerName, "Ah, rien. J'aimerais en savoir plus sur elle")
-            $ ptsa2 += 1
             call reply_message("Elle semble être la plus forte de notre classe et j'aimerais savoir comment elle fait")
             call message(tpa, "Je pourais...")
             call message(tpa, "Mais non.")
             jump .aftermenu
         label .aftermenu:
-            call message(tpa, "...")
-            call message(tpa, "Ne parle jamais de ça.")
     call phone_end
 
     "{i}..."
@@ -329,18 +346,20 @@ label RAF1:
         label .choice1:
             call phone_after_menu
             call message_start(playerName, "Akane. S'il te plaît, sois super prudente.")
-            $ ptsa2 += 1
             call message(tpa, "Je le serai.")
+            call message(tpa, "Mais pourquoi tu t'inquiète, ce n'es pas grave tu sais.")
+            call message(tpa, "Juste un peut énervant...")
             jump .aftermenu
         label .choice2:
             call phone_after_menu
+            $ ptsa2 += 1
             call message_start(playerName, "Akane, je vais t'aider à mettre en place des précautions.")
             call reply_message("On devrait également le signaler pendant qu'on y est comme ça la situation ne deviendra pas incontrôlable.")
             call message(tpa, "Ok")
             jump .aftermenu
         label .aftermenu:
     call phone_end
-    "..."
+    "{i}...{/i}"
     if ptsa2 > 2:
         jump RAF
     else:

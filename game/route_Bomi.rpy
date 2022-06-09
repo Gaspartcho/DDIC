@@ -228,8 +228,8 @@ label RBF1:
     show screen cexp("bpf", "bel", "bms", "bbs", p=p_center, h=h_down)
     "{i} A-t-elle déjà posté?"
     narrateur """Tu sors ton tel pour vérifier.
-    D’abord, tu regardes le compte de Bomi"""
-    show screen cexp("bpf", "bea", "bms", "bbs", p=p_center, h=h_down)
+    D'abord, tu regardes le compte de Bomi"""
+    show screen cexp("bpf", "bea", "bms", "bbs")
     "{i}Wow..."
     "{i}Ces commentaires sont stupides et méchants..."
     "{i}Himeno n'a aucune pitié."
@@ -266,9 +266,9 @@ label RBF1:
 
     menu:
         c_bomi "..."
-        "Ouais. T'as juste à les ignorer et garder une preuve qu'on t’a envoyé de la haine.":
+        "Ouais. T'as juste à les ignorer et garder une preuve qu'on t'a envoyé de la haine.":
             $ ptsb2 += 1
-            playerName "Ouais. T'as juste à les ignorer et garder une preuve qu'on t’a envoyé de la haine."
+            playerName "Ouais. T'as juste à les ignorer et garder une preuve qu'on t'a envoyé de la haine."
             playerName "Elle finira par payer de toute façon."
 
         "Defends-toi. ":
@@ -372,7 +372,7 @@ label RBG:
     c_bomi "Non, non, c'est pas grave je peux attendre."
     narrateur """Elle détourne le regard en pensant du ramen.
     
-    Tu sors ton portable et prends une photo d’elle et le plat.
+    Tu sors ton portable et prends une photo d'elle et le plat.
     
     {i}Ma copine est tellement mignonne{/i}"""
 
