@@ -406,7 +406,7 @@ label RH2:
     show screen cexp("hph", "hel", "hmt", "hbs")
     c_himeno "Pour récupérer mon compte, je dois me reconnecter avec ce lien."
     show screen cexp("hph", "hea", "hmf", "hbs")
-    c_himeno "Et apparament, je n'ai que 20 mins pour le faire, sinon je vais tout perdre..."
+    c_himeno "Et apparemment, je n'ai que 20 mins pour le faire, sinon je vais tout perdre..."
     show screen cexp("hph", "hea", "hmn", "hbs")
     menu:
         c_himeno "..."
@@ -427,11 +427,11 @@ label RH2:
             playerName "Appelle-moi si tu as besoin de quoi que ce soit, je vais chercher du banana milk."
             show screen cexp("hph", "heb", "hml", "hbs")
             c_himeno "Ok ~"
-
-    hide screen cexp
-    scene hallway day with fade
+    show screen cexp("hpw", "hel", "hml", "hbn")
     c_himeno "Attends! Peux-tu me chercher un thé glacé ?"
     playerName "Okay"
+    hide screen cexp
+    scene hallway day with fade
 
     if ptsh2 > 2:
         jump HGE
@@ -439,10 +439,9 @@ label RH2:
         jump HB2
         
 label HB2:
-    scene park with fade
     """{i}Hmm...{/i}
 
-    {i}C'est est tellement bizarre.{/i}"""
+    {i}C'est tellement bizarre.{/i}"""
     narrateur "Tu sens ton téléphone vibrer lorsque tu prends le thé glacé et le banana milk."
 
     call phone_start(usrh, "10:12")
@@ -515,7 +514,6 @@ label HB2:
     jump game_over
 
 label HGE:
-    scene park with fade
     """{i}Hmm...{/i}
 
     {i}C'est est tellement bizarre.{/i}
