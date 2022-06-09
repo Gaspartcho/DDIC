@@ -87,7 +87,6 @@ label RH1:
     c_himeno "Hé! Mais ce n'est pas..."
     show screen cexp("hph", "hea", "hmn", "hba")
 
-<<<<<<< HEAD
     """{i}Quoi{/i}
 
     {i}Est-ce que j'ai mal pris les photos ?{/i}"""
@@ -98,18 +97,6 @@ label RH1:
         "{i}J'ai pourtant suivi les règles de photographie que j'ai vues en ligne...{/i}"
 
     "{i}Elle exagère sûrement-{/i}"
-=======
-    """{cps=30}{i}Quoi{/i}{nw}
-
-    {i}{cps=30}Est-ce que j'ai mal fait ça ?{/i}{nw}"""
-
-    if himeno_help:
-        "{cps=30}{i}J'ai pourtant tout fait comme elle m'as dit...{/i}{nw}"
-    else:
-        "{cps=30}{i}J'ai pourtant suivi les règles de photographie que j'ai vues en ligne...{/i}{nw}"
-
-    "{cps=30}{i}Elle exagère sûrement-{/i}{nw}"
->>>>>>> 68957802b3ed2ff41fa81b8f82ddeb61197254e7
     show screen cexp("hph", "hel", "hmf", "hba")
     c_himeno "C'est Bomi à l'arrière."
 
@@ -350,9 +337,9 @@ label RH2:
     menu:
         "{i}Ouah, c'est vrai qu'il y en a beaucoup... Il y a même certains messages qui sont des propositions de cadeaux provenant de marques de luxe.{/i}"
         "Haha c'est super ! Et t'en as acceptées ?":
-            playerName "Haha c'est super ! Et t'en as accepté ?"
+            playerName "Haha c'est super ! Et t'en as acceptées ?"
             show screen cexp("hpw", "hes", "hmt", "hbn")
-            c_himeno "Non, je voulais te montrer tout avant d'accepter l'un d'eux!"
+            c_himeno "Non, je voulais te montrer tout avant d'accepter l'une d'elles!"
 
         "C'est incroyable Himeno ! ":
             playerName "C'est incroyable Himeno ! "
@@ -363,10 +350,10 @@ label RH2:
 
     {i}C'était une demande de guzzi.{/i}
 
-    {i}Une marque très populaire en ce moment, pratiquement connue de tout le monde.{/i}"""
+    {i}Une marque très populaire en ce moment, pratiquement connue par tout le monde.{/i}"""
 
     menu:
-        "{i}Tiens? le site de la marque étais vraiment \"guzzi_official.com\", et non pas \"guzzi.com\" ?{/i}"
+        "{i}Tiens? le site de la marque était vraiment \"guzzi_official.com\", et non pas \"guzzi.com\" ?{/i}"
 
         "Hey... certaines propositions ont l'air suspectes":
             playerName "Hey... certaines propositions ont l'air suspectes..."
@@ -385,7 +372,7 @@ label RH2:
     show screen cexp("hph", "hea", "hmn", "hbn")
     """{i}Himeno roule des yeux et ouvre le lien.{/i}
 
-    {i}Le site Web s'ouvre sur une section où on devait entrer nos coordonnées Guglas.{/i}
+    {i}Le site Web s'ouvre sur une section où on devait entrer nos coordonnées Guggle.{/i}
 
     {i}Mais pourquoi?{/i}"""
     show screen cexp("hph", "hel", "hmn", "hbn")
@@ -408,7 +395,7 @@ label RH2:
             $ ptsh2 += 1
             show screen cexp("hph", "hea", "hmt", "hbn")
             c_himeno "C'est à dire?"
-            playerName "Et bien tu vois, c'est important de...{nw}"
+            playerName "Et bien tu vois, c'est important de..."
     
     play sound phone_jingle
 
