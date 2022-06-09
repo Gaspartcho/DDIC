@@ -124,6 +124,7 @@ label after_load:
     image HB2 = "images/scenes/himeno_b2.png"
     image HGE = "images/scenes/himeno_ge.png"
     image BB1 = "images/scenes/bomi_b1.png"
+    image BB2 = "images/scenes/bomi_b2.png"
     image BGE = "images/scenes/bomi_ge.png"
     image AB1 = "images/scenes/akane_b1.png"
     image AB2 = "images/scenes/akane_b2.png"
