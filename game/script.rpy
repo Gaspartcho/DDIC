@@ -437,7 +437,7 @@ label happy_ending:
     
     Qu'est-ce que tu fais encore là?
     
-    Tu peut partir tu sais?
+    Tu peux partir tu sais?
     
     Rien ne t'oblige à rester ici..."""
 
