@@ -232,12 +232,21 @@ label scene_2:
     pause 1.0
     "{i}...{/i}"
     "{i}I should focus on class.{/i}"
+    hide screen cexp
+    window hide
+    scene black with fade
+    show screen cexp("apr", "ael", "ams", "abn", p=p_center, h=h_down) with fade
+    hide screen cexp with fade 
+    scene classroom day with fade
+    scene black with fade
+    show screen cexp("bpf", "bel", "bms", "bbn", p=p_center, h=h_down) with fade
     hide screen cexp with fade
-    scene black with Fade(3.0, 0, 1.0)
-    scene classroom with Fade(3.0, 0, 1.0)
-    scene black with Fade(3.0, 0, 1.0)
-    scene classroom with Fade(3.0, 0, 1.0)
-    scene black with Fade(3.0, 0, 1.0)
+    scene classroom day with fade
+    scene black with fade
+    show screen cexp("hph", "hel", "hms", "hbn", p=p_center, h=h_down) with fade
+    hide screen cexp with fade
+    scene classroom day with fade
+    scene black with fade
     pause 2.0
 
     show screen mlt with fade
@@ -259,14 +268,11 @@ label road_menu:
     c_mysteriousMan """good choice!
     
     wake up :)"""
-
-    stop music fadeout 1.5
-    narrateur "Vous vous réveillez."
     scene classroom late with fade 
     
-    narrateur """L'horloge affiche \"17:06\".
+    narrateur """The clock displays \"17:06\".
     
-    Il est tard, vous avez dormi toute la journée."""
+    It's late."""
 
     if road == "1":
         jump route_A
