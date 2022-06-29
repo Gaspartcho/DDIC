@@ -1,13 +1,13 @@
 label route_A:
     define ptsa1 = 0
-    narrateur "Vous décidez de rentrer chez vous dirrectement."
+    narrateur "{i}I should go home.{i/}"
     scene bedroom with fade
     pause 2.0
-    "{i}Je devrais quand même remercier Akane pour son acceuil..."
+    "{i}I should thank Chunhua for her warm welcome."
 
     call phone_start(usrc, "18:45") from _call_phone_start_4
     label choiceMaking_UAG: # Use this template eatch time u want to make a phone menu
-        call screen phone_reply("Merci pour l'accueil à l'école aujourd'hui","choiceMaking_UAG.choice1","Tu fais beaucoup pour la classe","choiceMaking_UAG.choice2")
+        call screen phone_reply("thanks for the welcome to","choiceMaking_UAG.choice1","Tu fais beaucoup pour la classe","choiceMaking_UAG.choice2")
         label .choice1:
             call phone_after_menu from _call_phone_after_menu_6 # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
             call message_start(playerName, "Salut Akane! Merci pour l'accueil à l'école aujourd'hui") from _call_message_start_9 # whenever you put the sender name to be playerName it is the player characters own message!
