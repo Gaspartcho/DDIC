@@ -5,7 +5,7 @@ label route_A:
     pause 2.0
     "{i}Je devrais quand même remercier Akane pour son acceuil..."
 
-    call phone_start(usra, "18:45") from _call_phone_start_4
+    call phone_start(usrc, "18:45") from _call_phone_start_4
     label choiceMaking_UAG: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("Merci pour l'accueil à l'école aujourd'hui","choiceMaking_UAG.choice1","Tu fais beaucoup pour la classe","choiceMaking_UAG.choice2")
         label .choice1:
@@ -251,7 +251,7 @@ label RAF1:
     define ptsa2 = 0
     scene bedroom with fade
     narrateur "Quelques jours plus tard..."
-    call phone_start(usra, "20:36") from _call_phone_start_5
+    call phone_start(usrc, "20:36") from _call_phone_start_5
     call message_start (tpa, "Bonjour, [playerName]. Je sais que ça fait une semaine que je t'ai dit d'envoyer ce lien à Himeno, mais au final t'as plus besoin de le faire.") from _call_message_start_19
     call reply_message ("Ok...") from _call_reply_message_11
     call message (tpa, "Au fait, Je sais pas si tu as remarqué, mais il y a quelqu'un en ligne qui se fait passer pour moi.") from _call_message_58
@@ -309,7 +309,7 @@ label RAF1:
     "{i}Est-ce que je lui dit?"
     "{i}..."
 
-    call phone_start (usraf, "20:38") from _call_phone_start_6
+    call phone_start (usrcf, "20:38") from _call_phone_start_6
     call message_start(tpa, " Bonjour, [playerName]!") from _call_message_start_24
     call message(tpa, "Comment vas-tu depuis la semaine dernière?") from _call_message_68
     call message(tpa, "J'espère que ça va.") from _call_message_69
@@ -340,7 +340,7 @@ label RAF1:
     "{i}..."
     "{i}Je devrais avertir Akane."
 
-    call phone_start(usra, "20:38") from _call_phone_start_7
+    call phone_start(usrc, "20:38") from _call_phone_start_7
     label choiceMaking_PBC:
         call screen phone_reply("Sois super prudente","choiceMaking_PBC.choice1","Je vais t'aider à te protéger","choiceMaking_PBC.choice2")
         label .choice1:

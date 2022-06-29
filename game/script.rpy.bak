@@ -130,7 +130,7 @@ label game_Launching:
 
 label scene_1:
     scene bedroom with fade
-    call phone_start(usraf, "21:30")
+    call phone_start(usrcf, "21:30")
 
     call message_start(tpa, "Bienvenue à l'école X ! Je suis {b}Akane Kousei{/b}, la déléguée de classe. Si tu as des questions, n'hésite pas à les poser soit à tes camarades, soit aux enseignants, ou tu peux venir me voir. Même si tu nous as rejoints très tard dans l'année, nous t’accueillons toujours à bras ouverts :)")
     call message_img(tpa, "Au fait, ça c'est moi!", "images/instagram/A1_insta.png")
