@@ -15,9 +15,7 @@ label start:
     stop music
 
     if hasPlayBefore:
-        narrateur """
-
-        welcome back, \"%(playerName)s\""""
+        narrateur "welcome back, \"%(playerName)s\""
 
         stop music 
 
@@ -63,7 +61,7 @@ label game_Launching:
 
 label scene_1:
     scene bedroom with fade
-    call phone_start(usracf, "21:30") from _call_phone_start_8
+    call phone_start(usrcf, "21:30") from _call_phone_start_8
 
     call message_start(tpc, "Welcome to Nōburu highschool! I'm {b}Zhou ChunHua{/b}, the class president. If you have any questions, don't hesitate to ask your classmates, teachers or even me. Even if you joined us in the middle of the school year, we welcome you with open arms :)") from _call_message_start_29
     call message_img(tpc, "This is me!", "images/instagram/A1_insta.png") from _call_message_img_1
@@ -167,7 +165,7 @@ label scene_2:
     narrateur "the next day at school, i recieve a text message from an unknown number"
 
     call phone_start("REAL_BUISNESS", "08:02") from _call_phone_start_10
-    call message_start("REAL_BUISNESS", "Hey [playerName], wanna video chat me for free? fine me here http://cunscam.com/xxx xoxo") from _call_message_start_38
+    call message_start("REAL_BUISNESS", "Hey [playerName], wanna video chat me for free? find me here http://cunscam.com/xxx xoxo") from _call_message_start_38
     pause 2.0
     window show
     "???" "I wouldn't click on that if i were you."
@@ -207,13 +205,13 @@ label scene_2:
 
     {i}I'm pretty sure i talked to her last night{/i}"""
     show screen cexp("bpb", "beb", "bms", "bbn", p=p_center, h=h_down) 
-    narrateur "You look to the side, feeling a bit awkward that Akane didn't recognize you."
+    narrateur "You look to the side, feeling a bit awkward that Chunhua didn't recognize you."
     narrateur "You spot a girl with pink hair dozing off on her desk."
     narrateur "You approach her and take a peek at her phone."
 
     """{i}...{/i}
 
-    {i}Isn't that my convo with Akane last night?{/i}
+    {i}Isn't that my convo with Chunhua last night?{/i}
 
     {i}...{/i}"""
 
@@ -221,7 +219,7 @@ label scene_2:
     play audio class_bell
     narrateur """... but the bell rings.
     
-    You go back to see Akane."""
+    You go back to see Chunhua."""
     show screen cexp("apr", "aeb", "ams", "abn", p=p_center, h=h_down)
     playerName "Who's that?"
     show screen cexp("apr", "ael", "amt", "abn", p=p_center, h=h_down)
@@ -238,11 +236,9 @@ label scene_2:
     scene black with Fade(3.0, 0, 1.0)
     scene classroom with Fade(3.0, 0, 1.0)
     scene black with Fade(3.0, 0, 1.0)
+    scene classroom with Fade(3.0, 0, 1.0)
+    scene black with Fade(3.0, 0, 1.0)
     pause 2.0
-
-    narrator """En tout cas, choisis bien.
-    
-    Tes décisions ont une importance ici."""
 
     show screen mlt with fade
 
@@ -250,11 +246,9 @@ label scene_2:
 
 label road_menu:
     menu:
-        "{i}Je choisis...{/i}"
-
-        "Akane":
+        "Chunhua":
             $ road = "1"
-            playerName "Akane!"
+            playerName "Chunhua!"
         "Bomi":
             $ road = "2"
             playerName "Bomi!"
@@ -262,11 +256,9 @@ label road_menu:
             $ road = "3"
             playerName "Himeno!"
     hide screen mlt with fade
-    c_mysteriousMan """Bien. Bonne chance pour la suite, on se reverra à la fin...
-
-    Allez, réveille-toi, c'est l'heure de la fin des cours.
+    c_mysteriousMan """good choice!
     
-    ;)"""
+    wake up :)"""
 
     stop music fadeout 1.5
     narrateur "Vous vous réveillez."

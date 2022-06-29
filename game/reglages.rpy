@@ -35,18 +35,18 @@ label after_load:
     define c_akane = Character("Akane", who_color="6d7aad")
     define c_himeno = Character("Himeno", who_color="db4cad")
     define tpb = "Bomi"
-    define tpa = "Akane"
+    define tpc = "ChunHua"
     define tph = "Himeno"
     define usrb = "bombomii"
-    define usra = "kousei.akane"
+    define usrc = "zhou.chunhua"
     define usrh = "yuzu.himi"
-    define usraf = "akanekouseii"
+    define usrcf = "zhouchunhua"
     
 #endregion
 
 #region Images
 
-# Akane
+# ChunHua
     image apc = "images/Characters/Akane/akane_default.png"
     image apr = "images/Characters/Akane/akane_chin.png"
 
