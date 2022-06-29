@@ -1345,7 +1345,7 @@ screen phone_object(caller, hour):
         text hour xpos 0.24 ypos 0.04 font "gui/font/roboto-bold.ttf" color "000" size 25
         if caller == usrb:
             add "Bomi pfp" at pfp_pos
-        if caller == usra or caller == usraf:
+        if caller == usrc or caller == usrcf:
             add "Akane pfp" at pfp_pos
         if caller == usrh:
             add "Himeno pfp" at pfp_pos
