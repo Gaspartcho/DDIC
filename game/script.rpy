@@ -94,7 +94,7 @@ label scene_1:
 
         label .choice1:    
             call phone_after_menu from _call_phone_after_menu_26
-            call message_start(playerName, "Oh. What has she done?") from _call_message_start_32
+            call message_start(playerName, "What has she done?") from _call_message_start_32
             call message(tpc, "Elle aime se moquer de moi... de tout le monde en fait... je ne sais pas pourquoi.") from _call_message_86
             jump .aftermenu
             
