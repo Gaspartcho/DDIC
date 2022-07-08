@@ -1,180 +1,173 @@
 label route_A:
-    define ptsa1 = 0
+    define ptsc1 = 0
     narrateur "{i}I should go home.{i/}"
     scene bedroom with fade
     pause 2.0
-    "{i}I should thank Chunhua for her warm welcome."
+    "{i}I should thank Chunhua for the warm welcome."
 
     call phone_start(usrc, "18:45") from _call_phone_start_4
     label choiceMaking_UAG: # Use this template eatch time u want to make a phone menu
-        call screen phone_reply("thanks for the welcome to","choiceMaking_UAG.choice1","Tu fais beaucoup pour la classe","choiceMaking_UAG.choice2")
+        call screen phone_reply("thanks for the warm welcome ^^","choiceMaking_UAG.choice1","I'm under the impression you do a lot for our class","choiceMaking_UAG.choice2")
         label .choice1:
             call phone_after_menu from _call_phone_after_menu_6 # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
-            call message_start(playerName, "Salut Akane! Merci pour l'accueil à l'école aujourd'hui") from _call_message_start_9 # whenever you put the sender name to be playerName it is the player characters own message!
-            call message(tpa, "Tkt. Je ne fais que mon devoir après tout") from _call_message_22
+            call message_start(playerName, "Hello Chunhua! thanks for the warm welcome ^^") from _call_message_start_9 # whenever you put the sender name to be playerName it is the player characters own message!
+            call message(tpc, "TIt's no problem. It's my job after all") from _call_message_22
             jump .aftermenu
         label .choice2:
-            $ ptsa1 += 1
+            $ ptsc1 += 1
             call phone_after_menu from _call_phone_after_menu_7
-            call message_start(playerName, "J'ai l'impression que tu fais beaucoup pour la classe") from _call_message_start_10
-            call message(playerName, "Je suis content qu'on ait quelqu'un d'aussi responsable comme déléguée.") from _call_message_23
-            call message(tpa, "Merci beaucoup.") from _call_message_24
+            call message_start(playerName, "I'm under the impression you do a lot for our class") from _call_message_start_10
+            call message(playerName, "I'm glad in the care of such a responsible person") from _call_message_23
+            call message(tpc, "Thank you.") from _call_message_24
             jump .aftermenu
         label .aftermenu:
     
-    call message (tpa, "C'est beaucoup de travail quand même.") from _call_message_25
-    call message (tpa, "Les gens sont très difficiles à gérer...") from _call_message_26
-    call message (tpa, "Certaines ne semblent tout simplement pas capables d'écouter des consignes.") from _call_message_27
-    call message (tpa, "J'espère que au moins tu es différent") from _call_message_28
-    call message (tpa, "Au fait, voici un lien de mon site web. Il contient tous les cours, leçons, devoirs et examens à venir mis à jour régulièrement.") from _call_message_29
-    call message (tpa, "{u}http://totallynotabadwebsite.com{/u}") from _call_message_30
+    call message (tpc, "It's a lot of work") from _call_message_25
+    call message (tpc, "People are hard to manage...") from _call_message_26
+    call message (tpc, "Some just don't seem to be able to listen to instructions.") from _call_message_27
+    call message (tpc, "I hope you're different.") from _call_message_28
+    call message (tpc, "Actually, now that i remember, here is a link to my school website. It updates regularly with the upcoming homework, assignments and exams.") from _call_message_29
+    call message (tpc, "{u}http://totallynotabadwebsite.com{/u}") from _call_message_30
 
     label choiceMaking_IPG:
-        call screen phone_reply("Le site est un peu bizarre","choiceMaking_IPG.choice1","ah ok, j'irai peut-être voir.","choiceMaking_IPG.choice2")
+        call screen phone_reply("It looks a bit funny","choiceMaking_IPG.choice1","oh okay, I'll go check it out.","choiceMaking_IPG.choice2")
         label .choice1:
             call phone_after_menu from _call_phone_after_menu_8
-            $ ptsa1 += 1
+            $ ptsc1 += 1
             call message_start(playerName, "...") from _call_message_start_11
-            call reply_message("Le site est un peu bizarre, est-ce qu'il est sûr ?") from _call_reply_message_6
-            call message(tpa, "non.") from _call_message_31
+            call reply_message("It looks a bit funny") from _call_reply_message_6
+            call message(tpc, "no it doesn't") from _call_message_31
             jump .aftermenu
         label .choice2:
             call phone_after_menu from _call_phone_after_menu_9
-            call message_start(playerName, "ah ok, j'irai peut-être voir") from _call_message_start_12
-            call message(tpa, "^^") from _call_message_32
+            call message_start(playerName, "oh okay, I'll go check it out.") from _call_message_start_12
+            call message(tpc, "^^") from _call_message_32
             jump .aftermenu
         label .aftermenu:
     
-    call message (tpa, "Au fait:") from _call_message_33
-    call message (tpa, "Tu préfère les chats ou les chiens?") from _call_message_34
+    call message (tpc, "Do you prefer cats or dogs?") from _call_message_34
 
     label choiceMaking_DOC:
-        call screen phone_reply("J'aime les deux","choiceMaking_DOC.choice1","Je préfère les chats","choiceMaking_DOC.choice2")
+        call screen phone_reply("i like both","choiceMaking_DOC.choice1","i prefer cats","choiceMaking_DOC.choice2")
         label .choice1:
-            $ ptsa1 += 1
+            $ ptsc1 += 1
             call phone_after_menu from _call_phone_after_menu_10
-            call message_start(playerName, "J'aime les deux.") from _call_message_start_13
-            call message(tpa, "Je vois, eh bien au moins tu penses aussi que les chiens sont mignons.") from _call_message_35
+            call message_start(playerName, "i like both") from _call_message_start_13
+            call message(tpc, "I see, at least you still like dogs.") from _call_message_35
             jump .aftermenu
         label .choice2:
             call phone_after_menu from _call_phone_after_menu_11
-            call message_start(playerName, "Je préfère les chats.") from _call_message_start_14
-            call message(tpa, "Je vois, chacun ses goûts.") from _call_message_36
+            call message_start(playerName, "i prefer cats.") from _call_message_start_14
+            call message(tpc, "I see, to each their own i suppose.") from _call_message_36
             jump .aftermenu
         label .aftermenu:
     
-    call message (tpa, "J'adore les chiens") from _call_message_37
-    call message (tpa, "Ils sont fidèles à leurs maîtres et font ce qu'on leur dit") from _call_message_38
-    call message (tpa, "Du moins la plupart du temps...") from _call_message_39
-    call message (tpa, "Si la plupart des gens avaient le même état d'esprit que les chiens, on aurait la paix dans le monde.") from _call_message_40
-    call message (tpa, "Ou en tout cas quelque chose de mieux que ce qu'on a") from _call_message_41
+    call message (tpc, "I love dogs") from _call_message_37
+    call message (tpc, "They are loyal to their owners and do what they're told") from _call_message_38
+    call message (tpc, "Most of the time at least...") from _call_message_39
+    call message (tpc, "If most people had the same mindset as dogs, we'd probably have world peace.") from _call_message_40
+    call message (tpc, "Or something of the sort.") from _call_message_41
 
     label choiceMaking_DAP:
-        call screen phone_reply("Les gens ne sont pas des chiens","choiceMaking_DAP.choice1","Je suis d'accord","choiceMaking_DAP.choice2")
+        call screen phone_reply("But people aren't dogs...","choiceMaking_DAP.choice1","I agree","choiceMaking_DAP.choice2")
         label .choice1:
             call phone_after_menu from _call_phone_after_menu_12
-            call message_start(playerName, "Mais, les gens ne sont pas des chiens...") from _call_message_start_15
-            $ ptsa1 += 1
-            call reply_message("Ils ont besoin de leur vie privée, de leur libre arbitre...") from _call_reply_message_7
-            call message(tpa, "Peut-être.") from _call_message_42
-            call message(tpa, "Mais au moins ce serait plus facile de maintenir l'ordre") from _call_message_43
-            call message(playerName, "Tu te rend compte au moins de ce que tu dis?") from _call_message_44
-            call message(tpa, "Oui.") from _call_message_45
+            call message_start(playerName, "But people aren't dogs...") from _call_message_start_15
+            $ ptsc1 += 1
+            call reply_message("They need privacy, freedom...") from _call_reply_message_7
+            call message(tpc, "Maybe.") from _call_message_42
+            call message(tpc, "But it would still be easier to maintain order") from _call_message_43
+            call message(playerName, "Do you realize what you're saying?") from _call_message_44
+            call message(tpc, "Yes .") from _call_message_45
             jump .aftermenu
         label .choice2:
             call phone_after_menu from _call_phone_after_menu_13
-            call message_start(playerName, "Je suis d'accord.") from _call_message_start_16
-            call reply_message("Ils sont tellement sympa et mignons, tout le monde serait content") from _call_reply_message_8
-            call message(tpa, "Haha") from _call_message_46
+            call message_start(playerName, "I agree") from _call_message_start_16
+            call reply_message("They're so nice and cute, everyone would be happy.") from _call_reply_message_8
+            call message(tpc, "Haha") from _call_message_46
             jump .aftermenu
         label .aftermenu:
 
-    call message (tpa, "D'ailleurs, j'adore faire du dog-sitting pendant mon temps libre.") from _call_message_47
-    call message_img(tpa, "", "images/instagram/A2_insta.png") from _call_message_img
-    call message (tpa, "Cela rapporte un peut d'argent.") from _call_message_48
-    call message (tpa, "Ma famille est plutôt aisée") from _call_message_49
-    call message (tpa, "Mais un peut d'argent de poche de temps en temps, ça ne fais de mal à personne") from _call_message_50
-    call message (tpa, "Ca te dirais de m'accompagner un jour ?") from _call_message_51
+    call message (tpc, "I love dog sitting in my spare time.") from _call_message_47
+    call message_img(tpc, "", "images/instagram/A2_insta.png") from _call_message_img
+    call message (tpc, "It gives me a bit of pocket money") from _call_message_48
+    call message (tpc, "My family is pretty well off") from _call_message_49
+    call message (tpc, "But a bit of extra cash never hurt anyone.") from _call_message_50
+    call message (tpc, "Do you want to join me one day?") from _call_message_51
 
     label choiceMaking_DSA:
-        call screen phone_reply("Bien sûr!","choiceMaking_DSA.choice1","J'ai beaucoup à rattraper avec l'école","choiceMaking_DSA.choice2")
+        call screen phone_reply("Of course!","choiceMaking_DSA.choice1","i have a lot to catch up with school...","choiceMaking_DSA.choice2")
         label .choice1:
             call phone_after_menu from _call_phone_after_menu_14
-            call message_start(playerName, "Bien sûr!") from _call_message_start_17
-            $ ptsa1 += 1
-            call reply_message("Je viendrai avec toi après avoir fini tous mes devoirs!") from _call_reply_message_9
-            call message(tpa, "Parfait") from _call_message_52
-            call message(tpa, "Au fait, c'est juste une formalité, mais...") from _call_message_53
+            call message_start(playerName, "Of course!") from _call_message_start_17
+            $ ptsc1 += 1
+            call message(tpc, "Perfect.") from _call_message_52
             jump .aftermenu
         label .choice2:
             call phone_after_menu from _call_phone_after_menu_15
-            call message_start(playerName, "Je suis désolé") from _call_message_start_18
-            call reply_message("J'ai beaucoup à rattraper avec l'école :((") from _call_reply_message_10
-            call message(tpa, "Ok pas de problème") from _call_message_54
-            call message(tpa, "Juste, au cas où tu changes d'avis...") from _call_message_55
+            call message_start(playerName, "i have a lot to catch up with school...") from _call_message_start_18
+            call message(tpc, "That's okay") from _call_message_54
+            call message(tpc, "If you ever change your mind...") from _call_message_55
             jump .aftermenu
         label .aftermenu:
 
-    call message(tpa, "Tu peut me donner tes coordonnées banquaires?") from _call_message_56
-    call message(tpa, "Comme ça on poura te faire un virement en avance...") from _call_message_57
+    call message(tpc, "could you give me your bank details?") from _call_message_56
+    call message(tpc, "that way I could sign you up in advance.") from _call_message_57
     call phone_end(False) from _call_phone_end_4
 
-    narrateur "Tu as décidé d'attendre de pouvoir faire le travail avant lui transmettre tes coordonnées."
-    narrateur "Tu poses ton téléphone et tu t'endors..."
-    scene black with fade
-    narrateur "Le lendemain..."
+    narrateur "Uhm"
+    narrateur "I'll just wait a little before i do..."
     scene classroom day with fade
     pause 1.0
-    c_akane "{cps=50}Bonjour, [playerName].{nw}"
+    c_akane "{cps=50}Hello, [playerName]."
     show screen cexp("apc", "aeb", "ams", "abn", h=h_mid)
     "{i}Holy Sweet Baby Jesus!!"
-    "{i}Elle doit arrêter d'apparaître de nulle part."
+    "{i}She's got to stop appearing out of nowhere"
     show screen cexp("apc", "ael", "ams", "abn", h=h_mid)
-    playerName "Salut Akane, t'as besoin de quelque chose?"
+    playerName "Hey Chunhua, you need something?"
     show screen cexp("apc", "ael", "amt", "abn", h=h_mid)
-    c_akane "Oui, j'aurais besoin de ton aide."
-    c_akane "Tu vois Himeno?"
-    c_akane "La blonde un peu bronzée."
+    c_akane "Yes, I need a favor from you."
+    c_akane "You know Himeno?"
+    c_akane "The blonde girl thats a bit tanned."
     show screen cexp("apc", "aeb", "ams", "abn", h=h_mid)
-    c_akane "Tu peux lui envoyer ce lien?"
+    c_akane "Could you send her this link?"
     show screen cexp("apc", "ael", "ams", "abn", h=h_mid)
-    c_akane "C'est un chèque cadeau pour la remercier."
-    c_akane "Tu vois, sa famille est très riche: elle donne beaucoup pour financer l'école."
+    c_akane "It's a gift card to thanking her and her family."
+    c_akane "You see, her family is extremely wealthy and they regularly donate to our school."
     show screen cexp("apr", "aeb", "ams", "abn", h=h_mid)
 
     menu:
-        c_akane "Donc j'aimerais lui faire un petit cadeau de la part de toute la classe pour la remercier."
-        "Euhh. Ca m'a l'air bizarre":
-            $ ptsa1 += 1
-            playerName "Euhh. Ca m'a l'air bizarre"
+        c_akane "I thought this would be a nice thank you gift coming from the whole class."
+        "Uh... This seems a bit weird":
+            $ ptsc1 += 1
+            playerName "Uh... This seems a bit weird"
             show screen cexp("apr", "ael", "ams", "abn", h=h_mid)
-            c_akane "Il est crypté pour que personne d'autre que Himeno peut l'ouvrir..."
+            c_akane "It's crypted in a way only Himeno can open it"
 
-        "D'accord, mais pourquoi ne le fais-tu pas toi-même?":
-            playerName "D'accord, mais pourquoi ne le fais-tu pas toi-même?"
+        "Okay, but why can't you do it yourself?":
+            playerName "Okay, but why can't you do it yourself?"
             show screen cexp("apr", "ael", "amt", "abn", h=h_mid)
-            c_akane "C'est pour le symbolisme tu vois..."
+            c_akane "I'ts symbolic. If I give it to Himeno might think I am looking down on her."
             show screen cexp("apr", "aeb", "ams", "abn", h=h_mid)
-            c_akane "Un nouvel élève qui remercie déja les bienfaiteurs de l'école, ça donnera un message positif."
+            c_akane "A new student thanking the donors of our school is a positive message."
     
     "{i}..."
-    "{i}C'est la deuxième fois qu'Akane m'envoie quelque chose de suspect..."
+    "{i}This is the second time Chunhua has sent me something suspicious..."
     show screen cexp("apc", "ael", "ams", "abn", h=h_mid)
-    playerName "Tu essayerais pas de nous arnaquer Himeno et moi par hasard?"
+    playerName "You aren't by any chance trying to scam us?"
     show screen cexp("apr", "aea", "ams", "abn", h=h_mid)
     c_akane "..."
     show screen cexp("apr", "aeb", "ams", "abn", h=h_mid)
-    c_akane "Non."
+    c_akane "No."
     show screen cexp("apr", "aeb", "amt", "abn", h=h_mid)
-    c_akane "C'a m'arrive de faire des blagues aux gens parfois..."
-    c_akane "Mais rien de méchant."
+    c_akane "Sometimes i like to do silly tricks..."
+    c_akane "Nothing evil though."
     show screen cexp("apr", "aeb", "ams", "abn", h=h_mid)
     menu:
-        c_akane "Et donc sinon, pour le lien?"
-        "Tu ne devrais pas prendre l'argent des autres":
-            $ ptsa1 += 1
-            playerName "Akane, tu ne devrais pas avoir envie de prendre l'argent des autres."
-            playerName "Penses à l'autre qui est plus misérable et en prenant le peu qu'il a, tu lui ruine sa vie!"
+        c_akane "So, what will you do?"
+        "Chunhua, You shouldn't feel the need to take other people's money.":
+            $ ptsc1 += 1
+            playerName "Chunhua, You shouldn't feel the need to take other people's money."
             show screen cexp("apr", "ael", "amt", "abn", h=h_mid)
             c_akane "Pardon?"
 
@@ -188,7 +181,7 @@ label route_A:
     c_akane "Je dois y aller, on se revéras plus tard."
     hide screen cexp
     
-    if ptsa1 >= 4:
+    if ptsc1 >= 4:
         jump RAF1
     else:
         jump RAB1
@@ -248,7 +241,7 @@ label RAB1:
     jump game_over
 
 label RAF1:
-    define ptsa2 = 0
+    define ptsc2 = 0
     scene bedroom with fade
     narrateur "Quelques jours plus tard..."
     call phone_start(usrc, "20:36") from _call_phone_start_5
@@ -274,7 +267,7 @@ label RAF1:
         label .choice2:
             call phone_after_menu from _call_phone_after_menu_17
             call message_start(playerName, "Tu devrais le dénoncer") from _call_message_start_21
-            $ ptsa2 += 1
+            $ ptsc2 += 1
             call message(tpa, "C'est inutile, Ils ne feront sûrement rien") from _call_message_62
             call message(tpa, "Je ne peux même pas si je le voulais de toute façon") from _call_message_63
             call message(tpa, "Je n'ai aucune idée de qui il s'agit.") from _call_message_64
