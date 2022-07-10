@@ -191,51 +191,50 @@ label RBB1:
 
 label RBF1:
     define ptsb2 = 0
-    narrateur "Le lendemain."
     scene classroom day with fade
 
     "???" "Hey! [playerName]!"
     show screen cexp("bpb", "bel", "bmh", "bbn", h=h_down)
-    c_bomi "J'ai retiré mes extensions."
+    c_bomi "I got rid of my extensions."
     show screen cexp("bpf", "beb", "bmh", "bbs", h=h_down)
-    c_bomi "Elles commençaient à devenir lourdes haha..."
+    c_bomi "They were starting to get heavy, haha"
     show screen cexp("bpf", "bea", "bms", "bbs", h=h_down)
     menu:
         c_bomi "..."
-        "Je suis sûr qu'elle ne l'a pas encore postée":
+        "I'm sure she hasn't posted it yet":
             show screen cexp("bpf", "bel", "bms", "bbs", h=h_down)
-            playerName "Je suis sûr qu'elle ne l'a pas encore postée."
+            playerName "I'm sure she hasn't posted it yet."
             
-        "Allons chercher Himeno":
+        "Let's go find Himeno":
             show screen cexp("bpf", "bel", "bms", "bbs", h=h_down)
-            playerName "Allons chercher Himeno"
+            playerName "Let's go find Himeno"
             $ ptsb2 += 1
     show screen cexp("bpf", "bea", "bms", "bbs", h=h_down)
     c_bomi "..."
     show screen cexp("bpf", "bel", "bmt", "bbs", h=h_down)
-    c_bomi "Je pense qu'elle est sur le toit en train de déjeuner et de prendre des photos pour Instagram."
+    c_bomi "I think she's on the rooftop taking pictures for her followers."
     show screen cexp("bpf", "bel", "bms", "bbs", h=h_down)
-    "{i} A-t-elle déjà posté?"
-    narrateur """Tu sors ton tel pour vérifier.
-    D'abord, tu regardes le compte de Bomi"""
+    "{i} Has she already posted?"
+    narrateur """You pull out your phone to check.
+    You look at Bomi, account first."""
     show screen cexp("bpf", "bea", "bms", "bbs", h=h_down)
     "{i}Wow..."
-    "{i}Ces commentaires sont stupides et méchants..."
-    "{i}Himeno n'a aucune pitié."
+    "{i}These comments are harsh..."
+    "{i}Himeno has no mercy."
     "..."
     show screen cexp("bpb", "beb", "bms", "bbs", h=h_down)
-    narrateur "Tu trouves la photo de Bomi avec ses extensions de cheveux, postée et virale."
+    narrateur "You find the picture of Bomi posted on her spam account, viral."
     show screen cexp("bpb", "bel", "bmf", "bbs", h=h_down)
-    c_bomi "Ah..."
+    c_bomi "Oh..."
     show screen cexp("bpb", "bea", "bmf", "bbs", h=h_down)
-    c_bomi "J'espérais que tu n'allais pas la voir..."
+    c_bomi "I was hoping she wouldn't have done that..."
     show screen cexp("bpb", "beb", "bmf", "bbs", h=h_down)
-    c_bomi "Je ne pensais pas que c'était si reconnaissable..."
+    c_bomi "I didn't think it was that noticeable..."
     show screen cexp("bpb", "bel", "bms", "bbs", h=h_down)
     menu:
         c_bomi "..."
-        "Tu devrais y repondre":
-            playerName "Tu devrais y repondre"
+        "You should respond":
+            playerName "You should respond"
             playerName "Et aller la confronter dirrectement!"
 
         "N'y fais pas attention.":
