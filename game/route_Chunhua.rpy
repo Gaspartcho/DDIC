@@ -169,16 +169,16 @@ label route_A:
             $ ptsc1 += 1
             playerName "Chunhua, You shouldn't feel the need to take other people's money."
             show screen cexp("apr", "ael", "amt", "abn", h=h_mid)
-            c_akane "Pardon?"
+            c_akane "Sorry?"
 
-        "Je peux attendre un peu plus longtemps ?":
-            playerName "..."
-            playerName "Est-ce que tu pourais me laisser un peut plus de temps?"
-            playerName "Histoire que je fasse bien connaissance avec tout le monde..."
+        "Can i wait a little?":
+            playerName "Can i wait a little?"
+            playerName "to get to know everyone a bit better..."
     show screen cexp("apr", "ael", "amn", "abn", h=h_mid)
-    c_akane "Bon, si tu n'as pas envie de le faire, je vais m'en occuper" 
+    c_akane "If you don't want to do it, I'll take care of it." 
+    "Teacher" "Chunhua! Could you help me with these papers?"
     show screen cexp("apr", "aeb", "ams", "abn", h=h_mid)
-    c_akane "Je dois y aller, on se revéras plus tard."
+    c_akane "I need to go, see you soon."
     hide screen cexp
     
     if ptsc1 >= 4:
@@ -187,54 +187,40 @@ label route_A:
         jump RAB1
 
 label RAB1:
-    "{i}Bon, et puis zut! Qu'est-ce qui pourai mal se passer de toute façon?"
-    scene black with fade
+    """{i}It's been a week.{/i}
 
-    """{i}Ça fait une semaine que je suis arrivé à l'école.{/i}
+    {i}I've learned everyone's names, but i haven't really made any close friends.{/i}
 
-    {i}J'ai appris les noms de tout le monde, mais je ne me suis pas fait de véritables amis.{/i}
-
-    {i}J'ai décidé d'envoyer le \"cadeau\" d'Akane à Himeno. {/i}
+    {i}I decided to send Chunhua's gift to Himeno. {/i}
 
     ...
 
     ..."""
     scene classroom late with fade 
 
-    """{i}Cela fait trois jours que j'ai envoyé ce lien à Himeno.{/i}
+    """{i}It's been 3 days since I've sent the gift.{/i}
 
-    {i}Je me demande ce que c'était, mais je passe à autre chose et je continue ma journée.{/i}"""
-    "Prof" "Les deux solutions à ces fonctions sont-"
-    "???" "Excusez-moi. Est-ce que Akane Kousei est là ?"
+    {i}I wonder what it was.{/i}"""
+    "Teacher" "The two solutions to this function-"
+    "???" "Excuse me. Is Zhou Chunhua here?"
     show screen cexp("apc", "aea", "amn", "abn", h=h_mid)
-    playerName "Akane, qu'est-ce qui se passe?"
     c_akane "..."
+    "Teacher" "Who are you? This is a classroom. You can't just come in like this!"
+    "Mr. Aki" """I am detective Aki. I'm here for a case involving Zhou Chunhua.
 
-    "{i}Elle semble pâle mais calme.{/i}"
-    "Prof" "Qui êtes-vous? Ceci est une salle de classe. Vous ne pouvez pas simplement rentrer comme ça!"
-    "Mr. Aki" """Je suis le détective Aki. Je suis là pour une enquête sur une affaire impliquant Akane Kousei.
-
-    Mademoiselle Kousei, veuillez sortir et venir avec moi."""
+    Miss Zhou, please step out the classroom and come with me."""
     show screen cexp("apc", "aea", "ams", "abn", h=h_mid)
     pause
     hide screen cexp
     scene black with fade
-    """{i}On a appris par Himeno que Akane était responsable de vol et de diverses arnaques en ligne.
-    
-    {i}Himeno étais l'une des victimes, elle avais perdu beaucoup d'argent à cause de ça.
-
-    {i}Il faudrais qu'elle fasse plus attention à ce qu'elle achète.
-    
-    {i}Un an plus tard, Akane a été mise en procès.{/i}"""
+    "{i}Un an plus tard, Akane a été mise en procès.{/i}"
     scene AB1 with fade
-    "Juges" """Kousei Akane.
+    "Judge" """Zhou Chunhua.
+    
+    You are accused of theft from the Yuzu family.
 
-    Vous êtes accusé de vol contre la famille Yuzu.
-
-    Vous plaidez coupable ?"""
-    c_akane "Oui, messieurs."
-    "{i}..."
-    "{i}Je pense qu'Akane ne pourra jamais finir sa scolarité...{/i}"
+    Do you plead guilty ?"""
+    c_akane "Yes sir."
     window hide
     pause
 
@@ -243,34 +229,34 @@ label RAB1:
 label RAF1:
     define ptsc2 = 0
     scene bedroom with fade
-    narrateur "Quelques jours plus tard..."
-    call phone_start(usrc, "20:36") from _call_phone_start_5
-    call message_start (tpa, "Bonjour, [playerName]. Je sais que ça fait une semaine que je t'ai dit d'envoyer ce lien à Himeno, mais au final t'as plus besoin de le faire.") from _call_message_start_19
-    call reply_message ("Ok...") from _call_reply_message_11
-    call message (tpa, "Au fait, Je sais pas si tu as remarqué, mais il y a quelqu'un en ligne qui se fait passer pour moi.") from _call_message_58
-    call message (tpa, "Il prend des photos de moi, vole mes photos de {b}mon{/b} compte et les publient comme les siennes.") from _call_message_59
-    call message (tpa, "C'est légèrement inquiétant...") from _call_message_60
+    narrateur "A few days later..."
+    call phone_start(usrc, "20:24") from _call_phone_start_5
+    call message_start (tpa, "Hello, [playerName]. I know it's been a week since I've asked you to send that gift to Himeno, turns out my gift expired so there's no need for it.") from _call_message_start_19
+    call reply_message ("Oh ok.") from _call_reply_message_11
+    call message (tpa, "Actually, I don't know if you've noticed, but someone has been catfishing as me.") from _call_message_58
+    call message (tpa, "They take pictures of me and steal my pictures from my account.") from _call_message_59
+    call message (tpa, "It's slightly worrisome...") from _call_message_60
 
     pause
     window show
-    "{i}Elle parle de Bomi?"
+    "{i}Is she talking about Bomi?"
     window hide
     
     label choiceMaking_WGD:
-        call screen phone_reply("Ca fait peur","choiceMaking_WGD.choice1","Tu devrais le dénoncer","choiceMaking_WGD.choice2")
+        call screen phone_reply("That's scary","choiceMaking_WGD.choice1","You should call them out","choiceMaking_WGD.choice2")
         label .choice1:
             call phone_after_menu from _call_phone_after_menu_16
-            call message_start(playerName, "Ca fait peur.") from _call_message_start_20
-            call reply_message("Qu'est-ce que tu vas faire?") from _call_reply_message_12
-            call message(tpa, "Non, pas vraiment. Je ne me sent pas menaçée à ce point.") from _call_message_61
+            call message_start(playerName, "That's scary.") from _call_message_start_20
+            call reply_message("Are you going to do something about it?") from _call_reply_message_12
+            call message(tpa, "No, not really. I don't feel particularily threatened by this .") from _call_message_61
             jump .aftermenu
         label .choice2:
             call phone_after_menu from _call_phone_after_menu_17
-            call message_start(playerName, "Tu devrais le dénoncer") from _call_message_start_21
+            call message_start(playerName, "You should call them out") from _call_message_start_21
             $ ptsc2 += 1
-            call message(tpa, "C'est inutile, Ils ne feront sûrement rien") from _call_message_62
-            call message(tpa, "Je ne peux même pas si je le voulais de toute façon") from _call_message_63
-            call message(tpa, "Je n'ai aucune idée de qui il s'agit.") from _call_message_64
+            call message(tpa, "There's no point, They surely won't do anything") from _call_message_62
+            call message(tpa, "I couldn't even if i wanted to.") from _call_message_63
+            call message(tpa, "I haven't got a clue on who it is.") from _call_message_64
 
             jump .aftermenu
         label .aftermenu:
@@ -281,64 +267,64 @@ label RAF1:
     window hide
 
     label choiceMaking_USP:
-        call screen phone_reply("Tu devrais prendre des précautions","choiceMaking_USP.choice1","Tu as raison","choiceMaking_USP.choice2")
+        call screen phone_reply("You should take precautions","choiceMaking_USP.choice1","You're right, I don't think they will do anything either.","choiceMaking_USP.choice2")
         label .choice1:
             call phone_after_menu from _call_phone_after_menu_18
-            call message_start(playerName, "Tu devrais prendre des précautions.") from _call_message_start_22
+            call message_start(playerName, "You should take precautions.") from _call_message_start_22
             $ ptsa2 += 1
-            call message(tpa, "Ok mais comment?") from _call_message_65
+            call message(tpa, "I don't really care.") from _call_message_65
             jump .aftermenu
         label .choice2:
             call phone_after_menu from _call_phone_after_menu_19
-            call message_start(playerName, "Tu as raison, il n'y a aucune raison pour que cette personne ne devienne un danger pour toi...") from _call_message_start_23
-            call message(tpa, "Bien sûr que j'ai raison.") from _call_message_66
+            call message_start(playerName, "You're right, I don't think they will do anything either.") from _call_message_start_23
+            call message(tpa, "Of course I'm right.") from _call_message_66
             jump .aftermenu
         label .aftermenu:
     
-    call message (tpa, "Je dois manger, salut.") from _call_message_67
+    call message (tpa, "Don't worry too much about it.") from _call_message_67
+    call message (tpa, "I need to eat, talk to you later.") from _call_message_67
     call phone_end from _call_phone_end_5
 
     "{i}..."
-    "{i}Est-ce que je lui dit?"
+    "{i}Should I tell her?"
     "{i}..."
 
     call phone_start (usrcf, "20:38") from _call_phone_start_6
-    call message_start(tpa, " Bonjour, [playerName]!") from _call_message_start_24
-    call message(tpa, "Comment vas-tu depuis la semaine dernière?") from _call_message_68
-    call message(tpa, "J'espère que ça va.") from _call_message_69
+    call message_start(tpa, " Hello, [playerName]!") from _call_message_start_24
+    call message(tpa, "How have you been this week?") from _call_message_68
+    call message(tpa, "I hope you've settled in well.") from _call_message_69
     call reply_message("...") from _call_reply_message_13
     call reply_message("Bomi Park?") from _call_reply_message_14
-    call message(tpa, "Quoi?") from _call_message_70
-    call message(tpa, "Pourquoi mentionnes-tu son nom ?") from _call_message_71
+    call message(tpa, "What?") from _call_message_70
+    call message(tpa, "Why are you mentioning her?") from _call_message_71
 
     label choiceMaking_KUR:
-        call screen phone_reply("Je sais qui tu es","choiceMaking_KUR.choice1","Non, rien...","choiceMaking_KUR.choice2")
+        call screen phone_reply("I know who you are","choiceMaking_KUR.choice1","No, nothing. I just wanted to know more about her.","choiceMaking_KUR.choice2")
         label .choice1:
             call phone_after_menu from _call_phone_after_menu_20
             $ ptsa2 += 1
-            call message_start(playerName, "Je sais qui tu es.") from _call_message_start_25
+            call message_start(playerName, "I know who you are.") from _call_message_start_25
             call message(tpa, "...") from _call_message_72
-            call message(tpa, "Ne parle jamais de ça.") from _call_message_73
+            call message(tpa, "Never speak of this.") from _call_message_73
             jump .aftermenu
         label .choice2:
             call phone_after_menu from _call_phone_after_menu_21
-            call message_start(playerName, "Ah, rien. J'aimerais en savoir plus sur elle") from _call_message_start_26
-            call reply_message("Elle semble être la plus forte de notre classe et j'aimerais savoir comment elle fait") from _call_reply_message_15
-            call message(tpa, "Je pourais...") from _call_message_74
-            call message(tpa, "Mais non.") from _call_message_75
+            call message_start(playerName, "No, nothing. I just wanted to know more about her.") from _call_message_start_26
+            call message(tpa, "I could tell you about her...") from _call_message_74
+            call message(tpa, "But i won't.") from _call_message_75
             jump .aftermenu
         label .aftermenu:
     call phone_end from _call_phone_end_6
 
     "{i}..."
-    "{i}Je devrais avertir Akane."
+    "{i}I should tell Chunhua."
 
-    call phone_start(usrc, "20:38") from _call_phone_start_7
+    call phone_start(usrc, "20:46") from _call_phone_start_7
     label choiceMaking_PBC:
-        call screen phone_reply("Sois super prudente","choiceMaking_PBC.choice1","Je vais t'aider à te protéger","choiceMaking_PBC.choice2")
+        call screen phone_reply("Please be really careful","choiceMaking_PBC.choice1","I'll teach you how to protect yourself","choiceMaking_PBC.choice2")
         label .choice1:
             call phone_after_menu from _call_phone_after_menu_22
-            call message_start(playerName, "Akane. S'il te plaît, sois super prudente.") from _call_message_start_27
+            call message_start(playerName, "Chunhua. Please be super careful.") from _call_message_start_27
             call message(tpa, "Je le serai.") from _call_message_76
             call message(tpa, "Mais pourquoi tu t'inquiète, ce n'es pas grave tu sais.") from _call_message_77
             call message(tpa, "Juste un peut énervant...") from _call_message_78

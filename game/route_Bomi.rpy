@@ -190,7 +190,6 @@ label RBB1:
     jump game_over
 
 label RBF1:
-    define ptsb2 = 0
     scene classroom day with fade
 
     "???" "Hey! [playerName]!"
@@ -208,7 +207,6 @@ label RBF1:
         "Let's go find Himeno":
             show screen cexp("bpf", "bel", "bms", "bbs", h=h_down)
             playerName "Let's go find Himeno"
-            $ ptsb2 += 1
     show screen cexp("bpf", "bea", "bms", "bbs", h=h_down)
     c_bomi "..."
     show screen cexp("bpf", "bel", "bmt", "bbs", h=h_down)
@@ -235,151 +233,100 @@ label RBF1:
         c_bomi "..."
         "You should respond":
             playerName "You should respond"
-            playerName "Et aller la confronter dirrectement!"
 
-        "N'y fais pas attention.":
-            $ ptsb2 += 1
-            playerName "N'y fais pas attention."
-            playerName "On devrait signaler l'incident sur instagram et à l'administration."
+        "Don't pay attention to it.":
+            playerName "Don't pay attention to it."
+            playerName "we should report her account and to the school administration."
 
     show screen cexp("bpb", "bea", "bms", "bbs", h=h_down)
     c_bomi "..."
-    playerName "Bon, allons voir Himeno."
+    playerName "Let's just go see her."
     show screen cexp("bpb", "bel", "bmt", "bbs", h=h_down)
-    c_bomi "Non!!" 
+    c_bomi "No!!" 
     show screen cexp("bpf", "bea", "bmt", "bbs", h=h_down)
-    c_bomi "J-je veux dire qu'on ne devrait pas."
+    c_bomi "I-I mean we shouldn't."
     show screen cexp("bpf", "bel", "bmt", "bbs", h=h_down)
-    c_bomi "Ça deviendrait plus compliqué que voulu."
+    c_bomi "It'll get more complicated than it should be."
     show screen cexp("bpb", "bea", "bmt", "bbs", h=h_down)
-    c_bomi "Ça passera... n'est-ce pas ?"
+    c_bomi "It'll go by... right ?"
     show screen cexp("bpb", "bel", "bms", "bbs", h=h_down)
 
     menu:
         c_bomi "..."
-        "Ouais. T'as juste à les ignorer et garder une preuve qu'on t'a envoyé de la haine.":
-            $ ptsb2 += 1
-            playerName "Ouais. T'as juste à les ignorer et garder une preuve qu'on t'a envoyé de la haine."
-            playerName "Elle finira par payer de toute façon."
+        "Yeah. Just keep proof somewhere and ignore the haters.":
+            playerName "Yeah. Just keep proof somewhere and ignore the haters."
+            playerName "She'll end up facing the consequences anyways"
 
-        "Defends-toi. ":
-            playerName "Defends-toi. "
-            playerName "Ils finiront par te croire."
-            playerName "Himeno aura ce quelle mérite!"
+        "Defend yourself.":
+            playerName "Defend yourself."
+            playerName "They'll end up believing you"
+            playerName "Himeno's got whats coming to her!"
 
     show screen cexp("bpb", "bea", "bmf", "bbs", h=h_down)
-    c_bomi "Oui mais..."
+    c_bomi "But..."
     show screen cexp("bpb", "beb", "bmf", "bbs", h=h_down)
-    c_bomi "Je voudrais pas lui attirer de problèmes..."
+    c_bomi "I don't want to cause her trouble..."
     show screen cexp("bpb", "bel", "bms", "bbs", h=h_down)
-    playerName "On dois lui faire comprendre que chaque actions a des conséquences!"
-    show screen cexp("bpb", "bea", "bms", "bbs", h=h_down)
     c_bomi "..."
-    playerName "Comment tu te sens?"
+    playerName "How do you feel?"
     show screen cexp("bpb", "bel", "bmf", "bbs", h=h_down)
-    c_bomi "Mal."
+    c_bomi "Bad."
     show screen cexp("bpb", "bea", "bmf", "bbs", h=h_down)
-    c_bomi "C'est atroce."
+    c_bomi "It's horrible."
     show screen cexp("bpb", "bel", "bmf", "bbs", h=h_down)
-    c_bomi "J'ai l'impression que ces commentaires me hantent..."
+    c_bomi "The comments fill my head making me believe them..."
     show screen cexp("bpb", "beb", "bmf", "bbs", h=h_down)
-    c_bomi "Ils m'ont empêché de dormir hier soir."
+    c_bomi "They kept me up last night."
     show screen cexp("bpb", "bel", "bmf", "bbs", h=h_down)
 
     menu:
-        c_bomi "Et chaque fois que j'en lis, je me sens encore moins bien."
-        "On devrait aller voir la psychologue scolaire.":
-            playerName "On devrait aller voir la psychologue scolaire."
-            $ ptsb2 += 1
+        c_bomi "The more i read, the more i believe it."
+        "We should get you a therapist":
+            playerName "We should get you a therapist"
             show screen cexp("bpb", "bel", "bmt", "bbn", h=h_down)
-            c_bomi "Et risquer qu'ils le disent à ma famille ?"
+            c_bomi "And risk the school telling my family?"
             show screen cexp("bpb", "bea", "bmt", "bbs", h=h_down)
-            c_bomi "Certainement pas!"
-            show screen cexp("bpb", "bel", "bms", "bbs", h=h_down)
-            playerName "Oui mais c'est important d'en parler à des personnes qualifiées..."
-            playerName "Ils pouront t'aider beaucoup mieux que moi et te donner des vrais conseils!"
+            c_bomi "No way!"
             show screen cexp("bpb", "bea", "bms", "bbs", h=h_down)
             c_bomi "..."
         
-        "Ils ne veulent rien dire. Ça ira.":
-            playerName "Ils ne veulent rien dire. Ça ira."
+        "They don't mean anything, it'll work out.":
+            playerName "They don't mean anything, it'll work out."
             show screen cexp("bpb", "bea", "bms", "bbs", h=h_down)
             c_bomi "..." 
     show screen cexp("bpb", "bel", "bmf", "bbs", h=h_down)
-    c_bomi "Bon ok."
-    c_bomi "Je ferai ce que tu m'as dit."
+    c_bomi "Fine."
     show screen cexp("bpf", "bel", "bmt", "bbs", h=h_down)
-    c_bomi "J'espère que tu as raison."
+    c_bomi "I hope you're right about this."
     hide screen cexp 
     scene black with fade
-
-    if ptsb2 > 2:
-        jump RBG
-    else:
-        jump RBB2
+    jump RBB2
 
 label RBB2:
     # A changer et a sénariser au fil du temps.
-    """{i}Ça fait un mois que j'ai parlé à Bomi du post.{/i}
+    """{i}It's been a month since I've talked to Bomi about the post.{/i}
 
-    {i}Le post s'est propagé et les gens à l'école ont commencé à le voir.{/i}
+    {i}The post spread so much that even the kids at school got whiff of it.{/i}
 
-    {i}Parfois, je trouvais des lettres dans son casier ou des mots méchants écrits sur son bureau.{/i}
+    {i}Sometimes I'd find hate messages on her locker.{/i}
 
-    {i}Apparemment, Akane a beaucoup d'admirateurs et puisque les gens essayaient d'imiter leur “déesse”, leurs commentaires finissaient par être ciblés.{/i}
+    {i}Apparently Chunhua had a lot of admirers and if someone tried to imitate their “godesse”, they'd get targeted.{/i}
 
-    {i}J'ai essayé de les cacher du mieux que je pouvais mais ce n'était pas assez.{/i}"""
+    {i}I tried to clean and keep the hate away from Bomi but it wasn't enough.{/i}"""
     scene classroom late with fade
-    "{i}Bomi a fini par les découvrir."
+    "{i}Bomi ended up finding out about it."
     show screen cexp("bpb", "bea", "bms", "bbs", h=h_down)
     c_bomi "..."
     show screen cexp("bpb", "bel", "bms", "bbs", h=h_down)
     c_bomi "..."
     show screen cexp("bpb", "bea", "bms", "bbs", h=h_down)
     c_bomi "..."
-    "{i}Au fil des jours, elle semblait se sentir de plus en plus mal."
     hide screen cexp
     scene BB2 with fade
-    """{i}À la fin, elle n'est plus venue en cours.{/i}
+    """{i}Eventually she just stopped coming to school.{/i}
 
-    {i}Personne n'a entendu parler d'elle depuis et je pense que la majorité n'ont rien fait pour essayer de prendre de ses nouvelles.{/i}
-
-    {i}Sa chaise est vide, ramassant la poussière au fil du temps.{/i}"""
+    {i}No one had heard from her and te be fair, no one cared.{/i}"""
 
     window hide
     pause
     jump game_over
-
-label RBG:
-    """{i}Ça fait un mois que j'ai parlé à Bomi du post.{/i}
-
-    {i}Bomi avait réussi à le supprimer pour “diffamation” et le compte de Himeno a été suspendu pendant un certain temps.{/i}
-
-    {i}J'ai accompagné Bomi à ses séances de thérapie et lentement mais sûrement, elle se reprenait en main.{/i}
-
-    {i}Même si la publication est devenue virale et que certains fans d'Akane l'ont encore insultée, Bomi a reçu beaucoup de soutien.{/i}"""
-    scene BGE with fade
-
-    "Serveur" "Voici votre plat."
-    playerName "Tiens, c'est chaud."
-    playerName "Tu peux le prendre d'abord."
-    c_bomi "Non, non, c'est pas grave je peux attendre."
-    narrateur """Elle détourne le regard en pensant du ramen.
-    
-    Tu sors ton portable et prends une photo d'elle et le plat.
-    
-    {i}Ma copine est tellement mignonne{/i}"""
-
-    c_bomi "H-Hey!!"
-
-    playerName "T'inquetes, t'inquetes... C'est une bonne photo."
-
-    "{i}Tu lui montre la photo."
-
-    c_bomi "...
-
-    Je peux la poster?" 
-    
-    window hide
-    pause
-    jump happy_ending
