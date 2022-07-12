@@ -321,20 +321,19 @@ label RAF1:
 
     call phone_start(usrc, "20:46") from _call_phone_start_7
     label choiceMaking_PBC:
-        call screen phone_reply("Please be really careful","choiceMaking_PBC.choice1","I'll teach you how to protect yourself","choiceMaking_PBC.choice2")
+        call screen phone_reply("Chunhua, Please be really careful","choiceMaking_PBC.choice1","Chunhua, I'll teach you how to protect yourself","choiceMaking_PBC.choice2")
         label .choice1:
             call phone_after_menu from _call_phone_after_menu_22
-            call message_start(playerName, "Chunhua. Please be super careful.") from _call_message_start_27
-            call message(tpa, "Je le serai.") from _call_message_76
-            call message(tpa, "Mais pourquoi tu t'inquiète, ce n'es pas grave tu sais.") from _call_message_77
-            call message(tpa, "Juste un peut énervant...") from _call_message_78
+            call message_start(playerName, "Chunhua, Please be really careful") from _call_message_start_27
+            call message(tpa, "I will.") from _call_message_76
+            call message(tpa, "Why are you worried, It's not that important.") from _call_message_77
+            call message(tpa, "its just a bit annoying...") from _call_message_78
             jump .aftermenu
         label .choice2:
             call phone_after_menu from _call_phone_after_menu_23
             $ ptsa2 += 1
-            call message_start(playerName, "Akane, je vais t'aider à mettre en place des précautions.") from _call_message_start_28
-            call reply_message("On devrait également le signaler pendant qu'on y est comme ça la situation ne deviendra pas incontrôlable.") from _call_reply_message_16
-            call message(tpa, "Ok") from _call_message_79
+            call message_start(playerName, "Chunhua, I'll teach you how to protect yourself.") from _call_message_start_28
+            call message(tpa, "Fine") from _call_message_79
             jump .aftermenu
         label .aftermenu:
     call phone_end from _call_phone_end_7
@@ -345,29 +344,24 @@ label RAF1:
         jump RAB2
 
 label RAB2:
-    "{i}Une semaine plus tard, tu reçois une notification de ton tel et tu vois Himeno est live."
+    "{i}A week later, i got a notification that Himeno is live on instargam."
 
     c_himeno """Oh.
 
-    Mon.
+    My.
 
-    Dieu.
+    Days.
 
-    Akane a transfert d'ecole!
-
-    Elle est maintenant à l'ecole Z.
-
-    Venons lui dire au revoirs </3"""
+    Chunhua is missing!"""
 
     "{i}...
 
-    Je devrais la chercher"
+    I should go find her"
     
     "..."
     scene AB2 with fade
-    playerName "Akane!"
-    c_akane "Ah. [playerName]."
-    playerName "Tu fais quoi?"
+    playerName "Chunhua!"
+    playerName "Where the fuck is she"
     c_akane "Je déménage."
     playerName "???"
     c_akane "Le faux Akane m'a déménage à l'école Z."
