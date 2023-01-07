@@ -116,7 +116,7 @@ label scene_1:
 
     call phone_start(usrh, "22:13") from _call_phone_start_9
     label choiceMaking_LUV: # Use this template eatch time u want to make a phone menu
-        call screen phone_reply("heyy~ you're hot!","choiceMaking_LUV.choice1","hey you can't possibly be that much of a bitch","choiceMaking_LUV.choice2")
+        call screen phone_reply("heyy~ you're hot!","choiceMaking_LUV.choice1","hey you can't possibly be that mean","choiceMaking_LUV.choice2")
         label .choice1:    
             call phone_after_menu from _call_phone_after_menu_28
             call message_start(playerName, "heyy~ you're hot!") from _call_message_start_34
@@ -125,8 +125,8 @@ label scene_1:
             
         label .choice2:
             call phone_after_menu from _call_phone_after_menu_29
-            call message_start(playerName, "hey you can't possibly be that much of a bitch") from _call_message_start_35
-            call message(tph, "the only bitch here is that pig looking nerd") from _call_message_91
+            call message_start(playerName, "hey you can't possibly be that mean") from _call_message_start_35
+            call message(tph, "the only annoying woman here is that pig looking nerd") from _call_message_91
             jump .aftermenu
         label .aftermenu:
     call message(tph, "i'm obviously the best") from _call_message_92
@@ -286,31 +286,29 @@ label game_over:
     play music MisteriousMan_theme fadein 1.0 loop
     c_mysteriousMan """...
     
-    Tu as perdu.
+    You lost.
     
-    Tu as fais les mauvais choix et tu a perdu.
-    
-    Que veut-tu faire maintenant?"""
+    What do you want to do now?"""
 
     menu:
-        "Recommencer au choix des routes":
-            playerName """Recommencer au choix des routes.
+        "Go back to selection":
+            playerName """Go back to route menu.
             
-            Recommencer, encore et encore.
+            Go back, again and again.
             
-            Jusqu'à que j'y arrive enfin."""
+            Until you find your good ending."""
 
-            c_mysteriousMan "Bien. J'aime cet état d'espris!"
-            c_mysteriousMan "Qui vas-tu choisir à présent?"
+            c_mysteriousMan "Good. I like your enthusiasm!"
+            c_mysteriousMan "Who will you pick now?"
             jump road_menu
 
-        "Quiter le jeu":
-            playerName "Quiter le jeu."
-            c_mysteriousMan """Bien. A la prochaine alors.
+        "Quit Game":
+            playerName "Quit Game."
+            c_mysteriousMan """Okay. See you next time.
 
-            Je t'aurais surement oulillé d'ici là, mais tu me ré-écoutera débiter mon discours ennuillant comme la pluie non?
+            I might forget you the next time I see you, but you'll listen to my speech again like sweet music won't you?
             
-            Dépèche toi quand même de revenir, je me sent si seul ici...
+            Come back quick will you, it's a bit lonely here...
             
             ;)"""
 
@@ -321,91 +319,87 @@ label game_over:
 label happy_ending:
     scene black with fade
     play music MisteriousMan_theme fadein 1.0 loop
-    c_mysteriousMan """Bravo!
+    c_mysteriousMan """Good Job!
     
-    Tu as gagné!
+    You Won!
     
-    Tu as réussi!
+    You did it!
     
-    Tu as triomphé!
+    You did something good.
     
-    Tu as fait quelque chose de bien.
+    You helped the lovely heroine.
     
-    Tu as aidé des gens.
-    
-    Tu as rendu le monde meilleur...
+    You made the world a better place...
     
     ...
     
     ...
     
-    Qu'est-ce que tu fais encore là?
+    What are you still doing here?
     
-    Tu peux partir tu sais?
+    You can leave now, you know?
     
-    Rien ne t'oblige à rester ici..."""
+    No one's keeping you here..."""
 
     menu:
-        "Non non rien, je m'en vais":
-            c_mysteriousMan """Tu es bizare tu sais...
+        "Nono, I'm leaving soon":
+            c_mysteriousMan """You're a bit quirky aren't you...
             
-            J'ai eu peur que tu te sois endormis devant ton écran.
+            i thought you fell asleep at your desk.
             
-            Bon, et bien c'est un au revoirs alors...
+            Well, I guess this is goodbye...
             
-            N'hésite pas à revenir me voir de temps en temps...
+            Don't hesitate to come back from time to time...
             
-            Je t'aurais oublillé mais...
+            I might forget you...
             
-            Ce sera toujours amusant.
+            But it'll always be fun.
             
             ;)"""
 
-        "Tu m'avais promis quelque chose...":
+        "You promised me something...":
             c_mysteriousMan """...
             
-            Moi?
+            Me?
             
-            Et qu'es-ce que je pourais bien t'avoir promis?"""
+            What could I have possibly promised you?"""
 
-            playerName "Ton identitée?"
+            playerName "Your identity?"
 
             c_mysteriousMan """Ah!
             
-            Oui c'est vrais...
+            Yes, that's right...
             
-            Et bien c'est simple...
+            It's simple, really...
             
-            Je suis juste un bout de code écris par un dévelopeur de ce jeu.
+            I'm just a script of code running.
             
-            Il avais juste envie que je sois là...
+            He just wanted me to be here...
             
-            Donc je suis là.
+            So I am.
             
-            Rien de plus compliqué.
+            Nothing more.
             
-            Déçu?
+            Disappointed?
             
-            Oui, je sais...
+            Yes, I know...
             
-            Mais bon, tous les histoires ne sont pas forcément palpitantes, non?
+            Well, not all truths are incredible, no?
             
             ;)"""
     
     stop music fadeout 1.5
 
-    narrateur """Fin du programme.
+    narrateur """You finished the game \"Doki-Doki information Club\"!
     
-    Vous avez terminé le jeu \"Doki-Doki Litterature Club\"!
+    created by \"NSI122\"
     
-    Une création de \"NSI122\"
-    
-    Merci d'avoir jouer."""
+    Thank you for playing."""
 
     menu:
-        narrateur "Voulez-vous recommencer une partie?"
+        narrateur "Would you like to play again?"
 
-        "oui":
+        "yes":
             jump start
-        "non":
+        "no":
             return

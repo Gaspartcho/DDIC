@@ -235,7 +235,7 @@ label RAF1:
     call reply_message ("Oh ok.") from _call_reply_message_11
     call message (tpa, "Actually, I don't know if you've noticed, but someone has been catfishing as me.") from _call_message_58
     call message (tpa, "They take pictures of me and steal my pictures from my account.") from _call_message_59
-    call message (tpa, "It's slightly worrisome...") from _call_message_60
+    call message (tpa, "It's slightly worrisome.") from _call_message_60
 
     pause
     window show
@@ -304,14 +304,14 @@ label RAF1:
             call phone_after_menu from _call_phone_after_menu_20
             $ ptsa2 += 1
             call message_start(playerName, "I know who you are.") from _call_message_start_25
-            call message(tpa, "...") from _call_message_72
-            call message(tpa, "Never speak of this.") from _call_message_73
+            call message(tpc, "...") from _call_message_72
+            call message(tpc, "Never speak of this.") from _call_message_73
             jump .aftermenu
         label .choice2:
             call phone_after_menu from _call_phone_after_menu_21
             call message_start(playerName, "No, nothing. I just wanted to know more about her.") from _call_message_start_26
-            call message(tpa, "I could tell you about her...") from _call_message_74
-            call message(tpa, "But i won't.") from _call_message_75
+            call message(tpc, "I could tell you about her...") from _call_message_74
+            call message(tpc, "But i won't.") from _call_message_75
             jump .aftermenu
         label .aftermenu:
     call phone_end from _call_phone_end_6
@@ -361,14 +361,9 @@ label RAB2:
     "..."
     scene AB2 with fade
     playerName "Chunhua!"
-    playerName "Where the fuck is she"
-    c_akane "Je déménage."
-    playerName "???"
-    c_akane "Le faux Akane m'a déménage à l'école Z."
-    playerName "Mais pourquoi tu ne fais rien?"
-    c_akane """Mes parents ont déjà accepté. Je ne peux rien faire.
-
-    au revoir, [playerName]."""
+    playerName "Where is she"
+    call phone_start (usrcf, "19:16")
+    call message_start(tpc, "Help")
 
     window hide
     pause
@@ -376,16 +371,16 @@ label RAB2:
 
 label RAF:
     scene blacks with fade
-    "{i}J'ai rencontré Akane le lendemain à l'école."
+    "{i}I met Chunhua the next day at school."
     scene AGE with fade
-    c_akane "Alors que veux-tu que je fasse ?"
-    playerName "Alors..."
-    """{i}J'ai expliqué à Akane les choses les plus élémentaires sur la façon de protéger son identité en ligne, mais elle semblait en savoir plus que moi.{/i}
+    c_akane "What do you want me to do?"
+    playerName "So..."
+    """{i}I explained to Chunhua the basics of online security but she seemed to know more than I did.{/i}
     
-    {i}Elle a fini par me guider pendant qu'elle mettait en place les précautions pour elle-même.{/i}"""
-    c_akane """Merci de penser à moi.
+    {i}She ended up giving me more tips while she was setting up the safety precautions.{/i}"""
+    c_akane """Thanks for thinking of me.
     
-    Aller, on rentre?"""
+    Let's go home?"""
 
     window hide
     pause

@@ -1346,7 +1346,7 @@ screen phone_object(caller, hour):
         if caller == usrb:
             add "Bomi pfp" at pfp_pos
         if caller == usrc or caller == usrcf:
-            add "Akane pfp" at pfp_pos
+            add "Chunhua pfp" at pfp_pos
         if caller == usrh:
             add "Himeno pfp" at pfp_pos
 

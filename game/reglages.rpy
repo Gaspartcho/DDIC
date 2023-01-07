@@ -6,7 +6,7 @@ label after_load:
 
     define defaultPlayerName = "Shujin"
     define playerName = defaultPlayerName
-    define LovePoints = {"Akane":0, "Bomi":0, "Himeno":0}
+    define LovePoints = {"Chunhua":0, "Bomi":0, "Himeno":0}
 
 #endregion
 
@@ -26,13 +26,13 @@ label after_load:
 
 #endregion
 
-#region Characters
+#region Charactersch_vein
 
     define c_mysteriousMan = Character("???", who_color="#000", callback=partial(beepy_voice, sound="audio/voices/MisteriousMan_voice.mp3", level=0.15))
     define narrateur = Character(" ", callback=partial(beepy_voice, sound="audio/voices/Narator_U_Voice.mp3", level=0.5))
 
     define c_bomi = Character("Bomi", who_color="779b5a")
-    define c_akane = Character("Akane", who_color="6d7aad")
+    define c_chunhua = Character("Chunhua", who_color="6d7aad")
     define c_himeno = Character("Himeno", who_color="db4cad")
     define tpb = "Bomi"
     define tpc = "ChunHua"
@@ -47,19 +47,19 @@ label after_load:
 #region Images
 
 # ChunHua
-    image apc = "images/Characters/Akane/akane_default.png"
-    image apr = "images/Characters/Akane/akane_chin.png"
+    image apc = "images/Characters/Chunhua/ch_default.png"
+    image apr = "images/Characters/Chunhua/ch_chin.png"
 
-    image abn = "images/Characters/Akane/expression/akane_eyebrows_happy.png"
-    image abm = "images/Characters/Akane/expression/akane_eyebrows_mad.png"
-    image abs = "images/Characters/Akane/expression/akane_eyebrows_neutral.png"
-    image aeb = "images/Characters/Akane/expression/akane_eyes_blink.png"
-    image ael = "images/Characters/Akane/expression/akane_eyes_left.png"
-    image aea = "images/Characters/Akane/expression/akane_eyes_right.png"
-    image amn = "images/Characters/Akane/expression/akane_mouth_neutral.png"
-    image ams = "images/Characters/Akane/expression/akane_mouth_smile.png"
-    image amt = "images/Characters/Akane/expression/akane_mouth_talk.png"
-    image av = "images/Characters/Akane/expression/Akane_vein.png"
+    image abn = "images/Characters/Chunhua/expression/ch_eyebrows_happy.png"
+    image abm = "images/Characters/Chunhua/expression/ch_eyebrows_mad.png"
+    image abs = "images/Characters/Chunhua/expression/ch_eyebrows_neutral.png"
+    image aeb = "images/Characters/Chunhua/expression/ch_eyes_blink.png"
+    image ael = "images/Characters/Chunhua/expression/ch_eyes_left.png"
+    image aea = "images/Characters/Chunhua/expression/ch_eyes_right.png"
+    image amn = "images/Characters/Chunhua/expression/ch_mouth_neutral.png"
+    image ams = "images/Characters/Chunhua/expression/ch_mouth_smile.png"
+    image amt = "images/Characters/Chunhua/expression/ch_mouth_talk.png"
+    image av = "images/Characters/Chunhua/expression/ch_vein.png"
 
 # Bomi
     image bpb = "images/Characters/Bomi/bomi_armsback.png"
@@ -104,13 +104,13 @@ label after_load:
 # Insta
     image insta bomi1 = "images/instagram/B1_insta.png"
     image insta bomi2 = "images/instagram/B2_insta.png"
-    image insta akane1 = "images/instagram/A1_insta.png"
-    image insta akane2 = "images/instagram/A2_insta.png"
+    image insta Chunhua1 = "images/instagram/A1_insta.png"
+    image insta Chunhua2 = "images/instagram/A2_insta.png"
     image insta himeno1 = "images/instagram/H1_insta.png"
     image insta himeno2 = "images/instagram/H2_insta.png"
 
     image Bomi pfp = "images/Phone/Bomi_Pfp.png"
-    image Akane pfp = "images/Phone/Akane_Pfp.png"
+    image Chunhua pfp = "images/Phone/Chunhua_Pfp.png"
     image Himeno pfp = "images/Phone/Himeno_Pfp.png"
 
 # Background
@@ -126,9 +126,9 @@ label after_load:
     image BB1 = "images/scenes/bomi_b1.png"
     image BB2 = "images/scenes/bomi_b2.png"
     image BGE = "images/scenes/bomi_ge.png"
-    image AB1 = "images/scenes/akane_b1.png"
-    image AB2 = "images/scenes/akane_b2.png"
-    image AGE = "images/scenes/akane_ge.png"
+    image AB1 = "images/scenes/Chunhua_b1.png"
+    image AB2 = "images/scenes/Chunhua_b2.png"
+    image AGE = "images/scenes/Chunhua_ge.png"
 
 #endregion
 

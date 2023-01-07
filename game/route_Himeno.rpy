@@ -1,69 +1,65 @@
 label RH1:
     define ptsh1 = 0
-    narrateur """{i}La cloche sonne trois fois, ce qui signifie que les cours sont terminés.{/i}
+    narrateur """{i}The clock rings 3 times. Classes are over{/i}"""
 
-    {i}Tu vois le soleil se coucher juste derrière le bâtiment de l'école.{/i}"""
-
-    "{i}Cette première journée était assez agréable."
-
-    narrateur "Tu te lèves pour t'étirer après une longue journée de travail, lorsque ton téléphone sonne dans ta poche."
+    "{i}This first day of school wasn't too bad."
     playerName "Hmm?"
 
     call phone_start(usrh, "17:05") from _call_phone_start_1
-    call message_start(tph, "Retrouve-moi au parc dès que possible, je sais que tu as fini tes cours <3") from _call_message_start_6
+    call message_start(tph, "Meet me at the park, I know you're done with classes <3") from _call_message_start_6
     call phone_end from _call_phone_end_1
     "{i}..."
     
-    "{i}Je me demande ce qu'elle me veut."
+    "{iI wonder what does she want."
 
     scene park with fade
 
-    narrateur "Tu trouves Himeno à l'arrière du parc assise à l'ombre."
+    narrateur "You find Himeno sat on a bench at the back of the park."
     show screen cexp("hpw", "heb", "hml", "hbn")
 
     c_himeno "Hey [playerName]"
     show screen cexp("hph", "hel", "hms", "hbn")
     menu:
-        c_himeno "Tu es prêt à ruiner des vies ?"
-        "On fait quoi? J'espère que c'est rien de mal":
-            playerName "On fait quoi? J'espère que c'est rien de mal"
+        c_himeno "Ready to ruin some lives?"
+        "What are we doing? I hope nothing bad":
+            playerName "What are we doing? I hope nothing bad"
             show screen cexp("hph", "heb", "hmt", "hbn")
-            c_himeno """Mais bien sûr que si! 
+            c_himeno """But of course we are! 
 
-            On va exécuter le plan le plus diabolique de l'humanité"""
+            We're going to execute the most evil plan of humanity"""
 
-        "C'est sûr et certain qu'on ne va pas faire de bonnes choses.":
-            playerName "C'est sûr et certain qu'on ne va pas faire de bonnes choses."
+        "We are definitely up to no good":
+            playerName "We are definitely up to no good."
             $ ptsh1 += 1
             show screen cexp("hph", "heb", "hmt", "hbn")
-            c_himeno "Ne sois pas bête c'est pour le plus grand bien"
+            c_himeno "Don't be dumb, it's for the greater good"
     
     playerName "..."
     show screen cexp("hph", "hel", "hms", "hbn")
-    c_himeno """Mon maquillage est superbe aujourd'hui.
+    c_himeno """My makeup is slaying today.
 
-    Donc mon plan, c'est que je t'engage pour faire mes photos de ma page instargam."""
+    I'm asking you to take my pics."""
     show screen cexp("hph", "hes", "hmm", "hbn")
-    c_himeno """Tu vas voir, ça va être marrant
+    c_himeno """It'll be fun, you'll see
         
-    On va ruiner la vie des gens en leur montrant ce qu'ils ratent."""
+    We're going to ruin people's lives by showing them that I'm missing in their life ."""
 
     menu:
-        c_himeno "Tu peux le faire, n'est-ce pas ?"
-        "Je suis le meilleur photographe que tu trouveras":
-            playerName "Je suis le meilleur photographe que tu trouveras ici."
+        c_himeno "You'll do that won't you ?"
+        "I'm the best camera man you'll find.":
+            playerName "I'm the best camera man you'll find."
             $ ptsh1 += 1
             define himeno_help = False
             show screen cexp("hph", "heb", "hms", "hbn")
-            c_himeno """C'est parfait!
+            c_himeno """Perfect!
 
-            Tu vois? On fait un duo parfait"""
+            See? We're the perfect duo"""
 
-        "Je ne suis pas très doué avec un appareil photo":
+        "I'm not really good with a camera":
             define himeno_help = True
-            playerName "Je ne suis pas très doué avec un appareil photo"
+            playerName "I'm not really good with a camera"
             show screen cexp("hpw", "hes", "hmt", "hbn")
-            c_himeno "C'est pas grave, je vais te guider"
+            c_himeno "It's fine, I'll guide you"
     
     show screen cexp("hph", "heb", "hms", "hbn")
 
@@ -80,137 +76,135 @@ label RH1:
     show screen cexp("hph", "hel", "hml", "hbn")
     with Fade(0.1, 0.0, 0.5, color="#fff")
 
-    narrateur "Tu prends des photos de Himeno dans diverses poses."
     show screen cexp("hpw", "hel", "hms", "hbn")
-    c_himeno "Je me demande si elles sont bien..."
+    c_himeno "Let me see! I wanna know how they turned out!"
     show screen cexp("hph", "hea", "hmf", "hba")
-    c_himeno "Hé! Mais ce n'est pas..."
+    c_himeno "Hey! Isn't that..."
     show screen cexp("hph", "hea", "hmn", "hba")
 
-    """{i}Quoi{/i}
+    """{i}What{/i}
 
-    {i}Est-ce que j'ai mal pris les photos ?{/i}"""
+    {i}Did i take bad angles?{/i}"""
 
     if himeno_help:
-        "{i}J'ai pourtant tout fait comme elle m'a dit...{/i}"
+        "{i}I did everything she asked me to do though...{/i}"
     else:
-        "{i}J'ai pourtant suivi les règles de photographie que j'ai vues en ligne...{/i}"
+        "{i}I followed the few photography rules i saw online though...{/i}"
 
-    "{i}Elle exagère sûrement-{/i}"
+    "{i}Surely, she's exagerating-{/i}"
     show screen cexp("hph", "hel", "hmf", "hba")
-    c_himeno "C'est Bomi à l'arrière."
+    c_himeno "Bomi is in my pics."
 
-    narrateur "Tu te rapproches du tél de Himeno et tu vois qu'il y avait une silhouette rose qui se cachait derrière l'un des arbres à l'arrière d'une des photos."
+    narrateur "you get closer and peek at her phone."
 
-    playerName "Hein?"
+    playerName "Huh?"
     show screen cexp("hph", "hea", "hml", "hba")
     c_himeno "Pfft!"
     show screen cexp("hph", "hel", "hml", "hba")
-    c_himeno "Elle ressemble à une harceleuse."
+    c_himeno "She looks like a stalker."
     show screen cexp("hph", "hea", "hml", "hba")
-    c_himeno "Qu'est-ce qu'elle fout ?"
+    c_himeno "What is she doing?"
     show screen cexp("hpw", "hel", "hml", "hba")
 
-    c_himeno """(A Bomi) Hey! 
+    c_himeno """ Hey! 
 
-    Je vais dire à tout le monde que tu es une harceleuse !"""
+    Go away! I'll file a restraining order!"""
 
     menu:
-        c_himeno "Laisse-moi tranquille !"
-        "Je ne pense pas que tu devrais faire ça... Elle est sûrement là par hasard":
-            playerName "Je ne pense pas que tu devrais faire ça... On ne connaît pas toute l'histoire."
-            playerName "Si ça se trouve, elle est sûrement là par hasard..."
+        c_himeno "leave me alone!"
+        "Don't be like that... Maybe she's just here by chance":
+            playerName "Don't be like that... Maybe she's just here by chance"
             show screen cexp("hph", "hel", "hmn", "hba")
             $ ptsh1 += 1
-            c_himeno "Elle me suit, je pense que c'est suffisant pour la punir"
+            c_himeno "She's following me, that's enough to punish her"
 
-        "Elle s'en ira, ignore-la.":
-            playerName "Elle s'en ira, ignore-la."
+        "She'll leave, just ignore her.":
+            playerName "She'll leave, just ignore her."
             show screen cexp("hph", "hel", "hmf", "hba")
-            c_himeno """Quoi et la laisser continuer de me suivre?
+            c_himeno """What? And let her keep following me?
 
-            Certainement pas."""
-    c_himeno "Je refuse d'accepter et d'endurer un événement aussi effrayant."
+            No."""
+    c_himeno "I would rather kill myself than let myself get stepped on"
     show screen cexp("hpw", "hel", "hmn", "hba")
     menu:
-        c_himeno "Surtout d'elle."
-        "Elle apprendra les conséquences de ses actes":
-            playerName "Elle apprendra les conséquences de ses actes"
+        c_himeno "especially by her."
+        "She'll get what's coming to her":
+            playerName "She'll get what's coming to her"
             show screen cexp("hph", "hea", "hmn", "hba")
-            c_himeno "Ouais, évidemment."
-            c_himeno "Et puis zut! Elle fais tout pour m'énerver celle-là!"
+            c_himeno "Duh, obviously."
+            c_himeno "Shit! Everything about her pisses me off!"
 
-        "On pourrait juste lui demander pourquoi elle te suit":
-            playerName "On pourrait juste lui demander pourquoi elle te suit..."
-            playerName "Est-ce qu'elle t'as fait d'autres choses qui te dérangent?"
+        "We could just ask her why she's following you":
+            playerName "We could just ask her why she's following you..."
+            playerName "Has she ever done anything to bother you?"
             $ ptsh1 += 1
             show screen cexp("hph", "hea", "hmn", "hba")
             c_himeno """...
 
-            Ouais"""
+            Yeah"""
 
     show screen cexp("hph", "hea", "hmf", "hba")
-    c_himeno """Et elle occupe {b}ma{/b} place au sommet du classement.
+    c_himeno """She took {b}my{/b} spot at the top of the leaderboard.
 
-    Comme je l'ai dit,"""
+    Like I said,"""
     show screen cexp("hph", "hel", "hmf", "hba")
     menu:
-        c_himeno "Je suis certaine qu'elle triche."
-        "Je suis sûr qu'elle a travaillé dur pour être là où elle est maintenant.":
-            playerName """Comment le sais-tu ? 
+        c_himeno "She's def cheating."
+        "I'm sure she's worked hard to get to where she is":
+            playerName """How do you know that? 
             
-            Je suis sûr qu'elle a travaillé dur pour être là où elle est maintenant. 
+            I'm sure she's worked hard to get to where she is. 
             
-            Je crois que tu peux la battre aussi."""
+            I think you can do better than her too."""
             show screen cexp("hph", "hea", "hmn", "hba")
             $ ptsh1 += 1
             c_himeno "..."
 
-        "Peut-être qu'elle est juste plus intelligente que toi. ":
-            playerName "Peut-être qu'elle est juste plus intelligente que toi. "
+        "Maybe she's just a genius. ":
+            playerName "Maybe she's just a genius. "
             show screen cexp("hph", "hea", "hmn", "hba")
             c_himeno "..."
 
-    """{i}Himeno a l'air énervé.{/i}
+    """{i}Himeno seems pissed.{/i}
 
-    {i}Peut-être que je n'aurais pas dû dire ça.{/i}"""
+    {i}Maybe i shouldn't have said that.{/i}"""
     show screen cexp("hph", "hel", "hmf", "hba", "hlc")
-    c_himeno "... Tais-toi..."
+    c_himeno "... Shut up..."
     show screen cexp("hph", "hel", "hmn", "hba", "hlc")
-    playerName "Hein?"
+    playerName "Huh?"
     show screen cexp("hph", "hea", "hmf", "hba", "hlc")
-    c_himeno "De quel droit tu me dis cela ?"
+    c_himeno "What right do you have to say that?"
     show screen cexp("hph", "hel", "hmf", "hba", "hlc")
-    c_himeno "Tu penses que je n'essaie pas?"
+    c_himeno "You think I don't try?"
     show screen cexp("hph", "hel", "hmf", "hbs", "hlc")
-    c_himeno """Tout ce que je veux...
+    c_himeno """All i ever wanted...
 
-    ... c'est que mon père me remarque"""
+    ... was for my father to notice me"""
     show screen cexp("hph", "hea", "hmf", "hbs", "hlc")
-    c_himeno """Il est jamais a la maison.
+    c_himeno """He's never home.
 
-    Peu importe si je fais des bonnes choses ou pas..."""
+    Whether I do things well or not..."""
     show screen cexp("hph", "hel", "hmf", "hbs", "hlc")
-    c_himeno "... Il ne me regarde jamais."
+    c_himeno "... He never looks at me."
     show screen cexp("hph", "hea", "hmn", "hbs", "hlc")
     c_himeno "..."
     show screen cexp("hph", "hel", "hmf", "hbs", "hlc")
     c_himeno """Ah
 
-    T'es nul"""
+    Why..."""
     show screen cexp("hph", "heb", "hmf", "hbs", "hlc")
-    c_himeno "T'as ruiné mon maquillage"
+    c_himeno "You ruined my makeup"
     show screen cexp("hph", "hea", "hmn", "hbs", "hlc")
     "..."
 
     menu:
-        "{i}Je devrais peut-être dire quelque chose{/i}"
-        "Il te verra un jour.":
+        "{i}I should say something{/i}"
+        "He'll acknowledge you one day.":
             show screen cexp("hph", "hel", "hmn", "hbs", "hlc")
-            playerName "Il te verra un jour, ne t'inquiète pas."
-            playerName "C'est pour ça que tu devras rester gentille,"
-            playerName "... pour que le jour où il le fera,"
-            playerName "... il te voit sous ton plus beau jour possible."
+            playerName "He'll acknowledge you one day, don't worry."
+            playerName "Which is why you should be nice,"
+            playerName "... for the day he sees you,"
+            playerName "... He'll see you in the best light possible."
             $ ptsh1 += 1
             show screen cexp("hph", "hea", "hmn", "hbs", "hlc")
 
@@ -220,16 +214,16 @@ label RH1:
     
     c_himeno "..."
     show screen cexp("hph", "hel", "hmf", "hbs", "hlc")
-    c_himeno "Je pense que je vais rentrer chez moi..."
+    c_himeno "I'm gonna go home..."
     hide screen cexp with fade
     pause 2.0
-    narrateur "Tu jetes un coup d'œil à la direction où Bomi était censée être mais elle n'est plus là"
+    narrateur "You glance at where Bomi was standing in the picture but she wasn't there anymore"
 
-    "{i}Elle a dû partir quand Himeno l'a appelée.{/i}"
-    narrateur "Tu décide également de rentrer chez toi."
+    "{i}She must have left when Himeno called her out.{/i}"
+    narrateur "You also decide to go back home."
     scene black with fade
 
-    "{i}Je me demande ce que va faire Himeno.{/i}"
+    "{i}I wonder what Himeno will do .{/i}"
     pause 5
 
     if ptsh1 >= 4: 
@@ -240,74 +234,67 @@ label RH1:
 label HB1:
     pause 5
     scene classroom late with fade
-    """{i}Ça fait une semaine que j'étais allé au parc avec Himeno.{/i}
+    """{i}It's been a week since I was at the park with Himeno.{/i}
 
-    {i}Himeno a fini par publier cette photo en accusant bomi d'arcellement et a répandu beaucoup de haine.{/i}
+    {i}Himeno ended up posting that picture and spread a lot of hate.{/i}
 
-    {i}Bomi a fini par subir de plus en plus de violence{/i}
-    
-    {i}C'étais d'autant pire que ces violences étaient passées du téléphone au monde réel...{/i}"""
+    {i}Bomi ended up enduring a lot of bullying since the cyberbullying became physical.{/i}"""
     show screen cexp("hpw", "hel", "hmf", "hbn")
     c_himeno "Hey [playerName]."
     
-    "{i}Le regard de Himeno semble devenir froid chaque fois qu'elle me regarde.{/i}"
+    "{i}Himeno's gaze seems to turn cold whenever she looks at me.{/i}"
     show screen cexp("hph", "hel", "hmf", "hbn")
-    c_himeno "Viens avec moi."
+    c_himeno "Come with me."
     show screen cexp("hph", "hea", "hmn", "hbn")
     playerName "Ok."
 
-    """{i}Pour être honnête, ce n'est pas comme si je pouvais dire non...{/i}
+    """{i}To be fair, it’s not like I can go against her...{/i}
 
-    {i}Elle est de plus en plus intimidante.{/i}"""
+    {i}She ended up finding dirt on me.{/i}"""
     hide screen cexp
     scene hallway late with fade
     show screen cexp("hph", "hel", "hmf", "hbs", p=p_right)
-    narrateur "Tu la suis dans le couloir quand une silhouette rose sortie de nulle part et attaque à Himeno"
+    narrateur "You follow her into the hallway when a pink figure out of nowhere tackles Himeno"
     hide screen cexp
     show screen h_and_bomi
-    c_bomi """Tu!
+    c_bomi """You!
 
-    As!
+    Did!
 
-    Fais!
+    This!
 
-    Ca!
-
-    T'es terrible!
-
-    Tu m'as ruinée!"""
+    You ruined my life!"""
 
     hide screen h_and_bomi
 
-    """{i}Himeno et Bomi ont comencées à se battre l'une contre l'autre.{/i}
+    """{i}Himeno and Bomi struggled against each other. {/i}
 
-    {i}Il ne semblait pas y avoir de limites.{/i}"""
+    {i}There didn’t seem to be any boundaries, they clawed at each other.{/i}"""
 
-    c_himeno "Lâche-moi espèce de - !"
+    c_himeno "Get off of me- !"
 
-    narrateur "Tu remarques que Himeno recule sur le bord de l'escalier"
+    narrateur "You notice Himeno step back onto the edge of the stairs"
 
-    playerName "Attention--"
+    playerName "Wait--"
     scene black with fade
 
-    """{i}C'était trop tard.{/i}
+    """{i}It was too late.{/i}
 
-    {i}Avant que je ne puisse faire quoi que ce soit, Himeno tombe à la renverse dans deux volées d'escaliers.{/i}"""
+    {i}Before I could do anything, Himeno fell backwards down two flights of stairs.{/i}"""
 
     c_bomi "..."
 
-    """{i}Avant que je puisse attraper Bomi et lui demander de l'aider, elle s'est enfuie.{/i}
+    """{i}Before I could grab Bomi and ask her to help she ran away.{/i}
 
-    {i}Je n'ai rien pu faire...{/i}
+    {i}What a mess.{/i}
 
-    {i}Quelques heures plus tard, Himeno a été transportée d'urgence à l'hôpital car elle ne se réveillait pas après sa chute.{/i}"""
+    {i}A few hours later, we were at the hospital.{/i}
+    
+    {i}Himeno was rushed to the hospital since she wouldn’t wake up after she fell.{/i}"""
 
-    scene HB1 with fade
-    """{i}Je suis allé lui rendre visite après qu'elle s'était réveillée un peut plus tard mais elle avait vraiment mal partout.{/i}
+    """{i}According to doctors, the stairs really roughed her up.{/i}
 
-    {i}Selon les médecins, \"les escaliers ne l'ont pas épargnée\"...{/i}
-
-    {i}Je ne pense pas qu'elle s'en remettra mentalement, sa vie était trop basée sur son apparence.{/i}"""
+    {i}She landed awkwardly and disfigured her face permanently.{/i}"""
 
     window hide
     pause
@@ -315,120 +302,115 @@ label HB1:
 
 label RH2:
     define ptsh2 = 0
-    """{i}Cela fait une semaine que j'étais allé au parc avec Himeno.{/i}
+    """{i}It’s been a week since I was at the park with Himeno. {/i}
 
-    {i}Himeno a posté les photos que j'avais prises d'elle et elles ont explosées.{/i}
+    {i}Himeno posted the pictures we took of her and they blew up.{/i}
 
-    {i}Heureusement, Himeno a été gentille et n'a pas publié celle où l'on voyait clairement Bomi.{/i}"""
+    {i}Thankfully, Himeno was merciful and edited her out.{/i}"""
 
     scene classroom day with fade
     pause 1.0
     show screen cexp("hpw", "heb", "hml", "hbn")
-    c_himeno "Hey! [playerName]! T'as vraiment bien travaillé avec la caméra."
+    c_himeno "Hey! [playerName]! You did really well with the camera work."
     show screen cexp("hph", "hes", "hml", "hbn")
-    c_himeno """T'as si bien réussi que j'ai reçu des offres d'entreprises !"""
+    c_himeno """You did so well that I've been receiving offers from businesses!"""
     show screen cexp("hph", "heb", "hml", "hbn")
-    c_himeno """Je peux gagner de l'argent maintenant!"""
+    c_himeno """I can actually make money!"""
     show screen cexp("hph", "hea", "hms", "hbn")
-    narrateur "Himeno montre les demandes qu'elle a reçu sur instargam."
+    narrateur "Himeno pulls out her phone and shows her requests on instargam."
     show screen cexp("hph", "hes", "hml", "hbn")
-    c_himeno "C'est fou ça tu te rends compte? Ta pote devient populaire même en dehors du lycée!"
+    c_himeno "It's crazy out here. You're girl is getting popular ~~"
     show screen cexp("hph", "hea", "hms", "hbn")
     menu:
-        "{i}Ouah, c'est vrai qu'il y en a beaucoup... Il y a même certains messages qui sont des propositions de cadeaux provenant de marques de luxe.{/i}"
-        "Haha c'est super ! Et t'en as acceptées ?":
-            playerName "Haha c'est super ! Et t'en as acceptées ?"
+        "{i}It was a mixture of jewelry, clothing and makeup. Some of them were free claim gifts and a lot of them were compliments from fans.{/i}"
+        "Haha that's great! Have you accepted any?":
+            playerName "Haha that's great! Have you accepted any?"
             show screen cexp("hpw", "hes", "hmt", "hbn")
-            c_himeno "Non, je voulais te montrer tout avant d'accepter l'une d'elles!"
+            c_himeno "Nope! I wanted to show you all before I accepted any of them!"
 
-        "C'est incroyable Himeno ! ":
-            playerName "C'est incroyable Himeno ! "
+        "That's amazing Himeno! You're gonna become an actual influencer!":
+            playerName "That's amazing Himeno! You're gonna become an actual influencer!"
             show screen cexp("hpw", "heb", "hml", "hbn")
-            c_himeno "Ha ha ! Attends que j'accepte les offres et que je devienne le visage de grandes marques !!"
+            c_himeno "Haha! Wait till I accept the offers and become the face of high brands!!"
     show screen cexp("hph", "hea", "hms", "hbn")
-    """{i}Elle a ouvert un des messages.{/i}
+    """{i}She opened one of the offers.{/i}
 
-    {i}C'était une demande de guzzi.{/i}
+    {i}It was a request from guzzi.{/i}
 
-    {i}Une marque très populaire en ce moment, pratiquement connue par tout le monde.{/i}"""
+    {i}A really well known brand by basically everyone.{/i}"""
 
     menu:
-        "{i}Tiens? le site de la marque était vraiment \"guzzi_official.com\", et non pas \"guzzi.com\" ?{/i}"
+        "{i}But wasn't the official website guzzi.com and not guzzi_official.com?{/i}"
 
-        "Hey... certaines propositions ont l'air suspectes":
-            playerName "Hey... certaines propositions ont l'air suspectes..."
-            playerName "Le lien vers le site à l'air bizarre"
+        "Hey… some of these don't look right.":
+            playerName "Hey… some of these don't look right."
             $ ptsh2 += 1
             show screen cexp("hph", "hel", "hmt", "hbn")
-            c_himeno "Que veux-tu dire?"
+            c_himeno "What do you mean?"
 
-        "T'as vraiment reçu une offre de marque de luxe?":
-            playerName "T'as vraiment reçu une offre de marque de luxe?"
+        "You got a request from a luxury brand? I find that a bit suspicious…":
+            playerName "You got a request from a luxury brand? I find that a bit suspicious…"
             show screen cexp("hph", "hel", "hmf", "hbn")
-            c_himeno "Bah ouai..."
-            c_himeno "Que veux-tu dire par là?"
+            c_himeno "Of course!"
+            c_himeno "What do you mean?!"
 
-    playerName "Je dis ça comme ça..."
+    playerName "I'm just saying…"
     show screen cexp("hph", "hea", "hmn", "hbn")
-    """{i}Himeno roule des yeux et ouvre le lien.{/i}
+    """{i}Himeno pouts at me and opens the link anyways.{/i}
 
-    {i}Le site Web s'ouvre sur une section où on devait entrer nos coordonnées Guggle.{/i}
+    {i}The website opens up to a section where you enter your bank details.{/i}"""
 
-    {i}Mais pourquoi?{/i}"""
+    c_himeno "What? I thought they were going to send a free item for me to advertise."
+    c_himeno "Well, whatever. I guess it'll guarantee that we'll come back later."
     show screen cexp("hph", "hel", "hmn", "hbn")
-    playerName "Attends"
+    playerName "Wait"
     show screen cexp("hph", "hel", "hmt", "hbn")
-    c_himeno "Hein?"
+    c_himeno "Huh?"
     show screen cexp("hph", "hel", "hml", "hbn")
 
     menu:
-        c_himeno "Qu'est-ce qu'il y a?"
-        "Ne mets pas tes coordonnées pendant que je suis à côté de toi !":
-            playerName "Ne mets pas tes coordonnées pendant que je suis à côté de toi !"
+        c_himeno "What's wrong?"
+        "Don't type in your details while I'm next to you!":
+            playerName "Don't type in your details while I'm next to you!"
             show screen cexp("hph", "hea", "hml", "hbn")
-            c_himeno "C'est pas comme si ça me dérangeait de toute façon"
-            c_himeno "T'es pas du genre à vouloir me hacker non?"
-            "{i}Moi non en tout cas..."
+            c_himeno "Oh! Right! Well. It's not like i mind anyways"
 
-        "J'ai l'impression qu'on devrait les vérifier.":
-            playerName "J'ai l'impression qu'on devrait les vérifier."
+        "I feel like we should check these.":
+            playerName "I feel like we should check these."
             $ ptsh2 += 1
             show screen cexp("hph", "hea", "hmt", "hbn")
-            c_himeno "C'est à dire?"
-            playerName "Et bien tu vois, c'est important de..."
+            c_himeno "How?"
     
     play sound phone_jingle
 
-    c_himeno "Oh, un email."
+    c_himeno "Oh, an email."
     show screen cexp("hph", "hea", "hmt", "hbs")
     c_himeno """Eh?! 
-    Il dit que mon compte bancaire a été compromis..."""
+    It says my bank account got compromised…"""
     show screen cexp("hph", "hel", "hmt", "hbs")
-    c_himeno "Pour récupérer mon compte, je dois me reconnecter avec ce lien."
+    c_himeno "To claim my account back I have to log back in."
     show screen cexp("hph", "hea", "hmf", "hbs")
-    c_himeno "Et apparemment, je n'ai que 20 mins pour le faire, sinon je vais tout perdre..."
-    show screen cexp("hph", "hea", "hmn", "hbs")
     menu:
         c_himeno "..."
-        "Tu devrais vérifier le lien":
+        "you should check the link":
             show screen cexp("hph", "hel", "hmn", "hbs")
             $ ptsh2 += 1
-            playerName "Himeno, je pense que tu devrais vraiment vérifier le lien avant de faire quoi que ce soit."
-            playerName "C'est hyper suspect"
+            playerName "Himeno, I think you should check them before you do anything."
+            playerName "This is super sus"
             show screen cexp("hph", "hea", "hmf", "hbs")
-            c_himeno "Wahhhh ! Que devrais-je faire..."
+            c_himeno "Wahhhh ! What should I do…"
 
-            playerName """Je vais chercher une boisson. 
+            playerName """I’ll go grab us a drink. Just wait for me.
 
-            Juste attends moi."""
+            Just wait for me."""
 
-        "Je vais chercher du banana milk.":
+        "I’ll go grab us some banana milk.":
             show screen cexp("hph", "hel", "hmn", "hbs")
-            playerName "Appelle-moi si tu as besoin de quoi que ce soit, je vais chercher du banana milk."
+            playerName "Call me back if you need anything, I’ll go grab us some banana milk."
             show screen cexp("hph", "heb", "hml", "hbs")
-            c_himeno "Ok ~"
+            c_himeno "Okay ~ It’ll be done in a jiffy."
     show screen cexp("hpw", "hel", "hml", "hbn")
-    c_himeno "Attends! Peux-tu me chercher un thé glacé ?"
+    c_himeno "Wait! Could you get me an ice tea?"
     playerName "Okay"
     hide screen cexp
     scene hallway day with fade
@@ -441,73 +423,73 @@ label RH2:
 label HB2:
     """{i}Hmm...{/i}
 
-    {i}C'est tellement bizarre.{/i}"""
-    narrateur "Tu sens ton téléphone vibrer lorsque tu prends le thé glacé et le banana milk."
+    {i}This is so weird.{/i}"""
+    narrateur "You feel your phone vibrate while you pick up the ice tea and banana milk."
 
     call phone_start(usrh, "10:12") from _call_phone_start_2
-    call message_start(tph, "Reviens! J'ai soif!!") from _call_message_start_7
+    call message_start(tph, "Come back! I'm thirsty!!") from _call_message_start_7
     call reply_message("Okay okay!") from _call_reply_message_4
-    call message(tph, "Au fait, c'est bon, je l'ai fait!") from _call_message_18
-    call message(tph, "Normalement c'est bon") from _call_message_19
-    call message(tph, "Il falais juste écrire ses codes banquaires.") from _call_message_20
+    call message(tph, "Actually, it's okay, i sent the email!") from _call_message_18
+    call message(tph, "It should be okay now") from _call_message_19
+    call message(tph, "I just had to send my bank account details.") from _call_message_20
     call message(playerName, "Ok cool.") from _call_message_21
     call phone_end(False) from _call_phone_end_2
 
     scene black with fade
-    narrateur "Quelques semaines plus tard..."
+    narrateur "A few weeks later..."
     """{i}...{/i}
 
-    {i}Himeno a juste arrêté de venir en cours.{/i}
+    {i}Himeno just stopped coming to school.{/i}
 
-    {i}Ce qui est plus inquiétant, c'est que des adultes sont venus dans notre classe pour demander où elle se trouvait.{/i}
+    {i}What's more concerning is that a bunch of adults came in our class to ask about her whereabouts.{/i}
 
-    {i}Je devrais aller lui rendre visite.{/i}"""
+    {i}i should pay her a visit.{/i}"""
 
-    narrateur "Tu te rend devant chez elle..."
+    narrateur "You drop by her place..."
 
     """{i}Huh??? {/i}
 
-    {i}Pourquoi les gens sortent-ils ses meubles ?{/i}"""
+    {i}Why are there people taking out the furniture??{/i}"""
 
-    narrateur "Tu remarque une foule séparée de personnes criant son nom."
+    narrateur "You notice a crowd nearby screaming her name."
 
-    """{i}Sont-ce des fans ?{/i}
+    """{i}Are they fans?{/i}
 
     {i}... {/i}
 
-    {i}Ils ont l'air ass fahés pour des fans...{/i}"""
+    {i}They seem a bit angry for fans...{/i}"""
 
-    narrateur "Tu regardes autour de toi pour voir si tu peux repérer Himeno mais tu ne la vois pas."
+    narrateur "You look around you to see if you can see Himeno but she is nowhere to be found."
 
     """{i}...{/i}
 
-    {i}Je vais aller chercher quelque chose à manger avant de rentrer à la maison.{/i}"""
+    {i}I'm going to get something to eat before going home.{/i}"""
 
-    narrateur "Tu vas au super-marché le plus proche et tu t'achètes un onigiri au saumon, des sandwichs japonais au riz."
+    narrateur "You go to the nearest convenient store and buy a salmon onigiri, japanese riceball sandwiches."
 
-    """{i}Zut.{/i}
+    """{i}Crap.{/i}
 
-    {i}J'ai oublié mon porte-monnaie.{/i}"""
+    {i}I forgot my wallet.{/i}"""
 
-    narrateur "Tu regardes la caissière."
+    narrateur "You look at the cashier."
     scene HB2 with fade
     "{i}...{/i}"
 
     c_himeno """???
     
-    Ah!?? [playerName]?! N-non! Ne me regarde pas !"""
+    Ah!?? [playerName]?! N-no! Don't look at me!"""
 
-    playerName "Himeno! Que s'est-il passé?"
+    playerName "Himeno! What happened?"
     
-    c_himeno """Ils ont tout pris ! Mon argent, ma maison, et ma vie.
+    c_himeno """They took everything! My money, my home and my life.
     
-    Mon père s'est mis dans une collère si forte qu'il m'a chassé de chez moi.
+    Daddy got mad at me and kicked me out.
     
-    Je ne pense pas qu'il me pardonnera un jour..."""
+    I don't know if he will ever forgive me..."""
 
-    """{i}Des larmes commencent à se former dans ses yeux fatigués.{/i}
+    """{i}Tears start forming in her tired eyes.{/i}
     
-    {i}Je n'aurais jamais pensé voir Himeno dans cet état.{/i}"""
+    {i}I never thought that I would see Himeno in this state.{/i}"""
 
     window hide
     pause
@@ -516,13 +498,13 @@ label HB2:
 label HGE:
     """{i}Hmm...{/i}
 
-    {i}C'est est tellement bizarre.{/i}
+    {i}This is so weird.{/i}
 
-    {i}J'ai l'impression que j'aurais dû m'assurer qu'elle ne fasse rien.{/i}"""
+    {i}I'm getting the feeling that i should make sure that she doesn't do anything.{/i}"""
     
-    narrateur "Tu sens ton téléphone vibrer lorsque tu t'aprette à prendre le thé glacé et le banana milk."
+    narrateur "You feel your phone vibrate while you pick up the ice tea and banana milk."
     call phone_start(usrh, "10:12") from _call_phone_start_3
-    call message_start(tph, "Reviens! J'ai soif!!") from _call_message_start_8
+    call message_start(tph, "Come back! I'm thirsty!!") from _call_message_start_8
     call reply_message("Okay okay!") from _call_reply_message_5
     pause
     call phone_end(False) from _call_phone_end_3
@@ -530,41 +512,41 @@ label HGE:
 
     pause 1
     show screen cexp("hph", "hea", "hmn", "hbn")
-    c_himeno "Tu avais raison, ce site est une arnaque."
+    c_himeno "You were right, this website's a scam."
     show screen cexp("hph", "hea", "hmt", "hbn")
-    c_himeno "Même l'e-mail est un faux."
+    c_himeno "Even the email is fake."
     show screen cexp("hph", "hea", "hmf", "hbn")
-    c_himeno "Quand je pense que j'ai failli me faire avoir si facilement..."
+    c_himeno "Imagine if I did send an email..."
     show screen cexp("hph", "hea", "hmn", "hbn")
-    c_himeno "Bon, vérifions ces propositions maintenant"
+    c_himeno "Well, let's verify these requests."
     c_himeno "..."
-    playerName "Regarde, la plus part sont des fausses mais il y en a qui ont l'air d'être réelles..."
+    playerName "Look, most of these are fake but there are some that seem legit!"
     hide screen cexp
 
     scene black with fade
 
     """{i}...{/i}
 
-    {i}Ça fait 2 semaines que j'ai parlé avec Himeno de ses offres.{/i}
+    {i}It's been 2 weeks since I spoke to Himeno about her offers.{/i}
 
-    {i}Finalement, certaines demandes se sont avérées être des vraies.{/i}
+    {i}In the end, some requests were verified and real.{/i}
 
-    {i}Himeno est très rapidement devenue une mannequin très renommée.{/i}
+    {i}Himeno quickly picked up modeling and got famous super fast.{/i}
     
-    {i}Avec le mannequinat et les sponsors qu'elle a réussi à obtenir, Himeno a commencé à gagner beaucoup d'argent.{/i}
+    {i}With the modeling and sponsors that she managed to get, Himeno started making a lot of money.{/i}
 
-    {i}Malgré ça, elle a décidé de continuer de venir à l'école, pour m'accompagner surement...{/i}"""
+    {i}Despite that, she still came to school, surely to keep me company...{/i}"""
 
     c_himeno "[playerName]!"
     scene HGE with fade
-    c_himeno """Concentre-toi!
+    c_himeno """Focus!
     
-    Il faut finir la séance pour ce soir."""
+    We need to finish this photoshoot tonight."""
 
-    playerName "Ok!"
+    playerName "Okay!"
     """{i}...{/i}
 
-    {i}Elle est vraiment faite pour le public.{/i}"""
+    {i}She's really made for the public eye.{/i}"""
 
     window hide
     pause
