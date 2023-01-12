@@ -5,9 +5,9 @@ label RH1:
     "{i}This first day of school wasn't too bad."
     playerName "Hmm?"
 
-    call phone_start(usrh, "17:05") from _call_phone_start_1
-    call message_start(tph, "Meet me at the park, I know you're done with classes <3") from _call_message_start_6
-    call phone_end from _call_phone_end_1
+    call phone_start(usrh, "17:05")
+    call message_start(tph, "Meet me at the park, I know you're done with classes <3") 
+    call phone_end
     "{i}..."
     
     "{iI wonder what does she want."
@@ -426,14 +426,14 @@ label HB2:
     {i}This is so weird.{/i}"""
     narrateur "You feel your phone vibrate while you pick up the ice tea and banana milk."
 
-    call phone_start(usrh, "10:12") from _call_phone_start_2
-    call message_start(tph, "Come back! I'm thirsty!!") from _call_message_start_7
-    call reply_message("Okay okay!") from _call_reply_message_4
-    call message(tph, "Actually, it's okay, i sent the email!") from _call_message_18
-    call message(tph, "It should be okay now") from _call_message_19
-    call message(tph, "I just had to send my bank account details.") from _call_message_20
-    call message(playerName, "Ok cool.") from _call_message_21
-    call phone_end(False) from _call_phone_end_2
+    call phone_start(usrh, "10:12") 
+    call message_start(tph, "Come back! I'm thirsty!!") 
+    call reply_message("Okay okay!") 
+    call message(tph, "Actually, it's okay, i sent the email!") 
+    call message(tph, "It should be okay now") 
+    call message(tph, "I just had to send my bank account details.") 
+    call message(playerName, "Ok cool.")
+    call phone_end(False)
 
     scene black with fade
     narrateur "A few weeks later..."
@@ -503,11 +503,11 @@ label HGE:
     {i}I'm getting the feeling that i should make sure that she doesn't do anything.{/i}"""
     
     narrateur "You feel your phone vibrate while you pick up the ice tea and banana milk."
-    call phone_start(usrh, "10:12") from _call_phone_start_3
-    call message_start(tph, "Come back! I'm thirsty!!") from _call_message_start_8
-    call reply_message("Okay okay!") from _call_reply_message_5
+    call phone_start(usrh, "10:12") 
+    call message_start(tph, "Come back! I'm thirsty!!") 
+    call reply_message("Okay okay!") 
     pause
-    call phone_end(False) from _call_phone_end_3
+    call phone_end(False)
     scene classroom day
 
     pause 1

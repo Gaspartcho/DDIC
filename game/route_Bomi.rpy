@@ -71,8 +71,8 @@ label route_B1:
             jump .aftermenu
         label .aftermenu:
     
-    call message(tpb, "...") from _call_message_16
-    call message(tpb, "à demain.") from _call_message_17
+    call message(tpb, "...") from _call_message_17
+    call message(tpb, "see you tomorrow.") from _call_message_18
     call phone_end from _call_phone_end
     "{i} What a weird girl"
     "{i} I hope she doesn't do anything dumb..."
@@ -106,7 +106,6 @@ label route_B1:
     c_bomi "E-eh!? W-wait !!"
     show screen cexp("bpfb", "beb", "bms", "bbs", p=p_right, h=h_down)
     c_bomi "Dont take pictures!"
-    moveoutleft screen h_photo_bomi
     show screen cexp("bpbb", "beb", "bms", "bbs", h=h_down)
     narrateur "Bomi tries to follow her but trips."
     show screen cexp("bpbb", "bea", "bms", "bbs", h=h_down)
@@ -128,16 +127,16 @@ label route_B1:
     show screen cexp("bpbb", "bel", "bms", "bbs", p=p_left, h=h_down)
     show screen a_and_b
     menu:
-        c_akane "What's happening?"
+        c_chunhua "What's happening?"
         "Everything is fine.":
             playerName "Everything is fine."
-            c_akane "If you say so."
+            c_chunhua "If you say so."
         
         "Someone took a picture of her!":
             $ ptsb1 += 1
             playerName "Someone took a picture of her!"
-            c_akane "Ah. I think i know who you're talking about."
-            c_akane "I can't really do much since she has a lot of influence over this school."
+            c_chunhua "Ah. I think i know who you're talking about."
+            c_chunhua "I can't really do much since she has a lot of influence over this school."
     show screen cexp("bpbb", "bel", "bmt", "bbs", p=p_left, h=h_down)
     c_bomi "[playerName]!"
     hide screen a_and_b
@@ -325,7 +324,7 @@ label RBB2:
     scene BB2 with fade
     """{i}Eventually she just stopped coming to school.{/i}
 
-    {i}No one had heard from her and te be fair, no one cared.{/i}"""
+    {i}No one had heard from her and to be fair, no one cared.{/i}"""
 
     window hide
     pause
