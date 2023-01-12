@@ -1,17 +1,17 @@
 label route_A:
-    define ptsc1 = 0
-    narrateur "{i}I should go home.{i/}"
+    default ptsc1 = 0
+    narrateur "{i}I should go home.{/i}"
     scene bedroom with fade
     pause 2.0
     "{i}I should thank Chunhua for the warm welcome."
 
     call phone_start(usrc, "18:45") 
     label choiceMaking_UAG: # Use this template eatch time u want to make a phone menu
-        call screen phone_reply("thanks for the warm welcome ^^","choiceMaking_UAG.choice1","I'm under the impression you do a lot for our class","choiceMaking_UAG.choice2")
+        call screen phone_reply("Thanks for the warm welcome ^^","choiceMaking_UAG.choice1","I'm under the impression you do a lot for our class","choiceMaking_UAG.choice2")
         label .choice1:
             call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
             call message_start(playerName, "Hello Chunhua! thanks for the warm welcome ^^")  # whenever you put the sender name to be playerName it is the player characters own message!
-            call message(tpc, "TIt's no problem. It's my job after all") 
+            call message(tpc, "It's no problem. It's my job after all") 
             jump .aftermenu
         label .choice2:
             $ ptsc1 += 1
@@ -26,7 +26,7 @@ label route_A:
     call message (tpc, "People are hard to manage...") 
     call message (tpc, "Some just don't seem to be able to listen to instructions.") 
     call message (tpc, "I hope you're different.") 
-    call message (tpc, "Actually, now that i remember, here is a link to my school website. It updates regularly with the upcoming homework, assignments and exams.") 
+    call message (tpc, "Actually, now that I remember, here is a link to my school website. It updates regularly with the upcoming homework, assignments and exams.") 
     call message (tpc, "{u}http://totallynotabadwebsite.com{/u}") 
 
     label choiceMaking_IPG:
@@ -48,16 +48,16 @@ label route_A:
     call message (tpc, "Do you prefer cats or dogs?") 
 
     label choiceMaking_DOC:
-        call screen phone_reply("i like both","choiceMaking_DOC.choice1","i prefer cats","choiceMaking_DOC.choice2")
+        call screen phone_reply("I like dogs","choiceMaking_DOC.choice1","I prefer cats","choiceMaking_DOC.choice2")
         label .choice1:
             $ ptsc1 += 1
             call phone_after_menu 
-            call message_start(playerName, "i like both") 
-            call message(tpc, "I see, at least you still like dogs.") 
+            call message_start(playerName, "I like dogs") 
+            call message(tpc, "I see.") 
             jump .aftermenu
         label .choice2:
             call phone_after_menu 
-            call message_start(playerName, "i prefer cats.") 
+            call message_start(playerName, "I prefer cats.") 
             call message(tpc, "I see, to each their own i suppose.")
             jump .aftermenu
         label .aftermenu:
@@ -89,7 +89,7 @@ label route_A:
         label .aftermenu:
 
     call message (tpc, "I love dog sitting in my spare time.") 
-    call message_img(tpc, "", "images/instagram/A2_insta.png") 
+    call message_img(tpc, "", "images/instagram/C2_insta.png") 
     call message (tpc, "It gives me a bit of pocket money") 
     call message (tpc, "My family is pretty well off") 
     call message (tpc, "But a bit of extra cash never hurt anyone.") 
@@ -111,18 +111,18 @@ label route_A:
             jump .aftermenu
         label .aftermenu:
 
-    call message(tpc, "could you give me your bank details?") 
-    call message(tpc, "that way I could sign you up in advance.") 
+    call message(tpc, "Could you give me your bank details?") 
+    call message(tpc, "That way I could sign you up in advance.") 
     call phone_end(False) 
 
     narrateur "Uhm"
-    narrateur "I'll just wait a little before i do..."
+    narrateur "I'll just wait a little before I do..."
     scene classroom day with fade
     pause 1.0
     c_chunhua "{cps=50}Hello, [playerName]."
     show screen cexp("apc", "aeb", "ams", "abn", h=h_mid)
     "{i}Holy Sweet Baby Jesus!!"
-    "{i}She's got to stop appearing out of nowhere"
+    "{i}She has got to stop appearing out of nowhere"
     show screen cexp("apc", "ael", "ams", "abn", h=h_mid)
     playerName "Hey Chunhua, you need something?"
     show screen cexp("apc", "ael", "amt", "abn", h=h_mid)
@@ -147,7 +147,7 @@ label route_A:
         "Okay, but why can't you do it yourself?":
             playerName "Okay, but why can't you do it yourself?"
             show screen cexp("apr", "ael", "amt", "abn", h=h_mid)
-            c_chunhua "I'ts symbolic. If I give it to Himeno might think I am looking down on her."
+            c_chunhua "It's symbolic. If I give it to Himeno might think I am looking down on her."
             show screen cexp("apr", "aeb", "ams", "abn", h=h_mid)
             c_chunhua "A new student thanking the donors of our school is a positive message."
     
@@ -160,7 +160,7 @@ label route_A:
     show screen cexp("apr", "aeb", "ams", "abn", h=h_mid)
     c_chunhua "No."
     show screen cexp("apr", "aeb", "amt", "abn", h=h_mid)
-    c_chunhua "Sometimes i like to do silly tricks..."
+    c_chunhua "Sometimes I like to do silly tricks..."
     c_chunhua "Nothing evil though."
     show screen cexp("apr", "aeb", "ams", "abn", h=h_mid)
     menu:
@@ -171,8 +171,8 @@ label route_A:
             show screen cexp("apr", "ael", "amt", "abn", h=h_mid)
             c_chunhua "Sorry?"
 
-        "Can i wait a little?":
-            playerName "Can i wait a little?"
+        "Can I wait a little?":
+            playerName "Can I wait a little?"
             playerName "to get to know everyone a bit better..."
     show screen cexp("apr", "ael", "amn", "abn", h=h_mid)
     c_chunhua "If you don't want to do it, I'll take care of it." 
@@ -187,9 +187,10 @@ label route_A:
         jump RAB1
 
 label RAB1:
+    pause
     """{i}It's been a week.{/i}
 
-    {i}I've learned everyone's names, but i haven't really made any close friends.{/i}
+    {i}I've learned everyone's names, but I haven't really made any close friends.{/i}
 
     {i}I decided to send Chunhua's gift to Himeno. {/i}
 
@@ -221,6 +222,7 @@ label RAB1:
 
     Do you plead guilty ?"""
     c_chunhua "Yes sir."
+    "Judge" "Zhou Chunhua. You are sentenced to 5 years in prison."
     window hide
     pause
 
@@ -231,11 +233,10 @@ label RAF1:
     scene bedroom with fade
     narrateur "A few days later..."
     call phone_start(usrc, "20:24") 
-    call message_start (tpa, "Hello, [playerName]. I know it's been a week since I've asked you to send that gift to Himeno, turns out my gift expired so there's no need for it.") 
-    call reply_message ("Oh ok.") 
-    call message (tpa, "Actually, I don't know if you've noticed, but someone has been catfishing as me.") 
-    call message (tpa, "They take pictures of me and steal my pictures from my account.") 
-    call message (tpa, "It's slightly worrisome.") 
+    call message_start (tpc, "Hello, [playerName]. I know it's been a week since I've asked you to send that gift to Himeno, turns out my gift expired so there's no need for it.") 
+    call message (tpc, "Actually, I don't know if you've noticed, but someone has been catfishing as me.") 
+    call message (tpc, "They take pictures of me and steal my pictures from my account.") 
+    call message (tpc, "It's slightly worrisome.") 
 
     pause
     window show
@@ -248,15 +249,15 @@ label RAF1:
             call phone_after_menu 
             call message_start(playerName, "That's scary.") 
             call reply_message("Are you going to do something about it?") 
-            call message(tpa, "No, not really. I don't feel particularily threatened by this .") 
+            call message(tpc, "No, not really. I don't feel particularily threatened by this .") 
             jump .aftermenu
         label .choice2:
             call phone_after_menu 
-            call message_start(playerName, "You should call them out") 
+            call message_start(playerName, "You should call them out.") 
             $ ptsc2 += 1
-            call message(tpa, "There's no point, They surely won't do anything")
-            call message(tpa, "I couldn't even if i wanted to.") 
-            call message(tpa, "I haven't got a clue on who it is.") 
+            call message(tpc, "There's no point, They surely won't do anything")
+            call message(tpc, "I couldn't even if I wanted to.") 
+            call message(tpc, "I haven't got a clue on who it is.") 
 
             jump .aftermenu
         label .aftermenu:
@@ -271,18 +272,18 @@ label RAF1:
         label .choice1:
             call phone_after_menu 
             call message_start(playerName, "You should take precautions.") 
-            $ ptsa2 += 1
-            call message(tpa, "I don't really care.") 
+            $ ptsc2 += 1
+            call message(tpc, "I don't really care.") 
             jump .aftermenu
         label .choice2:
             call phone_after_menu 
             call message_start(playerName, "You're right, I don't think they will do anything either.") 
-            call message(tpa, "Of course I'm right.") 
+            call message(tpc, "Of course I'm right.") 
             jump .aftermenu
         label .aftermenu:
     
-    call message (tpa, "Don't worry too much about it.") 
-    call message (tpa, "I need to eat, talk to you later.") 
+    call message (tpc, "Don't worry too much about it.") 
+    call message (tpc, "I need to eat, talk to you later.") 
     call phone_end
 
     "{i}..."
@@ -290,19 +291,19 @@ label RAF1:
     "{i}..."
 
     call phone_start (usrcf, "20:38") 
-    call message_start(tpa, " Hello, [playerName]!") 
-    call message(tpa, "How have you been this week?") 
-    call message(tpa, "I hope you've settled in well.") 
+    call message_start(tpc, " Hello, [playerName]!") 
+    call message(tpc, "How have you been this week?") 
+    call message(tpc, "I hope you've settled in well.") 
     call reply_message("...") 
     call reply_message("Bomi Park?")
-    call message(tpa, "What?") 
-    call message(tpa, "Why are you mentioning her?")
+    call message(tpc, "What?") 
+    call message(tpc, "Why are you mentioning her?")
 
     label choiceMaking_KUR:
         call screen phone_reply("I know who you are","choiceMaking_KUR.choice1","No, nothing. I just wanted to know more about her.","choiceMaking_KUR.choice2")
         label .choice1:
             call phone_after_menu 
-            $ ptsa2 += 1
+            $ ptsc2 += 1
             call message_start(playerName, "I know who you are.") 
             call message(tpc, "...") 
             call message(tpc, "Never speak of this.") 
@@ -311,7 +312,7 @@ label RAF1:
             call phone_after_menu 
             call message_start(playerName, "No, nothing. I just wanted to know more about her.") 
             call message(tpc, "I could tell you about her...") 
-            call message(tpc, "But i won't.") 
+            call message(tpc, "But I won't.") 
             jump .aftermenu
         label .aftermenu:
     call phone_end 
@@ -325,26 +326,26 @@ label RAF1:
         label .choice1:
             call phone_after_menu 
             call message_start(playerName, "Chunhua, Please be really careful") 
-            call message(tpa, "I will.") 
-            call message(tpa, "Why are you worried, It's not that important.") 
-            call message(tpa, "its just a bit annoying...") 
+            call message(tpc, "I will.") 
+            call message(tpc, "Why are you worried, it's not that important.") 
+            call message(tpc, "It's just a bit annoying...") 
             jump .aftermenu
         label .choice2:
             call phone_after_menu 
-            $ ptsa2 += 1
+            $ ptsc2 += 1
             call message_start(playerName, "Chunhua, I'll teach you how to protect yourself.") 
-            call message(tpa, "Fine") 
+            call message(tpc, "Fine") 
             jump .aftermenu
         label .aftermenu:
     call phone_end
     "{i}...{/i}"
-    if ptsa2 > 2:
-        jump RAF
+    if ptsc2 > 2:
+        jump RCF
     else:
-        jump RAB2
+        jump RCB2
 
-label RAB2:
-    "{i}A week later, i got a notification that Himeno is live on instargam."
+label RCB2:
+    "{i}A week later, I got a notification that Himeno is live on instargam."
 
     c_himeno """Oh.
 
@@ -361,15 +362,13 @@ label RAB2:
     "..."
     scene AB2 with fade
     playerName "Chunhua!"
-    playerName "Where is she"
-    call phone_start (usrcf, "19:16")
+    playerName "Where is she?"
+    call phone_start (usrc, "19:16")
     call message_start(tpc, "Help")
-
-    window hide
-    pause
+    call phone_end
     jump game_over
 
-label RAF:
+label RCF:
     scene blacks with fade
     "{i}I met Chunhua the next day at school."
     scene AGE with fade
@@ -380,7 +379,7 @@ label RAF:
     {i}She ended up giving me more tips while she was setting up the safety precautions.{/i}"""
     c_chunhua """Thanks for thinking of me.
     
-    Let's go home?"""
+    Let's go home."""
 
     window hide
     pause

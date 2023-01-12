@@ -40,7 +40,7 @@ label after_load:
     define usrb = "bombomii"
     define usrc = "zhou.chunhua"
     define usrh = "yuzu.himi"
-    define usrcf = "zhou.chunhua"
+    define usrcf = "zhouchunhua"
     
 #endregion
 

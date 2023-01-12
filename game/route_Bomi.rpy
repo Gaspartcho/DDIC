@@ -1,5 +1,5 @@
 label route_B1:
-    define ptsb1 = 0
+    default ptsb1 = 0
 
     "{i} I should see how Bomi is doing."
     "{i} ..."
@@ -136,7 +136,7 @@ label route_B1:
         "Someone took a picture of her!":
             $ ptsb1 += 1
             playerName "Someone took a picture of her!"
-            c_chunhua "Ah. I think i know who you're talking about."
+            c_chunhua "Ah. I think I know who you're talking about."
             c_chunhua "I can't really do much since she has a lot of influence over this school."
     hide screen a_and_b
     show screen cexp("bpbb", "bel", "bmt", "bbs", p=p_center, h=h_down)
@@ -166,7 +166,6 @@ label route_B1:
     c_bomi "Let's go back to class."
     hide screen cexp
     scene black with fade
-    jump RBF1
 
     if ptsb1 >= 4:
         jump RBF1
@@ -185,14 +184,14 @@ label RBB1:
     I've cut, dyed my hair, bought colored lenses...
 
     it's not working."""
-
+    scene BB1 with fade
     window hide
     pause
     jump game_over
 
 label RBF1:
     scene classroom day with fade
-
+    default ptsb2 = 0
     "???" "Hey! [playerName]!"
     show screen cexp("bpb", "bel", "bmh", "bbn", h=h_down)
     c_bomi "I got rid of my extensions."
@@ -206,6 +205,7 @@ label RBF1:
             playerName "I'm sure she hasn't posted it yet."
             
         "Let's go find Himeno":
+            $ ptsb2 += 1
             show screen cexp("bpf", "bel", "bms", "bbs", h=h_down)
             playerName "Let's go find Himeno"
     show screen cexp("bpf", "bea", "bms", "bbs", h=h_down)
@@ -236,8 +236,9 @@ label RBF1:
             playerName "You should respond"
 
         "Don't pay attention to it.":
+            $ ptsb2 += 1
             playerName "Don't pay attention to it."
-            playerName "we should report her account and to the school administration."
+            playerName "We should report her account and to the school administration."
 
     show screen cexp("bpb", "bea", "bms", "bbs", h=h_down)
     c_bomi "..."
@@ -255,12 +256,13 @@ label RBF1:
     menu:
         c_bomi "..."
         "Yeah. Just keep proof somewhere and ignore the haters.":
+            $ ptsb2 += 1
             playerName "Yeah. Just keep proof somewhere and ignore the haters."
             playerName "She'll end up facing the consequences anyways"
 
         "Defend yourself.":
             playerName "Defend yourself."
-            playerName "They'll end up believing you"
+            playerName "They'll end up believing you."
             playerName "Himeno's got whats coming to her!"
 
     show screen cexp("bpb", "bea", "bmf", "bbs", h=h_down)
@@ -275,14 +277,15 @@ label RBF1:
     show screen cexp("bpb", "bea", "bmf", "bbs", h=h_down)
     c_bomi "It's horrible."
     show screen cexp("bpb", "bel", "bmf", "bbs", h=h_down)
-    c_bomi "The comments fill my head making me believe them..."
+    c_bomi "The comments are getting to my head..."
     show screen cexp("bpb", "beb", "bmf", "bbs", h=h_down)
     c_bomi "They kept me up last night."
     show screen cexp("bpb", "bel", "bmf", "bbs", h=h_down)
 
     menu:
-        c_bomi "The more i read, the more i believe it."
+        c_bomi "The more I read, the more I believe it."
         "We should get you a therapist":
+            $ ptsb2 += 1
             playerName "We should get you a therapist"
             show screen cexp("bpb", "bel", "bmt", "bbn", h=h_down)
             c_bomi "And risk the school telling my family?"
@@ -301,7 +304,11 @@ label RBF1:
     c_bomi "I hope you're right about this."
     hide screen cexp 
     scene black with fade
-    jump RBB2
+
+    if ptsb1 >= 2:
+        jump RBG
+    else:
+        jump RBB2
 
 label RBB2:
     # A changer et a sénariser au fil du temps.
@@ -331,3 +338,23 @@ label RBB2:
     window hide
     pause
     jump game_over
+
+label RBG:
+    scene BGE with fade
+    c_bomi "Hey, aren't you going to eat?"
+    """It’s been a month since I talked to Bomi about the post. 
+    
+    Bomi had managed to take down the post for defamation and Himeno’s account was suspended for a while. 
+    
+    I accompanied Bomi to her therapy sessions and slowly but surely, she was picking herself up. 
+    
+    While the post did go viral and some Chunhua fans still berated her, Bomi had a lot of support for her achievements and how she looks. 
+    
+    I mean c'mon, my girlfriend is pretty cute.
+    
+    Despite the fact that the girl has been making a good name for herself, she’s decided to stay on closed off private social media since the public previously ruined her.
+    
+    Other than that, we're happy."""
+    window hide
+    pause
+    jump happy_ending

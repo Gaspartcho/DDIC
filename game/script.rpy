@@ -1,7 +1,8 @@
 label splashscreen:
     scene black
     with Pause(1)
-
+    show text "{color=#fff}Warning: Mentions of suicide, kidnapping and attempted murder. This project is made for educational purposes. It is also purely fictional: Any relations with existing people or places is thus coincidental. {/color}" with dissolve
+    with Pause(4)
     show text "{color=#fff}NSI122 Presents...{/color}" with dissolve
     with Pause(2)
 
@@ -279,8 +280,7 @@ label road_menu:
 
 label game_over:
     scene black with fade
-    play music MisteriousMan_theme fadein 1.0 loop
-    c_mysteriousMan """...
+    narrateur """...
     
     You lost.
     
@@ -289,7 +289,7 @@ label game_over:
     menu:
         "Go back to selection":
             playerName "Go back to route menu."
-            c_mysteriousMan """Going back to the route menu.
+            narrateur """Going back to the route menu.
             
             Who will you pick now?"""
             jump road_menu

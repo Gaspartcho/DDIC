@@ -10,7 +10,7 @@ label RH1:
     call phone_end
     "{i}..."
     
-    "{iI wonder what does she want."
+    "{i}I wonder what is it that she want.{/i}"
 
     scene park with fade
 
@@ -84,7 +84,7 @@ label RH1:
 
     """{i}What{/i}
 
-    {i}Did i take bad angles?{/i}"""
+    {i}Did I take bad angles?{/i}"""
 
     if himeno_help:
         "{i}I did everything she asked me to do though...{/i}"
@@ -95,7 +95,7 @@ label RH1:
     show screen cexp("hph", "hel", "hmf", "hba")
     c_himeno "Bomi is in my pics."
 
-    narrateur "you get closer and peek at her phone."
+    narrateur "You get closer and peek at her phone."
 
     playerName "Huh?"
     show screen cexp("hph", "hea", "hml", "hba")
@@ -112,11 +112,11 @@ label RH1:
 
     menu:
         c_himeno "leave me alone!"
-        "Don't be like that... Maybe she's just here by chance":
-            playerName "Don't be like that... Maybe she's just here by chance"
+        "Don't be like that... Maybe she's just here by chance.":
+            playerName "Don't be like that... Maybe she's just here by chance."
             show screen cexp("hph", "hel", "hmn", "hba")
             $ ptsh1 += 1
-            c_himeno "She's following me, that's enough to punish her"
+            c_himeno "She's following me, that's enough to punish her."
 
         "She'll leave, just ignore her.":
             playerName "She'll leave, just ignore her."
@@ -124,10 +124,10 @@ label RH1:
             c_himeno """What? And let her keep following me?
 
             No."""
-    c_himeno "I would rather kill myself than let myself get stepped on"
+    c_himeno "I would rather kill myself than let myself get stepped on."
     show screen cexp("hpw", "hel", "hmn", "hba")
     menu:
-        c_himeno "especially by her."
+        c_himeno "Especially by her."
         "She'll get what's coming to her":
             playerName "She'll get what's coming to her"
             show screen cexp("hph", "hea", "hmn", "hba")
@@ -151,9 +151,7 @@ label RH1:
     menu:
         c_himeno "She's def cheating."
         "I'm sure she's worked hard to get to where she is":
-            playerName """How do you know that? 
-            
-            I'm sure she's worked hard to get to where she is. 
+            playerName """I'm sure she's worked hard to get to where she is. 
             
             I think you can do better than her too."""
             show screen cexp("hph", "hea", "hmn", "hba")
@@ -167,7 +165,7 @@ label RH1:
 
     """{i}Himeno seems pissed.{/i}
 
-    {i}Maybe i shouldn't have said that.{/i}"""
+    {i}Maybe I shouldn't have said that.{/i}"""
     show screen cexp("hph", "hel", "hmf", "hba", "hlc")
     c_himeno "... Shut up..."
     show screen cexp("hph", "hel", "hmn", "hba", "hlc")
@@ -177,7 +175,7 @@ label RH1:
     show screen cexp("hph", "hel", "hmf", "hba", "hlc")
     c_himeno "You think I don't try?"
     show screen cexp("hph", "hel", "hmf", "hbs", "hlc")
-    c_himeno """All i ever wanted...
+    c_himeno """All I ever wanted...
 
     ... was for my father to notice me"""
     show screen cexp("hph", "hea", "hmf", "hbs", "hlc")
@@ -373,7 +371,7 @@ label RH2:
         "Don't type in your details while I'm next to you!":
             playerName "Don't type in your details while I'm next to you!"
             show screen cexp("hph", "hea", "hml", "hbn")
-            c_himeno "Oh! Right! Well. It's not like i mind anyways"
+            c_himeno "Oh! Right! Well. It's not like I mind anyways"
 
         "I feel like we should check these.":
             playerName "I feel like we should check these."
@@ -396,7 +394,7 @@ label RH2:
             show screen cexp("hph", "hel", "hmn", "hbs")
             $ ptsh2 += 1
             playerName "Himeno, I think you should check them before you do anything."
-            playerName "This is super sus"
+            playerName "This is super sus."
             show screen cexp("hph", "hea", "hmf", "hbs")
             c_himeno "Wahhhh ! What should I do…"
 
@@ -429,10 +427,9 @@ label HB2:
     call phone_start(usrh, "10:12") 
     call message_start(tph, "Come back! I'm thirsty!!") 
     call reply_message("Okay okay!") 
-    call message(tph, "Actually, it's okay, i sent the email!") 
+    call message(tph, "I sent the email!") 
     call message(tph, "It should be okay now") 
-    call message(tph, "I just had to send my bank account details.") 
-    call message(playerName, "Ok cool.")
+    call message(tph, "I just had to send my bank account details.")
     call phone_end(False)
 
     scene black with fade
@@ -443,7 +440,7 @@ label HB2:
 
     {i}What's more concerning is that a bunch of adults came in our class to ask about her whereabouts.{/i}
 
-    {i}i should pay her a visit.{/i}"""
+    {i}I should pay her a visit.{/i}"""
 
     narrateur "You drop by her place..."
 
@@ -465,7 +462,7 @@ label HB2:
 
     {i}I'm going to get something to eat before going home.{/i}"""
 
-    narrateur "You go to the nearest convenient store and buy a salmon onigiri, japanese riceball sandwiches."
+    narrateur "You go to the nearest convenient store and buy a salmon onigiri, a japanese riceball sandwiches."
 
     """{i}Crap.{/i}
 
@@ -500,7 +497,7 @@ label HGE:
 
     {i}This is so weird.{/i}
 
-    {i}I'm getting the feeling that i should make sure that she doesn't do anything.{/i}"""
+    {i}I'm getting the feeling that I should make sure that she doesn't do anything.{/i}"""
     
     narrateur "You feel your phone vibrate while you pick up the ice tea and banana milk."
     call phone_start(usrh, "10:12") 
@@ -520,6 +517,7 @@ label HGE:
     show screen cexp("hph", "hea", "hmn", "hbn")
     c_himeno "Well, let's verify these requests."
     c_himeno "..."
+    show screen cexp("hph", "hea", "hms", "hbn")
     playerName "Look, most of these are fake but there are some that seem legit!"
     hide screen cexp
 
