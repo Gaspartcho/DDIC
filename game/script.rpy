@@ -41,13 +41,13 @@ label name_choose:
 
         narrateur """...
         
-        that's not valid...
+        That's not valid...
 
-        we'll just call you \"%(defaultPlayerName)s\"
+        We'll just call you \"%(defaultPlayerName)s\"
         
-        okay?
+        Okay?
         
-        okay <3"""
+        Okay <3"""
     return
 
 label game_Launching:
@@ -64,12 +64,12 @@ label scene_1:
     call phone_start(usrcf, "21:30") 
 
     call message_start(tpc, "Welcome to Nōburu highschool. I'm {b}Zhou ChunHua{/b}, the class president! If you have any questions, don't hesitate to ask your classmates, teachers or even me. Even if you joined us in the middle of the school year, we welcome you with open arms :)")
-    call message_img(tpc, "This is me!", "images/instagram/A1_insta.png") 
-    call message(tpc, "i believe that starting school in the middle of a semester can be very difficult, so you can count on me!") 
+    call message_img(tpc, "This is me!", "images/instagram/C1_insta.png") 
+    call message(tpc, "I believe that starting school in the middle of a semester can be very difficult, so you can count on me!") 
     pause 1.0
 
     label choiceMaking_WAY: # Use this template eatch time u want to make a phone menu
-        call screen phone_reply("Thanks! I'll try to behave :)","choiceMaking_WAY.choice1","Thanks! you're really pretty ~","choiceMaking_WAY.choice2")
+        call screen phone_reply("Thanks! I'll try to behave :)","choiceMaking_WAY.choice1","Thanks! You're really pretty ~","choiceMaking_WAY.choice2")
 
         label .choice1:    
             call phone_after_menu  # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
@@ -86,8 +86,8 @@ label scene_1:
         label .aftermenu:
 
     call message(tpc, "Either way, shoot me a message and i'll reply to you as fast as I can, i'm usually available.") 
-    call message(tpc, "Oh uh... that probably gives the impression that I'm not doing my work as class representative, but I swear I'm doing the most i can!") 
-    call message(tpc, "Oh, theres a girl that i would suggest you avoid... She's a bit judgemental and loves to gossip.") 
+    call message(tpc, "Oh uh... that probably gives the impression that I'm not doing my work as class representative, but I swear I'm doing the most I can!") 
+    call message(tpc, "Oh, theres a girl that I would suggest you avoid... She's a bit judgemental and loves to gossip.") 
     
     label choiceMaking_ST: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("Oh. What has she done?","choiceMaking_ST.choice1","What does she look like?","choiceMaking_ST.choice2")
@@ -95,7 +95,7 @@ label scene_1:
         label .choice1:    
             call phone_after_menu 
             call message_start(playerName, "What has she done?") 
-            call message(tpc, "She bullies me sometimes... everyone actually... I don't know why.") 
+            call message(tpc, "She bullies me sometimes... I don't know why.") 
             jump .aftermenu
             
         label .choice2:
@@ -118,20 +118,20 @@ label scene_1:
 
     call phone_start(usrh, "22:13") 
     label choiceMaking_LUV: # Use this template eatch time u want to make a phone menu
-        call screen phone_reply("heyy~ you're hot!","choiceMaking_LUV.choice1","hey you can't possibly be that mean","choiceMaking_LUV.choice2")
+        call screen phone_reply("Heyy~ You're hot!","choiceMaking_LUV.choice1","Hey you can't possibly be that mean","choiceMaking_LUV.choice2")
         label .choice1:    
             call phone_after_menu 
-            call message_start(playerName, "heyy~ you're hot!") 
+            call message_start(playerName, "Heyy~ You're hot!") 
             call message(tph, "HAHA! OFC I AM!!") 
             jump .aftermenu
             
         label .choice2:
             call phone_after_menu 
-            call message_start(playerName, "hey you can't possibly be that mean") 
-            call message(tph, "the only annoying woman here is that pig looking nerd") 
+            call message_start(playerName, "Hey you can't possibly be that mean") 
+            call message(tph, "The only annoying woman here is that pig looking nerd") 
             jump .aftermenu
         label .aftermenu:
-    call message(tph, "i'm obviously the best") 
+    call message(tph, "I'm obviously the best") 
     call message(tph, "Yet SOMEHOW, SHE is always first") 
     call message(tph, "I swear to you she's cheating") 
     call message(tph, "...") 
@@ -141,18 +141,18 @@ label scene_1:
         label .choice1:    
             call phone_after_menu 
             call message_start(playerName, "Are you actually gonna do it?") 
-            call message(tph, "no") 
+            call message(tph, "No") 
             jump .aftermenu
             
         label .choice2:
             call phone_after_menu 
             call message_start(playerName, "You could probably do well without cheating if you tried") 
-            call message(tph, "yeah right.") 
+            call message(tph, "Yeah right.") 
             call reply_message("...") 
             jump .aftermenu
         label .aftermenu:
     call message(tph, "Oh ! One of my friends are calling me.") 
-    call message(tph, "don't miss me too much <3") 
+    call message(tph, "Don't miss me too much <3") 
     call phone_end 
 
     """{i}...
@@ -164,16 +164,16 @@ label scene_1:
 label scene_2:
     scene classroom day with Fade(1.0, 2.0, 1.0)
 
-    narrateur "the next day at school, i recieve a text message from an unknown number"
+    narrateur "the next day at school, I recieve a text message from an unknown number"
 
     call phone_start("Melissa", "08:02")
     call message_start("Melissa", "Hey [playerName], wanna video chat me for free? find me here http://itsascam.com/xxx xoxo") 
     pause 2.0
     window show
-    "???" "I wouldn't click on that if i were you."
+    "???" "I wouldn't click on that if I were you."
     call phone_end(False) 
 
-    show screen cexp("apc", "ael", "amn", "abn", p=p_center, h=h_down)
+    show screen cexp("apc", "ael", "amn", "abn", p=p_center)
 
     menu:
         c_chunhua "You should be careful with that stuff, it could ruin your life."

@@ -40,7 +40,7 @@ label after_load:
     define usrb = "bombomii"
     define usrc = "zhou.chunhua"
     define usrh = "yuzu.himi"
-    define usrcf = "zhouchunhua"
+    define usrcf = "zhou.chunhua"
     
 #endregion
 
@@ -104,8 +104,8 @@ label after_load:
 # Insta
     image insta bomi1 = "images/instagram/B1_insta.png"
     image insta bomi2 = "images/instagram/B2_insta.png"
-    image insta Chunhua1 = "images/instagram/A1_insta.png"
-    image insta Chunhua2 = "images/instagram/A2_insta.png"
+    image insta Chunhua1 = "images/instagram/C1_insta.png"
+    image insta Chunhua2 = "images/instagram/C2_insta.png"
     image insta himeno1 = "images/instagram/H1_insta.png"
     image insta himeno2 = "images/instagram/H2_insta.png"
 
@@ -126,9 +126,9 @@ label after_load:
     image BB1 = "images/scenes/bomi_b1.png"
     image BB2 = "images/scenes/bomi_b2.png"
     image BGE = "images/scenes/bomi_ge.png"
-    image AB1 = "images/scenes/Chunhua_b1.png"
-    image AB2 = "images/scenes/Chunhua_b2.png"
-    image AGE = "images/scenes/Chunhua_ge.png"
+    image AB1 = "images/scenes/ch_b1.png"
+    image AB2 = "images/scenes/ch_b2.png"
+    image AGE = "images/scenes/ch_ge.png"
 
 #endregion
 
