@@ -63,7 +63,7 @@ label scene_1:
     scene bedroom with fade
     call phone_start(usrcf, "21:30") from _call_phone_start_8
 
-    call message_start(tpc, "Welcome to Nōburu highschool! I'm {b}Zhou ChunHua{/b}, the class president. If you have any questions, don't hesitate to ask your classmates, teachers or even me. Even if you joined us in the middle of the school year, we welcome you with open arms :)") from _call_message_start_29
+    call message_start(tpc, "Welcome to Nōburu highschool. I'm {b}Zhou ChunHua{/b}, the class president! If you have any questions, don't hesitate to ask your classmates, teachers or even me. Even if you joined us in the middle of the school year, we welcome you with open arms :)") from _call_message_start_29
     call message_img(tpc, "This is me!", "images/instagram/A1_insta.png") from _call_message_img_1
     call message(tpc, "i believe that starting school in the middle of a semester can be very difficult, so you can count on me!") from _call_message_80
     pause 1.0
@@ -106,11 +106,13 @@ label scene_1:
         label .aftermenu:
 
     call message_img(tpc, "Here", "images/instagram/H1_insta.png") from _call_message_img_2
-    call message(tpc, "Her name's {b}Himeno Yuzu{/b}. I don't want you to talk about it though, it'd be embarassing if everyone knew the classpresident gets bullied, Haha...") from _call_message_87
+    call message(tpc, "Her name's {b}Himeno Yuzu{/b}. I don't want you to talk about it though, it'd be embarassing if everyone knew the class president gets bullied, Haha...") from _call_message_87
     call message(tpc, "Oh! My parents are calling me. I'll see you tomorrow :)") from _call_message_89
     call phone_end from _call_phone_end_8 # this one puts away the phone!
 
     narrateur """...
+
+    ...
     
     She can't be that bad."""
 
@@ -164,8 +166,8 @@ label scene_2:
 
     narrateur "the next day at school, i recieve a text message from an unknown number"
 
-    call phone_start("REAL_BUISNESS", "08:02") from _call_phone_start_10
-    call message_start("REAL_BUISNESS", "Hey [playerName], wanna video chat me for free? find me here http://cunscam.com/xxx xoxo") from _call_message_start_38
+    call phone_start("Melissa", "08:02") from _call_phone_start_10
+    call message_start("Melissa", "Hey [playerName], wanna video chat me for free? find me here http://itsascam.com/xxx xoxo") from _call_message_start_38
     pause 2.0
     window show
     "???" "I wouldn't click on that if i were you."
@@ -174,7 +176,7 @@ label scene_2:
     show screen cexp("apc", "ael", "amn", "abn", p=p_center, h=h_down)
 
     menu:
-        c_akane "You should be careful with that stuff, it could ruin your life."
+        c_chunhua "You should be careful with that stuff, it could ruin your life."
 
         "Are you talking from experience?":
             playerName "Are you talking from experience?"

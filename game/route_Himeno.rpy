@@ -42,7 +42,7 @@ label RH1:
     show screen cexp("hph", "hes", "hmm", "hbn")
     c_himeno """It'll be fun, you'll see
         
-    We're going to ruin people's lives by showing them that I'm missing in their life ."""
+    We're going to ruin people's lives by showing them that I'm missing in their life."""
 
     menu:
         c_himeno "You'll do that won't you ?"
@@ -132,7 +132,7 @@ label RH1:
             playerName "She'll get what's coming to her"
             show screen cexp("hph", "hea", "hmn", "hba")
             c_himeno "Duh, obviously."
-            c_himeno "Shit! Everything about her pisses me off!"
+            c_himeno "Everything about her pisses me off!"
 
         "We could just ask her why she's following you":
             playerName "We could just ask her why she's following you..."
