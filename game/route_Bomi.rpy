@@ -13,76 +13,76 @@ label route_B1:
     "{i}That's not catfishing..."
     "{i}Ah! I found it...{/i}"
 
-    call phone_start(usrb, "20:23") from _call_phone_start
+    call phone_start(usrb, "20:23") 
     label choiceMaking_HID: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("Hey Bomi, why do you hide yourself?","choiceMaking_HID.choice1","You were right, you clearly don't have look the same in person","choiceMaking_HID.choice2")
         
         label .choice1:    
-            call phone_after_menu from _call_phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
-            call message_start(playerName, "Hey Bomi, why do you hide yourself?") from _call_message_start # whenever you put the sender name to be playerName it is the player characters own message!
+            call phone_after_menu  # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
+            call message_start(playerName, "Hey Bomi, why do you hide yourself?")  # whenever you put the sender name to be playerName it is the player characters own message!
             $ ptsb1 += 1
-            call message(tpb, "Oh, you found me?") from _call_message
+            call message(tpb, "Oh, you found me?") 
             jump .aftermenu
         label .choice2:
-            call phone_after_menu from _call_phone_after_menu_1
-            call message_start(playerName, "You were right, you clearly don't have look the same in person.") from _call_message_start_1
-            call message(tpb, "...") from _call_message_1
+            call phone_after_menu 
+            call message_start(playerName, "You were right, you clearly don't have look the same in person.") 
+            call message(tpb, "...") 
             jump .aftermenu
         label .aftermenu:
     
-    call message(tpb, "I'm sorry for lying to you") from _call_message_2
-    call message(tpb, "I think Chunhua is really cool. She's smart, beautiful, confident...") from _call_message_3
-    call message(tpb, "My only good trait is having straight As.") from _call_message_4
-    call message(tpb, "It's not much compared to what she's has...") from _call_message_5
+    call message(tpb, "I'm sorry for lying to you") 
+    call message(tpb, "I think Chunhua is really cool. She's smart, beautiful, confident...") 
+    call message(tpb, "My only good trait is having straight As.") 
+    call message(tpb, "It's not much compared to what she's has...") 
 
     label choiceMaking_CHA: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("I think everyone has their own charm.","choiceMaking_CHA.choice1","You're not wrong.","choiceMaking_CHA.choice2")
         label .choice1:
             $ ptsb1 += 1
-            call phone_after_menu from _call_phone_after_menu_2 # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
-            call message_start(playerName, "I think everyone has their own charm.") from _call_message_start_2 # whenever you put the sender name to be playerName it is the player characters own message!
-            call reply_message("I'm sure you're just as lovely.") from _call_reply_message
-            call message(tpb, "Maybe.") from _call_message_7
+            call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
+            call message_start(playerName, "I think everyone has their own charm.")  # whenever you put the sender name to be playerName it is the player characters own message!
+            call reply_message("I'm sure you're just as lovely.") 
+            call message(tpb, "Maybe.") 
             jump .aftermenu
         label .choice2:
-            call phone_after_menu from _call_phone_after_menu_3
-            call message_start(playerName, "You're not wrong.") from _call_message_start_3
-            call reply_message("She's is one hell of a woman") from _call_reply_message_1
-            call message(tpb, "...") from _call_message_8
+            call phone_after_menu 
+            call message_start(playerName, "You're not wrong.") 
+            call reply_message("She's is one hell of a woman") 
+            call message(tpb, "...") 
             jump .aftermenu
         label .aftermenu:
 
-    call message(tpb, "Anyways, I'm not the only one that admires her. So many people want to either be or be with her.") from _call_message_9
-    call message(tpb, "...") from _call_message_10
-    call message(tpb, "Should i get a new haircut ?") from _call_message_11
-    call message(tpb, "To something that would look better") from _call_message_13
+    call message(tpb, "Anyways, I'm not the only one that admires her. So many people want to either be or be with her.") 
+    call message(tpb, "...") 
+    call message(tpb, "Should I get a new haircut ?") 
+    call message(tpb, "To something that would look better") 
 
     label choiceMaking_HAI: # Use this template eatch time u want to make a phone menu
         call screen phone_reply("idk, you tell me","choiceMaking_HAI.choice1","I like ya cut G.","choiceMaking_HAI.choice2")
         label .choice1:    
-            call phone_after_menu from _call_phone_after_menu_4 # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
-            call message_start(playerName, "idk, you tell me") from _call_message_start_4 # whenever you put the sender name to be playerName it is the player characters own message!
+            call phone_after_menu # always add this for both choices after the menu, this hides the previous message that we left visible during the menu
+            call message_start(playerName, "idk, you tell me")  # whenever you put the sender name to be playerName it is the player characters own message!
             jump .aftermenu
         label .choice2:
             $ ptsb1 += 1
-            call phone_after_menu from _call_phone_after_menu_5
-            call message_start(playerName, "I like ya cut G.") from _call_message_start_5
-            call message(tpb, "Really?") from _call_message_16
+            call phone_after_menu 
+            call message_start(playerName, "I like ya cut G.") 
+            call message(tpb, "Really?")
             jump .aftermenu
         label .aftermenu:
     
-    call message(tpb, "...") from _call_message_17
-    call message(tpb, "see you tomorrow.") from _call_message_18
-    call phone_end from _call_phone_end
+    call message(tpb, "...") 
+    call message(tpb, "See you tomorrow.") 
+    call phone_end 
     "{i} What a weird girl"
     "{i} I hope she doesn't do anything dumb..."
     scene classroom day with fade
     pause 1.0
-    show screen cexp("bpbb", "beb", "bmh", "bbn", h=h_down)
+    show screen cexp("bpbb", "beb", "bmh", "bbn", p=p_center, h=h_down)
     c_bomi "Hey [playerName]."
-    show screen cexp("bpfb", "bel", "bmn", "bbn", h=h_down)
+    show screen cexp("bpfb", "bel", "bmn", "bbn", p=p_center, h=h_down)
     c_bomi "..."
-    show screen cexp("bpbb", "bel", "bmt", "bbn", h=h_down)
+    show screen cexp("bpbb", "bel", "bmt", "bbn", p=p_center, h=h_down)
 
     menu:
         c_bomi "What do you think?"
@@ -102,9 +102,10 @@ label route_B1:
     c_himeno "Pfft you look ridiculous"
     play sound camera_effect
     with Fade(0.1, 0.0, 0.5, color="#fff")
-    show screen cexp("bpfb", "bel", "bmf", "bbs", p=p_right, h=h_down)
+    hide screen h_photo_bomi
+    show screen cexp("bpfb", "bel", "bmf", "bbs", p=p_center, h=h_down)
     c_bomi "E-eh!? W-wait !!"
-    show screen cexp("bpfb", "beb", "bms", "bbs", p=p_right, h=h_down)
+    show screen cexp("bpfb", "beb", "bms", "bbs", p=p_center, h=h_down)
     c_bomi "Dont take pictures!"
     show screen cexp("bpbb", "beb", "bms", "bbs", h=h_down)
     narrateur "Bomi tries to follow her but trips."
@@ -137,7 +138,8 @@ label route_B1:
             playerName "Someone took a picture of her!"
             c_chunhua "Ah. I think i know who you're talking about."
             c_chunhua "I can't really do much since she has a lot of influence over this school."
-    show screen cexp("bpbb", "bel", "bmt", "bbs", p=p_left, h=h_down)
+    hide screen a_and_b
+    show screen cexp("bpbb", "bel", "bmt", "bbs", p=p_center, h=h_down)
     c_bomi "[playerName]!"
     hide screen a_and_b
     scene hallway day with fade

@@ -173,7 +173,7 @@ label scene_2:
     "???" "I wouldn't click on that if I were you."
     call phone_end(False) 
 
-    show screen cexp("apc", "ael", "amn", "abn", p=p_center)
+    show screen cexp("apc", "ael", "amn", "abn", p=p_center, h=h_down)
 
     menu:
         c_chunhua "You should be careful with that stuff, it could ruin your life."
@@ -241,16 +241,10 @@ label scene_2:
     scene black with fade
     show screen cexp("apr", "ael", "ams", "abn", p=p_center, h=h_down) with fade
     hide screen cexp with fade 
-    scene classroom day with fade
-    scene black with fade
     show screen cexp("bpf", "bel", "bms", "bbn", p=p_center, h=h_down) with fade
     hide screen cexp with fade
-    scene classroom day with fade
-    scene black with fade
     show screen cexp("hph", "hel", "hms", "hbn", p=p_center, h=h_down) with fade
     hide screen cexp with fade
-    scene classroom day with fade
-    scene black with fade
     pause 2.0
 
     show screen mlt with fade
@@ -269,9 +263,7 @@ label road_menu:
             $ road = "3"
             playerName "Himeno!"
     hide screen mlt with fade
-    c_mysteriousMan """good choice!
-    
-    wake up :)"""
+    narrateur """wake up :)"""
     scene classroom late with fade 
     
     narrateur """The clock displays \"17:06\".

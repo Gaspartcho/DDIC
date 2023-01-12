@@ -199,6 +199,14 @@ label after_load:
         use cexp("hph", "hel", "hmf", "hbs", p=p_right)
         use cexp("bpfb", "bbm", "bel", "bmt", p=p_left, h=h_down)
 
+    screen h_photo_bomi:
+        use cexp("hph", "hea", "hml", "hba", p=p_right)
+        use cexp("bpbb", "bbs", "bea", "bms", p=p_left, h=h_down)
+
+    screen a_and_b:
+        use cexp("apr", "ael", "ams", "abn", p=p_right, h=h_down)
+        use cexp("bpbb", "bel", "bms", "bbs", p=p_left, h=h_down)
+
 # RAJOUTTER LE SCREEN H_PHOTO_B ET A_AND_B
 
 
