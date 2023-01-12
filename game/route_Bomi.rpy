@@ -310,7 +310,7 @@ label RBB2:
 
     {i}Sometimes I'd find hate messages on her locker.{/i}
 
-    {i}Apparently Chunhua had a lot of admirers and if someone tried to imitate their “godesse”, they'd get targeted.{/i}
+    {i}Apparently Chunhua had a lot of admirers and if someone tried to imitate their “godess”, they'd get targeted.{/i}
 
     {i}I tried to clean and keep the hate away from Bomi but it wasn't enough.{/i}"""
     scene classroom late with fade

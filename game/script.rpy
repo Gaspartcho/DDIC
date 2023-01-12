@@ -95,7 +95,7 @@ label scene_1:
         label .choice1:    
             call phone_after_menu from _call_phone_after_menu_26
             call message_start(playerName, "What has she done?") from _call_message_start_32
-            call message(tpc, "Elle aime se moquer de moi... de tout le monde en fait... je ne sais pas pourquoi.") from _call_message_86
+            call message(tpc, "She bullies me sometimes... everyone actually... I don't know why.") from _call_message_86
             jump .aftermenu
             
         label .choice2:
@@ -130,7 +130,7 @@ label scene_1:
             jump .aftermenu
         label .aftermenu:
     call message(tph, "i'm obviously the best") from _call_message_92
-    call message(tph, "Yet SOMEHOW, that SLAG is always first") from _call_message_94
+    call message(tph, "Yet SOMEHOW, SHE is always first") from _call_message_94
     call message(tph, "I swear to you she's cheating") from _call_message_95
     call message(tph, "...") from _call_message_96
     call message(tph, "I should do the same") from _call_message_97
@@ -179,7 +179,9 @@ label scene_2:
         "Are you talking from experience?":
             playerName "Are you talking from experience?"
             show screen cexp("apc", "aeb", "ams", "abn", p=p_center, h=h_down)
-            c_akane "Maybe"
+            c_akane """...
+            
+            Maybe"""
 
         "I was going to delete it anyways":
             playerName "I was going to delete it anyways"
@@ -292,25 +294,19 @@ label game_over:
 
     menu:
         "Go back to selection":
-            playerName """Go back to route menu.
+            playerName "Go back to route menu."
+            c_mysteriousMan """Going back to the route menu.
             
-            Go back, again and again.
-            
-            Until you find your good ending."""
-
-            c_mysteriousMan "Good. I like your enthusiasm!"
-            c_mysteriousMan "Who will you pick now?"
+            Who will you pick now?"""
             jump road_menu
 
         "Quit Game":
             playerName "Quit Game."
-            c_mysteriousMan """Okay. See you next time.
+            narrateur """Okay! 
 
-            I might forget you the next time I see you, but you'll listen to my speech again like sweet music won't you?
+            I might forget you the next time I see you, but you'll listen to my cringe little monologue again won't you?
             
-            Come back quick will you, it's a bit lonely here...
-            
-            ;)"""
+            See you next time :)"""
 
             stop music fadeout 1.5
 
@@ -318,81 +314,10 @@ label game_over:
     
 label happy_ending:
     scene black with fade
-    play music MisteriousMan_theme fadein 1.0 loop
-    c_mysteriousMan """Good Job!
-    
-    You Won!
-    
-    You did it!
-    
-    You did something good.
-    
-    You helped the lovely heroine.
-    
-    You made the world a better place...
-    
-    ...
-    
-    ...
-    
-    What are you still doing here?
-    
-    You can leave now, you know?
-    
-    No one's keeping you here..."""
-
-    menu:
-        "Nono, I'm leaving soon":
-            c_mysteriousMan """You're a bit quirky aren't you...
-            
-            i thought you fell asleep at your desk.
-            
-            Well, I guess this is goodbye...
-            
-            Don't hesitate to come back from time to time...
-            
-            I might forget you...
-            
-            But it'll always be fun.
-            
-            ;)"""
-
-        "You promised me something...":
-            c_mysteriousMan """...
-            
-            Me?
-            
-            What could I have possibly promised you?"""
-
-            playerName "Your identity?"
-
-            c_mysteriousMan """Ah!
-            
-            Yes, that's right...
-            
-            It's simple, really...
-            
-            I'm just a script of code running.
-            
-            He just wanted me to be here...
-            
-            So I am.
-            
-            Nothing more.
-            
-            Disappointed?
-            
-            Yes, I know...
-            
-            Well, not all truths are incredible, no?
-            
-            ;)"""
-    
-    stop music fadeout 1.5
 
     narrateur """You finished the game \"Doki-Doki information Club\"!
     
-    created by \"NSI122\"
+    created by \"NSI122\", Laura and Gas
     
     Thank you for playing."""
 
