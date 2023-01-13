@@ -89,7 +89,7 @@ label route_A:
         label .aftermenu:
 
     call message (tpc, "I love dog sitting in my spare time.") 
-    call message_img(tpc, "", "images/instagram/A2_insta.png") 
+    call message_img(tpc, "", "images/instagram/C2_insta.png") 
     call message (tpc, "It gives me a bit of pocket money") 
     call message (tpc, "My family is pretty well off") 
     call message (tpc, "But a bit of extra cash never hurt anyone.") 
