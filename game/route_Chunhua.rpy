@@ -1,6 +1,6 @@
 label route_A:
     define ptsc1 = 0
-    narrateur "{i}I should go home.{i/}"
+    narrateur "{i}I should go home.{/i}"
     scene bedroom with fade
     pause 2.0
     "{i}I should thank Chunhua for the warm welcome."
