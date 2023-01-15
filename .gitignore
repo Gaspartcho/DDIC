@@ -2,6 +2,7 @@
 *.rpyb
 *.rpymc
 *.asd
+*.bak
 
 **/saves
 
